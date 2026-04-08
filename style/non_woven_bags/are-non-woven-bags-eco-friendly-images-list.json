@@ -1,0 +1,77 @@
+{
+  "article": "are-non-woven-bags-eco-friendly",
+  "images": [
+    {
+      "no": 1,
+      "position": "After Introduction",
+      "purpose": "Hero image showing various non woven bags in different colors with eco-friendly symbols",
+      "alt_text": "Colorful reusable non woven shopping bags with recycling symbols on white background",
+      "filename": "eco-friendly-non-woven-bags-collection.webp",
+      "upload_path": "/wp-content/uploads/20260331/eco-friendly-non-woven-bags-collection.webp",
+      "search_keywords": ["eco friendly non woven bags", "reusable shopping bags", "sustainable packaging"]
+    },
+    {
+      "no": 2,
+      "position": "Before Chapter 2",
+      "purpose": "Infographic showing non woven bag lifecycle from production to disposal",
+      "alt_text": "Non woven bag lifecycle assessment diagram showing production use and recycling stages",
+      "filename": "non-woven-bag-lifecycle-assessment-diagram.webp",
+      "upload_path": "/wp-content/uploads/20260331/non-woven-bag-lifecycle-assessment-diagram.webp",
+      "search_keywords": ["lifecycle assessment", "non woven bag production", "environmental impact"]
+    },
+    {
+      "no": 3,
+      "position": "Before Chapter 3",
+      "purpose": "Comparison chart showing environmental impact of different bag materials",
+      "alt_text": "Environmental impact comparison chart non woven plastic cotton paper bags",
+      "filename": "bag-materials-environmental-impact-comparison.webp",
+      "upload_path": "/wp-content/uploads/20260331/bag-materials-environmental-impact-comparison.webp",
+      "search_keywords": ["bag comparison", "environmental impact", "sustainable materials"]
+    },
+    {
+      "no": 4,
+      "position": "Before Chapter 4",
+      "purpose": "Photo showing non woven bags being placed in recycling bin",
+      "alt_text": "Person placing used non woven polypropylene bags into recycling collection bin",
+      "filename": "recycling-non-woven-bags-collection.webp",
+      "upload_path": "/wp-content/uploads/20260331/recycling-non-woven-bags-collection.webp",
+      "search_keywords": ["recycle non woven bags", "PP recycling", "waste management"]
+    },
+    {
+      "no": 5,
+      "position": "Before Chapter 5",
+      "purpose": "Infographic comparing carbon footprint of different bag types per use",
+      "alt_text": "Carbon footprint comparison per use for non woven plastic cotton paper bags",
+      "filename": "carbon-footprint-bag-types-comparison.webp",
+      "upload_path": "/wp-content/uploads/20260331/carbon-footprint-bag-types-comparison.webp",
+      "search_keywords": ["carbon footprint", "bag environmental impact", "CO2 emissions"]
+    },
+    {
+      "no": 6,
+      "position": "Before Chapter 6",
+      "purpose": "Visual comparison showing non woven bags alongside plastic cotton and paper alternatives",
+      "alt_text": "Side by side comparison non woven plastic cotton paper shopping bags",
+      "filename": "non-woven-vs-plastic-cotton-paper-bags.webp",
+      "upload_path": "/wp-content/uploads/20260331/non-woven-vs-plastic-cotton-paper-bags.webp",
+      "search_keywords": ["bag types comparison", "non woven vs plastic", "sustainable alternatives"]
+    },
+    {
+      "no": 7,
+      "position": "Before Chapter 8",
+      "purpose": "Photo showing consumer reusing non woven bags for multiple shopping trips",
+      "alt_text": "Shopper reusing durable non woven bags for weekly grocery shopping trips",
+      "filename": "reusing-non-woven-bags-shopping.webp",
+      "upload_path": "/wp-content/uploads/20260331/reusing-non-woven-bags-shopping.webp",
+      "search_keywords": ["reuse non woven bags", "sustainable shopping", "eco friendly habits"]
+    },
+    {
+      "no": 8,
+      "position": "Before Conclusion",
+      "purpose": "Summary infographic showing key environmental benefits of non woven bags",
+      "alt_text": "Infographic summarizing environmental benefits of reusable non woven polypropylene bags",
+      "filename": "non-woven-bags-environmental-benefits-summary.webp",
+      "upload_path": "/wp-content/uploads/20260331/non-woven-bags-environmental-benefits-summary.webp",
+      "search_keywords": ["non woven benefits", "eco friendly packaging", "sustainable choice"]
+    }
+  ]
+}

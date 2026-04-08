@@ -1,0 +1,113 @@
+{
+  "article": "welding-procedure-specifications-wps-guide",
+  "images": [
+    {
+      "no": 1,
+      "position": "After 'What Is a WPS' section",
+      "purpose": "Opening theme image - industrial welding scene with pipeline",
+      "alt_text": "industrial welding procedure specification document on construction site with pipeline background",
+      "filename": "wps-document-industrial-pipeline-site.webp",
+      "upload_path": "/wp-content/uploads/20260331/wps-document-industrial-pipeline-site.webp",
+      "search_keywords": ["industrial welding", "pipeline construction", "welding site"]
+    },
+    {
+      "no": 2,
+      "position": "After 'Why Your Project Needs WPS' section",
+      "purpose": "Risk comparison illustration - NDT testing scene",
+      "alt_text": "welding inspector performing NDT testing on pipeline weld with equipment",
+      "filename": "ndt-testing-welding-inspection-pipeline.webp",
+      "upload_path": "/wp-content/uploads/20260331/ndt-testing-welding-inspection-pipeline.webp",
+      "search_keywords": ["welding inspection", "NDT testing", "quality control"]
+    },
+    {
+      "no": 3,
+      "position": "After 'WPS-PQR-WPQ Relationship' section",
+      "purpose": "Three document relationship diagram - engineer reviewing",
+      "alt_text": "engineer reviewing welding documentation at desk",
+      "filename": "welding-documentation-review-engineer-desk.webp",
+      "upload_path": "/wp-content/uploads/20260331/welding-documentation-review-engineer-desk.webp",
+      "search_keywords": ["engineer desk", "technical documentation", "blueprint review"]
+    },
+    {
+      "no": 4,
+      "position": "After 'Essential Variables' section",
+      "purpose": "Variable classification illustration - checklist document",
+      "alt_text": "welding parameter specification sheet with checklist",
+      "filename": "welding-essential-variables-checklist-document.webp",
+      "upload_path": "/wp-content/uploads/20260331/welding-essential-variables-checklist-document.webp",
+      "search_keywords": ["checklist document", "technical specification", "welding parameters"]
+    },
+    {
+      "no": 5,
+      "position": "After 'Common WPS Qualification Tests' section",
+      "purpose": "Mechanical testing scene - laboratory equipment",
+      "alt_text": "mechanical testing laboratory tensile test equipment",
+      "filename": "welding-mechanical-testing-laboratory-tensile.webp",
+      "upload_path": "/wp-content/uploads/20260331/welding-mechanical-testing-laboratory-tensile.webp",
+      "search_keywords": ["material testing", "laboratory equipment", "tensile test"]
+    },
+    {
+      "no": 6,
+      "position": "After 'WPS Format and Content' section",
+      "purpose": "WPS form template illustration",
+      "alt_text": "technical form template document with sections",
+      "filename": "wps-form-template-blank-joint-configuration.webp",
+      "upload_path": "/wp-content/uploads/20260331/wps-form-template-blank-joint-configuration.webp",
+      "search_keywords": ["technical form", "document template", "specification sheet"]
+    },
+    {
+      "no": 7,
+      "position": "After 'Material Groupings' section",
+      "purpose": "Material classification reference - pipe samples",
+      "alt_text": "steel pipe samples with classification labels",
+      "filename": "steel-pipe-p-number-f-number-classification.webp",
+      "upload_path": "/wp-content/uploads/20260331/steel-pipe-p-number-f-number-classification.webp",
+      "search_keywords": ["steel pipes", "metal tubes", "industrial materials"]
+    },
+    {
+      "no": 8,
+      "position": "After 'Qualification Timeline' section",
+      "purpose": "Timeline flowchart - testing phases schedule",
+      "alt_text": "project timeline chart with phases and schedule",
+      "filename": "welding-qualification-timeline-phases-chart.webp",
+      "upload_path": "/wp-content/uploads/20260331/welding-qualification-timeline-phases-chart.webp",
+      "search_keywords": ["project timeline", "schedule chart", "workflow diagram"]
+    },
+    {
+      "no": 9,
+      "position": "After 'Industry Requirements' section",
+      "purpose": "Industry application comparison - oil gas pipeline",
+      "alt_text": "oil gas pipeline construction site with workers",
+      "filename": "pipeline-welding-oil-gas-construction-site.webp",
+      "upload_path": "/wp-content/uploads/20260331/pipeline-welding-oil-gas-construction-site.webp",
+      "search_keywords": ["pipeline construction", "oil gas industry", "industrial site"]
+    },
+    {
+      "no": 10,
+      "position": "After 'Managing WPS Library' section",
+      "purpose": "Document management system - digital library",
+      "alt_text": "digital document management system on computer screen",
+      "filename": "wps-library-digital-management-system.webp",
+      "upload_path": "/wp-content/uploads/20260331/wps-library-digital-management-system.webp",
+      "search_keywords": ["document management", "digital files", "computer database"]
+    },
+    {
+      "no": 11,
+      "position": "After 'Cost Considerations' section",
+      "purpose": "Cost analysis chart - budget breakdown",
+      "alt_text": "cost estimation chart with budget analysis",
+      "filename": "welding-qualification-cost-estimation-chart.webp",
+      "upload_path": "/wp-content/uploads/20260331/welding-qualification-cost-estimation-chart.webp",
+      "search_keywords": ["cost analysis", "budget chart", "financial report"]
+    },
+    {
+      "no": 12,
+      "position": "Before 'Conclusion' section",
+      "purpose": "Summary scene - certified welder at work",
+      "alt_text": "professional welder working at industrial site",
+      "filename": "certified-welder-wps-document-industrial-site.webp",
+      "upload_path": "/wp-content/uploads/20260331/certified-welder-wps-document-industrial-site.webp",
+      "search_keywords": ["professional welder", "industrial worker", "welding work"]
+    }
+  ]
+}

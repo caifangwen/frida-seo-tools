@@ -1,0 +1,230 @@
+══════════════════════════════════════════════════════════════════════
+  HUAHAO BLOG COMPONENTS - USAGE GUIDE
+══════════════════════════════════════════════════════════════════════
+
+§ 0  DESIGN TOKENS
+   All brand values live here. Change once, updates everywhere.
+----------------------------------------------------------------------
+§ 1  ARTICLE WRAPPER
+   Wrap your entire post HTML in <div class="hh-post"> … </div>
+----------------------------------------------------------------------
+§ 2  HERO BANNER
+   Usage: <div class="hh-hero"> … </div>
+----------------------------------------------------------------------
+§ 3  SECTION HEADER  (numbered + title + tag)
+   Usage:
+   <div class="hh-section-header">
+     <div class="hh-section-num">01</div>
+     <div>
+       <span class="hh-section-tag">Material Science</span>
+       <h2 class="hh-section-title">The Material</h2>
+     </div>
+   </div>
+----------------------------------------------------------------------
+§ 4  PULL QUOTE  (blockquote replacement)
+   Usage: <blockquote class="hh-quote"> … </blockquote>
+----------------------------------------------------------------------
+§ 5  CALLOUT BOXES
+   Variants: .hh-box (dark/blue) .hh-box-info .hh-box-warn .hh-box-tip
+   Usage: <div class="hh-box"> … </div>
+----------------------------------------------------------------------
+§ 6  TABLES
+   Usage: <div class="hh-table-wrap"><table class="hh-table"> … </table>
+          <span class="hh-table-caption">Table 1: Description</span>
+   </div>
+----------------------------------------------------------------------
+§ 7  PROCESS / STEP FLOW (horizontal numbered cards)
+   Usage:
+   <div class="hh-steps">
+     <div class="hh-step"> <div class="hh-step-n">01</div> <h4>…</h4> <p>…</p> </div>
+   </div>
+----------------------------------------------------------------------
+§ 8  FLOWCHART  (vertical arrow chain — CSS only)
+   Usage:
+   <div class="hh-flow">
+     <div class="hh-flow-step">
+       <div class="hh-flow-dot">1</div>
+       <div class="hh-flow-body"><strong>Title</strong><p>Detail…</p></div>
+     </div>
+     …
+   </div>
+----------------------------------------------------------------------
+§ 9  COMPARISON / BAR CHART  (horizontal visual bars)
+   Usage:
+   <div class="hh-bars">
+     <div class="hh-bar-row">
+       <span class="hh-bar-label">Non-Woven PP</span>
+       <div class="hh-bar-track"><div class="hh-bar-fill" style="width:11%"></div></div>
+       <span class="hh-bar-val">~11 reuses</span>
+     </div>
+   </div>
+   Modifier colors: .hh-bar-fill (blue), .hh-bar-fill-amber, .hh-bar-fill-red
+----------------------------------------------------------------------
+§ 10  STAT / KPI CARDS  (row of headline numbers)
+   Usage:
+   <div class="hh-stats">
+     <div class="hh-stat"><span class="hh-stat-num">500M+</span><span class="hh-stat-label">Bags produced</span></div>
+   </div>
+----------------------------------------------------------------------
+§ 11  CARD GRID  (use-cases, features, product types)
+   Usage:
+   <div class="hh-cards">
+     <div class="hh-card">
+       <span class="hh-card-icon">
+         <svg>...</svg>
+       </span>
+       <h4>Title</h4><p>Description</p>
+     </div>
+   </div>
+----------------------------------------------------------------------
+§ 12  CHECKLIST  (enhanced <ul> with tick marks)
+   Usage: <ul class="hh-checklist"> <li>Item</li> </ul>
+   Variants: .hh-checklist-cross  .hh-checklist-warn
+----------------------------------------------------------------------
+§ 13  TWO-COLUMN SPLIT  (pros / cons or before / after)
+   Usage:
+   <div class="hh-split">
+     <div class="hh-split-col"> … </div>
+     <div class="hh-split-col"> … </div>
+   </div>
+----------------------------------------------------------------------
+§ 14  SPEC MINI-CARDS  (2×N grid of key-value info)
+   Usage:
+   <div class="hh-specs">
+     <div class="hh-spec-card">
+       <div class="hh-spec-head">Lead Time</div>
+       <div class="hh-spec-body">
+         <div class="hh-spec-val">10–15 Days</div>
+         <div class="hh-spec-note">From artwork approval to ex-factory</div>
+       </div>
+     </div>
+   </div>
+----------------------------------------------------------------------
+§ 15  INLINE QUOTE FORM  (no JS required — uses mailto / CF7 shortcode)
+   Usage: replace [wpcf7 …] with your CF7 shortcode, or use as HTML form
+----------------------------------------------------------------------
+§ 16  FAQ ACCORDION  (CSS-only, uses <details>/<summary>)
+   Usage:
+   <div class="hh-faq">
+     <details class="hh-faq-item">
+       <summary class="hh-faq-q">Question?</summary>
+       <div class="hh-faq-a"><p>Answer…</p></div>
+     </details>
+   </div>
+----------------------------------------------------------------------
+§ 17  TIMELINE  (horizontal milestone strip)
+   Usage:
+   <div class="hh-timeline">
+     <div class="hh-timeline-item">
+       <div class="hh-timeline-dot"></div>
+       <div class="hh-timeline-label">Day 1–2</div>
+       <div class="hh-timeline-title">Step Title</div>
+     </div>
+   </div>
+----------------------------------------------------------------------
+§ 18  CTA BANNER  (end-of-post conversion block)
+   Usage: <div class="hh-cta"> … </div>
+----------------------------------------------------------------------
+§ 19  VERDICT / SUMMARY TABLE
+   Usage:
+   <div class="hh-verdict">
+     <div class="hh-verdict-row">
+       <span class="hh-verdict-key">Budget</span>
+       <span class="hh-verdict-val">…</span>
+     </div>
+   </div>
+----------------------------------------------------------------------
+§ 20  UTILITY CLASSES
+   No usage notes
+----------------------------------------------------------------------
+§ 21  RESPONSIVE OVERRIDES
+   No usage notes
+----------------------------------------------------------------------
+§ 20  TAB PANELS
+   Usage: <div class="hh-tabs"> … </div>
+----------------------------------------------------------------------
+§ 21  NUMBERED LIST
+   Usage: <ol class="hh-numbered-list"> … </ol>
+----------------------------------------------------------------------
+§ 22  BADGES / TAGS
+   Usage: <span class="hh-badge">Text</span>
+----------------------------------------------------------------------
+§ 23  QUOTE BLOCK
+   Usage: <div class="hh-quote-block"> … </div>
+----------------------------------------------------------------------
+§ 24  PROGRESS INDICATOR
+   Usage: <div class="hh-progress"> … </div>
+----------------------------------------------------------------------
+§ 25  IMAGE GALLERY
+   Usage: <div class="hh-gallery"> … </div>
+----------------------------------------------------------------------
+§ 26  HIGHLIGHT BOX
+   Usage: <div class="hh-highlight"> … </div>
+----------------------------------------------------------------------
+§ 28  CALLOUT STRIP
+   Usage: <div class="hh-callout-strip"> … </div>
+----------------------------------------------------------------------
+§ 29  METRIC ROW
+   Usage: <div class="hh-metrics"> … </div>
+----------------------------------------------------------------------
+§ 30  INLINE ALERTS
+   Usage: <div class="hh-alert"> … </div>
+----------------------------------------------------------------------
+§ 31  AVATAR GROUP
+   Usage: <div class="hh-avatars"> … </div>
+----------------------------------------------------------------------
+§ 33  CODE EXAMPLE
+   Usage: <div class="hh-code"> … </div>
+----------------------------------------------------------------------
+§ 34  PRICING CARD
+   Usage: <div class="hh-pricing"> … </div>
+----------------------------------------------------------------------
+§ 35  FOOTER CTA
+   Usage: <div class="hh-footer-cta"> … </div>
+----------------------------------------------------------------------
+§ 36  VS COMPARISON CARDS
+   Usage: <div class="hh-vs"> … </div>
+----------------------------------------------------------------------
+§ 37  COMPARISON MATRIX
+   Usage: <div class="hh-matrix"> … </div>
+----------------------------------------------------------------------
+§ 38  SIDE-BY-SIDE FEATURES
+   Usage: <div class="hh-features-compare"> … </div>
+----------------------------------------------------------------------
+§ 39  RATING COMPARISON BARS
+   Usage: <div class="hh-ratings"> … </div>
+----------------------------------------------------------------------
+§ 39B  HORIZONTAL BAR CHART (for category comparison)
+   Usage: <div class="hh-hbar-chart"> … </div>
+----------------------------------------------------------------------
+§ 39C  DONUT / PIE INDICATOR
+   Usage: <div class="hh-donut-row"> … </div>
+----------------------------------------------------------------------
+§ 39D  DATA CARD GRID (for KPI comparison)
+   Usage: <div class="hh-data-cards"> … </div>
+----------------------------------------------------------------------
+§ 39E  VERTICAL BAR CHART
+   Usage: <div class="hh-vbar-chart"> … </div>
+----------------------------------------------------------------------
+§ 39F  HEAT MAP TABLE
+   Usage: <div class="hh-heatmap"> … </div>
+----------------------------------------------------------------------
+§ 39B  IMAGE PLACEHOLDER (fixed-size image boxes)
+   Usage: <div class="hh-img-placeholder hh-img-lg"> … </div>
+   Sizes: hh-img-sm (400×225) / hh-img-md (600×338) / hh-img-lg (800×450) / hh-img-xl (1200×675)
+----------------------------------------------------------------------
+§ 40  BEFORE / AFTER COMPARISON
+   Usage: <div class="hh-before-after"> … </div>
+----------------------------------------------------------------------
+§ 41  PROS AND CONS
+   Usage: <div class="hh-pros-cons"> … </div>
+----------------------------------------------------------------------
+§ 42  DECISION FLOW
+   Usage: <div class="hh-decision"> … </div>
+----------------------------------------------------------------------
+§ 43  SCORE CARD COMPARISON
+   Usage: <div class="hh-scorecards"> … </div>
+----------------------------------------------------------------------
+§ 45  COMPARISON SUMMARY
+   Usage: <div class="hh-summary"> … </div>
+----------------------------------------------------------------------

@@ -1,0 +1,86 @@
+{
+  "article": "pp-non-woven-bags",
+  "images": [
+    {
+      "no": 1,
+      "position": "After Introduction",
+      "purpose": "Hero image showing PP polypropylene non woven bags with material structure visualization",
+      "alt_text": "PP polypropylene non woven bags material structure closeup texture view",
+      "filename": "pp-non-woven-bags-material-structure.webp",
+      "upload_path": "/wp-content/uploads/20260331/pp-non-woven-bags-material-structure.webp",
+      "search_keywords": ["PP non woven bags", "polypropylene material", "fabric structure"]
+    },
+    {
+      "no": 2,
+      "position": "Before Chapter 2",
+      "purpose": "Educational diagram showing polypropylene chemical structure and polymer properties",
+      "alt_text": "Polypropylene PP chemical structure polymer properties molecular diagram",
+      "filename": "polypropylene-chemical-structure-diagram.webp",
+      "upload_path": "/wp-content/uploads/20260331/polypropylene-chemical-structure-diagram.webp",
+      "search_keywords": ["polypropylene structure", "PP polymer", "chemical properties"]
+    },
+    {
+      "no": 3,
+      "position": "Before Chapter 3",
+      "purpose": "Properties comparison chart showing PP versus PE PET cotton density strength melting point",
+      "alt_text": "PP vs PE PET cotton properties comparison density strength melting point chart",
+      "filename": "pp-properties-comparison-chart.webp",
+      "upload_path": "/wp-content/uploads/20260331/pp-properties-comparison-chart.webp",
+      "search_keywords": ["PP properties", "material comparison", "polypropylene advantages"]
+    },
+    {
+      "no": 4,
+      "position": "Before Chapter 4",
+      "purpose": "GSM grades visual guide showing fabric thickness samples from 60 to 200 GSM",
+      "alt_text": "GSM grades visual guide fabric thickness samples 60 to 200 GSM comparison",
+      "filename": "gsm-grades-visual-guide-thickness.webp",
+      "upload_path": "/wp-content/uploads/20260331/gsm-grades-visual-guide-thickness.webp",
+      "search_keywords": ["GSM grades", "fabric thickness", "weight guide"]
+    },
+    {
+      "no": 5,
+      "position": "Before Chapter 5",
+      "purpose": "Manufacturing process flowchart showing spunbond process from resin pellets to finished bags",
+      "alt_text": "PP non woven manufacturing process flowchart spunbond resin to finished bags",
+      "filename": "manufacturing-process-flowchart-spunbond.webp",
+      "upload_path": "/wp-content/uploads/20260331/manufacturing-process-flowchart-spunbond.webp",
+      "search_keywords": ["manufacturing process", "spunbond process", "production flow"]
+    },
+    {
+      "no": 6,
+      "position": "Before Chapter 6",
+      "purpose": "Quality testing visual showing GSM verification tensile strength handle pull tests",
+      "alt_text": "Quality testing procedures GSM tensile strength handle pull tests laboratory",
+      "filename": "quality-testing-procedures-lab.webp",
+      "upload_path": "/wp-content/uploads/20260331/quality-testing-procedures-lab.webp",
+      "search_keywords": ["quality testing", "GSM verification", "strength tests"]
+    },
+    {
+      "no": 7,
+      "position": "Before Chapter 7",
+      "purpose": "Material comparison infographic PP non woven versus cotton paper PET jute bags",
+      "alt_text": "PP non woven vs cotton paper PET jute bags material comparison infographic",
+      "filename": "pp-vs-alternative-materials-comparison.webp",
+      "upload_path": "/wp-content/uploads/20260331/pp-vs-alternative-materials-comparison.webp",
+      "search_keywords": ["material comparison", "PP alternatives", "bag materials"]
+    },
+    {
+      "no": 8,
+      "position": "Before Chapter 8",
+      "purpose": "Application recommendations chart showing GSM selections by industry use case",
+      "alt_text": "Application GSM recommendations chart industry use case selection guide",
+      "filename": "application-gsm-recommendations-chart.webp",
+      "upload_path": "/wp-content/uploads/20260331/application-gsm-recommendations-chart.webp",
+      "search_keywords": ["application guide", "GSM selection", "industry uses"]
+    },
+    {
+      "no": 9,
+      "position": "Before Conclusion",
+      "purpose": "Environmental and safety infographic showing recycling process certifications compliance",
+      "alt_text": "PP environmental safety infographic recycling process certifications compliance standards",
+      "filename": "pp-environmental-safety-infographic.webp",
+      "upload_path": "/wp-content/uploads/20260331/pp-environmental-safety-infographic.webp",
+      "search_keywords": ["PP recycling", "safety certifications", "environmental profile"]
+    }
+  ]
+}

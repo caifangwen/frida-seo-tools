@@ -1,0 +1,86 @@
+{
+  "article": "non-woven-vs-plastic-bags",
+  "images": [
+    {
+      "no": 1,
+      "position": "After Introduction",
+      "purpose": "Hero image showing side by side comparison of non woven and plastic bags with environmental symbols",
+      "alt_text": "Non woven vs plastic bags side by side comparison environmental impact analysis",
+      "filename": "non-woven-vs-plastic-bags-comparison.webp",
+      "upload_path": "/wp-content/uploads/20260331/non-woven-vs-plastic-bags-comparison.webp",
+      "search_keywords": ["non woven vs plastic", "bag comparison", "environmental analysis"]
+    },
+    {
+      "no": 2,
+      "position": "Before Chapter 2",
+      "purpose": "Educational diagram showing structural differences between HDPE plastic and PP non woven materials",
+      "alt_text": "HDPE plastic vs PP non woven material structure differences diagram explained",
+      "filename": "plastic-vs-non-woven-material-structure.webp",
+      "upload_path": "/wp-content/uploads/20260331/plastic-vs-non-woven-material-structure.webp",
+      "search_keywords": ["material structure", "HDPE vs PP", "bag composition"]
+    },
+    {
+      "no": 3,
+      "position": "Before Chapter 3",
+      "purpose": "Lifecycle assessment infographic comparing environmental impact stages production use disposal",
+      "alt_text": "Lifecycle assessment infographic environmental impact production use disposal comparison",
+      "filename": "lifecycle-assessment-environmental-impact.webp",
+      "upload_path": "/wp-content/uploads/20260331/lifecycle-assessment-environmental-impact.webp",
+      "search_keywords": ["lifecycle assessment", "environmental impact", "carbon footprint"]
+    },
+    {
+      "no": 4,
+      "position": "Before Chapter 4",
+      "purpose": "Cost comparison chart showing total cost of ownership over 5 years with plastic taxes",
+      "alt_text": "5 year total cost ownership comparison non woven plastic bags with taxes",
+      "filename": "5-year-cost-comparison-chart.webp",
+      "upload_path": "/wp-content/uploads/20260331/5-year-cost-comparison-chart.webp",
+      "search_keywords": ["cost comparison", "TCO analysis", "plastic tax impact"]
+    },
+    {
+      "no": 5,
+      "position": "Before Chapter 5",
+      "purpose": "Durability testing visual showing load bearing capacity and reuse testing results",
+      "alt_text": "Durability testing results load bearing capacity reuse testing comparison bags",
+      "filename": "durability-testing-results-comparison.webp",
+      "upload_path": "/wp-content/uploads/20260331/durability-testing-results-comparison.webp",
+      "search_keywords": ["durability testing", "load capacity", "reuse lifespan"]
+    },
+    {
+      "no": 6,
+      "position": "Before Chapter 6",
+      "purpose": "World map showing global plastic bag restrictions bans and taxes status 2026",
+      "alt_text": "Global plastic bag restrictions map bans taxes regulations status 2026",
+      "filename": "global-plastic-bag-regulations-map.webp",
+      "upload_path": "/wp-content/uploads/20260331/global-plastic-bag-regulations-map.webp",
+      "search_keywords": ["plastic regulations", "global bans", "bag taxes"]
+    },
+    {
+      "no": 7,
+      "position": "Before Chapter 7",
+      "purpose": "Consumer perception survey results visual showing preferences brand impact statistics",
+      "alt_text": "Consumer perception survey results preferences brand impact statistics 2026",
+      "filename": "consumer-perception-survey-results.webp",
+      "upload_path": "/wp-content/uploads/20260331/consumer-perception-survey-results.webp",
+      "search_keywords": ["consumer perception", "survey results", "brand impact"]
+    },
+    {
+      "no": 8,
+      "position": "Before Chapter 8",
+      "purpose": "Decision flowchart showing when to choose non woven versus plastic bags by application",
+      "alt_text": "Decision flowchart choosing non woven vs plastic bags by application use case",
+      "filename": "decision-flowchart-bag-selection.webp",
+      "upload_path": "/wp-content/uploads/20260331/decision-flowchart-bag-selection.webp",
+      "search_keywords": ["decision guide", "bag selection", "choice flowchart"]
+    },
+    {
+      "no": 9,
+      "position": "Before Conclusion",
+      "purpose": "Transition guide visual showing step by step process from plastic to non woven bags",
+      "alt_text": "Plastic to non woven transition guide step by step business implementation process",
+      "filename": "plastic-to-non-woven-transition-guide.webp",
+      "upload_path": "/wp-content/uploads/20260331/plastic-to-non-woven-transition-guide.webp",
+      "search_keywords": ["transition guide", "implementation process", "business change"]
+    }
+  ]
+}

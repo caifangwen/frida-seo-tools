@@ -1,0 +1,369 @@
+{
+  "Huahao Hero Banner": {
+    "prefix": "hh-hero",
+    "body": [
+      "<div class=\"hh-hero\">",
+      "  <span class=\"hh-hero-eyebrow\">${1:Guide · 2026}</span>",
+      "  <h1>${2:Article Title}</h1>",
+      "  <p class=\"hh-hero-sub\">${3:Subtitle description here}</p>",
+      "  <div class=\"hh-hero-stats\">",
+      "    <div>",
+      "      <span class=\"hh-hero-stat-num\">${4:100}</span>",
+      "      <span class=\"hh-hero-stat-label\">${5:Label}</span>",
+      "    </div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Huahao Hero Banner for article intro"
+  },
+  "Huahao Section Header": {
+    "prefix": "hh-section",
+    "body": [
+      "<div class=\"hh-section-header\">",
+      "  <div class=\"hh-section-num\">${1:01}</div>",
+      "  <div>",
+      "    <span class=\"hh-section-tag\">${2:TAG}</span>",
+      "    <h2 class=\"hh-section-title\">${3:Section Title}</h2>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Huahao Section Header with number and tag"
+  },
+  "Huahao Info Box": {
+    "prefix": "hh-info",
+    "body": [
+      "<div class=\"hh-box-info\">",
+      "  <p><span class=\"hh-box-icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><line x1=\"12\" y1=\"16\" x2=\"12\" y2=\"12\"></line><line x1=\"12\" y1=\"8\" x2=\"12.01\" y2=\"8\"></line></svg></span>${1:Info content here}</p>",
+      "</div>"
+    ],
+    "description": "Huahao Info Box (blue)"
+  },
+  "Huahao Warning Box": {
+    "prefix": "hh-warn",
+    "body": [
+      "<div class=\"hh-box-warn\">",
+      "  <p><span class=\"hh-box-icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z\"></path><line x1=\"12\" y1=\"9\" x2=\"12\" y2=\"13\"></line><line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\"></line></svg></span>${1:Warning content here}</p>",
+      "</div>"
+    ],
+    "description": "Huahao Warning Box (amber)"
+  },
+  "Huahao Tip Box": {
+    "prefix": "hh-tip",
+    "body": [
+      "<div class=\"hh-box-tip\">",
+      "  <p><span class=\"hh-box-icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 01-2 2H10a2 2 0 01-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z\"></path><path d=\"M9 21h6\"></path></svg></span>${1:Tip content here}</p>",
+      "</div>"
+    ],
+    "description": "Huahao Tip Box (green)"
+  },
+  "Huahao Feature Box": {
+    "prefix": "hh-box",
+    "body": [
+      "<div class=\"hh-box\">",
+      "  <span class=\"hh-box-title\">${1:KEY FEATURES}</span>",
+      "  <ul>",
+      "    <li>${2:Feature 1}</li>",
+      "    <li>${3:Feature 2}</li>",
+      "    <li>${4:Feature 3}</li>",
+      "  </ul>",
+      "</div>"
+    ],
+    "description": "Huahao Feature Box (dark with grid list)"
+  },
+  "Huahao Quote": {
+    "prefix": "hh-quote",
+    "body": [
+      "<blockquote class=\"hh-quote\">",
+      "  <p>${1:Quote content here}</p>",
+      "</blockquote>"
+    ],
+    "description": "Huahao Blockquote"
+  },
+  "Huahao Checklist (Pros)": {
+    "prefix": "hh-pros",
+    "body": [
+      "<ul class=\"hh-checklist\">",
+      "  <li>${1:Pro item 1}</li>",
+      "  <li>${2:Pro item 2}</li>",
+      "  <li>${3:Pro item 3}</li>",
+      "</ul>"
+    ],
+    "description": "Huahao Checklist with checkmarks (pros)"
+  },
+  "Huahao Checklist (Cons)": {
+    "prefix": "hh-cons",
+    "body": [
+      "<ul class=\"hh-checklist hh-checklist-cross\">",
+      "  <li>${1:Con item 1}</li>",
+      "  <li>${2:Con item 2}</li>",
+      "  <li>${3:Con item 3}</li>",
+      "</ul>"
+    ],
+    "description": "Huahao Checklist with cross marks (cons)"
+  },
+  "Huahao Checklist (Warn)": {
+    "prefix": "hh-warn-list",
+    "body": [
+      "<ul class=\"hh-checklist hh-checklist-warn\">",
+      "  <li>${1:Warning item 1}</li>",
+      "  <li>${2:Warning item 2}</li>",
+      "</ul>"
+    ],
+    "description": "Huahao Checklist with warning icons"
+  },
+  "Huahao Table": {
+    "prefix": "hh-table",
+    "body": [
+      "<div class=\"hh-table-wrap\">",
+      "  <table class=\"hh-table\">",
+      "    <thead>",
+      "      <tr>",
+      "        <th>${1:Header 1}</th>",
+      "        <th>${2:Header 2}</th>",
+      "        <th>${3:Header 3}</th>",
+      "      </tr>",
+      "    </thead>",
+      "    <tbody>",
+      "      <tr>",
+      "        <td>${4:Cell 1}</td>",
+      "        <td>${5:Cell 2}</td>",
+      "        <td>${6:Cell 3}</td>",
+      "      </tr>",
+      "    </tbody>",
+      "  </table>",
+      "</div>"
+    ],
+    "description": "Huahao Styled Table"
+  },
+  "Huahao Cards Grid": {
+    "prefix": "hh-cards",
+    "body": [
+      "<div class=\"hh-cards\">",
+      "  <div class=\"hh-card\">",
+      "    <span class=\"hh-card-icon\">",
+      "      <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z\"></path><line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\"></line><path d=\"M16 10a4 4 0 01-8 0\"></path></svg>",
+      "    </span>",
+      "    <h4>${1:Title}</h4>",
+      "    <p>${2:Description}</p>",
+      "  </div>",
+      "  <div class=\"hh-card\">",
+      "    <span class=\"hh-card-icon\">",
+      "      <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z\"></path></svg>",
+      "    </span>",
+      "    <h4>${3:Title}</h4>",
+      "    <p>${4:Description}</p>",
+      "  </div>",
+      "  <div class=\"hh-card\">",
+      "    <span class=\"hh-card-icon\">",
+      "      <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"7\" width=\"18\" height=\"13\" rx=\"2\" ry=\"2\"></rect><path d=\"M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2\"></path></svg>",
+      "    </span>",
+      "    <h4>${5:Title}</h4>",
+      "    <p>${6:Description}</p>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Huahao Cards Grid (3 columns)"
+  },
+  "Huahao Steps": {
+    "prefix": "hh-steps",
+    "body": [
+      "<div class=\"hh-steps\">",
+      "  <div class=\"hh-step\">",
+      "    <div class=\"hh-step-n\">01</div>",
+      "    <h4>${1:Step Title}</h4>",
+      "    <p>${2:Step description}</p>",
+      "  </div>",
+      "  <div class=\"hh-step\">",
+      "    <div class=\"hh-step-n\">02</div>",
+      "    <h4>${3:Step Title}</h4>",
+      "    <p>${4:Step description}</p>",
+      "  </div>",
+      "  <div class=\"hh-step\">",
+      "    <div class=\"hh-step-n\">03</div>",
+      "    <h4>${5:Step Title}</h4>",
+      "    <p>${6:Step description}</p>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Huahao Process Steps Grid"
+  },
+  "Huahao Stats Grid": {
+    "prefix": "hh-stats",
+    "body": [
+      "<div class=\"hh-stats\">",
+      "  <div class=\"hh-stat\">",
+      "    <span class=\"hh-stat-num\">${1:100}</span>",
+      "    <span class=\"hh-stat-label\">${2:Label}</span>",
+      "  </div>",
+      "  <div class=\"hh-stat\">",
+      "    <span class=\"hh-stat-num\">${3:50}</span>",
+      "    <span class=\"hh-stat-label\">${4:Label}</span>",
+      "  </div>",
+      "  <div class=\"hh-stat\">",
+      "    <span class=\"hh-stat-num\">${5:24}</span>",
+      "    <span class=\"hh-stat-label\">${6:Label}</span>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Huahao Stats Grid"
+  },
+  "Huahao Progress Bars": {
+    "prefix": "hh-bars",
+    "body": [
+      "<div class=\"hh-bars\">",
+      "  <span class=\"hh-bars-title\">${1:Comparison}</span>",
+      "  <div class=\"hh-bar-row\">",
+      "    <span class=\"hh-bar-label\">${2:Item 1}</span>",
+      "    <div class=\"hh-bar-track\">",
+      "      <div class=\"hh-bar-fill\" style=\"width: ${3:80}%\"></div>",
+      "    </div>",
+      "    <span class=\"hh-bar-val\">${4:80%}</span>",
+      "  </div>",
+      "  <div class=\"hh-bar-row\">",
+      "    <span class=\"hh-bar-label\">${5:Item 2}</span>",
+      "    <div class=\"hh-bar-track\">",
+      "      <div class=\"hh-bar-fill hh-bar-fill-amber\" style=\"width: ${6:60}%\"></div>",
+      "    </div>",
+      "    <span class=\"hh-bar-val\">${7:60%}</span>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Huahao Progress Bars"
+  },
+  "Huahao Verdict/Summary Box": {
+    "prefix": "hh-verdict",
+    "body": [
+      "<div class=\"hh-verdict\">",
+      "  <span class=\"hh-verdict-title\">${1:Quick Summary}</span>",
+      "  <div class=\"hh-verdict-row\">",
+      "    <span class=\"hh-verdict-key\">${2:Best For}</span>",
+      "    <span class=\"hh-verdict-val\">${3:Target audience}</span>",
+      "  </div>",
+      "  <div class=\"hh-verdict-row\">",
+      "    <span class=\"hh-verdict-key\">${4:Avoid If}</span>",
+      "    <span class=\"hh-verdict-val\">${5:When to avoid}</span>",
+      "  </div>",
+      "  <div class=\"hh-verdict-row\">",
+      "    <span class=\"hh-verdict-key\">${6:Key Spec}</span>",
+      "    <span class=\"hh-verdict-val\">${7:Specification}</span>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Huahao Verdict/Summary Box"
+  },
+  "Huahao CTA Banner": {
+    "prefix": "hh-cta",
+    "body": [
+      "<div class=\"hh-cta\">",
+      "  <span class=\"hh-cta-tag\">${1:Ready to Start?}</span>",
+      "  <h2>${2:Get a Free Quote}</h2>",
+      "  <p>${3:Description text here}</p>",
+      "  <div class=\"hh-cta-btns\">",
+      "    <a href=\"${4:/contact}\" class=\"hh-btn-primary\">${5:Request a Quote}</a>",
+      "    <a href=\"${6:/sales}\" class=\"hh-btn-outline\">${7:Contact Sales}</a>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Huahao CTA Banner for article ending"
+  },
+  "Huahao Timeline": {
+    "prefix": "hh-timeline",
+    "body": [
+      "<div class=\"hh-timeline\">",
+      "  <div class=\"hh-timeline-item\">",
+      "    <div class=\"hh-timeline-dot\"></div>",
+      "    <span class=\"hh-timeline-label\">${1:Step 1}</span>",
+      "    <span class=\"hh-timeline-title\">${2:Title}</span>",
+      "  </div>",
+      "  <div class=\"hh-timeline-item\">",
+      "    <div class=\"hh-timeline-dot\"></div>",
+      "    <span class=\"hh-timeline-label\">${3:Step 2}</span>",
+      "    <span class=\"hh-timeline-title\">${4:Title}</span>",
+      "  </div>",
+      "  <div class=\"hh-timeline-item\">",
+      "    <div class=\"hh-timeline-dot\"></div>",
+      "    <span class=\"hh-timeline-label\">${5:Step 3}</span>",
+      "    <span class=\"hh-timeline-title\">${6:Title}</span>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Huahao Horizontal Timeline"
+  },
+  "Huahao FAQ Item": {
+    "prefix": "hh-faq",
+    "body": [
+      "<div class=\"hh-faq\">",
+      "  <details class=\"hh-faq-item\">",
+      "    <summary class=\"hh-faq-q\">${1:Question here?}</summary>",
+      "    <div class=\"hh-faq-a\">",
+      "      <p>${2:Answer here}</p>",
+      "    </div>",
+      "  </details>",
+      "</div>"
+    ],
+    "description": "Huahao FAQ Item (expandable)"
+  },
+  "Huahao Split Compare": {
+    "prefix": "hh-split",
+    "body": [
+      "<div class=\"hh-split\">",
+      "  <div class=\"hh-split-col\">",
+      "    <h4>✓ Pros</h4>",
+      "    <ul>",
+      "      <li>${1:Pro 1}</li>",
+      "      <li>${2:Pro 2}</li>",
+      "      <li>${3:Pro 3}</li>",
+      "    </ul>",
+      "  </div>",
+      "  <div class=\"hh-split-col\">",
+      "    <h4>✗ Cons</h4>",
+      "    <ul>",
+      "      <li>${4:Con 1}</li>",
+      "      <li>${5:Con 2}</li>",
+      "      <li>${6:Con 3}</li>",
+      "    </ul>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Huahao Split Comparison (Pros/Cons side by side)"
+  },
+  "Huahao Specs Cards": {
+    "prefix": "hh-specs",
+    "body": [
+      "<div class=\"hh-specs\">",
+      "  <div class=\"hh-spec-card\">",
+      "    <div class=\"hh-spec-head\">${1:Spec Name}</div>",
+      "    <div class=\"hh-spec-body\">",
+      "      <div class=\"hh-spec-val\">${2:Value}</div>",
+      "      <div class=\"hh-spec-note\">${3:Note}</div>",
+      "    </div>",
+      "  </div>",
+      "  <div class=\"hh-spec-card\">",
+      "    <div class=\"hh-spec-head\">${4:Spec Name}</div>",
+      "    <div class=\"hh-spec-body\">",
+      "      <div class=\"hh-spec-val\">${5:Value}</div>",
+      "      <div class=\"hh-spec-note\">${6:Note}</div>",
+      "    </div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Huahao Specs Cards Grid"
+  },
+  "Huahao Image with Caption": {
+    "prefix": "hh-figure",
+    "body": [
+      "<figure>",
+      "  <img src=\"${1:image.jpg}\" alt=\"${2:Alt text}\">",
+      "  <figcaption>${3:Figure caption}</figcaption>",
+      "</figure>"
+    ],
+    "description": "Huahao Image with Caption"
+  },
+  "Huahao Code Block": {
+    "prefix": "hh-code",
+    "body": [
+      "<pre><code class=\"language-${1:javascript}\">${2:code here}</code></pre>"
+    ],
+    "description": "Huahao Code Block"
+  }
+}

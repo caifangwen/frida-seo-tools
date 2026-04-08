@@ -1,0 +1,77 @@
+{
+  "article": "biodegradable-non-woven-bags",
+  "images": [
+    {
+      "no": 1,
+      "position": "After Introduction",
+      "purpose": "Hero image showing biodegradable non woven bags with composting symbols and natural elements",
+      "alt_text": "Biodegradable non woven bags with composting certification logos on natural background",
+      "filename": "biodegradable-non-woven-bags-compostable.webp",
+      "upload_path": "/wp-content/uploads/20260331/biodegradable-non-woven-bags-compostable.webp",
+      "search_keywords": ["biodegradable non woven bags", "compostable bags", "eco friendly packaging"]
+    },
+    {
+      "no": 2,
+      "position": "Before Chapter 2",
+      "purpose": "Diagram illustrating biodegradation process stages from fresh bag to complete decomposition",
+      "alt_text": "Biodegradation process timeline showing non woven bag decomposition stages in compost",
+      "filename": "biodegradation-process-timeline-diagram.webp",
+      "upload_path": "/wp-content/uploads/20260331/biodegradation-process-timeline-diagram.webp",
+      "search_keywords": ["biodegradation process", "compostable materials", "decomposition timeline"]
+    },
+    {
+      "no": 3,
+      "position": "Before Chapter 3",
+      "purpose": "Comparison photo of different biodegradable materials PLA PBAT starch blends",
+      "alt_text": "Different biodegradable non woven materials PLA PBAT and starch blend samples",
+      "filename": "biodegradable-materials-pla-pbat-starch-comparison.webp",
+      "upload_path": "/wp-content/uploads/20260331/biodegradable-materials-pla-pbat-starch-comparison.webp",
+      "search_keywords": ["biodegradable materials", "PLA non woven", "PBAT bags"]
+    },
+    {
+      "no": 4,
+      "position": "Before Chapter 4",
+      "purpose": "Image showing various compostability certification logos EN 13432 ASTM D6400 OK Compost",
+      "alt_text": "Compostability certification logos EN 13432 ASTM D6400 OK Compost BPI displayed",
+      "filename": "compostability-certification-logos-guide.webp",
+      "upload_path": "/wp-content/uploads/20260331/compostability-certification-logos-guide.webp",
+      "search_keywords": ["compostability certification", "EN 13432", "ASTM D6400"]
+    },
+    {
+      "no": 5,
+      "position": "Before Chapter 5",
+      "purpose": "Infographic showing degradation timelines for different materials in various environments",
+      "alt_text": "Degradation time comparison chart industrial compost home compost soil marine environments",
+      "filename": "biodegradable-degradation-time-comparison-chart.webp",
+      "upload_path": "/wp-content/uploads/20260331/biodegradable-degradation-time-comparison-chart.webp",
+      "search_keywords": ["degradation time", "industrial composting", "home compost"]
+    },
+    {
+      "no": 6,
+      "position": "Before Chapter 6",
+      "purpose": "Photo comparison biodegradable bags versus conventional PP non woven bags",
+      "alt_text": "Side by side biodegradable and conventional PP non woven bags visual comparison",
+      "filename": "biodegradable-vs-conventional-non-woven-bags.webp",
+      "upload_path": "/wp-content/uploads/20260331/biodegradable-vs-conventional-non-woven-bags.webp",
+      "search_keywords": ["biodegradable vs conventional", "PP bags", "material comparison"]
+    },
+    {
+      "no": 7,
+      "position": "Before Chapter 8",
+      "purpose": "Image showing proper disposal methods for biodegradable bags in composting bins",
+      "alt_text": "Person disposing biodegradable non woven bag in industrial composting collection bin",
+      "filename": "biodegradable-bag-proper-disposal-composting.webp",
+      "upload_path": "/wp-content/uploads/20260331/biodegradable-bag-proper-disposal-composting.webp",
+      "search_keywords": ["biodegradable disposal", "composting bin", "waste sorting"]
+    },
+    {
+      "no": 8,
+      "position": "Before Conclusion",
+      "purpose": "Summary infographic showing when to choose biodegradable versus conventional non woven bags",
+      "alt_text": "Decision flowchart choosing biodegradable or conventional non woven bags applications",
+      "filename": "biodegradable-bags-selection-decision-guide.webp",
+      "upload_path": "/wp-content/uploads/20260331/biodegradable-bags-selection-decision-guide.webp",
+      "search_keywords": ["biodegradable selection", "bag choice guide", "sustainable decision"]
+    }
+  ]
+}

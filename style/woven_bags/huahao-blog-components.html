@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huahao Blog — Component Library & Style Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&family=Roboto+Slab:wght@600;700&display=swap" rel="stylesheet">
+
+<!--
+════════════════════════════════════════════════════════════════════════
+  HUAHAO NONWOVENS — BLOG COMPONENT STYLESHEET
+  Version: 2.0  |  2026
+  Usage: Copy the <style> block below into your WordPress
+         Appearance → Customize → Additional CSS
+         — OR — into a Custom HTML block at the top of each post.
+  All classes are prefixed with "hh-" to avoid theme conflicts.
+════════════════════════════════════════════════════════════════════════
+-->
+
+<style>
+/* ════════════════════════════════════════════════════════════════
+   § 0  DESIGN TOKENS
+   All brand values live here. Change once, updates everywhere.
+   ════════════════════════════════════════════════════════════════ */
+:root {
+  /* Brand palette - soft blue with better contrast */
+  --hh-blue:         rgba(60, 120, 200, 0.95);
+  --hh-blue-dark:    rgba(40, 90, 160, 0.98);
+  --hh-blue-mid:     rgba(50, 105, 180, 0.95);
+  --hh-blue-light:   rgba(60, 120, 200, 0.35);
+  --hh-blue-pale:    rgba(60, 120, 200, 0.12);
+
+  --hh-amber:        rgba(200, 150, 50, 0.95);
+  --hh-amber-light:  rgba(200, 150, 50, 0.18);
+
+  --hh-red:          rgba(180, 70, 70, 0.95);
+  --hh-red-light:    rgba(180, 70, 70, 0.15);
+
+  --hh-green:        rgba(70, 150, 100, 0.95);
+  --hh-green-light:  rgba(70, 150, 100, 0.2);
+
+  /* Neutrals - higher contrast */
+  --hh-ink:          #1a202c;
+  --hh-text:         #2d3748;
+  --hh-muted:        #4a5568;
+  --hh-border:       #cbd5e0;
+  --hh-bg:           #f7fafc;
+  --hh-white:        #ffffff;
+
+  /* Typography */
+  --hh-font-head:    'Georgia', 'Times New Roman', serif;
+  --hh-font-body:    'Roboto', sans-serif;
+  --hh-font-mono:    'Courier New', monospace;
+
+  /* Spacing & shape */
+  --hh-r:            5px;
+  --hh-r-sm:         3px;
+  --hh-r-lg:         12px;
+  --hh-shadow:       0 2px 8px rgba(28,41,59,.08);
+  --hh-shadow-md:    0 4px 16px rgba(28,41,59,.1);
+  --hh-shadow-lg:    0 8px 32px rgba(28,41,59,.12);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 1  ARTICLE WRAPPER
+   Wrap your entire post HTML in <div class="hh-post"> … </div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-post {
+  font-family: var(--hh-font-body);
+  color: var(--hh-text);
+  line-height: 1.8;
+  max-width: 860px;
+}
+.hh-post p   { font-size: 16px; margin-bottom: 1.1em; color: var(--hh-text); }
+.hh-post a   { color: var(--hh-blue); text-decoration: underline; }
+.hh-post a:hover { color: var(--hh-blue-dark); }
+.hh-post strong { color: var(--hh-ink); font-weight: 600; }
+.hh-post em { font-style: italic; color: var(--hh-text); }
+.hh-post hr {
+  border: none;
+  border-top: 1px solid var(--hh-border);
+  margin: 40px 0;
+}
+
+/* Headings */
+.hh-post h1, .hh-post h2, .hh-post h3, .hh-post h4, .hh-post h5, .hh-post h6 {
+  font-family: var(--hh-font-head);
+  color: var(--hh-ink);
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+.hh-post h1 { font-size: 32px; border-bottom: 2px solid var(--hh-blue-light); padding-bottom: 10px; }
+.hh-post h2 { font-size: 26px; }
+.hh-post h3 { font-size: 22px; }
+.hh-post h4 { font-size: 18px; }
+.hh-post h5 { font-size: 16px; font-style: italic; }
+.hh-post h6 { font-size: 14px; color: var(--hh-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+/* Lists */
+.hh-post ul, .hh-post ol { margin: 16px 0; padding-left: 24px; }
+.hh-post li { margin-bottom: 8px; color: var(--hh-text); }
+.hh-post li::marker { color: var(--hh-blue); }
+
+/* Inline elements */
+.hh-post code {
+  background: var(--hh-blue-pale);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: var(--hh-font-mono);
+  font-size: 14px;
+  color: var(--hh-blue-dark);
+}
+.hh-post pre {
+  background: #1a202c;
+  color: #f7fafc;
+  padding: 16px 20px;
+  border-radius: var(--hh-r);
+  overflow-x: auto;
+  font-family: var(--hh-font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+.hh-post pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+.hh-post blockquote {
+  border-left: 4px solid var(--hh-blue);
+  padding-left: 20px;
+  margin: 24px 0;
+  color: var(--hh-muted);
+  font-style: italic;
+}
+.hh-post img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--hh-r);
+  margin: 20px 0 8px;
+}
+.hh-post figcaption, .hh-img-caption {
+  text-align: center;
+  font-size: 13px;
+  color: var(--hh-muted);
+  margin-top: 8px;
+  font-style: italic;
+}
+.hh-post table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.hh-post th, .hh-post td {
+  border: 1px solid var(--hh-border);
+  padding: 12px 16px;
+  text-align: left;
+}
+.hh-post th {
+  background: var(--hh-blue-pale);
+  color: var(--hh-blue-dark);
+  font-weight: 600;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 2  HERO BANNER
+   Usage: <div class="hh-hero"> … </div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-hero {
+  background: linear-gradient(135deg, var(--hh-blue-dark) 0%, var(--hh-blue) 65%, var(--hh-blue-mid) 100%);
+  border-radius: var(--hh-r-lg);
+  padding: 56px 48px 48px;
+  color: var(--hh-white);
+  margin-bottom: 48px;
+  position: relative;
+  overflow: hidden;
+}
+.hh-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+.hh-hero-eyebrow {
+  display: inline-block;
+  font-family: var(--hh-font-mono);
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.65);
+  margin-bottom: 16px;
+}
+.hh-hero h1 {
+  font-family: var(--hh-font-head);
+  font-size: clamp(26px, 4.5vw, 44px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--hh-white);
+  margin-bottom: 16px;
+}
+.hh-hero-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,.8);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+/* Hero stat row inside hero */
+.hh-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+.hh-hero-stat-num {
+  font-family: var(--hh-font-head);
+  font-size: 26px;
+  font-weight: 800;
+  color: #93c5fd;
+  line-height: 1;
+  display: block;
+}
+.hh-hero-stat-label {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  display: block;
+  margin-top: 4px;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 3  SECTION HEADER  (numbered + title + tag)
+   Usage:
+   <div class="hh-section-header">
+     <div class="hh-section-num">01</div>
+     <div>
+       <span class="hh-section-tag">Material Science</span>
+       <h2 class="hh-section-title">The Material</h2>
+     </div>
+   </div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-section-header {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin: 52px 0 22px;
+  border-left: 4px solid var(--hh-blue);
+  padding-left: 0;
+  border-radius: 0 var(--hh-r-sm) var(--hh-r-sm) 0;
+  overflow: hidden;
+  background: linear-gradient(90deg, var(--hh-blue-pale) 0%, transparent 100%);
+}
+.hh-section-num {
+  flex-shrink: 0;
+  font-family: var(--hh-font-head);
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--hh-white);
+  background: var(--hh-blue);
+  line-height: 1;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  min-width: 48px;
+  justify-content: center;
+}
+.hh-section-header > div:last-child {
+  padding: 14px 20px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+.hh-section-tag {
+  display: block;
+  font-family: var(--hh-font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--hh-blue);
+  font-weight: 600;
+}
+.hh-section-title {
+  font-family: var(--hh-font-head);
+  font-size: clamp(17px, 2.6vw, 21px);
+  font-weight: 700;
+  color: var(--hh-ink);
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 4  PULL QUOTE  (blockquote replacement)
+   Usage: <blockquote class="hh-quote"> … </blockquote>
+   ════════════════════════════════════════════════════════════════ */
+.hh-quote {
+  border-left: 4px solid var(--hh-blue);
+  background: var(--hh-blue-pale);
+  padding: 22px 24px 22px 52px;
+  border-radius: 0 var(--hh-r) var(--hh-r) 0;
+  margin: 28px 0;
+  font-size: 15.5px;
+  font-style: italic;
+  color: var(--hh-blue-dark);
+  line-height: 1.7;
+  position: relative;
+}
+.hh-quote::before {
+  content: '\201C';
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  font-size: 52px;
+  color: var(--hh-blue-light);
+  line-height: 1;
+  font-style: normal;
+  font-family: Georgia, serif;
+  pointer-events: none;
+  user-select: none;
+}
+.hh-quote p { margin: 0; color: inherit; font-size: inherit; }
+
+/* ════════════════════════════════════════════════════════════════
+   § 5  CALLOUT BOXES
+   Variants: .hh-box (dark/blue) .hh-box-info .hh-box-warn .hh-box-tip
+   Usage: <div class="hh-box"> … </div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-box, .hh-box-info, .hh-box-warn, .hh-box-tip, .hh-box-light {
+  border-radius: var(--hh-r);
+  padding: 24px 28px;
+  margin: 24px 0;
+}
+
+/* Dark blue — feature lists */
+.hh-box {
+  background: #1e2d4a;
+  color: var(--hh-white);
+  border-top: 3px solid #5b9cf6;
+}
+.hh-box .hh-box-title {
+  font-family: var(--hh-font-mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #93c5fd;
+  margin-bottom: 16px;
+  display: block;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.hh-box ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.hh-box ul li {
+  display: flex; align-items: flex-start; gap: 9px;
+  font-size: 14px; color: rgba(255,255,255,.88); line-height: 1.5;
+}
+.hh-box ul li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2393c5fd' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 1px;
+}
+@media (max-width: 540px) { .hh-box ul { grid-template-columns: 1fr; } }
+
+/* Info (blue) */
+.hh-box-info {
+  background: var(--hh-blue-pale);
+  border-left: 4px solid var(--hh-blue-mid);
+  color: #1e3a5f;
+}
+.hh-box-info p { color: inherit; font-size: 14.5px; margin: 0; }
+
+/* Warning (amber) */
+.hh-box-warn {
+  background: var(--hh-amber-light);
+  border-left: 4px solid var(--hh-amber);
+  color: #7a4800;
+}
+.hh-box-warn p { color: inherit; font-size: 14.5px; margin: 0; }
+
+/* Tip (green light) */
+.hh-box-tip {
+  background: var(--hh-green-light);
+  border: 1px solid var(--hh-green);
+  border-left: 4px solid var(--hh-green);
+}
+.hh-box-tip p { font-size: 14.5px; color: #065f46; margin: 0; }
+
+/* Neutral parchment */
+.hh-box-light {
+  background: #f7f4ee;
+  border: 1px solid #e8e2d9;
+}
+.hh-box-light p { font-size: 14.5px; color: var(--hh-text); margin: 0; }
+
+/* Icon prefix for callout boxes - SVG icons */
+.hh-box-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: -3px;
+}
+.hh-box-icon svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 6  TABLES
+   Usage: <div class="hh-table-wrap"><table class="hh-table"> … </table></div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-table-wrap {
+  overflow-x: auto;
+  margin: 24px 0;
+}
+.hh-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.hh-table thead tr {
+  border-bottom: 2px solid var(--hh-border);
+}
+.hh-table thead th {
+  padding: 13px 16px;
+  text-align: left;
+  font-family: var(--hh-font-mono);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--hh-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.hh-table tbody tr {
+  border-bottom: 1px solid var(--hh-border);
+  transition: background .15s;
+}
+.hh-table tbody tr:last-child { border-bottom: none; }
+.hh-table tbody tr:hover { background: var(--hh-blue-pale); }
+.hh-table td {
+  padding: 13px 16px;
+  color: var(--hh-text);
+  vertical-align: middle;
+  line-height: 1.5;
+}
+.hh-table td:first-child { font-weight: 600; color: var(--hh-ink); }
+/* Pill badges inside tables */
+.hh-pill {
+  display: inline-block;
+  background: var(--hh-blue-pale);
+  color: var(--hh-blue);
+  border: 1px solid var(--hh-blue-light);
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--hh-font-mono);
+  padding: 2px 9px;
+  border-radius: 50px;
+}
+.hh-pill-best { background: #064e3b; color: #6ee7b7; border-color: #065f46; }
+.hh-pill-warn { background: var(--hh-amber-light); color: #7a4800; border-color: #f0c060; }
+
+/* ════════════════════════════════════════════════════════════════
+   § 7  PROCESS / STEP FLOW (horizontal numbered cards)
+   Usage:
+   <div class="hh-steps">
+     <div class="hh-step"> <div class="hh-step-n">01</div> <h4>…</h4> <p>…</p> </div>
+   </div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.hh-step {
+  background: var(--hh-white);
+  border: 1px solid var(--hh-border);
+  border-radius: var(--hh-r);
+  padding: 22px 18px;
+  position: relative;
+  transition: box-shadow .2s, transform .2s;
+}
+.hh-step:hover { box-shadow: var(--hh-shadow-md); transform: translateY(-3px); }
+.hh-step-n {
+  font-family: var(--hh-font-head);
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--hh-blue-light);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.hh-step h4 {
+  font-family: var(--hh-font-head);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--hh-blue-dark);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+.hh-step p { font-size: 13px; color: var(--hh-muted); margin: 0; line-height: 1.65; }
+
+/* ════════════════════════════════════════════════════════════════
+   § 8  FLOWCHART  (vertical arrow chain — CSS only)
+   Usage:
+   <div class="hh-flow">
+     <div class="hh-flow-step">
+       <div class="hh-flow-dot">1</div>
+       <div class="hh-flow-body"><strong>Title</strong><p>Detail…</p></div>
+     </div>
+     …
+   </div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-flow { margin: 28px 0; }
+.hh-flow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding-bottom: 8px;
+  position: relative;
+}
+/* Vertical connector line */
+.hh-flow-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 44px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--hh-blue-light), transparent);
+}
+.hh-flow-dot {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  background: var(--hh-blue);
+  color: var(--hh-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--hh-font-head);
+  font-weight: 800;
+  font-size: 14px;
+  box-shadow: 0 0 0 4px var(--hh-blue-light);
+  position: relative;
+  z-index: 1;
+}
+.hh-flow-body {
+  background: var(--hh-white);
+  border: 1px solid var(--hh-border);
+  border-radius: var(--hh-r);
+  padding: 16px 20px;
+  flex: 1;
+  margin-bottom: 16px;
+}
+.hh-flow-body strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--hh-blue-dark);
+  margin-bottom: 6px;
+}
+.hh-flow-body p { font-size: 13.5px; color: var(--hh-muted); margin: 0; line-height: 1.6; }
+.hh-flow-tag {
+  display: inline-block;
+  font-family: var(--hh-font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--hh-blue);
+  background: var(--hh-blue-pale);
+  border-radius: 50px;
+  padding: 2px 9px;
+  margin-bottom: 8px;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 9  COMPARISON / BAR CHART  (horizontal visual bars)
+   Usage:
+   <div class="hh-bars">
+     <div class="hh-bar-row">
+       <span class="hh-bar-label">Non-Woven PP</span>
+       <div class="hh-bar-track"><div class="hh-bar-fill" style="width:11%"></div></div>
+       <span class="hh-bar-val">~11 reuses</span>
+     </div>
+   </div>
+   Modifier colors: .hh-bar-fill (blue), .hh-bar-fill-amber, .hh-bar-fill-red
+   ════════════════════════════════════════════════════════════════ */
+.hh-bars {
+  background: var(--hh-white);
+  border: 1px solid var(--hh-border);
+  border-radius: var(--hh-r);
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.hh-bars-title {
+  font-family: var(--hh-font-mono);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--hh-muted);
+  margin-bottom: 16px;
+  display: block;
+}
+.hh-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.hh-bar-row:last-child { margin-bottom: 0; }
+.hh-bar-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--hh-blue-dark);
+  min-width: 130px;
+  flex-shrink: 0;
+}
+.hh-bar-track {
+  flex: 1;
+  height: 10px;
+  background: #eee;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.hh-bar-fill          { height: 100%; border-radius: 50px; background: var(--hh-blue); transition: width .6s ease; }
+.hh-bar-fill-amber    { background: var(--hh-amber); }
+.hh-bar-fill-red      { background: var(--hh-red); }
+.hh-bar-fill-muted    { background: #bbb; }
+.hh-bar-val {
+  font-family: var(--hh-font-mono);
+  font-size: 12px;
+  color: var(--hh-muted);
+  min-width: 80px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 10  STAT / KPI CARDS  (row of headline numbers)
+   Usage:
+   <div class="hh-stats">
+     <div class="hh-stat"><span class="hh-stat-num">500M+</span><span class="hh-stat-label">Bags produced</span></div>
+   </div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+.hh-stat {
+  background: var(--hh-white);
+  border: 1px solid var(--hh-border);
+  border-radius: var(--hh-r);
+  padding: 20px 18px;
+  text-align: center;
+  transition: box-shadow .2s;
+}
+.hh-stat:hover { box-shadow: var(--hh-shadow); }
+.hh-stat-num {
+  display: block;
+  font-family: var(--hh-font-head);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--hh-blue);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.hh-stat-label {
+  display: block;
+  font-family: var(--hh-font-mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--hh-muted);
+  line-height: 1.4;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 11  CARD GRID  (use-cases, features, product types)
+   Usage:
+   <div class="hh-cards">
+     <div class="hh-card">
+       <span class="hh-card-icon">
+         <svg>...</svg>
+       </span>
+       <h4>Title</h4><p>Description</p>
+     </div>
+   </div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+.hh-card {
+  background: var(--hh-white);
+  border: 1px solid var(--hh-border);
+  border-radius: var(--hh-r);
+  padding: 22px 18px;
+  text-align: center;
+  transition: box-shadow .2s, transform .2s, border-color .2s;
+}
+.hh-card:hover {
+  box-shadow: var(--hh-shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--hh-blue-light);
+}
+.hh-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 12px;
+  background: var(--hh-blue-pale);
+  border-radius: 50%;
+  border: 1px solid rgba(120, 180, 240, 0.2);
+}
+.hh-card-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: var(--hh-blue);
+  stroke-width: 1.8;
+  fill: rgba(120, 180, 240, 0.08);
+}
+.hh-card h4 {
+  font-family: var(--hh-font-head);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--hh-ink);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+.hh-card p { font-size: 12.5px; color: var(--hh-muted); margin: 0; line-height: 1.55; }
+
+/* ════════════════════════════════════════════════════════════════
+   § 12  CHECKLIST  (enhanced <ul> with tick marks)
+   Usage: <ul class="hh-checklist"> <li>Item</li> </ul>
+   Variants: .hh-checklist-cross  .hh-checklist-warn
+   ════════════════════════════════════════════════════════════════ */
+.hh-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+.hh-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 14.5px;
+  color: var(--hh-text);
+  border-bottom: 1px dashed var(--hh-border);
+  line-height: 1.55;
+}
+.hh-checklist li:last-child { border-bottom: none; }
+.hh-checklist li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 1px;
+}
+.hh-checklist-cross li::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dc2626' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+}
+.hh-checklist-warn  li::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d97706' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z'%3E%3C/path%3E%3Cline x1='12' y1='9' x2='12' y2='13'%3E%3C/line%3E%3Cline x1='12' y1='17' x2='12.01' y2='17'%3E%3C/line%3E%3C/svg%3E");
+  width: 20px;
+  height: 20px;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 13  TWO-COLUMN SPLIT  (pros / cons or before / after)
+   Usage:
+   <div class="hh-split">
+     <div class="hh-split-col"> … </div>
+     <div class="hh-split-col"> … </div>
+   </div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background: var(--hh-blue-pale);
+  border: 1px solid var(--hh-blue-light);
+  border-radius: var(--hh-r);
+  padding: 28px;
+  margin: 24px 0;
+}
+@media (max-width: 580px) { .hh-split { grid-template-columns: 1fr; } }
+.hh-split-col h4 {
+  font-family: var(--hh-font-mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--hh-blue);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--hh-blue-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hh-split-col h4::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.hh-split-col:first-child h4::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23059669' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+}
+.hh-split-col:last-child h4::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d97706' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 14  SPEC MINI-CARDS  (2×N grid of key-value info)
+   Usage:
+   <div class="hh-specs">
+     <div class="hh-spec-card">
+       <div class="hh-spec-head">Lead Time</div>
+       <div class="hh-spec-body">
+         <div class="hh-spec-val">10–15 Days</div>
+         <div class="hh-spec-note">From artwork approval to ex-factory</div>
+       </div>
+     </div>
+   </div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 24px 0;
+}
+@media (max-width: 540px) { .hh-specs { grid-template-columns: 1fr; } }
+.hh-spec-card {
+  background: var(--hh-white);
+  border: 1px solid var(--hh-border);
+  border-radius: var(--hh-r-sm);
+  overflow: hidden;
+}
+.hh-spec-head {
+  background: none;
+  border-bottom: 1px solid var(--hh-border);
+  padding: 9px 15px;
+  font-family: var(--hh-font-mono);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--hh-ink);
+  font-weight: 600;
+}
+.hh-spec-body { padding: 14px 15px; }
+.hh-spec-val {
+  font-family: var(--hh-font-head);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--hh-blue-dark);
+  margin-bottom: 4px;
+}
+.hh-spec-note {
+  font-size: 12px;
+  color: var(--hh-muted);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 15  INLINE QUOTE FORM  (no JS required — uses mailto / CF7 shortcode)
+   Usage: replace [wpcf7 …] with your CF7 shortcode, or use as HTML form
+   ════════════════════════════════════════════════════════════════ */
+.hh-form-wrap {
+  background: var(--hh-blue-pale);
+  border: 1px solid var(--hh-blue-light);
+  border-radius: var(--hh-r-lg);
+  padding: 32px 36px;
+  margin: 32px 0;
+}
+.hh-form-wrap h3 {
+  font-family: var(--hh-font-head);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--hh-blue-dark);
+  margin-bottom: 6px;
+}
+.hh-form-wrap .hh-form-sub {
+  font-size: 13.5px;
+  color: var(--hh-muted);
+  margin-bottom: 22px;
+}
+.hh-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+@media (max-width: 560px) { .hh-form-grid { grid-template-columns: 1fr; } }
+.hh-form-field { display: flex; flex-direction: column; gap: 5px; }
+.hh-form-field.hh-full { grid-column: 1 / -1; }
+.hh-form-label {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--hh-font-mono);
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: var(--hh-blue-dark);
+}
+.hh-form-field input,
+.hh-form-field select,
+.hh-form-field textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: var(--hh-font-body);
+  font-size: 14px;
+  color: var(--hh-ink);
+  background: var(--hh-white);
+  border: 1px solid #bfdbfe;
+  border-radius: var(--hh-r-sm);
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+  -webkit-appearance: none;
+}
+.hh-form-field input:focus,
+.hh-form-field select:focus,
+.hh-form-field textarea:focus {
+  border-color: var(--hh-blue);
+  box-shadow: 0 0 0 3px rgba(30,64,175,.12);
+}
+.hh-form-field textarea { resize: vertical; min-height: 90px; }
+.hh-form-field select { cursor: pointer; }
+.hh-btn-submit {
+  display: inline-block;
+  background: var(--hh-blue);
+  color: var(--hh-white);
+  font-family: var(--hh-font-head);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px 32px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: .5px;
+  transition: background .2s, transform .15s;
+  text-decoration: none;
+}
+.hh-btn-submit:hover { background: var(--hh-blue-mid); transform: translateY(-2px); color: var(--hh-white); }
+.hh-form-privacy {
+  font-size: 12px;
+  color: var(--hh-muted);
+  margin-top: 10px;
+  display: block;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 16  FAQ ACCORDION  (CSS-only, uses <details>/<summary>)
+   Usage:
+   <div class="hh-faq">
+     <details class="hh-faq-item">
+       <summary class="hh-faq-q">Question?</summary>
+       <div class="hh-faq-a"><p>Answer…</p></div>
+     </details>
+   </div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-faq { margin: 24px 0; }
+.hh-faq-item {
+  border: 1px solid var(--hh-border);
+  border-radius: var(--hh-r);
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+.hh-faq-item[open] { box-shadow: var(--hh-shadow); border-color: var(--hh-blue-light); }
+.hh-faq-q {
+  padding: 16px 20px;
+  font-family: var(--hh-font-head);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--hh-blue-dark);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--hh-white);
+  transition: background .15s;
+}
+.hh-faq-q::-webkit-details-marker { display: none; }
+.hh-faq-q::after {
+  content: '+';
+  font-size: 20px;
+  color: var(--hh-blue);
+  line-height: 1;
+  font-weight: 400;
+  flex-shrink: 0;
+  margin-left: 12px;
+  transition: transform .2s;
+}
+details[open] .hh-faq-q { background: var(--hh-blue-pale); }
+details[open] .hh-faq-q::after { content: '−'; }
+.hh-faq-a {
+  padding: 16px 20px;
+  background: var(--hh-white);
+  border-top: 1px solid var(--hh-border);
+}
+.hh-faq-a p { font-size: 14px; color: var(--hh-text); margin: 0; line-height: 1.7; }
+
+/* ════════════════════════════════════════════════════════════════
+   § 17  TIMELINE  (horizontal milestone strip)
+   Usage:
+   <div class="hh-timeline">
+     <div class="hh-timeline-item">
+       <div class="hh-timeline-dot"></div>
+       <div class="hh-timeline-label">Day 1–2</div>
+       <div class="hh-timeline-title">Step Title</div>
+     </div>
+   </div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-timeline {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  overflow-x: auto;
+  padding: 8px 0 20px;
+  margin: 24px 0;
+  scroll-snap-type: x mandatory;
+}
+.hh-timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 100px;
+  position: relative;
+  scroll-snap-align: start;
+  padding: 0 4px;
+}
+/* Connecting line */
+.hh-timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: calc(50% + 14px);
+  right: calc(-50% + 14px);
+  height: 2px;
+  background: var(--hh-blue-light);
+}
+.hh-timeline-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--hh-blue);
+  border: 3px solid var(--hh-blue-light);
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+.hh-timeline-label {
+  font-family: var(--hh-font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--hh-blue);
+  margin-bottom: 4px;
+  text-align: center;
+}
+.hh-timeline-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--hh-blue-dark);
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 18  CTA BANNER  (end-of-post conversion block)
+   Usage: <div class="hh-cta"> … </div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-cta {
+  /* Background: swap url() below for your real photo, e.g. url('/wp-content/uploads/factory-bg.jpg') */
+  background-image:
+    linear-gradient(135deg, rgba(20, 52, 120, 0.88) 0%, rgba(10, 30, 80, 0.92) 100%),
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover, 80px 80px;
+  background-position: center, center;
+  border-radius: var(--hh-r-lg);
+  padding: 56px 40px;
+  text-align: center;
+  color: var(--hh-white);
+  margin-top: 56px;
+  position: relative;
+  overflow: hidden;
+}
+/* To use a real photo: replace the data: URI above with url('/your-photo.jpg') */
+.hh-cta::after {
+  content: '';
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  width: 160px;
+  height: 160px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='0.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z'%3E%3C/path%3E%3Cpolyline points='3.27 6.96 12 12.01 20.73 6.96'%3E%3C/polyline%3E%3Cline x1='12' y1='22.08' x2='12' y2='12'%3E%3C/line%3E%3C/svg%3E");
+  opacity: .06;
+  pointer-events: none;
+}
+.hh-cta-tag {
+  font-family: var(--hh-font-mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.8);
+  display: block;
+  margin-bottom: 12px;
+}
+.hh-cta h2 {
+  font-family: var(--hh-font-head);
+  font-size: clamp(20px, 3.5vw, 30px);
+  font-weight: 700;
+  color: var(--hh-white);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+.hh-cta p {
+  font-size: 15px;
+  color: rgba(255,255,255,.9);
+  max-width: 460px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+}
+.hh-cta-btns {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.hh-btn-primary {
+  display: inline-block;
+  background: #f59e0b;
+  color: #1a1a1a;
+  font-family: var(--hh-font-head);
+  font-weight: 800;
+  font-size: 14px;
+  padding: 14px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all .2s;
+  box-shadow: 0 4px 16px rgba(245,158,11,.4);
+  letter-spacing: .3px;
+}
+.hh-btn-primary:hover {
+  background: #fbbf24;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(245,158,11,.5);
+  color: #1a1a1a;
+}
+.hh-btn-outline {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.75);
+  color: var(--hh-white);
+  font-family: var(--hh-font-head);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all .2s;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.hh-btn-outline:hover {
+  background: rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,1);
+  transform: translateY(-2px);
+  color: var(--hh-white);
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 19  VERDICT / SUMMARY TABLE
+   Usage:
+   <div class="hh-verdict">
+     <div class="hh-verdict-row">
+       <span class="hh-verdict-key">Budget</span>
+       <span class="hh-verdict-val">…</span>
+     </div>
+   </div>
+   ════════════════════════════════════════════════════════════════ */
+.hh-verdict {
+  background: #f7f4ee;
+  border: 1px solid #e8e2d9;
+  border-radius: var(--hh-r);
+  padding: 24px 28px;
+  margin: 24px 0;
+}
+.hh-verdict-title {
+  font-family: var(--hh-font-mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--hh-muted);
+  margin-bottom: 16px;
+  display: block;
+}
+.hh-verdict-row {
+  display: flex;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e8e2d9;
+  align-items: flex-start;
+}
+.hh-verdict-row:last-child { border-bottom: none; padding-bottom: 0; }
+.hh-verdict-key {
+  font-family: var(--hh-font-head);
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a1a;
+  min-width: 140px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.hh-verdict-val {
+  font-size: 14px;
+  color: var(--hh-text);
+  line-height: 1.6;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   § 20  UTILITY CLASSES
+   ════════════════════════════════════════════════════════════════ */
+.hh-divider {
+  display: flex; align-items: center; gap: 14px;
+  margin: 48px 0 0; color: var(--hh-border);
+}
+.hh-divider::before, .hh-divider::after {
+  content: ''; flex: 1; height: 1px; background: var(--hh-border);
+}
+.hh-divider span { font-size: 14px; color: var(--hh-blue-light); }
+.hh-text-center { text-align: center; }
+.hh-mt-sm  { margin-top: 12px; }
+.hh-mt-md  { margin-top: 24px; }
+.hh-mt-lg  { margin-top: 40px; }
+.hh-mb-sm  { margin-bottom: 12px; }
+.hh-mb-md  { margin-bottom: 24px; }
+
+/* ════════════════════════════════════════════════════════════════
+   § 21  RESPONSIVE OVERRIDES
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  .hh-hero    { padding: 36px 24px; }
+  .hh-cta     { padding: 36px 22px; }
+  .hh-form-wrap { padding: 24px 18px; }
+  .hh-split   { padding: 20px; }
+  .hh-steps   { grid-template-columns: 1fr 1fr; }
+  .hh-stats   { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 380px) {
+  .hh-steps   { grid-template-columns: 1fr; }
+  .hh-stats   { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     LIVE DEMO PAGE — remove everything below this comment when
+     pasting the CSS into WordPress Additional CSS
+     ═══════════════════════════════════════════════════════════════════ -->
+<style>
+  body { background: #f4f4f2; padding: 40px 20px; font-family: 'Roboto', sans-serif; }
+  .demo-wrap { max-width: 900px; margin: 0 auto; }
+  .demo-label {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin: 36px 0 10px;
+  }
+  .demo-section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #1E73BE;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #E0EDFF;
+  }
+</style>
+</head>
+<body>
+<div class="demo-wrap">
+
+  <h1 style="font-family:'Montserrat',sans-serif;font-size:32px;font-weight:800;color:#1C293B;margin:0 0 6px;">Huahao Blog — Component Library</h1>
+  <p style="color:#6b7280;font-family:'Roboto',sans-serif;font-size:15px;margin:0 0 40px;">Paste the &lt;style&gt; block into WordPress → Appearance → Additional CSS.<br>Then use the HTML snippets below inside any post's Custom HTML block.</p>
+
+<div class="hh-post">
+
+<!-- ─── TYPOGRAPHY DEMO ─── -->
+<div class="demo-label">Typography · 排版演示</div>
+<div class="demo-section-title">Headings &amp; Text Formatting</div>
+
+<div class="hh-post">
+  <h1>Heading Level 1 - 一级标题</h1>
+  <p>This is a paragraph with <strong>bold text</strong>, <em>italic text</em>, and <strong><em>bold italic</em></strong>. 这是包含<strong>粗体</strong>、<em>斜体</em>和<strong><em>粗斜体</em></strong>的段落。</p>
+  
+  <h2>Heading Level 2 - 二级标题</h2>
+  <p>Links are styled with <a href="#">underline on hover</a>. 链接带有下划线效果。</p>
+  
+  <h3>Heading Level 3 - 三级标题</h3>
+  <p>Inline code looks like <code>console.log('Hello')</code> or <code>npm install package</code>.</p>
+  
+  <h4>Heading Level 4 - 四级标题</h4>
+  <p>Lists can be unordered or ordered:</p>
+  
+  <h5>Heading Level 5 - 五级标题（斜体）</h5>
+  <ul>
+    <li>Unordered list item 1</li>
+    <li>Unordered list item 2</li>
+    <li>Unordered list item 3</li>
+  </ul>
+  
+  <h6>Heading Level 6 - 六级标题（大写）</h6>
+  <ol>
+    <li>Ordered list item 1</li>
+    <li>Ordered list item 2</li>
+    <li>Ordered list item 3</li>
+  </ol>
+  
+  <blockquote>
+    This is a blockquote. Use it for citations or highlighted text.
+    这是引用块，用于突出显示重要内容。
+  </blockquote>
+  
+  <hr>
+  
+  <p>Code block example:</p>
+  <pre><code>function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet('World'));</code></pre>
+  
+  <p>Image with caption:</p>
+  <figure>
+    <img src="https://via.placeholder.com/600x300/e2e8f0/4a5568?text=Sample+Image" alt="Sample">
+    <figcaption>Figure 1: This is an image caption describing the photo above.</figcaption>
+  </figure>
+</div>
+
+<!-- ─── § 2 HERO ─── -->
+<div class="demo-label">§ 2 · Hero Banner</div>
+<div class="demo-section-title">class="hh-hero"</div>
+<div class="hh-hero">
+  <span class="hh-hero-eyebrow">Complete Buyer's Guide · 2026</span>
+  <h1>How to Order Custom Bags<br>from a Manufacturer</h1>
+  <p class="hh-hero-sub">Every step from material choice to delivery — with exact timelines, transparent pricing, and the questions you should be asking any supplier.</p>
+  <div class="hh-hero-stats">
+    <div><span class="hh-hero-stat-num">21 yrs</span><span class="hh-hero-stat-label">Factory experience</span></div>
+    <div><span class="hh-hero-stat-num">500M+</span><span class="hh-hero-stat-label">Bags produced</span></div>
+    <div><span class="hh-hero-stat-num">24 hrs</span><span class="hh-hero-stat-label">Quote turnaround</span></div>
+    <div><span class="hh-hero-stat-num">500 pcs</span><span class="hh-hero-stat-label">Minimum order</span></div>
+  </div>
+</div>
+
+<!-- ─── § 3 SECTION HEADER ─── -->
+<div class="demo-label">§ 3 · Section Header</div>
+<div class="demo-section-title">class="hh-section-header"</div>
+<div class="hh-section-header">
+  <div class="hh-section-num">01</div>
+  <div>
+    <span class="hh-section-tag">Material Science</span>
+    <h2 class="hh-section-title">Choose Your Material &amp; Construction</h2>
+  </div>
+</div>
+<p>Material is the single decision that affects everything else: price, durability, print quality, and sustainability credentials. Here's an honest comparison of the most common options.</p>
+
+<!-- ─── § 4 PULL QUOTE ─── -->
+<div class="demo-label">§ 4 · Pull Quote</div>
+<div class="demo-section-title">class="hh-quote"</div>
+<blockquote class="hh-quote">
+  <p>All production colors are matched to Pantone Solid Coated or our in-house calibrated color library. If your approved sample and bulk order have a color difference exceeding ±5 Delta E, we will re-run the affected units at no charge.</p>
+</blockquote>
+
+<!-- ─── § 5 CALLOUT BOXES ─── -->
+<div class="demo-label">§ 5 · Callout Boxes</div>
+<div class="demo-section-title">hh-box / hh-box-info / hh-box-warn / hh-box-tip</div>
+
+<div class="hh-box">
+  <span class="hh-box-title">Key Properties of PP Non-Woven Fabric</span>
+  <ul>
+    <li>Tear-resistant and puncture-tolerant</li>
+    <li>Moisture-resistant — does not absorb water</li>
+    <li>Breathable — air passes through micro-fiber structure</li>
+    <li>Chemically inert — no dye leach under normal conditions</li>
+    <li>Recyclable within PP streams (#5 plastic)</li>
+    <li>Available from 60 gsm to 120 gsm heavy-duty</li>
+  </ul>
+</div>
+
+<div class="hh-box-tip">
+  <p><span class="hh-box-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 01-2 2H10a2 2 0 01-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z"></path><path d="M9 21h6"></path></svg></span><strong>Pro tip:</strong> 80-100 gsm covers 90% of retail use cases. Only go heavier if you need hardware or bulk grocery load capacity above 12 kg.</p>
+</div>
+
+<div class="hh-box-info">
+  <p><span class="hh-box-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></span>International sample shipping via DHL Express is complimentary for all first-time orders. Physical samples ship within 5-7 business days of digital proof approval.</p>
+</div>
+
+<div class="hh-box-warn">
+  <p><span class="hh-box-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></span>PP non-woven fabric is <strong>not biodegradable</strong>. Its environmental benefit only holds when the bags are genuinely reused and properly disposed of. Minimum 11 reuses required to offset one plastic bag.</p>
+</div>
+
+<!-- ─── § 6 TABLE ─── -->
+<div class="demo-label">§ 6 · Table</div>
+<div class="demo-section-title">class="hh-table-wrap" + class="hh-table"</div>
+<div class="hh-table-wrap">
+  <table class="hh-table">
+    <thead>
+      <tr>
+        <th>Material</th><th>Best For</th><th>Load</th><th>Eco Option</th><th>MOQ</th><th>Print Method</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nonwoven (PP)</td>
+        <td>Retail, supermarket, brand gifts</td>
+        <td>5–15 kg</td>
+        <td>rPET available</td>
+        <td><span class="hh-pill">500 pcs</span></td>
+        <td>Screen / heat transfer</td>
+      </tr>
+      <tr>
+        <td>Canvas (cotton)</td>
+        <td>Premium brand, creative, gift</td>
+        <td>10–20 kg</td>
+        <td>Organic cotton</td>
+        <td><span class="hh-pill">300 pcs</span></td>
+        <td>Screen / digital</td>
+      </tr>
+      <tr>
+        <td>Oxford fabric</td>
+        <td>E-commerce, outdoor, utility</td>
+        <td>8–20 kg</td>
+        <td>—</td>
+        <td><span class="hh-pill">500 pcs</span></td>
+        <td>Heat transfer</td>
+      </tr>
+      <tr>
+        <td>PLA biodegradable</td>
+        <td>ESG compliance, food retail</td>
+        <td>3–8 kg</td>
+        <td>OK Compost</td>
+        <td><span class="hh-pill hh-pill-best">1,000 pcs</span></td>
+        <td>Digital print</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ─── § 7 PROCESS STEPS ─── -->
+<div class="demo-label">§ 7 · Process Step Cards</div>
+<div class="demo-section-title">class="hh-steps" + class="hh-step"</div>
+<div class="hh-steps">
+  <div class="hh-step"><div class="hh-step-n">01</div><h4>Choose Material</h4><p>Decide GSM, fabric type, and lamination based on load and budget. Day 1–2.</p></div>
+  <div class="hh-step"><div class="hh-step-n">02</div><h4>Request a Quote</h4><p>Submit your specs. We respond with itemized pricing within 24 hours. Day 2–3.</p></div>
+  <div class="hh-step"><div class="hh-step-n">03</div><h4>Sample Approval</h4><p>Digital proof then physical sample. Approve only when every element is correct. Day 3–12.</p></div>
+  <div class="hh-step"><div class="hh-step-n">04</div><h4>Place Order</h4><p>30% deposit, production slot assigned, factory order number issued. Day 10–12.</p></div>
+  <div class="hh-step"><div class="hh-step-n">05</div><h4>Production &amp; QC</h4><p>3-stage quality control: incoming materials, in-line checks, pre-shipment AQL 2.5. Day 10–28.</p></div>
+  <div class="hh-step"><div class="hh-step-n">06</div><h4>Shipment</h4><p>Choose express air, air freight, or sea freight. Full QC report included. Day 21–35.</p></div>
+</div>
+
+<!-- ─── § 8 FLOWCHART ─── -->
+<div class="demo-label">§ 8 · Vertical Flowchart</div>
+<div class="demo-section-title">class="hh-flow"</div>
+<div class="hh-flow">
+  <div class="hh-flow-step">
+    <div class="hh-flow-dot">1</div>
+    <div class="hh-flow-body">
+      <span class="hh-flow-tag">Day 1–2</span>
+      <strong>Polymer Extrusion</strong>
+      <p>PP pellets are melted and extruded through spinnerets. Filament diameter determines the final fabric's feel and tensile strength.</p>
+    </div>
+  </div>
+  <div class="hh-flow-step">
+    <div class="hh-flow-dot">2</div>
+    <div class="hh-flow-body">
+      <span class="hh-flow-tag">Day 2–3</span>
+      <strong>Web Laying &amp; Thermal Bonding</strong>
+      <p>Filaments are laid randomly onto a moving belt, then passed through heated calendar rollers — no adhesive required.</p>
+    </div>
+  </div>
+  <div class="hh-flow-step">
+    <div class="hh-flow-dot">3</div>
+    <div class="hh-flow-body">
+      <span class="hh-flow-tag">Day 3–5</span>
+      <strong>Printing &amp; Color Application</strong>
+      <p>Branding applied via screen printing, offset, heat transfer, or BOPP lamination for photo-quality full-bleed coverage.</p>
+    </div>
+  </div>
+  <div class="hh-flow-step">
+    <div class="hh-flow-dot">4</div>
+    <div class="hh-flow-body">
+      <span class="hh-flow-tag">Day 5–12</span>
+      <strong>Cutting, Sewing &amp; QC</strong>
+      <p>Die-cut or laser-cut panels sewn with reinforced seams. AQL 2.5 random sampling before shipment.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── § 9 BAR CHART ─── -->
+<div class="demo-label">§ 9 · Comparison Bar Chart</div>
+<div class="demo-section-title">class="hh-bars"</div>
+<div class="hh-bars">
+  <span class="hh-bars-title">CO₂ Break-Even vs. Single-Use Plastic (reuses required)</span>
+  <div class="hh-bar-row">
+    <span class="hh-bar-label">Non-Woven PP</span>
+    <div class="hh-bar-track"><div class="hh-bar-fill" style="width:0.55%"></div></div>
+    <span class="hh-bar-val">~11 reuses</span>
+  </div>
+  <div class="hh-bar-row">
+    <span class="hh-bar-label">Cotton Canvas</span>
+    <div class="hh-bar-track"><div class="hh-bar-fill hh-bar-fill-amber" style="width:65%"></div></div>
+    <span class="hh-bar-val">~130 reuses</span>
+  </div>
+  <div class="hh-bar-row">
+    <span class="hh-bar-label">Organic Cotton</span>
+    <div class="hh-bar-track"><div class="hh-bar-fill hh-bar-fill-red" style="width:100%"></div></div>
+    <span class="hh-bar-val">~20,000 reuses</span>
+  </div>
+  <div class="hh-bar-row">
+    <span class="hh-bar-label">HDPE Plastic</span>
+    <div class="hh-bar-track"><div class="hh-bar-fill hh-bar-fill-muted" style="width:0.015%"></div></div>
+    <span class="hh-bar-val">Baseline (1 use)</span>
+  </div>
+</div>
+
+<!-- ─── § 10 STAT CARDS ─── -->
+<div class="demo-label">§ 10 · Stat / KPI Cards</div>
+<div class="demo-section-title">class="hh-stats" + class="hh-stat"</div>
+<div class="hh-stats">
+  <div class="hh-stat"><span class="hh-stat-num">500M+</span><span class="hh-stat-label">Bags Produced</span></div>
+  <div class="hh-stat"><span class="hh-stat-num">21 yrs</span><span class="hh-stat-label">Experience</span></div>
+  <div class="hh-stat"><span class="hh-stat-num">9</span><span class="hh-stat-label">Production Bases</span></div>
+  <div class="hh-stat"><span class="hh-stat-num">AQL 2.5</span><span class="hh-stat-label">QC Standard</span></div>
+  <div class="hh-stat"><span class="hh-stat-num">24 hrs</span><span class="hh-stat-label">Quote Response</span></div>
+</div>
+
+<!-- ─── § 11 CARD GRID ─── -->
+<div class="demo-label">§ 11 · Use-Case Cards</div>
+<div class="demo-section-title">class="hh-cards" + class="hh-card"</div>
+<div class="hh-cards">
+  <div class="hh-card">
+    <span class="hh-card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 01-8 0"></path></svg>
+    </span>
+    <h4>Grocery &amp; Supermarket</h4>
+    <p>90-100 gsm, wide gusset for bottles and cartons. Sold at checkout.</p>
+  </div>
+  <div class="hh-card">
+    <span class="hh-card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path></svg>
+    </span>
+    <h4>Pharmacy &amp; Healthcare</h4>
+    <p>80 gsm D-cut. Clean, professional image with health messaging.</p>
+  </div>
+  <div class="hh-card">
+    <span class="hh-card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2" ry="2"></rect><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"></path></svg>
+    </span>
+    <h4>Retail &amp; Fashion</h4>
+    <p>BOPP-laminated, full-bleed brand print. Replaces paper carrier bags.</p>
+  </div>
+  <div class="hh-card">
+    <span class="hh-card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"></path></svg>
+    </span>
+    <h4>Trade Shows</h4>
+    <p>60-80 gsm, 1-2 color screen print, high volume, rapid turnaround.</p>
+  </div>
+  <div class="hh-card">
+    <span class="hh-card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+    </span>
+    <h4>CSR Campaigns</h4>
+    <p>Paired with recycling messaging and rPET material certification.</p>
+  </div>
+  <div class="hh-card">
+    <span class="hh-card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"></path></svg>
+    </span>
+    <h4>Hardware &amp; DIY</h4>
+    <p>120 gsm reinforced seams. Carries tools and building materials.</p>
+  </div>
+  <div class="hh-card">
+    <span class="hh-card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+    </span>
+    <h4>Corporate Gifts</h4>
+    <p>Premium finish with custom branding. Perfect for client appreciation.</p>
+  </div>
+  <div class="hh-card">
+    <span class="hh-card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+    </span>
+    <h4>Eco Packaging</h4>
+    <p>Sustainable materials with minimal environmental impact.</p>
+  </div>
+</div>
+
+<!-- ─── § 12 CHECKLISTS ─── -->
+<div class="demo-label">§ 12 · Checklist</div>
+<div class="demo-section-title">class="hh-checklist"</div>
+<div class="hh-split">
+  <div class="hh-split-col">
+    <h4>Where Non-Woven Wins</h4>
+    <ul class="hh-checklist">
+      <li>Breaks even vs. plastic after just 11 reuses</li>
+      <li>Lasts 50-100 uses in normal conditions</li>
+      <li>Recyclable in PP (#5) drop-off streams</li>
+      <li>Return-to-manufacturer programs available</li>
+    </ul>
+  </div>
+  <div class="hh-split-col">
+    <h4>Honest Caveats</h4>
+    <ul class="hh-checklist hh-checklist-warn">
+      <li>PP is not biodegradable - degrades over decades if littered</li>
+      <li>Benefit only holds if bag is actually reused</li>
+      <li>Recycling infrastructure varies by region</li>
+      <li>rPET offers a cleaner story for premium brands</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ─── § 13 SPLIT already shown above in § 12 ─── -->
+
+<!-- ─── § 14 SPEC MINI-CARDS ─── -->
+<div class="demo-label">§ 14 · Spec Mini-Cards</div>
+<div class="demo-section-title">class="hh-specs" + class="hh-spec-card"</div>
+<div class="hh-specs">
+  <div class="hh-spec-card">
+    <div class="hh-spec-head">Standard Lead Time</div>
+    <div class="hh-spec-body"><div class="hh-spec-val">10–15 Business Days</div><div class="hh-spec-note">From artwork approval to ex-factory shipment.</div></div>
+  </div>
+  <div class="hh-spec-card">
+    <div class="hh-spec-head">Rush Production</div>
+    <div class="hh-spec-body"><div class="hh-spec-val">7 Days</div><div class="hh-spec-note">Available with surcharge. Confirm capacity early.</div></div>
+  </div>
+  <div class="hh-spec-card">
+    <div class="hh-spec-head">QC Standard</div>
+    <div class="hh-spec-body"><div class="hh-spec-val">AQL 2.5</div><div class="hh-spec-note">Random sampling before every shipment. Full photo report included.</div></div>
+  </div>
+  <div class="hh-spec-card">
+    <div class="hh-spec-head">Free Sample</div>
+    <div class="hh-spec-body"><div class="hh-spec-val">1 Round Included</div><div class="hh-spec-note">DHL Express complimentary for first-time inquiries.</div></div>
+  </div>
+</div>
+
+<!-- ─── § 15 INQUIRY FORM ─── -->
+<div class="demo-label">§ 15 · Inline Quote Form</div>
+<div class="demo-section-title">class="hh-form-wrap"</div>
+<div class="hh-form-wrap">
+  <h3>Get a Free Quote — 24-Hour Response</h3>
+  <p class="hh-form-sub">Tell us your requirements and we'll respond with pricing, lead times, and a sample offer within one business day.</p>
+  <div class="hh-form-grid">
+    <div class="hh-form-field">
+      <label class="hh-form-label">Full Name *</label>
+      <input type="text" placeholder="Jane Smith">
+    </div>
+    <div class="hh-form-field">
+      <label class="hh-form-label">Company *</label>
+      <input type="text" placeholder="Acme Retail Ltd.">
+    </div>
+    <div class="hh-form-field">
+      <label class="hh-form-label">Email Address *</label>
+      <input type="email" placeholder="jane@company.com">
+    </div>
+    <div class="hh-form-field">
+      <label class="hh-form-label">WhatsApp / Phone</label>
+      <input type="tel" placeholder="+1 555 000 0000">
+    </div>
+    <div class="hh-form-field">
+      <label class="hh-form-label">Product Type *</label>
+      <select>
+        <option value="">— Select —</option>
+        <option>Nonwoven Shopping Bag</option>
+        <option>Canvas Tote Bag</option>
+        <option>Drawstring Bag</option>
+        <option>Insulated Cooler Bag</option>
+        <option>Paper Bag</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="hh-form-field">
+      <label class="hh-form-label">Estimated Quantity *</label>
+      <input type="text" placeholder="e.g. 5,000 pcs">
+    </div>
+    <div class="hh-form-field">
+      <label class="hh-form-label">Target Delivery Date</label>
+      <input type="date">
+    </div>
+    <div class="hh-form-field">
+      <label class="hh-form-label">Delivery Country *</label>
+      <input type="text" placeholder="United States">
+    </div>
+    <div class="hh-form-field hh-full">
+      <label class="hh-form-label">Tell us about your project</label>
+      <textarea placeholder="Material preference, GSM, print details, sustainability requirements…"></textarea>
+    </div>
+  </div>
+  <button class="hh-btn-submit">Get My Quote in 24 Hours →</button>
+  <span class="hh-form-privacy">Your information is never shared. No spam, ever.</span>
+</div>
+
+<!-- ─── § 16 FAQ ─── -->
+<div class="demo-label">§ 16 · FAQ Accordion</div>
+<div class="demo-section-title">class="hh-faq" + details.hh-faq-item</div>
+<div class="hh-faq">
+  <details class="hh-faq-item">
+    <summary class="hh-faq-q">Can you accept orders below your standard MOQ?</summary>
+    <div class="hh-faq-a"><p>Yes, in most cases. Small-batch production is available for select product lines, sometimes as low as 100 pcs. Minimum order surcharges may apply. Send us your quantity and we'll advise on the most cost-effective route.</p></div>
+  </details>
+  <details class="hh-faq-item">
+    <summary class="hh-faq-q">How do you handle color accuracy across large runs?</summary>
+    <div class="hh-faq-a"><p>We use Pantone Solid Coated as the production standard — not screen color. Our calibrated inkroom is tested daily. Bulk order color tolerance is ±5 Delta E vs. the signed physical sample.</p></div>
+  </details>
+  <details class="hh-faq-item">
+    <summary class="hh-faq-q">What happens if my delivery is delayed?</summary>
+    <div class="hh-faq-a"><p>We issue a written delay notice a minimum of 10 days before the original delivery date, with two alternative solutions (partial shipment, expedited shipping upgrade). Our contracts include a delivery guarantee clause.</p></div>
+  </details>
+  <details class="hh-faq-item">
+    <summary class="hh-faq-q">What certifications do your factories hold?</summary>
+    <div class="hh-faq-a"><p>BSCI, ISO 14001, ISO 9001, OEKO-TEX (select materials). Certificates are available on request for all 9 production bases.</p></div>
+  </details>
+</div>
+
+<!-- ─── § 17 TIMELINE ─── -->
+<div class="demo-label">§ 17 · Horizontal Timeline</div>
+<div class="demo-section-title">class="hh-timeline"</div>
+<div class="hh-timeline">
+  <div class="hh-timeline-item"><div class="hh-timeline-dot"></div><div class="hh-timeline-label">Day 1–2</div><div class="hh-timeline-title">Material<br>Selection</div></div>
+  <div class="hh-timeline-item"><div class="hh-timeline-dot"></div><div class="hh-timeline-label">Day 2–3</div><div class="hh-timeline-title">Request<br>Quote</div></div>
+  <div class="hh-timeline-item"><div class="hh-timeline-dot"></div><div class="hh-timeline-label">Day 3–5</div><div class="hh-timeline-title">Digital<br>Proof</div></div>
+  <div class="hh-timeline-item"><div class="hh-timeline-dot"></div><div class="hh-timeline-label">Day 7–12</div><div class="hh-timeline-title">Physical<br>Sample</div></div>
+  <div class="hh-timeline-item"><div class="hh-timeline-dot"></div><div class="hh-timeline-label">Day 10–12</div><div class="hh-timeline-title">Place<br>Order</div></div>
+  <div class="hh-timeline-item"><div class="hh-timeline-dot"></div><div class="hh-timeline-label">Day 10–28</div><div class="hh-timeline-title">Production<br>&amp; QC</div></div>
+  <div class="hh-timeline-item"><div class="hh-timeline-dot"></div><div class="hh-timeline-label">Day 21–35</div><div class="hh-timeline-title">Shipment<br>Delivery</div></div>
+</div>
+
+<!-- ─── § 18 CTA ─── -->
+<div class="demo-label">§ 18 · CTA Banner</div>
+<div class="demo-section-title">class="hh-cta"</div>
+<div class="hh-cta">
+  <span class="hh-cta-tag">Ready to Start Production?</span>
+  <h2>Get a Free Quote Within 24 Hours</h2>
+  <p>Send us your specifications and receive itemized pricing, lead times, and a complimentary sample offer - no obligation.</p>
+  <div class="hh-cta-btns">
+    <a href="#" class="hh-btn-primary">Request a Quote</a>
+    <a href="#" class="hh-btn-outline">Contact Sales</a>
+  </div>
+</div>
+
+<!-- ─── § 19 VERDICT ─── -->
+<div class="demo-label">§ 19 · Verdict Table</div>
+<div class="demo-section-title">class="hh-verdict"</div>
+<div class="hh-verdict">
+  <span class="hh-verdict-title">Quick Summary</span>
+  <div class="hh-verdict-row">
+    <span class="hh-verdict-key">Best For</span>
+    <span class="hh-verdict-val">Retail brands, supermarkets, and promotional events requiring durable, reusable bags with quality printing.</span>
+  </div>
+  <div class="hh-verdict-row">
+    <span class="hh-verdict-key">Avoid If</span>
+    <span class="hh-verdict-val">You need biodegradable materials or expect single-use behavior without reuse messaging.</span>
+  </div>
+  <div class="hh-verdict-row">
+    <span class="hh-verdict-key">Sweet Spot</span>
+    <span class="hh-verdict-val">80–100 gsm non-woven PP with screen printing for orders between 1,000–10,000 units.</span>
+  </div>
+  <div class="hh-verdict-row">
+    <span class="hh-verdict-key">Lead Time</span>
+    <span class="hh-verdict-val">10–15 business days from sample approval, plus shipping time to your destination.</span>
+  </div>
+</div>
+
+</div> <!-- /.hh-post -->
+
+<div class="hh-divider"><span>End of Component Library</span></div>
+
+</div> <!-- /.demo-wrap -->
+</body>
+</html>

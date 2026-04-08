@@ -35,9 +35,23 @@
               "icon": "lucide-file",
               "title": "How to Order Custom Bags from a Manufacturer A Complete Step-by-Step Guide"
             }
+          },
+          {
+            "id": "b2d329013bf9dc33",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "assets/image-list-generator.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "image-list-generator"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "8caa895a8ea66369",
@@ -216,8 +230,21 @@
       "bases:新建数据库": false
     }
   },
-  "active": "cbb16537a68de5d9",
+  "active": "b2d329013bf9dc33",
   "lastOpenFiles": [
+    "assets/internal-links.md",
+    "assets/image-list-generator.md",
+    "assets/image-list-generator-en.md",
+    "writing/Huahao/ehuahao/non_woven_bags/what-are-non-woven-bags.md",
+    "writing/Niche/leeknives/writing/数据引用.rar",
+    "writing/Niche/leeknives/writing/m390-vs-s30v-vs-s35vn.md",
+    "writing/Niche/leeknives/workflow.md",
+    "writing/Niche/leeknives/article-types (2).md",
+    "writing/Niche/leeknives/writing/data_auth.md",
+    "writing/Niche/leeknives/writing/SKILL.md",
+    "未命名.md",
+    "research/woven_bags_keyword_analysis_20260401.md",
+    "output/ehuahao/2026-03-30 How to Order Custom Bags from a Manufacturer/How to Order Custom Bags from a Manufacturer A Complete Step-by-Step Guide.md",
     "resource/Niche/organic/https___biliknife.com-organic.Positions-us-20260329-2026-03-31T02_28_09Z.xlsx",
     "resource/Niche/organic/xinzuocutlery.com-organic.Positions-us-20260329-2026-03-31T02_43_00Z.csv",
     "resource/Niche/organic/shieldon.net-organic.Positions-us-20260329-2026-03-31T02_22_30Z.csv",
@@ -227,11 +254,8 @@
     "resource/Niche/organic/https___www.insight-kitchenkni-organic.Positions-us-20260329-2026-03-31T02_24_01Z.csv",
     "resource/Niche/organic/https___nobliecustomknives.com-organic.Positions-us-20260329-2026-03-31T02_25_00Z.csv",
     "resource/Niche/organic",
-    "resource/Niche/新建文件夹",
     "output/ehuahao/[note]How to Order Custom Bags from a Manufacturer A Complete Step-by-Step Guide.md",
-    "output/ehuahao/2026-03-30 How to Order Custom Bags from a Manufacturer/custom_bag_guide_framework.html",
     "output/ehuahao/2026-03-30 How to Order Custom Bags from a Manufacturer/[note]How to Order Custom Bags from a Manufacturer A Complete Step-by-Step Guide.md",
-    "output/ehuahao/2026-03-30 How to Order Custom Bags from a Manufacturer/How to Order Custom Bags from a Manufacturer A Complete Step-by-Step Guide.md",
     "output/ehuahao/How to Order Custom Bags from a Manufacturer A Complete Step-by-Step Guide.md",
     "writing/Niche/keganico/writing/15-price-analysis.md",
     "writing/Niche/keganico/writing/14-material-comparison.md",
@@ -244,16 +268,6 @@
     "writing/Niche/keganico/writing/07-internal-links.md",
     "writing/Niche/keganico/writing/06-images.md",
     "writing/Niche/keganico/writing/05-comparison-tables.md",
-    "writing/Niche/keganico/writing/03-steel-composition.md",
-    "writing/Niche/keganico/writing/02-intro.md",
-    "research/research/competitor-research.md",
-    "qa/seo-checklist.md",
-    "qa/publish-checklist.md",
-    "qa/qa/seo-checklist (2).md",
-    "qa/qa/seo-checklist.md",
-    "qa/qa/publish-checklist (2).md",
-    "qa/qa/publish-checklist.md",
-    "assets/image-guidelines.md",
     "writing/Niche/leeknives blog/output/images/cpm20cv/steel-texture-metal-pattern-3.jpg",
     "writing/Niche/leeknives blog/output/images/cpm20cv/steel-texture-metal-pattern-2.jpg",
     "writing/Niche/leeknives blog/output/images/cpm20cv/steel-texture-metal-pattern-1.jpg",

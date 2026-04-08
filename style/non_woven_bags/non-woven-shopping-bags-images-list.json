@@ -1,0 +1,86 @@
+{
+  "article": "non-woven-shopping-bags",
+  "images": [
+    {
+      "no": 1,
+      "position": "After Introduction",
+      "purpose": "Hero image showing various non woven shopping bags in retail environments with shoppers",
+      "alt_text": "Non woven shopping bags in retail stores with customers shopping reusable bags",
+      "filename": "non-woven-shopping-bags-retail-use.webp",
+      "upload_path": "/wp-content/uploads/20260331/non-woven-shopping-bags-retail-use.webp",
+      "search_keywords": ["non woven shopping bags", "retail bags", "reusable shopping"]
+    },
+    {
+      "no": 2,
+      "position": "Before Chapter 2",
+      "purpose": "Handle type comparison visual showing D-cut U-cut W-cut soft loop patch handles",
+      "alt_text": "Shopping bag handle types comparison D-cut U-cut W-cut soft loop patch",
+      "filename": "shopping-bag-handle-types-comparison.webp",
+      "upload_path": "/wp-content/uploads/20260331/shopping-bag-handle-types-comparison.webp",
+      "search_keywords": ["handle types", "bag handles", "shopping bag styles"]
+    },
+    {
+      "no": 3,
+      "position": "Before Chapter 3",
+      "purpose": "Benefits infographic showing retailer and consumer advantages of non woven shopping bags",
+      "alt_text": "Non woven shopping bags benefits infographic retailer consumer advantages",
+      "filename": "shopping-bags-benefits-infographic.webp",
+      "upload_path": "/wp-content/uploads/20260331/shopping-bags-benefits-infographic.webp",
+      "search_keywords": ["bag benefits", "retail advantages", "consumer benefits"]
+    },
+    {
+      "no": 4,
+      "position": "Before Chapter 4",
+      "purpose": "GSM selection guide chart showing recommended weights by retail segment",
+      "alt_text": "GSM selection guide chart recommended weights retail segments supermarkets",
+      "filename": "gsm-selection-guide-retail-segments.webp",
+      "upload_path": "/wp-content/uploads/20260331/gsm-selection-guide-retail-segments.webp",
+      "search_keywords": ["GSM guide", "weight selection", "retail segments"]
+    },
+    {
+      "no": 5,
+      "position": "Before Chapter 5",
+      "purpose": "Size selection visual showing small medium large XL bags with capacity examples",
+      "alt_text": "Shopping bag size selection guide small medium large XL capacity examples",
+      "filename": "shopping-bag-size-selection-guide.webp",
+      "upload_path": "/wp-content/uploads/20260331/shopping-bag-size-selection-guide.webp",
+      "search_keywords": ["bag sizes", "size guide", "capacity chart"]
+    },
+    {
+      "no": 6,
+      "position": "Before Chapter 6",
+      "purpose": "Customization branding options showcase showing logo printing colors features",
+      "alt_text": "Shopping bag customization branding options logo printing colors features",
+      "filename": "shopping-bag-customization-branding-options.webp",
+      "upload_path": "/wp-content/uploads/20260331/shopping-bag-customization-branding-options.webp",
+      "search_keywords": ["bag customization", "branding options", "logo printing"]
+    },
+    {
+      "no": 7,
+      "position": "Before Chapter 7",
+      "purpose": "Cost analysis comparison chart showing total cost of ownership versus plastic bags",
+      "alt_text": "Shopping bags cost analysis chart total cost ownership versus plastic bags",
+      "filename": "shopping-bags-cost-analysis-comparison.webp",
+      "upload_path": "/wp-content/uploads/20260331/shopping-bags-cost-analysis-comparison.webp",
+      "search_keywords": ["cost analysis", "price comparison", "TCO shopping bags"]
+    },
+    {
+      "no": 8,
+      "position": "Before Chapter 8",
+      "purpose": "2026 market trends visual showing consumer preferences design trends innovations",
+      "alt_text": "2026 shopping bag market trends consumer preferences design innovations",
+      "filename": "shopping-bags-market-trends-2026.webp",
+      "upload_path": "/wp-content/uploads/20260331/shopping-bags-market-trends-2026.webp",
+      "search_keywords": ["market trends", "consumer preferences", "2026 trends"]
+    },
+    {
+      "no": 9,
+      "position": "Before Conclusion",
+      "purpose": "Industry applications collage showing supermarkets fashion department stores electronics",
+      "alt_text": "Shopping bags industry applications collage supermarkets fashion department stores",
+      "filename": "shopping-bags-industry-applications.webp",
+      "upload_path": "/wp-content/uploads/20260331/shopping-bags-industry-applications.webp",
+      "search_keywords": ["industry applications", "retail sectors", "use cases"]
+    }
+  ]
+}

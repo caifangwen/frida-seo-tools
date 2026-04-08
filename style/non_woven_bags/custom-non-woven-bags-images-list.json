@@ -1,0 +1,77 @@
+{
+  "article": "custom-non-woven-bags",
+  "images": [
+    {
+      "no": 1,
+      "position": "After Introduction",
+      "purpose": "Hero image showcasing diverse custom non woven bags with various sizes handles and colors",
+      "alt_text": "Custom non woven bags collection showing various sizes handles colors and styles",
+      "filename": "custom-non-woven-bags-collection-variety.webp",
+      "upload_path": "/wp-content/uploads/20260331/custom-non-woven-bags-collection-variety.webp",
+      "search_keywords": ["custom non woven bags", "bespoke bags", "personalized packaging"]
+    },
+    {
+      "no": 2,
+      "position": "Before Chapter 2",
+      "purpose": "Comparison infographic showing OEM versus ODM manufacturing models for non woven bags",
+      "alt_text": "OEM vs ODM manufacturing model comparison diagram for custom bag production",
+      "filename": "oem-vs-odm-manufacturing-comparison.webp",
+      "upload_path": "/wp-content/uploads/20260331/oem-vs-odm-manufacturing-comparison.webp",
+      "search_keywords": ["OEM vs ODM", "manufacturing models", "custom production"]
+    },
+    {
+      "no": 3,
+      "position": "Before Chapter 3",
+      "purpose": "Visual matrix showing all customization options size GSM handles printing features",
+      "alt_text": "Customization options matrix showing size GSM handles printing features available",
+      "filename": "customization-options-matrix-guide.webp",
+      "upload_path": "/wp-content/uploads/20260331/customization-options-matrix-guide.webp",
+      "search_keywords": ["customization options", "bag features", "design choices"]
+    },
+    {
+      "no": 4,
+      "position": "Before Chapter 4",
+      "purpose": "Detailed handle type comparison showing D-cut U-cut soft loop patch rope handles",
+      "alt_text": "Handle types comparison D-cut U-cut soft loop patch rope handles displayed",
+      "filename": "handle-types-comparison-guide.webp",
+      "upload_path": "/wp-content/uploads/20260331/handle-types-comparison-guide.webp",
+      "search_keywords": ["handle types", "bag handles", "custom handles"]
+    },
+    {
+      "no": 5,
+      "position": "Before Chapter 5",
+      "purpose": "Flowchart showing design process from concept to sampling to production",
+      "alt_text": "Custom bag design process flowchart concept sampling production timeline",
+      "filename": "design-process-flowchart-timeline.webp",
+      "upload_path": "/wp-content/uploads/20260331/design-process-flowchart-timeline.webp",
+      "search_keywords": ["design process", "production timeline", "custom workflow"]
+    },
+    {
+      "no": 6,
+      "position": "Before Chapter 6",
+      "purpose": "Artwork preparation checklist visual showing file requirements and specifications",
+      "alt_text": "Artwork preparation checklist file formats resolution color mode requirements",
+      "filename": "artwork-preparation-checklist-guide.webp",
+      "upload_path": "/wp-content/uploads/20260331/artwork-preparation-checklist-guide.webp",
+      "search_keywords": ["artwork preparation", "file requirements", "design specs"]
+    },
+    {
+      "no": 7,
+      "position": "Before Chapter 7",
+      "purpose": "Cost breakdown infographic showing how different customization choices affect pricing",
+      "alt_text": "Custom bag cost breakdown infographic showing GSM printing handle price impacts",
+      "filename": "custom-bag-cost-breakdown-infographic.webp",
+      "upload_path": "/wp-content/uploads/20260331/custom-bag-cost-breakdown-infographic.webp",
+      "search_keywords": ["cost breakdown", "pricing factors", "customization cost"]
+    },
+    {
+      "no": 8,
+      "position": "Before Conclusion",
+      "purpose": "Quality control checklist visual showing inspection points during custom production",
+      "alt_text": "Quality control checklist inspection points custom non woven bag production",
+      "filename": "quality-control-checklist-production.webp",
+      "upload_path": "/wp-content/uploads/20260331/quality-control-checklist-production.webp",
+      "search_keywords": ["quality control", "inspection checklist", "production QC"]
+    }
+  ]
+}

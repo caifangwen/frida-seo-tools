@@ -1,0 +1,68 @@
+{
+  "article": "custom-logo-non-woven-bags",
+  "images": [
+    {
+      "no": 1,
+      "position": "After Introduction",
+      "purpose": "Hero image showing various custom logo printed non woven bags with different brand designs",
+      "alt_text": "Custom logo printed non woven bags with various brand designs and colors displayed",
+      "filename": "custom-logo-non-woven-bags-variety.webp",
+      "upload_path": "/wp-content/uploads/20260331/custom-logo-non-woven-bags-variety.webp",
+      "search_keywords": ["custom logo bags", "printed non woven bags", "branded shopping bags"]
+    },
+    {
+      "no": 2,
+      "position": "Before Chapter 2",
+      "purpose": "Comparison chart showing different printing methods screen heat transfer laminated digital",
+      "alt_text": "Logo printing methods comparison screen heat transfer laminated digital printing samples",
+      "filename": "logo-printing-methods-comparison-chart.webp",
+      "upload_path": "/wp-content/uploads/20260331/logo-printing-methods-comparison-chart.webp",
+      "search_keywords": ["logo printing methods", "screen printing", "heat transfer"]
+    },
+    {
+      "no": 3,
+      "position": "Before Chapter 3",
+      "purpose": "Visual guide showing optimal logo placement positions on non woven bags",
+      "alt_text": "Logo placement guide showing center front back bottom side positions on bags",
+      "filename": "logo-placement-positions-guide.webp",
+      "upload_path": "/wp-content/uploads/20260331/logo-placement-positions-guide.webp",
+      "search_keywords": ["logo placement", "brand positioning", "print location"]
+    },
+    {
+      "no": 4,
+      "position": "Before Chapter 4",
+      "purpose": "Infographic showing logo size guidelines for different bag sizes",
+      "alt_text": "Logo size guidelines chart for small medium large extra large non woven bags",
+      "filename": "logo-size-guidelines-bag-sizes.webp",
+      "upload_path": "/wp-content/uploads/20260331/logo-size-guidelines-bag-sizes.webp",
+      "search_keywords": ["logo size guide", "bag sizing", "print dimensions"]
+    },
+    {
+      "no": 5,
+      "position": "Before Chapter 5",
+      "purpose": "Screenshot or visual showing artwork file format requirements and specifications",
+      "alt_text": "Artwork file format requirements AI EPS PDF specifications for logo printing",
+      "filename": "artwork-file-format-requirements-guide.webp",
+      "upload_path": "/wp-content/uploads/20260331/artwork-file-format-requirements-guide.webp",
+      "search_keywords": ["artwork requirements", "file formats", "logo design"]
+    },
+    {
+      "no": 6,
+      "position": "Before Chapter 6",
+      "purpose": "Color contrast guide showing good and bad logo color combinations on different bag colors",
+      "alt_text": "Logo color contrast examples good and bad combinations on various bag colors",
+      "filename": "logo-color-contrast-guide-examples.webp",
+      "upload_path": "/wp-content/uploads/20260331/logo-color-contrast-guide-examples.webp",
+      "search_keywords": ["color contrast", "logo colors", "design best practices"]
+    },
+    {
+      "no": 7,
+      "position": "Before Conclusion",
+      "purpose": "Step-by-step visual workflow showing custom logo bag ordering process from design to delivery",
+      "alt_text": "Custom logo bag ordering process workflow design sample production delivery steps",
+      "filename": "custom-logo-ordering-process-workflow.webp",
+      "upload_path": "/wp-content/uploads/20260331/custom-logo-ordering-process-workflow.webp",
+      "search_keywords": ["ordering process", "custom production", "workflow guide"]
+    }
+  ]
+}

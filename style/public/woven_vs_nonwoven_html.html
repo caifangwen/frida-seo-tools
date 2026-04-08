@@ -1,0 +1,101 @@
+
+<style>
+  .compare-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 24px 0 16px; font-family: var(--font-sans); }
+  .col { display: flex; flex-direction: column; align-items: center; padding: 0 20px; }
+  .col-title { font-size: 11px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--color-text-tertiary); margin-bottom: 20px; }
+  .divider { width: 1px; background: var(--color-border-tertiary); }
+  .step { width: 100%; border-radius: var(--border-radius-md); padding: 11px 16px; cursor: pointer; transition: opacity .15s; box-sizing: border-box; }
+  .step:hover { opacity: .8; }
+  .step-name { font-size: 14px; font-weight: 500; }
+  .step-sub { font-size: 12px; margin-top: 2px; }
+  .arrow { width: 16px; height: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-text-tertiary); font-size: 14px; }
+  .woven .step { background: #EEEDFE; border: 0.5px solid #534AB7; }
+  .woven .step-name { color: #3C3489; }
+  .woven .step-sub { color: #534AB7; }
+  .nonwoven .step { background: #FAEEDA; border: 0.5px solid #854F0B; }
+  .nonwoven .step-name { color: #633806; }
+  .nonwoven .step-sub { color: #854F0B; }
+  .step-1-w { background: #EEEDFE !important; }
+  .badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 20px; margin-bottom: 20px; }
+  .badge-w { background: #EEEDFE; color: #3C3489; border: 0.5px solid #534AB7; }
+  .badge-n { background: #FAEEDA; color: #633806; border: 0.5px solid #854F0B; }
+  .final { width: 100%; border-radius: var(--border-radius-md); padding: 10px 16px; margin-top: 4px; box-sizing: border-box; text-align: center; font-size: 13px; font-weight: 500; }
+  .final-w { background: #CECBF6; color: #26215C; border: 0.5px solid #534AB7; }
+  .final-n { background: #FAC775; color: #412402; border: 0.5px solid #854F0B; }
+  @media (prefers-color-scheme: dark) {
+    .woven .step { background: #3C3489; border-color: #AFA9EC; }
+    .woven .step-name { color: #CECBF6; }
+    .woven .step-sub { color: #AFA9EC; }
+    .nonwoven .step { background: #633806; border-color: #EF9F27; }
+    .nonwoven .step-name { color: #FAC775; }
+    .nonwoven .step-sub { color: #EF9F27; }
+    .badge-w { background: #3C3489; color: #CECBF6; border-color: #AFA9EC; }
+    .badge-n { background: #633806; color: #FAC775; border-color: #EF9F27; }
+    .final-w { background: #26215C; color: #CECBF6; border-color: #AFA9EC; }
+    .final-n { background: #412402; color: #FAC775; border-color: #EF9F27; }
+  }
+</style>
+
+<div class="compare-wrap">
+  <div class="col woven">
+    <div class="badge badge-w">01 · Woven Fabric</div>
+    <div class="step" onclick="sendPrompt('Tell me more about yarn types for woven fabric')">
+      <div class="step-name">Yarn</div>
+      <div class="step-sub">Natural or synthetic fiber</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="step" onclick="sendPrompt('How does the weaving process work?')">
+      <div class="step-name">Weaving</div>
+      <div class="step-sub">Interlace warp &amp; weft</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="step" onclick="sendPrompt('What are the properties of woven fabric?')">
+      <div class="step-name">Fabric</div>
+      <div class="step-sub">Structured textile sheet</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="step" onclick="sendPrompt('How is woven fabric cut in production?')">
+      <div class="step-name">Cutting</div>
+      <div class="step-sub">Pattern pieces shaped</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="step" onclick="sendPrompt('What sewing techniques are used for woven fabric?')">
+      <div class="step-name">Sewing</div>
+      <div class="step-sub">Pieces assembled</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="final final-w">Product</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="col nonwoven">
+    <div class="badge badge-n">02 · Non-Woven Fabric</div>
+    <div class="step" onclick="sendPrompt('What polymers are used in non-woven fabric?')">
+      <div class="step-name">Polymer</div>
+      <div class="step-sub">Polypropylene / polyester</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="step" onclick="sendPrompt('How is polymer melted in non-woven production?')">
+      <div class="step-name">Melting</div>
+      <div class="step-sub">Heated to liquid state</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="step" onclick="sendPrompt('What is the extrusion process in non-woven fabric?')">
+      <div class="step-name">Extrusion</div>
+      <div class="step-sub">Forced through spinnerets</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="step" onclick="sendPrompt('How are fibers laid in non-woven fabric?')">
+      <div class="step-name">Fiber</div>
+      <div class="step-sub">Continuous filaments laid</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="step" onclick="sendPrompt('What bonding methods are used in non-woven fabric?')">
+      <div class="step-name">Bonding</div>
+      <div class="step-sub">Heat, chemical or mechanical</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="final final-n">Fabric</div>
+  </div>
+</div>

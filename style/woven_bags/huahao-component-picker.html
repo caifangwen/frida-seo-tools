@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huahao 组件选择器</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f5f7fa;
+    padding: 20px;
+  }
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: center;
+    color: #1a202c;
+    margin-bottom: 10px;
+  }
+  .subtitle {
+    text-align: center;
+    color: #718096;
+    margin-bottom: 30px;
+  }
+  .search-box {
+    max-width: 500px;
+    margin: 0 auto 30px;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+  }
+  .search-box input:focus {
+    border-color: #4299e1;
+  }
+  .components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .component-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+  }
+  .component-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border-color: #4299e1;
+  }
+  .component-card.copied {
+    border-color: #48bb78;
+    background: #f0fff4;
+  }
+  .component-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+  }
+  .component-prefix {
+    display: inline-block;
+    background: #edf2f7;
+    color: #4a5568;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    margin-bottom: 12px;
+  }
+  .component-preview {
+    background: #f7fafc;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 13px;
+    color: #4a5568;
+    max-height: 100px;
+    overflow: hidden;
+  }
+  .copy-hint {
+    text-align: center;
+    color: #48bb78;
+    font-weight: 500;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .component-card.copied .copy-hint {
+    opacity: 1;
+  }
+  .category {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 40px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  .toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #2d3748;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: transform 0.3s;
+    z-index: 1000;
+  }
+  .toast.show {
+    transform: translateX(-50%) translateY(0);
+  }
+  .instructions {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .instructions h3 {
+    color: #2d3748;
+    margin-bottom: 12px;
+  }
+  .instructions ol {
+    margin-left: 20px;
+    color: #4a5568;
+  }
+  .instructions li {
+    margin-bottom: 8px;
+  }
+  .instructions code {
+    background: #edf2f7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #e53e3e;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🎨 Huahao 组件选择器</h1>
+  <p class="subtitle">点击组件自动复制 HTML 代码，然后粘贴到你的文章中</p>
+  
+  <div class="instructions">
+    <h3>📌 使用步骤</h3>
+    <ol>
+      <li>点击下方的组件卡片</li>
+      <li>HTML 代码会自动复制到剪贴板</li>
+      <li>在你的文章文件中粘贴 (Ctrl+V)</li>
+      <li>修改占位符内容即可</li>
+    </ol>
+    <p style="margin-top: 12px; color: #718096;">
+      💡 <strong>提示：</strong>在 VS Code 中输入前缀（如 <code>hhero</code>）按 Tab 键更快捷！
+    </p>
+  </div>
+  
+  <div class="search-box">
+    <input type="text" id="search" placeholder="搜索组件...">
+  </div>
+  
+  <div id="components"></div>
+</div>
+
+<div class="toast" id="toast">✅ 已复制到剪贴板！</div>
+
+<script>
+const components = [
+  {
+    category: "基础组件",
+    items: [
+      {
+        name: "文章包装器",
+        prefix: "hh",
+        preview: "<div class=\"hh-post\">...</div>",
+        html: `<div class="hh-post">
+  <!-- 你的内容放在这里 -->
+</div>`
+      },
+      {
+        name: "英雄横幅",
+        prefix: "hhero",
+        preview: "带标题、副标题和统计数据的横幅...",
+        html: `<div class="hh-hero">
+  <span class="hh-hero-eyebrow">Guide · 2026</span>
+  <h1>Your Title Here</h1>
+  <p class="hh-hero-sub">Subtitle text describing the article...</p>
+  <div class="hh-hero-stats">
+    <div><span class="hh-hero-stat-num">100+</span><span class="hh-hero-stat-label">Label 1</span></div>
+    <div><span class="hh-hero-stat-num">500+</span><span class="hh-hero-stat-label">Label 2</span></div>
+    <div><span class="hh-hero-stat-num">24/7</span><span class="hh-hero-stat-label">Label 3</span></div>
+  </div>
+</div>`
+      },
+      {
+        name: "章节标题",
+        prefix: "hhsec",
+        preview: "带编号和标签的章节头...",
+        html: `<div class="hh-section-header">
+  <div class="hh-section-num">01</div>
+  <div>
+    <span class="hh-section-tag">Category Tag</span>
+    <h2 class="hh-section-title">Section Title Here</h2>
+  </div>
+</div>`
+      }
+    ]
+  },
+  {
+    category: "提示框",
+    items: [
+      {
+        name: "信息框",
+        prefix: "hhboxi",
+        preview: "蓝色信息提示框...",
+        html: `<div class="hh-box-info">
+  <p><span class="hh-box-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></span>Important information goes here...</p>
+</div>`
+      },
+      {
+        name: "专业提示",
+        prefix: "hhboxt",
+        preview: "绿色专业提示框...",
+        html: `<div class="hh-box-tip">
+  <p><span class="hh-box-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 01-2 2H10a2 2 0 01-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z"></path><path d="M9 21h6"></path></svg></span><strong>Pro tip:</strong> Your expert tip here...</p>
+</div>`
+      },
+      {
+        name: "警告框",
+        prefix: "hhboxw",
+        preview: "黄色警告提示框...",
+        html: `<div class="hh-box-warn">
+  <p><span class="hh-box-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></span><strong>Warning:</strong> Important warning here...</p>
+</div>`
+      },
+      {
+        name: "深色特性框",
+        prefix: "hhbox",
+        preview: "深色特性列表框...",
+        html: `<div class="hh-box">
+  <span class="hh-box-title">Key Features</span>
+  <ul>
+    <li>Feature 1</li>
+    <li>Feature 2</li>
+    <li>Feature 3</li>
+    <li>Feature 4</li>
+  </ul>
+</div>`
+      }
+    ]
+  },
+  {
+    category: "列表与表格",
+    items: [
+      {
+        name: "勾选列表",
+        prefix: "hhcheck",
+        preview: "带勾图标的列表...",
+        html: `<ul class="hh-checklist">
+  <li>Item 1 description</li>
+  <li>Item 2 description</li>
+  <li>Item 3 description</li>
+</ul>`
+      },
+      {
+        name: "数据表格",
+        prefix: "hhtable",
+        preview: "样式化数据表格...",
+        html: `<div class="hh-table-wrap">
+  <table class="hh-table">
+    <thead>
+      <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+        <th>Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+      </tr>
+      <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+      </tr>
+    </tbody>
+  </table>
+</div>`
+      }
+    ]
+  },
+  {
+    category: "布局组件",
+    items: [
+      {
+        name: "卡片网格",
+        prefix: "hhcards",
+        preview: "多列卡片布局...",
+        html: `<div class="hh-cards">
+  <div class="hh-card">
+    <span class="hh-card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+    </span>
+    <h4>Card Title</h4>
+    <p>Card description text goes here...</p>
+  </div>
+  <div class="hh-card">
+    <span class="hh-card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+    </span>
+    <h4>Card Title</h4>
+    <p>Card description text goes here...</p>
+  </div>
+</div>`
+      },
+      {
+        name: "步骤卡片",
+        prefix: "hhsteps",
+        preview: "流程步骤展示...",
+        html: `<div class="hh-steps">
+  <div class="hh-step">
+    <div class="hh-step-n">01</div>
+    <h4>Step Title</h4>
+    <p>Step description text...</p>
+  </div>
+  <div class="hh-step">
+    <div class="hh-step-n">02</div>
+    <h4>Step Title</h4>
+    <p>Step description text...</p>
+  </div>
+</div>`
+      },
+      {
+        name: "双栏对比",
+        prefix: "hhsplit",
+        preview: "左右对比布局...",
+        html: `<div class="hh-split">
+  <div class="hh-split-col">
+    <h4>Option A</h4>
+    <ul class="hh-checklist">
+      <li>Advantage 1</li>
+      <li>Advantage 2</li>
+      <li>Advantage 3</li>
+    </ul>
+  </div>
+  <div class="hh-split-col">
+    <h4>Option B</h4>
+    <ul class="hh-checklist">
+      <li>Advantage 1</li>
+      <li>Advantage 2</li>
+      <li>Advantage 3</li>
+    </ul>
+  </div>
+</div>`
+      },
+      {
+        name: "流程图",
+        prefix: "hhflow",
+        preview: "垂直流程图...",
+        html: `<div class="hh-flow">
+  <div class="hh-flow-step">
+    <div class="hh-flow-dot">1</div>
+    <div class="hh-flow-body">
+      <span class="hh-flow-tag">Step 1</span>
+      <strong>Step Title</strong>
+      <p>Step description text...</p>
+    </div>
+  </div>
+  <div class="hh-flow-step">
+    <div class="hh-flow-dot">2</div>
+    <div class="hh-flow-body">
+      <span class="hh-flow-tag">Step 2</span>
+      <strong>Step Title</strong>
+      <p>Step description text...</p>
+    </div>
+  </div>
+</div>`
+      }
+    ]
+  },
+  {
+    category: "数据展示",
+    items: [
+      {
+        name: "统计卡片",
+        prefix: "hhstats",
+        preview: "数字统计卡片...",
+        html: `<div class="hh-stats">
+  <div class="hh-stat">
+    <span class="hh-stat-num">100+</span>
+    <span class="hh-stat-label">Stat Label</span>
+  </div>
+  <div class="hh-stat">
+    <span class="hh-stat-num">500+</span>
+    <span class="hh-stat-label">Stat Label</span>
+  </div>
+</div>`
+      },
+      {
+        name: "规格卡片",
+        prefix: "hhspecs",
+        preview: "产品规格展示...",
+        html: `<div class="hh-specs">
+  <div class="hh-spec-card">
+    <div class="hh-spec-head">Spec Name</div>
+    <div class="hh-spec-body">
+      <div class="hh-spec-val">Value</div>
+      <div class="hh-spec-note">Additional note</div>
+    </div>
+  </div>
+  <div class="hh-spec-card">
+    <div class="hh-spec-head">Spec Name</div>
+    <div class="hh-spec-body">
+      <div class="hh-spec-val">Value</div>
+      <div class="hh-spec-note">Additional note</div>
+    </div>
+  </div>
+</div>`
+      },
+      {
+        name: "条形图",
+        prefix: "hhbars",
+        preview: "数据对比条形图...",
+        html: `<div class="hh-bars">
+  <span class="hh-bars-title">Comparison Chart</span>
+  <div class="hh-bar-row">
+    <span class="hh-bar-label">Item A</span>
+    <div class="hh-bar-track"><div class="hh-bar-fill" style="width:80%"></div></div>
+    <span class="hh-bar-val">80%</span>
+  </div>
+  <div class="hh-bar-row">
+    <span class="hh-bar-label">Item B</span>
+    <div class="hh-bar-track"><div class="hh-bar-fill hh-bar-fill-amber" style="width:60%"></div></div>
+    <span class="hh-bar-val">60%</span>
+  </div>
+</div>`
+      },
+      {
+        name: "总结表格",
+        prefix: "hhverdict",
+        preview: "快速对比总结...",
+        html: `<div class="hh-verdict">
+  <span class="hh-verdict-title">At a Glance</span>
+  <div class="hh-verdict-row">
+    <span class="hh-verdict-key">Key Metric</span>
+    <span class="hh-verdict-val">Value description here...</span>
+  </div>
+  <div class="hh-verdict-row">
+    <span class="hh-verdict-key">Another Metric</span>
+    <span class="hh-verdict-val">Value description here...</span>
+  </div>
+</div>`
+      },
+      {
+        name: "时间线",
+        prefix: "hhtimeline",
+        preview: "水平时间线...",
+        html: `<div class="hh-timeline">
+  <div class="hh-timeline-item">
+    <div class="hh-timeline-dot"></div>
+    <div class="hh-timeline-label">Day 1-2</div>
+    <div class="hh-timeline-title">Milestone 1</div>
+  </div>
+  <div class="hh-timeline-item">
+    <div class="hh-timeline-dot"></div>
+    <div class="hh-timeline-label">Day 3-5</div>
+    <div class="hh-timeline-title">Milestone 2</div>
+  </div>
+</div>`
+      }
+    ]
+  },
+  {
+    category: "交互组件",
+    items: [
+      {
+        name: "FAQ 问答",
+        prefix: "hhfaq",
+        preview: "可折叠的问答项...",
+        html: `<div class="hh-faq">
+  <details class="hh-faq-item">
+    <summary class="hh-faq-q">Your question here?</summary>
+    <div class="hh-faq-a">
+      <p>Answer text goes here. You can use multiple paragraphs.</p>
+    </div>
+  </details>
+  <details class="hh-faq-item">
+    <summary class="hh-faq-q">Another question?</summary>
+    <div class="hh-faq-a">
+      <p>Answer text goes here.</p>
+    </div>
+  </details>
+</div>`
+      },
+      {
+        name: "CTA 横幅",
+        prefix: "hhcta",
+        preview: "底部转化横幅...",
+        html: `<div class="hh-cta">
+  <span class="hh-cta-tag">Call to Action</span>
+  <h2>Compelling Headline</h2>
+  <p>Description text encouraging user action...</p>
+  <div class="hh-cta-btns">
+    <a href="/contact" class="hh-btn-primary">Primary Action</a>
+    <a href="#" class="hh-btn-outline">Secondary Action</a>
+  </div>
+</div>`
+      }
+    ]
+  }
+];
+
+function renderComponents(filter = '') {
+  const container = document.getElementById('components');
+  container.innerHTML = '';
+  
+  components.forEach(cat => {
+    const filteredItems = cat.items.filter(item => 
+      item.name.toLowerCase().includes(filter.toLowerCase()) ||
+      item.prefix.toLowerCase().includes(filter.toLowerCase())
+    );
+    
+    if (filteredItems.length === 0) return;
+    
+    const categoryEl = document.createElement('div');
+    categoryEl.className = 'category';
+    categoryEl.textContent = cat.category;
+    container.appendChild(categoryEl);
+    
+    const gridEl = document.createElement('div');
+    gridEl.className = 'components-grid';
+    
+    filteredItems.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'component-card';
+      card.innerHTML = `
+        <div class="component-name">${item.name}</div>
+        <span class="component-prefix">${item.prefix}</span>
+        <div class="component-preview">${item.preview}</div>
+        <div class="copy-hint">✅ 已复制!</div>
+      `;
+      card.addEventListener('click', () => copyToClipboard(item.html, card));
+      gridEl.appendChild(card);
+    });
+    
+    container.appendChild(gridEl);
+  });
+}
+
+async function copyToClipboard(html, card) {
+  try {
+    await navigator.clipboard.writeText(html);
+    card.classList.add('copied');
+    showToast();
+    setTimeout(() => card.classList.remove('copied'), 2000);
+  } catch (err) {
+    // Fallback for older browsers
+    const textarea = document.createElement('textarea');
+    textarea.value = html;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    card.classList.add('copied');
+    showToast();
+    setTimeout(() => card.classList.remove('copied'), 2000);
+  }
+}
+
+function showToast() {
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
+document.getElementById('search').addEventListener('input', (e) => {
+  renderComponents(e.target.value);
+});
+
+// Initial render
+renderComponents();
+</script>
+</body>
+</html>
