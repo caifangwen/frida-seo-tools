@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industry Packaging Solutions | Custom Bag & Packaging Supplier</title>
+<link rel="stylesheet" href="huahao.css">
+<style>
+/* ===== Page Layout ===== */
+body {
+  font-family: var(--hh-font-body);
+  color: var(--hh-text);
+  background: var(--hh-white);
+  margin: 0;
+  line-height: 1.6;
+}
+a { color: var(--hh-blue); text-decoration: none; }
+a:hover { color: var(--hh-blue-dark); text-decoration: underline; }
+
+/* ===== Nav ===== */
+.site-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: var(--hh-white);
+  border-bottom: 1px solid var(--hh-border);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  gap: 32px;
+}
+.nav-logo {
+  font-family: var(--hh-font-head);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--hh-ink);
+  text-decoration: none;
+  margin-right: auto;
+  letter-spacing: .3px;
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.nav-links a {
+  font-size: 13px;
+  color: var(--hh-muted);
+  text-decoration: none;
+  letter-spacing: .3px;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--hh-ink); }
+.nav-cta {
+  background: var(--hh-ink);
+  color: var(--hh-white);
+  padding: 8px 20px;
+  font-size: 13px;
+  font-family: var(--hh-font-head);
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--hh-ink);
+  transition: all .2s;
+}
+.nav-cta:hover {
+  background: var(--hh-white);
+  color: var(--hh-ink);
+}
+
+/* ===== Hero Override ===== */
+.hh-hero { margin-top: 56px; padding: 64px 48px 48px; }
+
+/* ===== Industry Grid ===== */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 32px 0 48px;
+}
+.ind-card {
+  border: 1px solid var(--hh-border);
+  padding: 28px 24px;
+  position: relative;
+  background: var(--hh-white);
+  transition: border-color .2s;
+}
+.ind-card:hover { border-color: var(--hh-border-strong); }
+.ind-number {
+  font-family: var(--hh-font-head);
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--hh-border-strong);
+  position: absolute;
+  top: 12px; right: 20px;
+  line-height: 1;
+}
+.ind-label {
+  font-family: var(--hh-font-mono);
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--hh-muted);
+  margin-bottom: 8px;
+}
+.ind-title {
+  font-family: var(--hh-font-head);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--hh-ink);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.ind-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--hh-muted);
+  margin-bottom: 16px;
+}
+.ind-segments {
+  border-top: 1px solid var(--hh-border);
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.seg-item {
+  font-size: 12px;
+  color: var(--hh-text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.seg-item::before {
+  content: '';
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.seg-item:hover { color: var(--hh-ink); text-decoration: underline; }
+
+/* ===== Material Tags ===== */
+.material-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0 0;
+}
+.mat-tag {
+  font-family: var(--hh-font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--hh-muted);
+  border: 1px solid var(--hh-border);
+  padding: 5px 12px;
+}
+
+/* ===== Section Intro ===== */
+.section-intro {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 48px 0;
+}
+
+/* ===== CTA Split ===== */
+.cta-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 48px;
+  align-items: start;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  border-top: 1px solid var(--hh-border);
+  padding: 32px 48px;
+  text-align: center;
+  margin-top: 64px;
+}
+.site-footer p {
+  font-size: 12px;
+  color: var(--hh-muted);
+  letter-spacing: .5px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .industry-grid { grid-template-columns: 1fr 1fr; }
+  .cta-split { grid-template-columns: 1fr; }
+  .site-nav { padding: 0 24px; }
+  .hh-hero { padding: 48px 24px 36px; }
+  .section-intro { padding: 36px 24px 0; }
+  .cta-split { padding: 0 24px; }
+}
+@media (max-width: 640px) {
+  .industry-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="#" class="nav-logo">BAGPRO Solutions</a>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#" class="active">Industries</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Certifications</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#" class="nav-cta">Get Quote</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hh-hero">
+  <span class="hh-hero-eyebrow">Packaging Solutions</span>
+  <h1>Industry-Specific Bag & Box Customization</h1>
+  <p class="hh-hero-sub">From paper bags to woven PP, from cotton totes to foil barriers — we deliver bespoke packaging solutions across 9 core industries and 45+ specialized segments. Every order is engineered for your product, channel, and brand requirements.</p>
+  <div class="hh-hero-stats">
+    <div><span class="hh-hero-stat-num">9</span><span class="hh-hero-stat-label">Core Industries</span></div>
+    <div><span class="hh-hero-stat-num">45+</span><span class="hh-hero-stat-label">Segments Covered</span></div>
+    <div><span class="hh-hero-stat-num">8</span><span class="hh-hero-stat-label">Material Types</span></div>
+    <div><span class="hh-hero-stat-num">100%</span><span class="hh-hero-stat-label">Customizable</span></div>
+  </div>
+</div>
+
+<!-- SECTION HEADER -->
+<div class="section-intro">
+  <div class="hh-section-header">
+    <span class="hh-section-num">01</span>
+    <div>
+      <span class="hh-section-tag">Browse by Industry</span>
+      <h2 class="hh-section-title">Precision Packaging for Every Industry</h2>
+    </div>
+  </div>
+  <p style="font-size:15px;color:var(--hh-muted);line-height:1.7;margin-bottom:8px;">Select your industry below to explore segment-specific solutions, material recommendations, and compliance requirements.</p>
+  <div class="material-strip">
+    <span class="mat-tag">Kraft Paper</span>
+    <span class="mat-tag">Art Paper</span>
+    <span class="mat-tag">Non-Woven PP</span>
+    <span class="mat-tag">Cotton Canvas</span>
+    <span class="mat-tag">Woven PP</span>
+    <span class="mat-tag">Aluminum Foil</span>
+    <span class="mat-tag">PET / PE</span>
+    <span class="mat-tag">PLA Bio</span>
+  </div>
+</div>
+
+<!-- INDUSTRY GRID -->
+<div class="section-intro">
+  <div class="industry-grid">
+
+    <!-- 01 RETAIL -->
+    <div class="ind-card">
+      <div class="ind-number">01</div>
+      <div class="ind-label">Retail Industry</div>
+      <div class="ind-title">Retail Packaging Solutions</div>
+      <div class="ind-desc">From luxury boutiques to supermarket chains, packaging that reinforces brand identity and drives customer loyalty.</div>
+      <div class="ind-segments">
+        <a class="seg-item" href="01-A-luxury-retail-solution.html">Luxury Retail</a>
+        <a class="seg-item" href="01-B-fast-fashion-solution.html">Fast Fashion</a>
+        <a class="seg-item" href="01-C-jewelry-watches-solution.html">Jewelry & Watches</a>
+        <a class="seg-item" href="01-D-supermarket-grocery-solution.html">Supermarket & Grocery</a>
+        <a class="seg-item" href="01-E-ecommerce-retail-solution.html">E-commerce Retail</a>
+      </div>
+    </div>
+
+    <!-- 02 FOOD & BEVERAGE -->
+    <div class="ind-card">
+      <div class="ind-number">02</div>
+      <div class="ind-label">Food & Beverage</div>
+      <div class="ind-title">F&B Packaging Solutions</div>
+      <div class="ind-desc">Food-safe, oil-resistant, temperature-controlled packaging for restaurants, cafes, and food delivery.</div>
+      <div class="ind-segments">
+        <a class="seg-item" href="02-A-coffee-tea-solution.html">Coffee & Tea</a>
+        <a class="seg-item" href="02-B-bakery-desserts-solution.html">Bakery & Desserts</a>
+        <a class="seg-item" href="02-C-fast-food-delivery-solution.html">Fast Food & Delivery</a>
+        <a class="seg-item" href="02-D-fine-dining-solution.html">Fine Dining</a>
+        <a class="seg-item" href="02-E-ready-to-cook-solution.html">Ready-to-Cook & Meal Kits</a>
+      </div>
+    </div>
+
+    <!-- 03 BEAUTY -->
+    <div class="ind-card">
+      <div class="ind-number">03</div>
+      <div class="ind-label">Beauty & Cosmetics</div>
+      <div class="ind-title">Beauty Packaging Solutions</div>
+      <div class="ind-desc">Luxury finishes, ingredient protection, and gift-worthy presentation for skincare, makeup, and fragrance brands.</div>
+      <div class="ind-segments">
+        <a class="seg-item" href="03-A-premium-skincare-solution.html">Premium Skincare</a>
+        <a class="seg-item" href="03-B-makeup-fragrance-solution.html">Makeup & Fragrance</a>
+        <a class="seg-item" href="03-C-personal-care-solution.html">Personal Care</a>
+        <a class="seg-item" href="03-D-medical-aesthetics-solution.html">Medical Aesthetics</a>
+        <a class="seg-item" href="03-E-beauty-subscription-solution.html">Beauty Subscription</a>
+      </div>
+    </div>
+
+    <!-- 04 MEDICAL -->
+    <div class="ind-card">
+      <div class="ind-number">04</div>
+      <div class="ind-label">Medical & Healthcare</div>
+      <div class="ind-title">Medical Packaging Solutions</div>
+      <div class="ind-desc">ISO 13485 certified sterile barriers, cold chain validation, and regulatory-ready documentation.</div>
+      <div class="ind-segments">
+        <a class="seg-item" href="04-A-medical-devices-solution.html">Medical Devices</a>
+        <a class="seg-item" href="04-B-pharmaceutical-solution.html">Pharmaceutical</a>
+        <a class="seg-item" href="04-C-ivd-diagnostics-solution.html">IVD Diagnostics</a>
+        <a class="seg-item" href="04-D-supplements-solution.html">Supplements & Nutraceuticals</a>
+        <a class="seg-item" href="04-E-aesthetic-consumables-solution.html">Aesthetic Consumables</a>
+      </div>
+    </div>
+
+    <!-- 05 EDUCATION -->
+    <div class="ind-card">
+      <div class="ind-number">05</div>
+      <div class="ind-label">Education</div>
+      <div class="ind-title">Education Packaging Solutions</div>
+      <div class="ind-desc">Child-safe, durable, and brand-building bags for schools, universities, and training centers.</div>
+      <div class="ind-segments">
+        <a class="seg-item" href="05-A-k12-schools-solution.html">K-12 Schools</a>
+        <a class="seg-item" href="05-B-universities-solution.html">Universities & Colleges</a>
+        <a class="seg-item" href="05-C-training-centers-solution.html">Training Centers</a>
+        <a class="seg-item" href="05-D-edtech-solution.html">EdTech & Online Learning</a>
+        <a class="seg-item" href="05-E-international-education-solution.html">International Education</a>
+      </div>
+    </div>
+
+    <!-- 06 AGRICULTURE -->
+    <div class="ind-card">
+      <div class="ind-number">06</div>
+      <div class="ind-label">Agriculture</div>
+      <div class="ind-title">Agriculture Packaging Solutions</div>
+      <div class="ind-desc">Heavy-duty, weather-resistant, and moisture-proof packaging for grains, produce, seeds, and organic farming.</div>
+      <div class="ind-segments">
+        <a class="seg-item" href="06-A-grains-cereals-solution.html">Grains & Cereals</a>
+        <a class="seg-item" href="06-B-fresh-produce-solution.html">Fresh Produce</a>
+        <a class="seg-item" href="06-C-seeds-seedlings-solution.html">Seeds & Seedlings</a>
+        <a class="seg-item" href="06-D-organic-farming-solution.html">Organic Farming</a>
+        <a class="seg-item" href="06-E-tea-industry-solution.html">Tea Industry</a>
+      </div>
+    </div>
+
+    <!-- 07 FOOD PROCESSING -->
+    <div class="ind-card">
+      <div class="ind-number">07</div>
+      <div class="ind-label">Food Processing</div>
+      <div class="ind-title">Food Processing Solutions</div>
+      <div class="ind-desc">High-barrier, shelf-life-extending packaging for coffee, snacks, sauces, dairy, and health foods.</div>
+      <div class="ind-segments">
+        <a class="seg-item" href="07-A-coffee-roasting-solution.html">Coffee Roasting</a>
+        <a class="seg-item" href="07-B-snacks-confectionery-solution.html">Snacks & Confectionery</a>
+        <a class="seg-item" href="07-C-seasonings-sauces-solution.html">Seasonings & Sauces</a>
+        <a class="seg-item" href="07-D-dairy-products-solution.html">Dairy Products</a>
+        <a class="seg-item" href="07-E-health-food-solution.html">Health Food & Meal Replacements</a>
+      </div>
+    </div>
+
+    <!-- 08 HOSPITALITY -->
+    <div class="ind-card">
+      <div class="ind-number">08</div>
+      <div class="ind-label">Hospitality & Hotel</div>
+      <div class="ind-title">Hospitality Packaging Solutions</div>
+      <div class="ind-desc">Brand-consistent, sustainable amenities for luxury hotels, resorts, B&Bs, and serviced apartments.</div>
+      <div class="ind-segments">
+        <a class="seg-item" href="08-A-luxury-hotels-solution.html">Luxury Hotels</a>
+        <a class="seg-item" href="08-B-boutique-bnb-solution.html">Boutique B&Bs</a>
+        <a class="seg-item" href="08-C-resorts-tourism-solution.html">Resorts & Tourism</a>
+        <a class="seg-item" href="08-D-serviced-apartments-solution.html">Serviced Apartments</a>
+        <a class="seg-item" href="08-E-business-hotels-solution.html">Business Hotels</a>
+      </div>
+    </div>
+
+    <!-- 09 ELECTRONICS -->
+    <div class="ind-card">
+      <div class="ind-number">09</div>
+      <div class="ind-label">Electronics</div>
+      <div class="ind-title">Electronics Packaging Solutions</div>
+      <div class="ind-desc">ESD-safe, moisture-barrier, and transit-tested packaging for semiconductors, EV batteries, and telecom.</div>
+      <div class="ind-segments">
+        <a class="seg-item" href="09-A-consumer-electronics-solution.html">Consumer Electronics</a>
+        <a class="seg-item" href="09-B-semiconductors-solution.html">Semiconductors</a>
+        <a class="seg-item" href="09-C-automotive-electronics-solution.html">Automotive Electronics</a>
+        <a class="seg-item" href="09-D-ev-batteries-solution.html">EV Batteries & Energy Storage</a>
+        <a class="seg-item" href="09-E-telecom-equipment-solution.html">Telecom Equipment</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- VALUE PROPS -->
+<div class="section-intro">
+  <div class="hh-section-header">
+    <span class="hh-section-num">02</span>
+    <div>
+      <span class="hh-section-tag">Why Us</span>
+      <h2 class="hh-section-title">What Sets Our Solutions Apart</h2>
+    </div>
+  </div>
+  <div class="hh-cards">
+    <div class="hh-card">
+      <div class="hh-card-icon">
+        <svg viewBox="0 0 24 24" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <h4>Full-Color Customization</h4>
+      <p>Silk screen, digital, hot foil, UV spot, embossing — MOQ from 100 pieces for premium options.</p>
+    </div>
+    <div class="hh-card">
+      <div class="hh-card-icon">
+        <svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <h4>Complete Certifications</h4>
+      <p>FDA, SGS, ISO 9001, REACH, FSC, GOTS — full documentation for audit and export.</p>
+    </div>
+    <div class="hh-card">
+      <div class="hh-card-icon">
+        <svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M7 12l3 3 7-7"/></svg>
+      </div>
+      <h4>Sustainable Materials</h4>
+      <p>FSC-certified paper, GRS recycled, compostable PLA, and carbon-neutral programs.</p>
+    </div>
+    <div class="hh-card">
+      <div class="hh-card-icon">
+        <svg viewBox="0 0 24 24" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <h4>Rapid Turnaround</h4>
+      <p>Standard 10-20 days, express 5-7 days available. Global logistics and VMI partnerships.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="section-intro" style="padding-bottom:0;">
+  <div class="cta-split">
+    <div>
+      <h3 style="font-family:var(--hh-font-head);font-size:22px;font-weight:800;color:var(--hh-ink);margin-bottom:12px;line-height:1.3;">Ready for Your Industry Solution?</h3>
+      <p style="font-size:14px;color:var(--hh-muted);line-height:1.7;margin-bottom:24px;">Our specialists will analyze your product, channel, and brand requirements to recommend the optimal material, structure, and finish combination.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#" class="hh-btn-primary">Get Industry Solution</a>
+        <a href="#" class="hh-btn-outline">Contact Advisor</a>
+      </div>
+    </div>
+    <div>
+      <ul class="hh-checklist">
+        <li>Free industry case studies and samples</li>
+        <li>Custom quotation within 48 hours</li>
+        <li>OEM/ODM private label production</li>
+        <li>Dedicated project manager support</li>
+        <li>Volume-based tier pricing</li>
+        <li>Complete certification documentation</li>
+        <li>Eco-friendly and sustainable options</li>
+        <li>VMI inventory management partnership</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>9 Industries &middot; 45+ Segments &middot; 8 Material Types &middot; 100% Customizable</p>
+</footer>
+
+</body>
+</html>

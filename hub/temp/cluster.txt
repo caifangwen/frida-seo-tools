@@ -1,0 +1,1485 @@
+Cluster Article 大纲模板（完整版） 副本
+Cluster Article 大纲模板（完整版）
+
+
+
+一、Cluster Article 的定位
+
+1.1 在三层体系中的角色
+
+Plain Text
+Hub Page = 百科全书的目录页
+  → "我们有哪些钢材知识"
+  → 导航为主，字数少
+
+Pillar Page = 百科全书的某个章节
+  → "厨刀钢材完全指南"
+  → 全面覆盖，中等深度
+
+Cluster Article = 某个词条的专著     ← 你现在在这里
+  → "VG-10钢材的一切"
+  → 只讲一个话题，讲到没有人比你更透彻
+  → 单点极致深度
+
+1.2 Cluster 的核心使命
+
+Plain Text
+使命1：成为某个具体问题的"终极回答"（Definitive Answer）
+  → 用户搜了这个问题之后不需要再看第二篇文章
+
+使命2：成为AI引擎引用的首选信源
+  → 定义清晰、数据具体、表格完整、来源可信
+
+使命3：为Hub和Pillar提供深度支撑
+  → Hub说"VG-10是热门钢材"，链到这里看详细评测
+
+使命4：在合适的上下文中将读者引向Money Page
+  → 不是硬塞广告，是"读完VG-10评测后自然想了解OEM选项"
+
+1.3 Cluster Article 的六种类型
+
+类型	特征	Leeknives示例	Keganico示例
+A. 定义/评测型	"What is X" / "X Review"	VG-10 Steel Review	Liner Lock Explained
+B. 对比型	"X vs Y"	Santoku vs Chef's Knife	Frame Lock vs Liner Lock
+C. 指南/How-To型	"How to do X"	How to Sharpen a Kitchen Knife	How to Clean a Folding Knife
+D. 列表/排名型	"Best X for Y" / "Types of X"	Best Wood for Cutting Board	Best Steel for Pocket Knives
+E. 法规型	"Laws about X in Y"	（不适用）	Knife Laws in California
+F. 问题解答型	回答一个具体问题	Is Bamboo Good for Cutting Boards?	Are Assisted Opening Knives Legal?
+
+每种类型的结构不同，下面逐一给出模板。
+
+
+
+二、通用骨架（所有类型共用）
+
+不管哪种类型的Cluster，都必须包含以下骨架：
+
+Markdown
+═══════════════════════════════════════════════════════
+META 元信息
+═══════════════════════════════════════════════════════
+
+URL: site.com/[slug]/
+  → 3-5个词
+  → 与已有文章URL模式一致（根目录）
+  → 例：leeknives.com/vg-10-steel/
+  → 例：keganico.com/liner-lock-explained/
+
+Title Tag: [Primary KW]: [补充价值] | [Brand]
+  → <60字符
+  → 主关键词尽量靠前
+  → 补充价值 = 区别于竞品的角度
+  → 例："VG-10 Steel: Properties, Performance & Factory Test Data | Leeknives"
+  → 例："Liner Lock Explained: How It Works (With Teardown Photos) | Keganico"
+
+Meta Description:
+  → <160字符
+  → 包含主关键词
+  → 包含一个独特卖点（制造商数据/实测/拆解）
+  → 包含一个具体数据点
+  → 例："VG-10 steel achieves 58-60 HRC with excellent edge retention. 
+       A manufacturer's review with real production data from 100,000+ blades tested."
+
+H1: [与Title相同或自然变体]
+
+Schema（每篇必须全部添加）:
+  □ Article（headline, author, publisher, datePublished, dateModified）
+  □ BreadcrumbList（Home > Hub > This Article）
+  □ FAQPage（底部FAQ）
+  □ HowTo（仅指南型文章）
+
+═══════════════════════════════════════════════════════
+BLOCK 1: INSTANT ANSWER 即时回答
+═══════════════════════════════════════════════════════
+
+位置：H1之后的第一个元素
+目的：AI引擎引用、Featured Snippet、用户即时获得答案
+字数：50-100字
+
+[H1] [标题]
+
+┌─────────────────────────────────────────────────────┐
+│ KEY TAKEAWAY                                        │
+│                                                     │
+│ [句1：直接回答核心问题]                              │
+│ [句2：关键数据支撑]                                  │
+│ [句3：明确的结论或推荐]                              │
+│ [可选句4：制造商立场/限定条件]                        │
+└─────────────────────────────────────────────────────┘
+
+规则：
+□ 第一句话必须直接回答——不要"It depends"开头
+□ 必须包含至少一个具体数据点
+□ 必须能被AI引擎单独提取引用而不丢失语义
+□ 不要包含内链（这段是给AI抓取的纯文本）
+
+═══════════════════════════════════════════════════════
+BLOCK 2: QUICK DATA 快速数据
+═══════════════════════════════════════════════════════
+
+位置：Key Takeaway之后
+目的：用表格给出核心属性，AI引擎极爱引用表格
+适用：定义/评测型、对比型（其他类型可选）
+
+[H2] [Subject] at a Glance
+
+[属性表格]
+| Property | Value |
+|---|---|
+| ... | ... |
+
+规则：
+□ 表格数据必须准确、具体
+□ 如果是制造商实测数据，标注 "(our heat treatment)" 等
+□ 如果是行业通用数据，标注来源
+
+═══════════════════════════════════════════════════════
+BLOCK 3: CONTEXT 上下文导语
+═══════════════════════════════════════════════════════
+
+位置：快速数据之后
+目的：交代文章背景、建立作者权威、说明文章范围
+字数：50-100字
+
+"[建立权威的1句话]。[文章范围的1句话]。[读者将获得什么的1句话]。"
+
+例：
+"We've heat-treated and tested over 100,000 VG-10 blades 
+since 2012. This review covers VG-10's composition, 
+performance characteristics, and honest pros/cons — based 
+on our factory data, not spec sheet theories. By the end, 
+you'll know whether VG-10 is right for your knife line."
+
+规则：
+□ 提及制造商身份
+□ 提及具体经验数据
+□ 说明文章角度（"based on factory data"而非"based on research"）
+□ 不要写废话导语（"In today's world of knife making..."）
+
+═══════════════════════════════════════════════════════
+BLOCK 4: MAIN CONTENT 主体内容
+═══════════════════════════════════════════════════════
+
+位置：文章核心
+目的：深度覆盖话题
+字数：占全文70-80%
+
+[具体结构取决于文章类型——见下方六种类型的详细模板]
+
+通用规则：
+□ 每个H2下的第一句话能独立回答该章节问题
+□ 段落平均3-5句话
+□ 每300-500字至少1个内链
+□ 专业术语首次出现时链接到Glossary
+□ 至少1个表格或对比矩阵
+□ 至少1个有序或无序列表
+□ 没有超过6行的纯文字段落（用列表/表格/小标题打断）
+
+═══════════════════════════════════════════════════════
+BLOCK 5: FROM OUR FACTORY 制造商视角
+═══════════════════════════════════════════════════════
+
+位置：主体内容之后（或穿插在主体中）
+目的：E-E-A-T信号——你与所有内容站的核心区别
+字数：150-300字
+
+[H2] From Our Factory: [具体角度]
+
+内容来源（至少选2个）：
+□ 生产数据（"VG-10 accounts for 35% of our orders"）
+□ 测试数据（"In our edge retention test across 1,000 blades..."）
+□ 客户反馈（"The #1 complaint from brands using X steel is..."）
+□ 常见误区（"The biggest misconception we encounter is..."）
+□ 坦诚推荐（"If forced to choose one steel for [scenario], we'd pick..."）
+□ 意外发现（"What surprises most clients is..."）
+
+[配1-2张工厂实拍图片]
+
+规则：
+□ 必须用第一人称复数（"we", "our"）
+□ 必须包含至少1个具体数据点
+□ 语气坦诚——可以说缺点，可以说"不推荐某种用法"
+□ 图片必须原创实拍，不是库图
+□ 图片有描述性alt text
+
+═══════════════════════════════════════════════════════
+BLOCK 6: FAQ 常见问题
+═══════════════════════════════════════════════════════
+
+位置：正文结束后
+目的：覆盖长尾搜索 + AI引用 + Featured Snippet
+字数：250-500字（5-8个Q&A）
+
+[H2] Frequently Asked Questions
+
+格式规则：
+□ 问题用自然语言（像用户在搜索框中实际输入的）
+□ 每个回答40-80字
+□ 每个回答第一句直接回答（不要"Good question!"）
+□ 每个回答包含至少1个内链
+□ 必须添加FAQPage Schema
+
+Q&A来源：
+□ Google "People Also Ask"
+□ 你们销售团队实际收到的客户提问
+□ 在ChatGPT/Perplexity中搜索相关话题，看AI回答中暗含的问题
+□ 竞品文章的评论区中用户的提问
+
+────────────────────────────────────
+单个Q&A标准格式：
+
+Q: [自然语言问题]?
+A: "[直接回答，1句话]。[补充解释，1-2句话]。
+See our [detailed guide on Y](/slug/) for more."
+────────────────────────────────────
+
+═══════════════════════════════════════════════════════
+BLOCK 7: INTERNAL NAVIGATION 内部导航
+═══════════════════════════════════════════════════════
+
+位置：FAQ之后
+目的：引导继续阅读 + 权重传递
+
+[H2] Related Articles
+
+[列出4-6篇最相关的文章]
+• [兄弟Cluster 1](/slug/) — 一句话说明相关性
+• [兄弟Cluster 2](/slug/)
+• [兄弟Cluster 3](/slug/)
+• [相关对比文章](/slug/)
+
+[H2] Learn More
+← Back to [Hub Name](/hub-slug/)
+← See also: [Pillar Page Title](/pillar-slug/)
+→ Also explore: [相关的其他Hub](/hub-slug/)
+
+═══════════════════════════════════════════════════════
+BLOCK 8: CTA 行动号召（可选）
+═══════════════════════════════════════════════════════
+
+位置：页面底部
+目的：知识兴趣 → 商业行为
+字数：20-40字
+
+CTA强度判断：
+
+强CTA（直接导向Money Page）：
+适用于：选购指南、评测文章、行业指南
+"Looking to source [product] in [material/spec]?
+[See our OEM options →] [Get a custom quote →]"
+
+弱CTA（导向其他知识内容）：
+适用于：纯科普、定义类、法规类
+"Planning your knife line? See our 
+[guide to starting a knife brand](/start-knife-brand/)."
+
+无CTA：
+适用于：纯教育内容如"What is Rockwell Hardness"
+→ 不加CTA，让内容本身建立authority
+
+═══════════════════════════════════════════════════════
+BLOCK 9: AUTHOR & META
+═══════════════════════════════════════════════════════
+
+Written by: [Full Name]
+[Job Title] at [Company]
+→ [View all articles by this author](/author/name/)
+
+Published: [Date]
+Last Updated: [Date]
+Reviewed by: [Name], [Title]
+
+═══════════════════════════════════════════════════════
+全文参数
+═══════════════════════════════════════════════════════
+
+总字数：1,500-3,000字
+H2数量：5-10个
+H3数量：8-20个
+表格数量：1-3个
+内链数量：5-10个
+  □ 链回Hub：1次
+  □ 链回Pillar：1-2次
+  □ 链到兄弟Cluster：2-3次
+  □ 链到Money Page：0-2次
+  □ 链到Glossary：3-6次
+  □ 链到跨Hub内容：0-2次
+图片：2-4张（优先工厂实拍）
+FAQ：5-8个
+
+
+
+三、六种 Cluster 类型的详细模板
+
+类型A：定义/评测型
+
+Plain Text
+特征："What is X" / "X Review" / "X Explained"
+目标：成为X的权威参考页面
+典型文章：
+  Leeknives: VG-10 Steel Review, What Is Damascus Steel, 
+             What Is Granton Edge, Knife Bolster Guide
+  Keganico:  Liner Lock Explained, What Is a Flipper Knife,
+             What Is a Balisong
+
+Block 4（主体内容）结构
+
+Markdown
+[H2] What Is [Subject]?
+
+[定义段落 — AI引用的核心目标]
+"[Subject] is [精确定义], [特征1], and [特征2]. 
+It is [分类归属/历史背景]. [1-2句补充说明]."
+
+规则：
+□ 定义必须在段落第一句
+□ 用"[Subject] is..."句型开头
+□ 不要用比喻或类比开头，直接给定义
+□ 这段话被AI引用的概率最高，必须准确、简洁、完整
+
+例（VG-10）：
+"VG-10 (V Gold 10) is a high-carbon stainless steel 
+produced by Takefu Special Steel Co. in Japan, containing 
+approximately 1% carbon and 15% chromium. It is classified 
+as a martensitic stainless steel, widely considered the 
+industry standard for mid-to-premium kitchen knives due 
+to its balanced combination of edge retention, corrosion 
+resistance, and ease of sharpening."
+
+例（Liner Lock）：
+"A liner lock is a folding knife locking mechanism in 
+which a thin, spring-tempered steel liner inside the 
+handle flexes laterally to press against the blade tang, 
+holding the blade in the open position. Invented by 
+Michael Walker in 1981, it is the most common lock type 
+in modern folding knives, used in an estimated 60%+ of 
+production folders worldwide."
+
+────────────────────────────────────
+
+[H2] [Subject] Composition / Anatomy / Specifications
+
+[详细属性分解]
+
+例（钢材评测）：
+[H3] Chemical Composition
+| Element | Percentage | Role |
+|---|---|---|
+| Carbon (C) | 0.95-1.05% | Hardness, edge retention |
+| Chromium (Cr) | 14.5-15.5% | Corrosion resistance (>13% = stainless) |
+| Molybdenum (Mo) | 0.9-1.2% | Strength, machinability |
+| Vanadium (V) | 0.1-0.3% | Wear resistance, fine grain |
+| Cobalt (Co) | 1.3-1.5% | Hot hardness, strengthens matrix |
+
+"The high cobalt content is what distinguishes VG-10 from 
+similar steels like AUS-10. Cobalt strengthens the steel 
+matrix without forming its own carbides."
+
+例（锁定机制）：
+[H3] Anatomy of a Liner Lock
+[配标注图]
+1. Liner — 弹簧钢片（通常420J2或钛合金）
+2. Lock face — 与blade tang接触的面
+3. Tang — 刀片根部
+4. Stop pin — 限制开合角度
+5. Detent ball — 提供闭合保持力
+
+[每个部件2-3句话描述功能]
+
+────────────────────────────────────
+
+[H2] Performance / How It Works
+
+[性能详述 — 用子维度分H3]
+
+例（钢材评测）：
+[H3] Edge Retention
+"VG-10 maintains a working edge through approximately 
+800-1,000 cuts on our standardized cardboard test media 
+(CATRA equivalent). This places it above AUS-8 (~600 cuts) 
+and below SG2 (~1,200 cuts) in our testing."
+
+[H3] Corrosion Resistance
+"With 15% chromium, VG-10 offers excellent corrosion 
+resistance for daily kitchen use. In our 72-hour salt 
+spray test, VG-10 blades show minimal surface oxidation 
+compared to significant rust on non-stainless options 
+like 1095 carbon steel."
+
+[H3] Toughness
+[同上格式]
+
+[H3] Ease of Sharpening
+[同上格式]
+
+例（锁定机制）：
+[H3] How It Locks
+Step 1: 刀片打开时，liner被blade tang推到一侧
+Step 2: 刀片到达全开位置，liner弹回tang后方
+Step 3: liner弹力持续压住tang，阻止闭合
+Step 4: 用户用拇指将liner推开，释放tang以闭合
+
+[配步骤图或动图]
+
+[H3] Lock Engagement
+"Lock engagement refers to how much of the liner 
+contacts the blade tang. Our factory standard is 
+minimum 40% engagement. Below 30% increases failure risk; 
+above 60% may indicate the liner will over-travel with wear."
+
+[配标注图：展示30%/40%/60%的区别]
+
+[H3] Lock Strength
+"In our spine-whack testing (n=500), liner lock knives 
+with >40% engagement showed 0% lock failure at 30 lb-ft 
+and 0.4% partial disengagement at 50 lb-ft."
+
+────────────────────────────────────
+
+[H2] Pros and Cons
+
+[表格形式 — 简洁明了]
+
+| Pros | Cons |
+|---|---|
+| [优点1 + 简短解释] | [缺点1 + 简短解释] |
+| [优点2] | [缺点2] |
+| [优点3] | [缺点3] |
+| [优点4] | [缺点4（如有）] |
+
+"Bottom line: [1句话总结——适合什么，不适合什么]"
+
+────────────────────────────────────
+
+[H2] [Subject] vs Alternatives / Compared to Others
+
+[简要对比——不需要像对比型文章那么详细，
+ 但给读者一个参照系]
+
+| | [Subject] | [Alternative 1] | [Alternative 2] |
+|---|---|---|---|
+| 维度1 | ... | ... | ... |
+| 维度2 | ... | ... | ... |
+| 维度3 | ... | ... | ... |
+| Best For | ... | ... | ... |
+
+→ "Detailed comparison: [Subject vs Alt 1](/slug/)"
+→ "Detailed comparison: [Subject vs Alt 2](/slug/)"
+
+────────────────────────────────────
+
+[H2] Best Use Cases / Who Should Use [Subject]
+
+[分场景推荐]
+
+| ✅ Ideal For | ❌ Not Ideal For |
+|---|---|
+| [场景1 + 原因] | [场景1 + 原因] |
+| [场景2] | [场景2] |
+| [场景3] | [场景3] |
+
+例（VG-10）：
+| ✅ Ideal For | ❌ Not Ideal For |
+|---|---|
+| Mid-to-premium kitchen knives ($80-150 retail) | Ultra-budget production (<$20 retail) |
+| Brands wanting "Japanese steel" marketing appeal | Heavy-duty cleavers (toughness concerns) |
+| All-purpose chef's knives, Santoku, Gyuto | Knives used on frozen food regularly |
+| Customers who maintain their knives occasionally | "Zero maintenance" market positioning |
+
+例（Liner Lock）：
+| ✅ Ideal For | ❌ Not Ideal For |
+|---|---|
+| Budget to mid-range EDC folders | Left-handed users (primary market) |
+| High-volume production (low cost per unit) | Premium brand positioning (perceived as basic) |
+| First-time knife brands (simple MOQ) | Heavy-duty tactical use |
+| Markets with no lock-type restrictions | UK market (all locking folders restricted) |
+
+完整示范：Leeknives — VG-10 Steel Review
+
+Markdown
+URL: leeknives.com/vg-10-steel/
+Title: VG-10 Steel: Properties, Performance & Factory Test Data | Leeknives
+H1: A Review of VG-10 Steel as a Knife Material
+
+┌─────────────────────────────────────────────────────┐
+│ KEY TAKEAWAY                                        │
+│                                                     │
+│ VG-10 is a Japanese high-carbon stainless steel      │
+│ (1% C, 15% Cr) achieving 58-60 HRC. It delivers    │
+│ excellent edge retention and corrosion resistance,   │
+│ making it the most popular mid-to-premium kitchen   │
+│ knife steel worldwide. It accounts for 35% of our   │
+│ OEM orders. Best for brands targeting the $80-150   │
+│ retail segment.                                     │
+└─────────────────────────────────────────────────────┘
+
+[H2] VG-10 at a Glance
+| Property | Value |
+|---|---|
+| Full Name | V Gold 10 |
+| Manufacturer | Takefu Special Steel Co., Japan |
+| Steel Type | Martensitic Stainless |
+| Carbon | 0.95-1.05% |
+| Chromium | 14.5-15.5% |
+| Cobalt | 1.30-1.50% |
+| Molybdenum | 0.90-1.20% |
+| Vanadium | 0.10-0.30% |
+| HRC (our heat treatment) | 60 ±0.5 |
+| Edge Retention | ★★★★☆ |
+| Corrosion Resistance | ★★★★☆ |
+| Toughness | ★★★☆☆ |
+| Ease of Sharpening | ★★★☆☆ |
+| Price Tier | Mid-Premium |
+
+[H2] What Is VG-10 Steel?
+"VG-10 (V Gold 10) is a high-carbon stainless steel 
+produced by Takefu Special Steel Co. in Japan..."
+[定义段落]
+
+[H2] Chemical Composition Breakdown
+[H3] Carbon (0.95-1.05%)
+[H3] Chromium (14.5-15.5%)
+[H3] Cobalt (1.3-1.5%) — What Sets VG-10 Apart
+[H3] Vanadium & Molybdenum
+
+[H2] Performance in Kitchen Knives
+[H3] Edge Retention
+  "In our standardized cutting test (1,000 blades tested)..."
+[H3] Corrosion Resistance
+  "72-hour salt spray test results..."
+[H3] Toughness
+  "Lateral flex test data..."
+[H3] Ease of Sharpening
+  "Responds well to 1000/3000 grit whetstones..."
+  → [Whetstone Grit Guide](/whetstone-grit/)
+
+[H2] Pros and Cons of VG-10
+| Pros | Cons |
+|---|---|
+| Excellent edge retention (800-1000 cuts) | Can micro-chip on bone/frozen food |
+| Good corrosion resistance (15% Cr) | Not the toughest (SG2, AUS-8 are better) |
+| Industry recognition ("VG-10" sells) | Mid-premium cost |
+| Cobalt strengthens matrix | Harder to sharpen than softer steels |
+| Takes a very fine edge (15° possible) | Requires some maintenance knowledge |
+
+[H2] VG-10 Compared to Similar Steels
+| | VG-10 | AUS-10 | AUS-8 | SG2/R2 | 1.4116 |
+|---|---|---|---|---|---|
+| HRC | 58-60 | 58-60 | 57-59 | 62-64 | 55-57 |
+| Edge Retention | ★★★★ | ★★★★ | ★★★ | ★★★★★ | ★★★ |
+| Toughness | ★★★ | ★★★ | ★★★★ | ★★ | ★★★★ |
+| Corrosion | ★★★★ | ★★★★ | ★★★★ | ★★★★ | ★★★★★ |
+| Price | $$ | $$ | $ | $$$ | $ |
+
+→ "Detailed comparison: [VG-10 vs AUS-10](/vg10-vs-aus10/)"
+→ "All steels: [Best Steel for Kitchen Knives](/best-steel-for-kitchen-knives/)"
+
+[H2] Best Use Cases for VG-10
+| ✅ Ideal For | ❌ Not Ideal For |
+|---|---|
+| Mid-premium chef's knives ($80-150) | Budget knives (<$30 retail) |
+| Japanese-style knives (Gyuto, Santoku) | Heavy cleavers / bone cutting |
+| Brands wanting recognized steel name | "Zero maintenance" market |
+| Damascus blade core steel | Ultra-premium (SG2 better) |
+
+[H2] From Our Factory: 100,000+ VG-10 Blades Later
+[H3] Our Heat Treatment Advantage
+  "Industry average: 58 HRC. Our process: 60 ±0.5 HRC..."
+[H3] Most Common Quality Issue
+  "Micro-chipping when end users cut frozen food..."
+[H3] Client Order Data
+  "VG-10 = 35% of our total orders. Most popular pairing:
+   VG-10 + pakkawood handle + satin finish..."
+[工厂实拍图 ×2]
+
+[H2] Frequently Asked Questions
+Q: Is VG-10 a good knife steel?
+Q: Is VG-10 better than AUS-8?
+Q: What hardness is VG-10?
+Q: Is VG-10 stainless steel?
+Q: Can VG-10 rust?
+Q: Is VG-10 hard to sharpen?
+Q: What knives use VG-10 steel?
+[7-8个FAQ]
+
+[H2] Related Articles
+• [AUS-8 Steel Review](/aus-8-steel/)
+• [SG2 Steel Review](/sg2-steel/)
+• [AUS-10 Steel Review](/aus-10-steel/)
+• [Carbon Steel vs Stainless Steel](/carbon-steel-vs-stainless-steel-knife/)
+• [Best Steel for Kitchen Knives](/best-steel-for-kitchen-knives/)
+
+← Back to [Knife Steel Knowledge Center](/knife-steel/)
+
+[CTA]
+"Looking to source VG-10 kitchen knives?
+We produce chef's knives, Santoku, and Damascus 
+in VG-10 with MOQ from 200 pcs.
+[See Our VG-10 Options →] [Get a Quote →]"
+
+Written by: [Name], Quality Control Manager at Leeknives
+Published: [Date] | Last Updated: [Date]
+
+
+
+类型B：对比型
+
+Plain Text
+特征："X vs Y"
+目标：帮助读者在两个选项之间做出明确选择
+典型文章：
+  Leeknives: Santoku vs Chef's Knife, Carbon Steel vs Stainless Steel,
+             Forged vs Stamped, Boning Knife vs Fillet Knife
+  Keganico:  Frame Lock vs Liner Lock, Fixed Blade vs Folding Knife,
+             S30V vs S35VN, Flipper vs Thumb Stud
+
+Block 4（主体内容）结构
+
+Markdown
+[H2] [X] vs [Y]: Quick Comparison
+
+[对比表 — 文章开头就给，不要让读者等]
+
+| Dimension | [X] | [Y] | Winner |
+|---|---|---|---|
+| 维度1 | ... | ... | [X] ✅ / [Y] ✅ / Tie 🤝 |
+| 维度2 | ... | ... | ... |
+| 维度3 | ... | ... | ... |
+| 维度4 | ... | ... | ... |
+| 维度5 | ... | ... | ... |
+| Overall | - | - | Depends on [决策变量] |
+
+────────────────────────────────────
+
+[H2] What Is [X]?
+
+[完整介绍X — 200-400字]
+- 定义
+- 关键特征
+- 典型规格
+- 适用场景
+
+→ "Full guide: [X Complete Guide](/slug/)"（如果有独立的X评测文章）
+
+────────────────────────────────────
+
+[H2] What Is [Y]?
+
+[同上结构 — 200-400字]
+
+→ "Full guide: [Y Complete Guide](/slug/)"
+
+────────────────────────────────────
+
+[H2] Key Differences Between [X] and [Y]
+
+[逐维度对比 — 每个维度一个H3]
+
+[H3] Difference 1: [维度名称]
+
+"[X] [在此维度的表现]。[Y] [在此维度的表现]。
+[具体数据或例子]。"
+
+*Manufacturing note: "[制造商视角的补充]"*
+
+[H3] Difference 2: [维度名称]
+[同上结构]
+
+[H3] Difference 3: [维度名称]
+[同上]
+
+[H3] Difference 4: [维度名称]
+[同上]
+
+[H3] Difference 5: [维度名称]
+[同上]
+
+每个差异点的结构：
+□ 句1: X的表现
+□ 句2: Y的表现
+□ 句3: 具体数据或对比例子
+□ 句4（可选）: 制造商视角
+□ 明确指出哪个在此维度更好
+
+────────────────────────────────────
+
+[H2] Similarities Between [X] and [Y]
+
+[2-4个共同点 — 列表形式]
+• 共同点1
+• 共同点2
+• 共同点3
+
+"Despite their differences, both [X] and [Y] [共同特征]."
+
+────────────────────────────────────
+
+[H2] Which Should You Choose?
+
+[H3] Choose [X] If:
+• 条件1（具体场景）
+• 条件2
+• 条件3
+• 条件4
+
+[H3] Choose [Y] If:
+• 条件1
+• 条件2
+• 条件3
+• 条件4
+
+[场景对照表]
+| Your Situation / Need | Choose | Why |
+|---|---|---|
+| 场景1 | [X] | ... |
+| 场景2 | [Y] | ... |
+| 场景3 | [X] | ... |
+| 场景4 | [Y] | ... |
+
+[H3] Consider Both If:
+"Many of our OEM clients offer both [X] and [Y] in their 
+product line to cover different [market segments / use cases]. 
+This is a strong strategy if [condition]."
+→ [Products link]
+
+完整示范：Keganico — Frame Lock vs Liner Lock
+
+Markdown
+URL: keganico.com/frame-lock-vs-liner-lock/
+Title: Frame Lock vs Liner Lock: Key Differences Explained | Keganico
+H1: Frame Lock vs Liner Lock: What's the Difference?
+
+┌─────────────────────────────────────────────────────┐
+│ KEY TAKEAWAY                                        │
+│                                                     │
+│ A liner lock uses a thin internal steel liner to     │
+│ secure the blade; a frame lock uses a section of the│
+│ handle frame itself (typically titanium). Frame locks│
+│ are stronger, more premium, and 30-50% more costly  │
+│ to manufacture. Liner locks are simpler, cheaper,   │
+│ and ideal for budget-to-mid EDC. Both are safe and  │
+│ reliable when properly manufactured.                │
+└─────────────────────────────────────────────────────┘
+
+[H2] Quick Comparison
+
+| Dimension | Liner Lock | Frame Lock | Winner |
+|---|---|---|---|
+| Lock Strength | ★★★★ | ★★★★★ | Frame ✅ |
+| Manufacturing Cost | $ | $$ | Liner ✅ |
+| Handle Profile | Thinner | Slightly thicker | Liner ✅ |
+| Perceived Quality | Good | Premium | Frame ✅ |
+| Ambidextrous | ❌ | ❌ | Tie 🤝 |
+| One-Hand Close | ✅ | ✅ | Tie 🤝 |
+| Weight | Lighter | Heavier (Ti) | Depends |
+| Durability/Wear | Good | Excellent | Frame ✅ |
+| Handle Material | G10, FRN, any | Usually Titanium | - |
+| Best For | Budget-Mid EDC | Mid-Premium EDC | Depends |
+
+[H2] What Is a Liner Lock?
+"A liner lock is a folding knife locking mechanism where..."
+[200-300字]
+→ [Full guide: Liner Lock Explained](/liner-lock-explained/)
+
+[H2] What Is a Frame Lock?
+"A frame lock (also called integral lock) is a mechanism where..."
+[200-300字]
+→ [Full guide: Frame Lock Guide](/frame-lock-guide/)
+
+[H2] Key Differences
+
+[H3] Difference 1: Lock Construction
+"Liner lock: separate steel liner inside the handle.
+Frame lock: section of the handle frame itself — no separate part.
+This means a frame lock has fewer parts and a more 
+direct steel-on-steel engagement."
+
+*From our factory: "We test lock engagement at 40% minimum 
+for both types. Frame locks typically achieve 50-60% 
+engagement more consistently due to the thicker material."*
+
+[H3] Difference 2: Strength
+"In our stress tests (n=500 each):
+- Liner lock: 0% failure at 30 lb-ft, 0.4% at 50 lb-ft
+- Frame lock: 0% failure at 50 lb-ft, 0% at 75 lb-ft
+Frame locks are measurably stronger, though both are 
+adequate for all normal use."
+
+[H3] Difference 3: Handle Material & Weight
+[配拆解对比图]
+
+[H3] Difference 4: Manufacturing Cost & Complexity
+"Frame locks require precision titanium milling, adding 
+approximately 30-50% to per-unit cost. Liner locks use 
+stamped steel liners, which are significantly cheaper."
+
+| Component | Liner Lock | Frame Lock |
+|---|---|---|
+| Lock material | 420J2 stainless liner | 6AL4V Titanium frame |
+| Assembly complexity | Low | Medium |
+| Parts count | +1 (liner) | 0 (frame is the lock) |
+| Cost impact | Baseline | +30-50% |
+
+[H3] Difference 5: Market Perception
+"Liner locks are perceived as standard/budget.
+Frame locks are perceived as premium/enthusiast.
+This affects brand positioning..."
+
+[H2] Similarities
+• Both are spring-bar type locks
+• Both support one-hand operation
+• Both are right-hand biased
+• Both are legally unrestricted
+
+[H2] Which Should You Choose?
+
+[H3] Choose Liner Lock If:
+• Budget EDC line ($15-40 retail)
+• High-volume production
+• G10 or FRN handle designs
+• First knife brand (lower MOQ risk)
+
+[H3] Choose Frame Lock If:
+• Premium EDC line ($60-150 retail)
+• Titanium handle design
+• Strength is a selling point
+• Enthusiast/collector market
+
+| Scenario | Pick | Why |
+|---|---|---|
+| Amazon budget EDC | Liner | Cost-effective, proven |
+| Boutique knife brand | Frame | Premium positioning |
+| First production run | Liner | Simpler, lower risk |
+| Second product tier | Frame | Upsell from liner lock line |
+
+[H2] From Our Factory: Building Both Lock Types Daily
+"We produce approximately 3x more liner lock folders than 
+frame locks. However, frame lock ASP (average selling price) 
+is 2x higher..."
+[工厂对比实拍]
+
+[H2] FAQ
+Q: Is a frame lock stronger than a liner lock?
+Q: Are liner locks safe?
+Q: Which lock is better for EDC?
+Q: Can a liner lock knife have a titanium handle?
+Q: What is lock stick?
+Q: Which lock is easier to manufacture?
+[6-7个FAQ]
+
+[H2] Related Articles
+• [Knife Lock Types: Complete Guide](/knife-lock-types/)
+• [Liner Lock Explained](/liner-lock-explained/)
+• [Axis Lock Guide](/axis-lock-explained/)
+• [Back Lock Guide](/back-lock-explained/)
+• [Button Lock Guide](/button-lock-explained/)
+← [Knife Mechanisms Knowledge Center](/knife-mechanisms/)
+
+[CTA]
+"Want to see liner lock and frame lock samples side by side?
+[Request Comparison Samples →] [Get a Quote →]"
+
+
+
+类型C：指南/How-To型
+
+Plain Text
+特征："How to do X" / "Step by step guide to X"
+目标：提供可操作的步骤指南
+典型文章：
+  Leeknives: How to Sharpen a Kitchen Knife, 
+             How to Take Care of Carbon Steel Knives
+  Keganico:  How to Clean and Lubricate a Folding Knife,
+             How to Design a Custom Folding Knife
+
+必须添加：HowTo Schema
+
+Block 4（主体内容）结构
+
+Markdown
+[H2] What You'll Need
+
+[工具/材料清单 — 列表形式]
+• 工具/材料1 — 简短说明用途
+• 工具/材料2
+• 工具/材料3
+
+[可选：准备工作]
+"Before you begin, [前置条件或准备步骤]."
+
+────────────────────────────────────
+
+[H2] Step-by-Step Guide
+
+[H3] Step 1: [步骤名称]
+
+[做什么 + 为什么 + 怎么做]
+[具体操作指令，用祈使句]
+[常见错误提醒]
+[配图（每步至少1张）]
+
+*Tip: "[专业技巧]"*
+*Warning: "[注意事项]"*
+
+[H3] Step 2: [步骤名称]
+[同上结构]
+
+[H3] Step 3: [步骤名称]
+[同上]
+
+...
+
+[H3] Step N: [最后一步]
+[完成标志——怎么判断做对了]
+
+────────────────────────────────────
+
+[H2] Common Mistakes to Avoid
+
+| Mistake | Why It's Wrong | What to Do Instead |
+|---|---|---|
+| 错误1 | 后果 | 正确做法 |
+| 错误2 | 后果 | 正确做法 |
+| 错误3 | 后果 | 正确做法 |
+
+────────────────────────────────────
+
+[H2] Tips from Our Workshop
+
+"Having [done this process X thousand times], here are 
+our top tips:"
+
+1. [技巧1 — 基于制造经验]
+2. [技巧2]
+3. [技巧3]
+
+────────────────────────────────────
+
+[H2] Expected Results
+
+"If done correctly, you should see/achieve [具体结果]."
+[配对比图：before/after]
+
+────────────────────────────────────
+
+HowTo Schema:
+{
+  "@type": "HowTo",
+  "name": "[How-To标题]",
+  "description": "[简短描述]",
+  "totalTime": "PT30M",（如适用）
+  "supply": [
+    {"@type": "HowToSupply", "name": "工具1"},
+    {"@type": "HowToSupply", "name": "工具2"}
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "[Step 1名称]",
+      "text": "[Step 1描述]",
+      "image": "[Step 1图片URL]"
+    },
+    ...
+  ]
+}
+
+
+
+类型D：列表/排名型
+
+Plain Text
+特征："Best X for Y" / "Types of X" / "Top N X"
+目标：提供可筛选的选项列表
+典型文章：
+  Leeknives: Best Wood for Cutting Board, Best Wood for Knife Handles,
+             Types of Cutting Boards, Best Cookware Material
+  Keganico:  Best Steel for Pocket Knives, Best Handle Materials for EDC,
+             Types of Fixed Blade Knives
+
+Block 4（主体内容）结构
+
+Markdown
+[H2] How We Evaluated / Selection Criteria
+
+"We evaluated [items] based on [N] criteria:"
+
+| Criteria | Weight | Why It Matters |
+|---|---|---|
+| 标准1 | High | ... |
+| 标准2 | Medium | ... |
+| 标准3 | Medium | ... |
+| 标准4 | Low | ... |
+
+"Ratings are based on [数据来源——制造商实测/行业数据]."
+
+规则：
+□ 必须说明评价标准——增加可信度
+□ 说明数据来源——制造商实测是最强信号
+□ 不要假装客观——你是制造商，你有立场，但要透明
+
+────────────────────────────────────
+
+[H2] Quick Comparison: All [N] Options at a Glance
+
+[总览表 — 文章开头就给]
+
+| Rank | Item | 标准1 | 标准2 | 标准3 | Best For | Details |
+|---|---|---|---|---|---|---|
+| 1 | ... | ... | ... | ... | ... | [↓](#item-1) |
+| 2 | ... | ... | ... | ... | ... | [↓](#item-2) |
+| ... | | | | | | |
+
+────────────────────────────────────
+
+[H2] 1. [Item Name] — [一句话定位]   {#item-1}
+
+[为什么排这个位置]
+[关键属性数据]
+[优缺点]
+
+| Pros | Cons |
+|---|---|
+| ... | ... |
+
+[制造商视角（1-2句）]
+[链接到Cluster详细文章（如有）]
+
+*Best for: [具体场景]*
+
+────────────────────────────────────
+
+[H2] 2. [Item Name] — [一句话定位]   {#item-2}
+[同上结构]
+
+...重复到所有items
+
+────────────────────────────────────
+
+[H2] Which [Item Type] Should You Choose?
+
+[场景推荐表]
+| Your Situation | Our Pick | Why |
+|---|---|---|
+| 场景1 | Item X | ... |
+| 场景2 | Item Y | ... |
+| 场景3 | Item Z | ... |
+
+规则：
+□ 排名要有明确依据
+□ 不要所有item都说"excellent"——要有区分度
+□ 制造商可以有推荐偏好，但要说明原因
+□ 如果是"Types of"类型（非排名），不用Rank列，但保留对比表
+
+
+
+类型E：法规型（Keganico专属）
+
+Plain Text
+特征："Knife Laws in [Region]" / "Is [Knife Type] Legal?"
+目标：成为该地区/话题的刀具法规权威参考
+典型文章：
+  Keganico: Knife Laws in California, Butterfly Knife Laws,
+            Switchblade Laws in the US, Blade Length Laws
+
+必须包含：Disclaimer + Last Updated日期 + Sources
+
+Block 4（主体内容）结构
+
+Markdown
+[H2] [Region] Knife Laws: Quick Summary
+
+[合法性对照表 — 文章最顶部]
+
+| Knife Type | Legal to Own | Legal to Carry (Open) | Legal to Carry (Concealed) | Legal to Sell |
+|---|---|---|---|---|
+| Folding Knife < 3" | ✅ | ✅ | ✅ | ✅ |
+| Folding Knife > 3" | ✅ | ✅ | ⚠️ Varies | ✅ |
+| Locking Folder | ✅ | ✅ | ⚠️ | ✅ |
+| Fixed Blade < 4" | ✅ | ✅ | ⚠️ | ✅ |
+| Fixed Blade > 4" | ✅ | ✅ | ❌ | ✅ |
+| Switchblade | ❌ | ❌ | ❌ | ❌ |
+| Balisong | ❌ | ❌ | ❌ | ❌ |
+| Assisted Opening | ✅ | ✅ | ⚠️ | ✅ |
+
+[⚠️ = 有条件/需进一步查看]
+
+────────────────────────────────────
+
+[H2] Overview of [Region] Knife Laws
+
+[简要历史/法律框架概述]
+[管辖层级：联邦/州/市（如美国）]
+[关键法律条文引用]
+
+────────────────────────────────────
+
+[H2] Folding Knife Laws in [Region]
+
+[H3] Blade Length Restrictions
+[H3] Locking vs Non-Locking
+[H3] Opening Mechanism Restrictions
+  → "What is assisted opening: [link]"
+
+────────────────────────────────────
+
+[H2] Fixed Blade Laws in [Region]
+
+[H3] Open Carry
+[H3] Concealed Carry
+[H3] Blade Length Limits
+
+────────────────────────────────────
+
+[H2] Restricted/Prohibited Knife Types in [Region]
+
+[逐一说明]
+• Switchblades: [法律原文引用 + 解释]
+• Balisongs: [同上]
+• Gravity knives: [同上]
+• Dirks/Daggers: [同上]
+
+────────────────────────────────────
+
+[H2] Age Restrictions
+
+| Purchase Age | Carry Age | Exceptions |
+|---|---|---|
+| ... | ... | ... |
+
+────────────────────────────────────
+
+[H2] Preemption: State vs Local Laws
+
+"[Region] [does/does not] have preemption, meaning 
+[cities can/cannot] pass stricter knife laws than state law.
+Key cities with additional restrictions: [list]"
+
+────────────────────────────────────
+
+[H2] For Knife Sellers: What This Means for Your Business
+
+"If you're selling knives in [Region], here are the 
+key compliance considerations:"
+
+| What to Do | Why | How We Help |
+|---|---|---|
+| Verify blade length limits | [legal requirement] | We manufacture to your spec |
+| Avoid restricted mechanisms | [penalties] | We advise on compliant designs |
+| Include age verification | [requirement] | - |
+| Label accurately | [requirement] | We handle packaging/labeling |
+
+→ [Start Your Knife Brand Guide](/start-knife-brand/)
+
+────────────────────────────────────
+
+[H2] Recent Changes & Updates
+
+[按年份列出最近的法律变更]
+• [Year]: [Change description]
+• [Year]: [Change description]
+
+"We review and update this guide annually. Last verified: [Date]."
+
+────────────────────────────────────
+
+[法律免责声明 — 必须包含]
+┌─────────────────────────────────────────────────────┐
+│ DISCLAIMER                                          │
+│                                                     │
+│ This article is for informational purposes only and │
+│ does not constitute legal advice. Knife laws change  │
+│ frequently and vary by jurisdiction. Always verify   │
+│ current laws with local authorities or a qualified   │
+│ attorney before carrying, selling, or importing      │
+│ knives. Last verified: [Date].                      │
+└─────────────────────────────────────────────────────┘
+
+[H2] Sources
+• [State Code § XXX — link to official legal text]
+• [City Ordinance XXX — link]
+• [Federal regulation — link]
+
+
+
+类型F：问题解答型
+
+Plain Text
+特征：回答一个具体的是/否或选择性问题
+目标：直接回答 + 提供足够的支撑信息
+典型文章：
+  Leeknives: Is Bamboo Good for Cutting Boards?,
+             Is Acacia Wood Good for Cutting Boards?,
+             Can Cast Iron Go in the Oven?,
+             Are Wood Cutting Boards Sanitary?
+  Keganico:  Are Assisted Opening Knives Legal?,
+             Is Damascus Steel Strong?
+
+特点：通常比其他类型短（1,000-2,000字）
+     Key Takeaway必须直接回答是/否
+
+Block 4（主体内容）结构
+
+Markdown
+[Key Takeaway — 必须直接回答]
+┌─────────────────────────────────────────────────────┐
+│ [Yes/No/It depends], [原因概述].                    │
+│ [具体数据或条件].                                    │
+│ [最终推荐].                                         │
+└─────────────────────────────────────────────────────┘
+
+例（Is Bamboo Good for Cutting Boards?）：
+┌─────────────────────────────────────────────────────┐
+│ Yes, bamboo is a viable cutting board material, but │
+│ it's not the best option. Bamboo is harder than most│
+│ woods (Janka hardness ~1,380 lbf), which makes it   │
+│ durable but harder on knife edges. It's best suited │
+│ for budget-friendly cutting boards where price       │
+│ matters more than knife-friendliness.               │
+└─────────────────────────────────────────────────────┘
+
+────────────────────────────────────
+
+[H2] The Short Answer
+
+[1段，3-5句话，扩展Key Takeaway]
+[直接给出明确立场]
+
+────────────────────────────────────
+
+[H2] Why [Yes/No]: The Details
+
+[H3] Reason/Factor 1
+[证据 + 数据]
+
+[H3] Reason/Factor 2
+[证据 + 数据]
+
+[H3] Reason/Factor 3
+[证据 + 数据]
+
+────────────────────────────────────
+
+[H2] The Other Side: [Counterarguments/Caveats]
+
+"However, there are situations where [opposite view]:"
+[公平呈现另一面的观点]
+[说明什么条件下结论会改变]
+
+────────────────────────────────────
+
+[H2] Compared to Alternatives
+
+| Option | [维度1] | [维度2] | [维度3] | Verdict |
+|---|---|---|---|---|
+| [Subject] | ... | ... | ... | [评价] |
+| Alternative 1 | ... | ... | ... | [评价] |
+| Alternative 2 | ... | ... | ... | [评价] |
+
+→ "Full comparison: [Subject vs Alternative](/slug/)"
+
+────────────────────────────────────
+
+[H2] Our Recommendation
+
+"Based on our manufacturing experience:
+- If [条件A], then [yes, subject is good]
+- If [条件B], then [consider alternative instead]
+- If [条件C], then [subject with caveat]"
+
+────────────────────────────────────
+
+字数：1,000-2,000字（比其他类型短）
+结构更紧凑，直奔主题
+
+完整示范：Leeknives — Is Bamboo Good for Cutting Boards?
+
+Markdown
+URL: leeknives.com/is-bamboo-good-for-cutting-boards/
+Title: How Is Bamboo for Cutting Boards? Honest Assessment | Leeknives
+H1: Bamboo Cutting Boards: Are They Any Good?
+
+┌─────────────────────────────────────────────────────┐
+│ KEY TAKEAWAY                                        │
+│                                                     │
+│ Bamboo is an acceptable but not ideal cutting board  │
+│ material. It's harder than most hardwoods (Janka    │
+│ ~1,380 lbf), making it durable and affordable but   │
+│ harsher on knife edges. It's best for budget-       │
+│ conscious brands and light-duty kitchen use. For     │
+│ premium positioning, hardwoods like walnut, maple,  │
+│ or teak are superior options.                       │
+└─────────────────────────────────────────────────────┘
+
+[H2] Bamboo at a Glance
+| Property | Value | Rating |
+|---|---|---|
+| Janka Hardness | ~1,380 lbf | Hard (harder on knives) |
+| Knife-Friendliness | ★★☆☆☆ | Below average |
+| Durability | ★★★★☆ | Good |
+| Water Resistance | ★★★☆☆ | Moderate (needs sealing) |
+| Price | ★★★★★ | Very affordable |
+| Sustainability | ★★★★★ | Excellent (fast growing) |
+| Aesthetics | ★★★☆☆ | Decent, limited variation |
+
+[H2] The Short Answer
+"Bamboo works as a cutting board material, but it's a 
+compromise. Its main advantage is cost — bamboo boards 
+are 40-60% cheaper to produce than hardwood equivalents. 
+Its main disadvantage is hardness — at ~1,380 Janka, 
+bamboo dulls knives faster than softer woods like walnut 
+(~1,010) or cherry (~995). If your brand prioritizes 
+price, bamboo is fine. If you're positioning as 
+knife-friendly or premium, look elsewhere."
+
+[H2] Pros of Bamboo Cutting Boards
+[H3] Affordability
+  "Bamboo raw material costs 40-60% less than 
+  comparable hardwoods..."
+[H3] Sustainability
+  "Bamboo is technically a grass, growing up to 
+  3 feet per day..."
+[H3] Durability
+  "High hardness means bamboo resists cuts and 
+  gouges well..."
+
+[H2] Cons of Bamboo Cutting Boards
+[H3] Hard on Knife Edges
+  "At Janka 1,380, bamboo is harder than maple (1,450 
+  is often cited but varies), walnut (1,010), and 
+  cherry (995). In our testing, knives used on bamboo 
+  boards need sharpening 30-40% more frequently..."
+  → [Best Cutting Boards for Knives](/best-cutting-board-for-knives/)
+[H3] Silica Content
+  "Bamboo contains microscopic silica particles that 
+  act as an abrasive on blade edges..."
+[H3] Quality Variation
+  "Bamboo board quality varies dramatically between 
+  manufacturers. Adhesive quality is the key variable..."
+
+[H2] Bamboo vs Other Cutting Board Materials
+| Material | Janka | Knife-Friendly | Price | Durability | Best For |
+|---|---|---|---|---|---|
+| Bamboo | ~1,380 | ★★☆ | ★★★★★ | ★★★★ | Budget brands |
+| Walnut | ~1,010 | ★★★★ | ★★★ | ★★★★ | Premium brands |
+| Maple | ~1,450 | ★★★ | ★★★ | ★★★★★ | Commercial use |
+| Teak | ~1,070 | ★★★★ | ★★ | ★★★★★ | Luxury brands |
+| Cherry | ~995 | ★★★★ | ★★★ | ★★★ | Mid-premium |
+
+→ [Full comparison: Best Wood for Cutting Boards](/best-wood-for-cutting-board/)
+→ [All cutting board materials compared](/best-cutting-board-material/)
+
+[H2] From Our Factory: Our Honest Take
+"We manufacture both bamboo and hardwood cutting boards. 
+Bamboo accounts for about 60% of our cutting board orders, 
+primarily from brands selling on Amazon in the $15-25 
+retail range. However, 90% of our repeat orders from 
+premium brands are hardwood. The pattern is clear: 
+bamboo gets you started, hardwood builds your brand."
+
+[H2] Our Recommendation
+"Use bamboo if:
+• Your target retail price is under $25
+• You're testing the market with a first production run
+• Sustainability is a core brand value
+
+Skip bamboo if:
+• You're building a premium kitchen brand
+• Your customers are knife enthusiasts (they'll notice edge damage)
+• You're pairing the board with high-end knives in a set"
+
+→ [OEM Cutting Board Options](/products/oem-cutting-boards/)
+
+[H2] FAQ
+Q: Is bamboo harder on knives than wood?
+Q: Is bamboo cutting board hygienic?
+Q: Does bamboo cutting board need oiling?
+Q: Is bamboo better than plastic?
+Q: What is the best cutting board material?
+[5-6个FAQ]
+
+[H2] Related Articles
+• [Best Wood for Cutting Boards](/best-wood-for-cutting-board/)
+• [Bamboo vs Wood Cutting Boards](/bamboo-vs-wood-cutting-board/)
+• [Types of Cutting Boards](/types-of-cutting-boards/)
+• [Is Teak Good for Cutting Boards?](/is-teak-good-for-cutting-boards/)
+← [Cutting Board Knowledge Center](/cutting-boards/)
+
+Written by: [Name], Product Manager at Leeknives
+
+
+
+四、Cluster 发布检查清单
+
+Markdown
+## 发布前检查
+
+### 内容质量
+□ Key Takeaway框在H1后立即出现
+□ Key Takeaway第一句直接回答核心问题
+□ Key Takeaway包含至少1个具体数据点
+□ Key Takeaway能被AI独立引用
+□ 导语/Context包含制造商身份和经验数据
+□ From Our Factory板块存在，包含第一人称和具体数据
+□ 正文没有超过6行的纯文字段落
+□ 至少1个表格
+□ 至少1个列表
+□ FAQ有5-8个Q&A
+□ 每个FAQ第一句直接回答
+□ 每个FAQ包含1个内链
+□ 字数1,500-3,000
+
+### 内链
+□ 链回Hub：1次
+□ 链回Pillar：1-2次
+□ 链到兄弟Cluster：2-3次
+□ 链到Money Page：0-2次（仅在自然上下文中）
+□ 链到Glossary：3-6次（术语首次出现时）
+□ 总内链：5-10个
+□ 没有死链
+□ 锚文本描述性强
+
+### Schema
+□ Article Schema完整（author, publisher, dates）
+□ BreadcrumbList正确（Home > Hub > Article）
+□ FAQPage Schema覆盖所有FAQ
+□ HowTo Schema（仅指南型）
+□ Google Rich Results Test验证通过
+
+### SEO
+□ Title <60字符，主关键词靠前
+□ Meta Description <160字符
+□ URL slug 3-5词
+□ 图片有alt text
+□ 图片压缩（WebP, <200KB）
+
+### 发布后
+□ Hub页面已更新（加入新文章链接和摘要）
+□ Pillar页面已检查（如提到相关话题，加链接）
+□ 2-3篇最相关的已有文章已加反向链接
+□ Google Search Console已提交URL
+□ 内容管理追踪表已更新
+
+
+
+五、六种类型的速查对比表
+
+维度	A. 定义/评测	B. 对比	C. 指南/How-To	D. 列表/排名	E. 法规	F. 问题解答
+字数	1,500-3,000	2,000-3,000	1,500-3,000	2,000-3,000	2,000-3,500	1,000-2,000
+Key Takeaway格式	定义+数据+推荐	X好在/Y好在/取决于	步骤概述+预期结果	#1推荐+原因	合法/不合法+条件	是/否+原因+条件
+核心表格	属性值表	X vs Y对比表	步骤总览表	排名总览表	合法性对照表	与替代品对比表
+H2组织逻辑	属性维度逐一	先介绍X和Y再逐维度比	按步骤顺序	按排名顺序	按刀具类型/法规维度	先回答再解释再对比
+独有Schema	Article	Article	Article + HowTo	Article + ItemList	Article	Article
+独有板块	Pros & Cons表	Choose X If / Choose Y If	Common Mistakes	Selection Criteria	Disclaimer + Sources	The Other Side
+CTA强度	中	中	弱	中强	无-弱	弱-中
+工厂板块重点	测试数据、订单占比	生产两者的成本对比	工厂操作技巧	数据驱动的推荐	合规设计服务	坦诚制造商立场
+
+
+
+需要我继续出其他模板吗？按之前的列表，接下来是：
+
+•	Glossary 页面设计模板
+•	Money Page 优化模板
+•	内容产出SOP
+•	已有文章内链改造方案
+•	以及A-H的可选深入模块

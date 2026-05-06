@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Internal Link Strategy Map</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; margin: 40px; background: #f8f9fa; }
+  h1 { color: #1a1a2e; }
+  h2 { color: #16213e; margin-top: 40px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  th { background: #1a1a2e; color: #fff; padding: 14px 12px; text-align: left; }
+  td { padding: 12px; border-bottom: 1px solid #e9ecef; vertical-align: top; }
+  tr:hover { background: #f1f3f5; }
+  a { color: #0f3460; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+  .L1 { background: #e63946; color: white; }
+  .L2 { background: #457b9d; color: white; }
+  .L3 { background: #2a9d8f; color: white; }
+  .mermaid { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+<h1>🔗 Internal Link Strategy Map</h1>
+<p>Visual overview of all page relationships, link directions, and cross-industry connections.</p>
+
+<h2>📊 Architecture Flowchart</h2>
+<div class="mermaid">
+flowchart TB
+  L1["🌐 bag-industry-solutions
+Industry Solutions Hub"]
+  L1 --> L2_01["📁 01 Retail"]
+  L1 --> L2_02["📁 02 Food Beverage"]
+  L1 --> L2_03["📁 03 Beauty Cosmetics"]
+  L1 --> L2_05["📁 05 Education"]
+  L1 --> L2_07["📁 07 Food Processing"]
+  L1 --> L2_08["📁 08 Hospitality Hotel"]
+  L1 --> L3_orphan["📄 04 / 06 / 09 Sub-sectors
+(Link directly to Hub)"]
+
+  L2_01 --> L3_01A["📄 01-A Luxury Retail"]
+  L2_01 --> L3_01B["📄 01-B Fast Fashion"]
+  L2_01 --> L3_01C["📄 01-C Jewelry Watches"]
+  L2_01 --> L3_01D["📄 01-D Supermarket"]
+  L2_01 --> L3_01E["📄 01-E Ecommerce"]
+
+  L2_02 --> L3_02A["📄 02-A Coffee Tea"]
+  L2_02 --> L3_02B["📄 02-B Bakery"]
+  L2_02 --> L3_02C["📄 02-C Fast Food"]
+  L2_02 --> L3_02D["📄 02-D Fine Dining"]
+  L2_02 --> L3_02E["📄 02-E Ready to Cook"]
+
+  L2_03 --> L3_03A["📄 03-A Premium Skincare"]
+  L2_03 --> L3_03B["📄 03-B Makeup Fragrance"]
+  L2_03 --> L3_03C["📄 03-C Personal Care"]
+  L2_03 --> L3_03D["📄 03-D Medical Aesthetics"]
+  L2_03 --> L3_03E["📄 03-E Beauty Subscription"]
+
+  L3_01A -.-> L3_08A["📄 08-A Luxury Hotels"]
+  L3_02A -.-> L3_07A["📄 07-A Coffee Roasting"]
+  L3_03D -.-> L3_04E["📄 04-E Aesthetic Consumables"]
+</div>
+
+<h2>📋 Full Link Matrix</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Page</th>
+      <th>Parent (Up)</th>
+      <th>Children (Down)</th>
+      <th>Siblings (Related)</th>
+      <th>Cross-Industry</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="01-A-luxury-retail-solution.html">Luxury Retail - Premium Packaging Solutions</a></td>
+      <td><a href="01-retail-solution.html">Retail Industry</a></td>
+      <td>—</td>
+      <td><a href="01-C-jewelry-watches-solution.html">Jewelry & Watches</a><br/><a href="01-E-ecommerce-retail-solution.html">E-commerce Retail</a></td>
+      <td><a href="03-A-premium-skincare-solution.html">Premium Skincare</a><br/><a href="08-A-luxury-hotels-solution.html">Luxury Hotels</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="01-B-fast-fashion-solution.html">Fast Fashion - Cost-Effective Bag Solutions</a></td>
+      <td><a href="01-retail-solution.html">Retail Industry</a></td>
+      <td>—</td>
+      <td><a href="01-E-ecommerce-retail-solution.html">E-commerce Retail</a><br/><a href="01-D-supermarket-grocery-solution.html">Supermarket & Grocery</a></td>
+      <td><a href="02-C-fast-food-delivery-solution.html">Fast Food & Delivery</a><br/><a href="05-C-training-centers-solution.html">Training Centers</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="01-C-jewelry-watches-solution.html">Jewelry & Watches - Protective Packaging Solutions</a></td>
+      <td><a href="01-retail-solution.html">Retail Industry</a></td>
+      <td>—</td>
+      <td><a href="01-A-luxury-retail-solution.html">Luxury Retail</a><br/><a href="01-E-ecommerce-retail-solution.html">E-commerce Retail</a></td>
+      <td><a href="03-B-makeup-fragrance-solution.html">Makeup & Fragrance</a><br/><a href="08-A-luxury-hotels-solution.html">Luxury Hotels</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="01-D-supermarket-grocery-solution.html">Supermarket & Grocery - Durable Shopping Bags</a></td>
+      <td><a href="01-retail-solution.html">Retail Industry</a></td>
+      <td>—</td>
+      <td><a href="01-B-fast-fashion-solution.html">Fast Fashion</a><br/><a href="01-E-ecommerce-retail-solution.html">E-commerce Retail</a></td>
+      <td><a href="06-A-grains-cereals-solution.html">Grains & Cereals</a><br/><a href="07-B-snacks-confectionery-solution.html">Snacks & Confectionery</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="01-E-ecommerce-retail-solution.html">E-commerce Retail - Shipping & Unboxing Packaging</a></td>
+      <td><a href="01-retail-solution.html">Retail Industry</a></td>
+      <td>—</td>
+      <td><a href="01-A-luxury-retail-solution.html">Luxury Retail</a><br/><a href="01-B-fast-fashion-solution.html">Fast Fashion</a></td>
+      <td><a href="09-A-consumer-electronics-solution.html">Consumer Electronics</a><br/><a href="05-D-edtech-solution.html">EdTech</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L2</strong></td>
+      <td><a href="01-retail-solution.html">Retail Industry - Shopping Bag Solutions</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td><a href="01-A-luxury-retail-solution.html">Luxury Retail</a><br/><a href="01-B-fast-fashion-solution.html">Fast Fashion</a><br/><a href="01-C-jewelry-watches-solution.html">Jewelry & Watches</a><br/><a href="01-D-supermarket-grocery-solution.html">Supermarket & Grocery</a><br/><a href="01-E-ecommerce-retail-solution.html">E-commerce Retail</a></td>
+      <td><a href="03-beauty-cosmetics-solution.html">Beauty & Cosmetics Industry</a><br/><a href="08-hospitality-hotel-solution.html">Hospitality & Hotel Industry</a></td>
+      <td>—</td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="02-A-coffee-tea-solution.html">Coffee & Tea Shop - Insulated Takeaway Bags</a></td>
+      <td><a href="02-food-beverage-solution.html">Food & Beverage Industry</a></td>
+      <td>—</td>
+      <td><a href="02-B-bakery-desserts-solution.html">Bakery & Desserts</a><br/><a href="02-C-fast-food-delivery-solution.html">Fast Food & Delivery</a></td>
+      <td><a href="07-A-coffee-roasting-solution.html">Coffee Roasting</a><br/><a href="06-E-tea-industry-solution.html">Tea Industry</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="02-B-bakery-desserts-solution.html">Bakery & Desserts - Grease-Resistant Paper Bags</a></td>
+      <td><a href="02-food-beverage-solution.html">Food & Beverage Industry</a></td>
+      <td>—</td>
+      <td><a href="02-A-coffee-tea-solution.html">Coffee & Tea Shop</a><br/><a href="02-D-fine-dining-solution.html">Fine Dining</a></td>
+      <td><a href="07-B-snacks-confectionery-solution.html">Snacks & Confectionery</a><br/><a href="02-C-fast-food-delivery-solution.html">Fast Food & Delivery</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="02-C-fast-food-delivery-solution.html">Fast Food & Delivery - Leak-Proof Packaging</a></td>
+      <td><a href="02-food-beverage-solution.html">Food & Beverage Industry</a></td>
+      <td>—</td>
+      <td><a href="02-A-coffee-tea-solution.html">Coffee & Tea Shop</a><br/><a href="02-E-ready-to-cook-solution.html">Ready-to-Cook</a></td>
+      <td><a href="01-B-fast-fashion-solution.html">Fast Fashion</a><br/><a href="07-C-seasonings-sauces-solution.html">Seasonings & Sauces</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="02-D-fine-dining-solution.html">Fine Dining - Premium Restaurant Packaging</a></td>
+      <td><a href="02-food-beverage-solution.html">Food & Beverage Industry</a></td>
+      <td>—</td>
+      <td><a href="02-B-bakery-desserts-solution.html">Bakery & Desserts</a><br/><a href="02-E-ready-to-cook-solution.html">Ready-to-Cook</a></td>
+      <td><a href="08-A-luxury-hotels-solution.html">Luxury Hotels</a><br/><a href="01-A-luxury-retail-solution.html">Luxury Retail</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="02-E-ready-to-cook-solution.html">Ready-to-Cook - Cold Chain & Vacuum Packaging</a></td>
+      <td><a href="02-food-beverage-solution.html">Food & Beverage Industry</a></td>
+      <td>—</td>
+      <td><a href="02-C-fast-food-delivery-solution.html">Fast Food & Delivery</a><br/><a href="02-D-fine-dining-solution.html">Fine Dining</a></td>
+      <td><a href="04-B-pharmaceutical-solution.html">Pharmaceutical</a><br/><a href="07-D-dairy-products-solution.html">Dairy Products</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L2</strong></td>
+      <td><a href="02-food-beverage-solution.html">Food & Beverage Industry - Packaging Solutions</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td><a href="02-A-coffee-tea-solution.html">Coffee & Tea Shop</a><br/><a href="02-B-bakery-desserts-solution.html">Bakery & Desserts</a><br/><a href="02-C-fast-food-delivery-solution.html">Fast Food & Delivery</a><br/><a href="02-D-fine-dining-solution.html">Fine Dining</a><br/><a href="02-E-ready-to-cook-solution.html">Ready-to-Cook</a></td>
+      <td><a href="07-food-processing-solution.html">Food Processing Industry</a><br/><a href="05-education-solution.html">Education Industry</a></td>
+      <td>—</td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="03-A-premium-skincare-solution.html">Premium Skincare - Luxury Cosmetic Packaging</a></td>
+      <td><a href="03-beauty-cosmetics-solution.html">Beauty & Cosmetics Industry</a></td>
+      <td>—</td>
+      <td><a href="03-B-makeup-fragrance-solution.html">Makeup & Fragrance</a><br/><a href="03-D-medical-aesthetics-solution.html">Medical Aesthetics</a></td>
+      <td><a href="01-A-luxury-retail-solution.html">Luxury Retail</a><br/><a href="08-A-luxury-hotels-solution.html">Luxury Hotels</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="03-B-makeup-fragrance-solution.html">Makeup & Fragrance - Glass Bottle Protection Bags</a></td>
+      <td><a href="03-beauty-cosmetics-solution.html">Beauty & Cosmetics Industry</a></td>
+      <td>—</td>
+      <td><a href="03-A-premium-skincare-solution.html">Premium Skincare</a><br/><a href="03-C-personal-care-solution.html">Personal Care</a></td>
+      <td><a href="01-C-jewelry-watches-solution.html">Jewelry & Watches</a><br/><a href="03-E-beauty-subscription-solution.html">Beauty Subscription</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="03-C-personal-care-solution.html">Personal Care - Daily Use Packaging Solutions</a></td>
+      <td><a href="03-beauty-cosmetics-solution.html">Beauty & Cosmetics Industry</a></td>
+      <td>—</td>
+      <td><a href="03-B-makeup-fragrance-solution.html">Makeup & Fragrance</a><br/><a href="03-D-medical-aesthetics-solution.html">Medical Aesthetics</a></td>
+      <td><a href="05-A-k12-schools-solution.html">K-12 Schools</a><br/><a href="06-D-organic-farming-solution.html">Organic Farming</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="03-D-medical-aesthetics-solution.html">Medical Aesthetics - Post-Treatment Care Kits</a></td>
+      <td><a href="03-beauty-cosmetics-solution.html">Beauty & Cosmetics Industry</a></td>
+      <td>—</td>
+      <td><a href="03-A-premium-skincare-solution.html">Premium Skincare</a><br/><a href="03-E-beauty-subscription-solution.html">Beauty Subscription</a></td>
+      <td><a href="04-E-aesthetic-consumables-solution.html">Aesthetic Consumables</a><br/><a href="04-A-medical-devices-solution.html">Medical Devices</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="03-E-beauty-subscription-solution.html">Beauty Subscription - Monthly Box Packaging</a></td>
+      <td><a href="03-beauty-cosmetics-solution.html">Beauty & Cosmetics Industry</a></td>
+      <td>—</td>
+      <td><a href="03-B-makeup-fragrance-solution.html">Makeup & Fragrance</a><br/><a href="03-D-medical-aesthetics-solution.html">Medical Aesthetics</a></td>
+      <td><a href="09-A-consumer-electronics-solution.html">Consumer Electronics</a><br/><a href="01-E-ecommerce-retail-solution.html">E-commerce Retail</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L2</strong></td>
+      <td><a href="03-beauty-cosmetics-solution.html">Beauty & Cosmetics Industry - Gift Bag Solutions</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td><a href="03-A-premium-skincare-solution.html">Premium Skincare</a><br/><a href="03-B-makeup-fragrance-solution.html">Makeup & Fragrance</a><br/><a href="03-C-personal-care-solution.html">Personal Care</a><br/><a href="03-D-medical-aesthetics-solution.html">Medical Aesthetics</a><br/><a href="03-E-beauty-subscription-solution.html">Beauty Subscription</a></td>
+      <td><a href="01-retail-solution.html">Retail Industry</a><br/><a href="08-hospitality-hotel-solution.html">Hospitality & Hotel Industry</a></td>
+      <td>—</td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="04-A-medical-devices-solution.html">Medical Devices - Sterile Barrier Packaging</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="04-B-pharmaceutical-solution.html">Pharmaceutical</a><br/><a href="04-C-ivd-diagnostics-solution.html">IVD Diagnostics</a></td>
+      <td><a href="03-D-medical-aesthetics-solution.html">Medical Aesthetics</a><br/><a href="09-B-semiconductors-solution.html">Semiconductors</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="04-B-pharmaceutical-solution.html">Pharmaceutical - Drug Packaging Solutions</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="04-A-medical-devices-solution.html">Medical Devices</a><br/><a href="04-C-ivd-diagnostics-solution.html">IVD Diagnostics</a></td>
+      <td><a href="02-E-ready-to-cook-solution.html">Ready-to-Cook</a><br/><a href="04-D-supplements-solution.html">Supplements</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="04-C-ivd-diagnostics-solution.html">IVD Diagnostics - Cold Chain Transport Packaging</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="04-A-medical-devices-solution.html">Medical Devices</a><br/><a href="04-B-pharmaceutical-solution.html">Pharmaceutical</a></td>
+      <td><a href="04-E-aesthetic-consumables-solution.html">Aesthetic Consumables</a><br/><a href="09-B-semiconductors-solution.html">Semiconductors</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="04-D-supplements-solution.html">Supplements - Health Product Packaging</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="04-B-pharmaceutical-solution.html">Pharmaceutical</a><br/><a href="04-E-aesthetic-consumables-solution.html">Aesthetic Consumables</a></td>
+      <td><a href="07-E-health-food-solution.html">Health Food</a><br/><a href="06-D-organic-farming-solution.html">Organic Farming</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="04-E-aesthetic-consumables-solution.html">Aesthetic Consumables - Disposable Medical Packaging</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="04-C-ivd-diagnostics-solution.html">IVD Diagnostics</a><br/><a href="04-D-supplements-solution.html">Supplements</a></td>
+      <td><a href="03-D-medical-aesthetics-solution.html">Medical Aesthetics</a><br/><a href="04-A-medical-devices-solution.html">Medical Devices</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="05-A-k12-schools-solution.html">K-12 Schools - Safe & Durable School Bags</a></td>
+      <td><a href="05-education-solution.html">Education Industry</a></td>
+      <td>—</td>
+      <td><a href="05-B-universities-solution.html">Universities</a><br/><a href="05-C-training-centers-solution.html">Training Centers</a></td>
+      <td><a href="03-C-personal-care-solution.html">Personal Care</a><br/><a href="06-D-organic-farming-solution.html">Organic Farming</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="05-B-universities-solution.html">Universities - Branded Campus Merchandise Bags</a></td>
+      <td><a href="05-education-solution.html">Education Industry</a></td>
+      <td>—</td>
+      <td><a href="05-A-k12-schools-solution.html">K-12 Schools</a><br/><a href="05-E-international-education-solution.html">International Education</a></td>
+      <td><a href="08-D-serviced-apartments-solution.html">Serviced Apartments</a><br/><a href="05-E-international-education-solution.html">International Education</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="05-C-training-centers-solution.html">Training Centers - Marketing Giveaway Bags</a></td>
+      <td><a href="05-education-solution.html">Education Industry</a></td>
+      <td>—</td>
+      <td><a href="05-D-edtech-solution.html">EdTech</a><br/><a href="05-E-international-education-solution.html">International Education</a></td>
+      <td><a href="01-B-fast-fashion-solution.html">Fast Fashion</a><br/><a href="05-D-edtech-solution.html">EdTech</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="05-D-edtech-solution.html">EdTech - Course Kit & Delivery Packaging</a></td>
+      <td><a href="05-education-solution.html">Education Industry</a></td>
+      <td>—</td>
+      <td><a href="05-C-training-centers-solution.html">Training Centers</a><br/><a href="05-E-international-education-solution.html">International Education</a></td>
+      <td><a href="01-E-ecommerce-retail-solution.html">E-commerce Retail</a><br/><a href="09-E-telecom-equipment-solution.html">Telecom Equipment</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="05-E-international-education-solution.html">International Education - Study Abroad Welcome Kits</a></td>
+      <td><a href="05-education-solution.html">Education Industry</a></td>
+      <td>—</td>
+      <td><a href="05-B-universities-solution.html">Universities</a><br/><a href="05-C-training-centers-solution.html">Training Centers</a></td>
+      <td><a href="08-C-resorts-tourism-solution.html">Resorts & Tourism</a><br/><a href="05-B-universities-solution.html">Universities</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L2</strong></td>
+      <td><a href="05-education-solution.html">Education Industry - Branded Bag Solutions</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td><a href="05-A-k12-schools-solution.html">K-12 Schools</a><br/><a href="05-B-universities-solution.html">Universities</a><br/><a href="05-C-training-centers-solution.html">Training Centers</a><br/><a href="05-D-edtech-solution.html">EdTech</a><br/><a href="05-E-international-education-solution.html">International Education</a></td>
+      <td><a href="02-food-beverage-solution.html">Food & Beverage Industry</a><br/><a href="07-food-processing-solution.html">Food Processing Industry</a></td>
+      <td>—</td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="06-A-grains-cereals-solution.html">Grains & Cereals - Heavy-Duty Woven Bags</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="06-B-fresh-produce-solution.html">Fresh Produce</a><br/><a href="06-C-seeds-seedlings-solution.html">Seeds & Seedlings</a></td>
+      <td><a href="01-D-supermarket-grocery-solution.html">Supermarket & Grocery</a><br/><a href="07-B-snacks-confectionery-solution.html">Snacks & Confectionery</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="06-B-fresh-produce-solution.html">Fresh Produce - Breathable Storage Bags</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="06-A-grains-cereals-solution.html">Grains & Cereals</a><br/><a href="06-D-organic-farming-solution.html">Organic Farming</a></td>
+      <td><a href="02-E-ready-to-cook-solution.html">Ready-to-Cook</a><br/><a href="07-D-dairy-products-solution.html">Dairy Products</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="06-C-seeds-seedlings-solution.html">Seeds & Seedlings - Moisture-Barrier Foil Bags</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="06-A-grains-cereals-solution.html">Grains & Cereals</a><br/><a href="06-E-tea-industry-solution.html">Tea Industry</a></td>
+      <td><a href="04-D-supplements-solution.html">Supplements</a><br/><a href="07-E-health-food-solution.html">Health Food</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="06-D-organic-farming-solution.html">Organic Farming - Compostable Eco Bags</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="06-B-fresh-produce-solution.html">Fresh Produce</a><br/><a href="06-E-tea-industry-solution.html">Tea Industry</a></td>
+      <td><a href="03-C-personal-care-solution.html">Personal Care</a><br/><a href="05-A-k12-schools-solution.html">K-12 Schools</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="06-E-tea-industry-solution.html">Tea Industry - Aroma-Preserving Tea Bags</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="06-C-seeds-seedlings-solution.html">Seeds & Seedlings</a><br/><a href="06-D-organic-farming-solution.html">Organic Farming</a></td>
+      <td><a href="02-A-coffee-tea-solution.html">Coffee & Tea Shop</a><br/><a href="07-A-coffee-roasting-solution.html">Coffee Roasting</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="07-A-coffee-roasting-solution.html">Coffee Roasting - Degassing Valve Bags</a></td>
+      <td><a href="07-food-processing-solution.html">Food Processing Industry</a></td>
+      <td>—</td>
+      <td><a href="07-B-snacks-confectionery-solution.html">Snacks & Confectionery</a><br/><a href="07-E-health-food-solution.html">Health Food</a></td>
+      <td><a href="02-A-coffee-tea-solution.html">Coffee & Tea Shop</a><br/><a href="06-E-tea-industry-solution.html">Tea Industry</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="07-B-snacks-confectionery-solution.html">Snacks & Confectionery - High-Barrier Zipper Bags</a></td>
+      <td><a href="07-food-processing-solution.html">Food Processing Industry</a></td>
+      <td>—</td>
+      <td><a href="07-A-coffee-roasting-solution.html">Coffee Roasting</a><br/><a href="07-C-seasonings-sauces-solution.html">Seasonings & Sauces</a></td>
+      <td><a href="01-D-supermarket-grocery-solution.html">Supermarket & Grocery</a><br/><a href="06-A-grains-cereals-solution.html">Grains & Cereals</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="07-C-seasonings-sauces-solution.html">Seasonings & Sauces - Spout Pouch Packaging</a></td>
+      <td><a href="07-food-processing-solution.html">Food Processing Industry</a></td>
+      <td>—</td>
+      <td><a href="07-B-snacks-confectionery-solution.html">Snacks & Confectionery</a><br/><a href="07-D-dairy-products-solution.html">Dairy Products</a></td>
+      <td><a href="02-C-fast-food-delivery-solution.html">Fast Food & Delivery</a><br/><a href="02-E-ready-to-cook-solution.html">Ready-to-Cook</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="07-D-dairy-products-solution.html">Dairy Products - Powder & Liquid Barrier Bags</a></td>
+      <td><a href="07-food-processing-solution.html">Food Processing Industry</a></td>
+      <td>—</td>
+      <td><a href="07-C-seasonings-sauces-solution.html">Seasonings & Sauces</a><br/><a href="07-E-health-food-solution.html">Health Food</a></td>
+      <td><a href="02-E-ready-to-cook-solution.html">Ready-to-Cook</a><br/><a href="06-B-fresh-produce-solution.html">Fresh Produce</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="07-E-health-food-solution.html">Health Food - Supplement & Meal Replacement Bags</a></td>
+      <td><a href="07-food-processing-solution.html">Food Processing Industry</a></td>
+      <td>—</td>
+      <td><a href="07-A-coffee-roasting-solution.html">Coffee Roasting</a><br/><a href="07-D-dairy-products-solution.html">Dairy Products</a></td>
+      <td><a href="04-D-supplements-solution.html">Supplements</a><br/><a href="06-C-seeds-seedlings-solution.html">Seeds & Seedlings</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L2</strong></td>
+      <td><a href="07-food-processing-solution.html">Food Processing Industry - Freshness Packaging Solutions</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td><a href="07-A-coffee-roasting-solution.html">Coffee Roasting</a><br/><a href="07-B-snacks-confectionery-solution.html">Snacks & Confectionery</a><br/><a href="07-C-seasonings-sauces-solution.html">Seasonings & Sauces</a><br/><a href="07-D-dairy-products-solution.html">Dairy Products</a><br/><a href="07-E-health-food-solution.html">Health Food</a></td>
+      <td><a href="02-food-beverage-solution.html">Food & Beverage Industry</a><br/><a href="05-education-solution.html">Education Industry</a></td>
+      <td>—</td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="08-A-luxury-hotels-solution.html">Luxury Hotels - Five-Star Welcome Amenities</a></td>
+      <td><a href="08-hospitality-hotel-solution.html">Hospitality & Hotel Industry</a></td>
+      <td>—</td>
+      <td><a href="08-B-boutique-bnb-solution.html">Boutique B&Bs</a><br/><a href="08-C-resorts-tourism-solution.html">Resorts & Tourism</a></td>
+      <td><a href="01-A-luxury-retail-solution.html">Luxury Retail</a><br/><a href="03-A-premium-skincare-solution.html">Premium Skincare</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="08-B-boutique-bnb-solution.html">Boutique B&Bs - Cultural Themed Welcome Bags</a></td>
+      <td><a href="08-hospitality-hotel-solution.html">Hospitality & Hotel Industry</a></td>
+      <td>—</td>
+      <td><a href="08-A-luxury-hotels-solution.html">Luxury Hotels</a><br/><a href="08-C-resorts-tourism-solution.html">Resorts & Tourism</a></td>
+      <td><a href="02-D-fine-dining-solution.html">Fine Dining</a><br/><a href="05-E-international-education-solution.html">International Education</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="08-C-resorts-tourism-solution.html">Resorts & Tourism - Waterproof Souvenir Bags</a></td>
+      <td><a href="08-hospitality-hotel-solution.html">Hospitality & Hotel Industry</a></td>
+      <td>—</td>
+      <td><a href="08-A-luxury-hotels-solution.html">Luxury Hotels</a><br/><a href="08-B-boutique-bnb-solution.html">Boutique B&Bs</a></td>
+      <td><a href="05-E-international-education-solution.html">International Education</a><br/><a href="02-D-fine-dining-solution.html">Fine Dining</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="08-D-serviced-apartments-solution.html">Serviced Apartments - Long-Stay Practical Bags</a></td>
+      <td><a href="08-hospitality-hotel-solution.html">Hospitality & Hotel Industry</a></td>
+      <td>—</td>
+      <td><a href="08-B-boutique-bnb-solution.html">Boutique B&Bs</a><br/><a href="08-E-business-hotels-solution.html">Business Hotels</a></td>
+      <td><a href="05-B-universities-solution.html">Universities</a><br/><a href="01-D-supermarket-grocery-solution.html">Supermarket & Grocery</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="08-E-business-hotels-solution.html">Business Hotels - Corporate Event & Laundry Bags</a></td>
+      <td><a href="08-hospitality-hotel-solution.html">Hospitality & Hotel Industry</a></td>
+      <td>—</td>
+      <td><a href="08-C-resorts-tourism-solution.html">Resorts & Tourism</a><br/><a href="08-D-serviced-apartments-solution.html">Serviced Apartments</a></td>
+      <td><a href="09-E-telecom-equipment-solution.html">Telecom Equipment</a><br/><a href="05-D-edtech-solution.html">EdTech</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L2</strong></td>
+      <td><a href="08-hospitality-hotel-solution.html">Hospitality & Hotel Industry - Guest Experience Packaging</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td><a href="08-A-luxury-hotels-solution.html">Luxury Hotels</a><br/><a href="08-B-boutique-bnb-solution.html">Boutique B&Bs</a><br/><a href="08-C-resorts-tourism-solution.html">Resorts & Tourism</a><br/><a href="08-D-serviced-apartments-solution.html">Serviced Apartments</a><br/><a href="08-E-business-hotels-solution.html">Business Hotels</a></td>
+      <td><a href="01-retail-solution.html">Retail Industry</a><br/><a href="03-beauty-cosmetics-solution.html">Beauty & Cosmetics Industry</a></td>
+      <td>—</td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="09-A-consumer-electronics-solution.html">Consumer Electronics - Unboxing Experience Packaging</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="09-B-semiconductors-solution.html">Semiconductors</a><br/><a href="09-C-automotive-electronics-solution.html">Automotive Electronics</a></td>
+      <td><a href="01-E-ecommerce-retail-solution.html">E-commerce Retail</a><br/><a href="03-E-beauty-subscription-solution.html">Beauty Subscription</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="09-B-semiconductors-solution.html">Semiconductors - ESD & Moisture Barrier Packaging</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="09-A-consumer-electronics-solution.html">Consumer Electronics</a><br/><a href="09-C-automotive-electronics-solution.html">Automotive Electronics</a></td>
+      <td><a href="04-A-medical-devices-solution.html">Medical Devices</a><br/><a href="04-C-ivd-diagnostics-solution.html">IVD Diagnostics</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="09-C-automotive-electronics-solution.html">Automotive Electronics - VCI Anti-Corrosion Bags</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="09-B-semiconductors-solution.html">Semiconductors</a><br/><a href="09-D-ev-batteries-solution.html">EV Batteries</a></td>
+      <td><a href="09-D-ev-batteries-solution.html">EV Batteries</a><br/><a href="04-A-medical-devices-solution.html">Medical Devices</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="09-D-ev-batteries-solution.html">EV Batteries - UN38.3 Certified Transport Bags</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="09-C-automotive-electronics-solution.html">Automotive Electronics</a><br/><a href="09-E-telecom-equipment-solution.html">Telecom Equipment</a></td>
+      <td><a href="09-C-automotive-electronics-solution.html">Automotive Electronics</a><br/><a href="04-A-medical-devices-solution.html">Medical Devices</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L3</strong></td>
+      <td><a href="09-E-telecom-equipment-solution.html">Telecom Equipment - Anti-Static Bulk Packaging</a></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="09-A-consumer-electronics-solution.html">Consumer Electronics</a><br/><a href="09-D-ev-batteries-solution.html">EV Batteries</a></td>
+      <td><a href="05-D-edtech-solution.html">EdTech</a><br/><a href="08-E-business-hotels-solution.html">Business Hotels</a></td>
+    </tr>
+
+    <tr>
+      <td><strong>L1</strong></td>
+      <td><a href="bag-industry-solutions.html">Industry Solutions for Bag Packaging</a></td>
+      <td>—</td>
+      <td><a href="01-retail-solution.html">Retail Industry</a><br/><a href="02-food-beverage-solution.html">Food & Beverage Industry</a><br/><a href="03-beauty-cosmetics-solution.html">Beauty & Cosmetics Industry</a><br/><a href="05-education-solution.html">Education Industry</a><br/><a href="07-food-processing-solution.html">Food Processing Industry</a><br/><a href="08-hospitality-hotel-solution.html">Hospitality & Hotel Industry</a></td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<h2>📈 Link Distribution Stats</h2>
+<table>
+  <tr><th>Metric</th><th>Value</th></tr>
+  <tr><td>Total Pages</td><td>52</td></tr>
+  <tr><td>L1 Hub Pages</td><td>1</td></tr>
+  <tr><td>L2 Industry Pages</td><td>6</td></tr>
+  <tr><td>L3 Sub-sector Pages</td><td>45</td></tr>
+  <tr><td>Total Internal Links</td><td>279</td></tr>
+</table>
+
+<script>mermaid.initialize({startOnLoad:true});</script>
+</body>
+</html>

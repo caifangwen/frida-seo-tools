@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Industry Name] Packaging Solutions | Custom Bag & Box Supplier</title>
+<link rel="stylesheet" href="huahao.css">
+<style>
+/* ===== Base ===== */
+body {
+  font-family: var(--hh-font-body);
+  color: var(--hh-text);
+  background: var(--hh-white);
+  margin: 0;
+  line-height: 1.6;
+}
+a { color: var(--hh-blue); text-decoration: none; }
+a:hover { color: var(--hh-blue-dark); text-decoration: underline; }
+
+/* ===== Nav ===== */
+.site-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: var(--hh-white);
+  border-bottom: 1px solid var(--hh-border);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  gap: 32px;
+}
+.nav-logo {
+  font-family: var(--hh-font-head);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--hh-ink);
+  text-decoration: none;
+  margin-right: auto;
+  letter-spacing: .3px;
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.nav-links a {
+  font-size: 13px;
+  color: var(--hh-muted);
+  text-decoration: none;
+  letter-spacing: .3px;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--hh-ink); }
+.nav-cta {
+  background: var(--hh-ink);
+  color: var(--hh-white);
+  padding: 8px 20px;
+  font-size: 13px;
+  font-family: var(--hh-font-head);
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--hh-ink);
+  transition: all .2s;
+}
+.nav-cta:hover { background: var(--hh-white); color: var(--hh-ink); }
+
+/* ===== Breadcrumb ===== */
+.breadcrumb {
+  margin-top: 56px;
+  padding: 14px 48px;
+  border-bottom: 1px solid var(--hh-border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--hh-muted);
+}
+.breadcrumb a { color: var(--hh-muted); }
+.breadcrumb a:hover { color: var(--hh-ink); }
+.breadcrumb .sep { color: var(--hh-border-strong); }
+.breadcrumb .current { color: var(--hh-ink); font-weight: 600; }
+
+/* ===== Hero Split ===== */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  border-bottom: 1px solid var(--hh-border);
+}
+.hero-left {
+  padding: 56px 48px;
+  border-right: 1px solid var(--hh-border);
+}
+.hero-left h1 {
+  font-family: var(--hh-font-head);
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--hh-ink);
+  margin: 16px 0;
+}
+.hero-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--hh-text);
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+.hero-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 32px; }
+.hero-right {
+  padding: 48px 40px;
+  background: none;
+}
+
+/* ===== Subnav ===== */
+.subnav {
+  position: sticky;
+  top: 56px;
+  z-index: 90;
+  background: var(--hh-white);
+  border-bottom: 1px solid var(--hh-border);
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  height: 48px;
+  gap: 0;
+  overflow-x: auto;
+}
+.subnav-item {
+  padding: 0 18px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: var(--hh-muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all .2s;
+  white-space: nowrap;
+  font-family: var(--hh-font-mono);
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+.subnav-item:hover { color: var(--hh-ink); }
+.subnav-item.active { color: var(--hh-ink); border-bottom-color: var(--hh-ink); font-weight: 700; }
+
+/* ===== Page Body ===== */
+.page-body {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  gap: 0;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  padding: 40px 0;
+  border-right: 1px solid var(--hh-border);
+  position: sticky;
+  top: 104px;
+  height: fit-content;
+  padding-right: 28px;
+}
+.sidebar-section { margin-bottom: 32px; }
+.sidebar-label {
+  font-family: var(--hh-font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--hh-muted);
+  margin-bottom: 10px;
+}
+.sidebar-menu { list-style: none; margin: 0; padding: 0; }
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  font-size: 13px;
+  color: var(--hh-text);
+  text-decoration: none;
+  transition: all .15s;
+  line-height: 1.4;
+}
+.sidebar-menu li a:hover { background: var(--hh-blue-light); color: var(--hh-ink); }
+.sidebar-menu li a.active { background: var(--hh-ink); color: var(--hh-white); font-weight: 600; }
+.sidebar-divider { height: 1px; background: var(--hh-border); margin: 20px 0; }
+.cert-mini { display: flex; flex-wrap: wrap; gap: 4px; }
+.cert-mini span {
+  font-size: 10px;
+  padding: 2px 6px;
+  border: 1px solid var(--hh-border);
+  color: var(--hh-muted);
+  font-family: var(--hh-font-mono);
+}
+
+/* ===== Main Content ===== */
+.main-content { padding: 40px 0 80px 40px; }
+.content-section { margin-bottom: 64px; }
+.content-section:last-child { margin-bottom: 0; }
+
+/* ===== Pain Grid ===== */
+.pain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pain-card {
+  border: 1px solid var(--hh-border);
+  padding: 22px 24px;
+  position: relative;
+}
+.pain-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 2px; height: 100%;
+  background: var(--hh-border-strong);
+}
+.pain-title {
+  font-family: var(--hh-font-head);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--hh-ink);
+  margin-bottom: 6px;
+}
+.pain-text {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--hh-text);
+  margin-bottom: 10px;
+}
+.pain-solution {
+  font-size: 12px;
+  color: var(--hh-muted);
+  padding-top: 10px;
+  border-top: 1px solid var(--hh-border);
+  font-style: italic;
+}
+
+/* ===== Product Cards (3-col) ===== */
+.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.product-card {
+  border: 1px solid var(--hh-border);
+  background: var(--hh-white);
+  overflow: hidden;
+}
+.product-card:hover { border-color: var(--hh-border-strong); }
+.product-img {
+  height: 140px;
+  background: var(--hh-blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--hh-border);
+}
+.product-img svg {
+  width: 36px; height: 36px;
+  stroke: var(--hh-muted);
+  stroke-width: 1.5;
+  fill: none;
+}
+.product-body { padding: 16px 18px 18px; }
+.product-name {
+  font-family: var(--hh-font-head);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--hh-ink);
+  margin-bottom: 4px;
+}
+.product-material {
+  font-size: 11px;
+  color: var(--hh-muted);
+  letter-spacing: .5px;
+  margin-bottom: 10px;
+}
+.product-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px; }
+.spec-item { font-size: 11px; color: var(--hh-muted); }
+.spec-item strong { color: var(--hh-ink); font-size: 12px; }
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid var(--hh-border);
+}
+.moq-label { font-size: 10px; color: var(--hh-muted); }
+.moq-val { font-size: 13px; font-weight: 700; color: var(--hh-ink); }
+
+/* ===== Case Cards ===== */
+.cases-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.case-card {
+  border: 1px solid var(--hh-border);
+  padding: 22px 24px;
+  display: flex;
+  gap: 16px;
+  transition: border-color .2s;
+}
+.case-card:hover { border-color: var(--hh-border-strong); }
+.case-icon {
+  width: 44px; height: 44px;
+  border: 1px solid var(--hh-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.case-icon svg {
+  width: 20px; height: 20px;
+  stroke: var(--hh-muted);
+  stroke-width: 1.8;
+  fill: none;
+}
+.case-industry {
+  font-family: var(--hh-font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--hh-muted);
+  margin-bottom: 4px;
+}
+.case-name {
+  font-family: var(--hh-font-head);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--hh-ink);
+  margin-bottom: 6px;
+}
+.case-desc { font-size: 13px; line-height: 1.6; color: var(--hh-text); margin-bottom: 8px; }
+.case-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.case-tag { font-size: 10px; padding: 2px 7px; border: 1px solid var(--hh-border); color: var(--hh-muted); }
+
+/* ===== Cert Grid ===== */
+.cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.cert-card {
+  border: 1px solid var(--hh-border);
+  padding: 22px 16px;
+  text-align: center;
+}
+.cert-card:hover { border-color: var(--hh-border-strong); }
+.cert-icon {
+  width: 40px; height: 40px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--hh-border);
+}
+.cert-icon svg {
+  width: 20px; height: 20px;
+  stroke: var(--hh-muted);
+  stroke-width: 1.5;
+  fill: none;
+}
+.cert-name {
+  font-family: var(--hh-font-head);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--hh-ink);
+  margin-bottom: 4px;
+}
+.cert-desc { font-size: 11px; line-height: 1.5; color: var(--hh-muted); }
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .hero-split { grid-template-columns: 1fr; }
+  .hero-right { border-top: 1px solid var(--hh-border); }
+  .page-body { grid-template-columns: 1fr; padding: 0 24px; }
+  .sidebar { display: none; }
+  .main-content { padding: 32px 0 60px; }
+  .pain-grid { grid-template-columns: 1fr; }
+  .product-grid { grid-template-columns: 1fr 1fr; }
+  .cases-grid { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: 1fr 1fr; }
+  .site-nav { padding: 0 24px; }
+  .breadcrumb { padding: 14px 24px; }
+  .hero-left { padding: 40px 24px; }
+  .hero-right { padding: 32px 24px; }
+  .subnav { padding: 0 24px; }
+}
+@media (max-width: 640px) {
+  .product-grid { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="#" class="nav-logo">BAGPRO Solutions</a>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="bag-supplier-solutions-en.html" class="active">Industries</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Certifications</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#" class="nav-cta">Get Quote</a></li>
+  </ul>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="#">Home</a>
+  <span class="sep">/</span>
+  <a href="bag-supplier-solutions-en.html">Industries</a>
+  <span class="sep">/</span>
+  <a href="#">[Parent Industry]</a>
+  <span class="sep">/</span>
+  <span class="current">[Industry Name]</span>
+</div>
+
+<!-- HERO -->
+<div class="hero-split">
+  <div class="hero-left">
+    <span class="hh-hero-eyebrow">Industry Solutions / [Parent Industry]</span>
+    <h1>[Industry Name] Packaging Solutions</h1>
+    <p class="hero-desc">[Industry-specific description: product characteristics, packaging challenges, and how our solutions address them. 2-3 sentences covering material needs, regulatory requirements, and brand positioning.]</p>
+    <div class="hero-pills">
+      <span class="hh-pill">FDA Compliant</span>
+      <span class="hh-pill">ISO 9001</span>
+      <span class="hh-pill">Custom Sizes</span>
+      <span class="hh-pill">MOQ 500</span>
+    </div>
+    <div class="hh-hero-stats">
+      <div><span class="hh-hero-stat-num">[X]</span><span class="hh-hero-stat-label">Sub-Segments</span></div>
+      <div><span class="hh-hero-stat-num">[Y]</span><span class="hh-hero-stat-label">Material Options</span></div>
+      <div><span class="hh-hero-stat-num">[Z] Days</span><span class="hh-hero-stat-label">Standard Lead Time</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hh-form-wrap">
+      <h3>Quick Inquiry</h3>
+      <p class="hh-form-sub">Get a tailored quote for your [industry] packaging needs.</p>
+      <div class="hh-form-grid">
+        <div class="hh-form-field">
+          <label class="hh-form-label">Your Name</label>
+          <input type="text" placeholder="Full name">
+        </div>
+        <div class="hh-form-field">
+          <label class="hh-form-label">Email</label>
+          <input type="email" placeholder="name@company.com">
+        </div>
+        <div class="hh-form-field">
+          <label class="hh-form-label">Segment</label>
+          <select>
+            <option>Select segment</option>
+            <option>Segment A</option>
+            <option>Segment B</option>
+            <option>Segment C</option>
+          </select>
+        </div>
+        <div class="hh-form-field">
+          <label class="hh-form-label">Volume</label>
+          <select>
+            <option>Select volume</option>
+            <option>500-1,000 units</option>
+            <option>1,000-5,000 units</option>
+            <option>5,000-20,000 units</option>
+            <option>20,000+ units</option>
+          </select>
+        </div>
+        <div class="hh-form-field hh-full">
+          <label class="hh-form-label">Requirements</label>
+          <textarea placeholder="Describe your product, size requirements, printing needs..."></textarea>
+        </div>
+      </div>
+      <button class="hh-btn-submit">Request Quote</button>
+      <span class="hh-form-privacy">We respond within 24 hours. No spam, ever.</span>
+    </div>
+  </div>
+</div>
+
+<!-- SUBNAV -->
+<div class="subnav">
+  <a href="#pain-points" class="subnav-item active">Pain Points</a>
+  <a href="#products" class="subnav-item">Products</a>
+  <a href="#specs" class="subnav-item">Specs</a>
+  <a href="#process" class="subnav-item">Process</a>
+  <a href="#cases" class="subnav-item">Cases</a>
+  <a href="#certifications" class="subnav-item">Certifications</a>
+  <a href="#faq" class="subnav-item">FAQ</a>
+</div>
+
+<!-- PAGE BODY -->
+<div class="page-body">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-label">In This Industry</div>
+    <ul class="sidebar-menu">
+      <li><a href="#" class="active">[Segment A]</a></li>
+      <li><a href="#">[Segment B]</a></li>
+      <li><a href="#">[Segment C]</a></li>
+      <li><a href="#">[Segment D]</a></li>
+      <li><a href="#">[Segment E]</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-divider"></div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Other Industries</div>
+    <ul class="sidebar-menu">
+      <li><a href="#">Retail</a></li>
+      <li><a href="#">Food & Beverage</a></li>
+      <li><a href="#">Beauty & Cosmetics</a></li>
+      <li><a href="#">Medical</a></li>
+      <li><a href="#">Education</a></li>
+      <li><a href="#">Agriculture</a></li>
+      <li><a href="#">Food Processing</a></li>
+      <li><a href="#">Hospitality</a></li>
+      <li><a href="#">Electronics</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-divider"></div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Certifications</div>
+    <div class="cert-mini">
+      <span>FDA</span><span>SGS</span><span>ISO</span><span>REACH</span><span>FSC</span><span>GOTS</span>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+<!-- PAIN POINTS -->
+<section class="content-section" id="pain-points">
+  <div class="hh-section-header">
+    <span class="hh-section-num">01</span>
+    <div>
+      <span class="hh-section-tag">Challenges</span>
+      <h2 class="hh-section-title">Industry Pain Points & Solutions</h2>
+    </div>
+  </div>
+  <div class="pain-grid">
+    <div class="pain-card">
+      <div class="pain-title">[Pain Point 1]</div>
+      <div class="pain-text">[Description of the specific packaging challenge this industry faces.]</div>
+      <div class="pain-solution">Solution: [How our packaging addresses this issue.]</div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-title">[Pain Point 2]</div>
+      <div class="pain-text">[Description of the specific packaging challenge this industry faces.]</div>
+      <div class="pain-solution">Solution: [How our packaging addresses this issue.]</div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-title">[Pain Point 3]</div>
+      <div class="pain-text">[Description of the specific packaging challenge this industry faces.]</div>
+      <div class="pain-solution">Solution: [How our packaging addresses this issue.]</div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-title">[Pain Point 4]</div>
+      <div class="pain-text">[Description of the specific packaging challenge this industry faces.]</div>
+      <div class="pain-solution">Solution: [How our packaging addresses this issue.]</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="content-section" id="products">
+  <div class="hh-section-header">
+    <span class="hh-section-num">02</span>
+    <div>
+      <span class="hh-section-tag">Product Matrix</span>
+      <h2 class="hh-section-title">Recommended Packaging by Segment</h2>
+    </div>
+  </div>
+  <div class="hh-tabs">
+    <div class="hh-tab-list">
+      <button class="hh-tab-btn hh-active" onclick="switchTab(this,'tab-a')">[Segment A]</button>
+      <button class="hh-tab-btn" onclick="switchTab(this,'tab-b')">[Segment B]</button>
+      <button class="hh-tab-btn" onclick="switchTab(this,'tab-c')">[Segment C]</button>
+      <button class="hh-tab-btn" onclick="switchTab(this,'tab-d')">[Segment D]</button>
+      <button class="hh-tab-btn" onclick="switchTab(this,'tab-e')">[Segment E]</button>
+    </div>
+    <div class="hh-tab-panel" id="tab-a">
+      <h4>[Segment A] Packaging</h4>
+      <p>[Product description for this segment: material recommendations, size range, printing options, and key features.]</p>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-img">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+          </div>
+          <div class="product-body">
+            <div class="product-name">[Product Name 1]</div>
+            <div class="product-material">[Material Type]</div>
+            <div class="product-specs">
+              <div class="spec-item"><strong>[Spec]</strong> [Value]</div>
+              <div class="spec-item"><strong>[Spec]</strong> [Value]</div>
+              <div class="spec-item"><strong>[Spec]</strong> [Value]</div>
+              <div class="spec-item"><strong>[Spec]</strong> [Value]</div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">[X] units</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+          </div>
+          <div class="product-body">
+            <div class="product-name">[Product Name 2]</div>
+            <div class="product-material">[Material Type]</div>
+            <div class="product-specs">
+              <div class="spec-item"><strong>[Spec]</strong> [Value]</div>
+              <div class="spec-item"><strong>[Spec]</strong> [Value]</div>
+              <div class="spec-item"><strong>[Spec]</strong> [Value]</div>
+              <div class="spec-item"><strong>[Spec]</strong> [Value]</div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">[X] units</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+          </div>
+          <div class="product-body">
+            <div class="product-name">[Product Name 3]</div>
+            <div class="product-material">[Material Type]</div>
+            <div class="product-specs">
+              <div class="spec-item"><strong>[Spec]</strong> [Value]</div>
+              <div class="spec-item"><strong>[Spec]</strong> [Value]</div>
+              <div class="spec-item"><strong>[Spec]</strong> [Value]</div>
+              <div class="spec-item"><strong>[Spec]</strong> [Value]</div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">[X] units</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hh-tab-panel" id="tab-b" style="display:none;">
+      <h4>[Segment B] Packaging</h4>
+      <p>[Product description for Segment B.]</p>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-img">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+          </div>
+          <div class="product-body">
+            <div class="product-name">[Product Name]</div>
+            <div class="product-material">[Material]</div>
+            <div class="product-specs">
+              <div class="spec-item"><strong>[Spec]</strong> [Value]</div>
+              <div class="spec-item"><strong>[Spec]</strong> [Value]</div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">[X] units</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hh-tab-panel" id="tab-c" style="display:none;">
+      <h4>[Segment C] Packaging</h4>
+      <p>[Product description for Segment C.]</p>
+    </div>
+    <div class="hh-tab-panel" id="tab-d" style="display:none;">
+      <h4>[Segment D] Packaging</h4>
+      <p>[Product description for Segment D.]</p>
+    </div>
+    <div class="hh-tab-panel" id="tab-e" style="display:none;">
+      <h4>[Segment E] Packaging</h4>
+      <p>[Product description for Segment E.]</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section class="content-section" id="specs">
+  <div class="hh-section-header">
+    <span class="hh-section-num">03</span>
+    <div>
+      <span class="hh-section-tag">Technical Specs</span>
+      <h2 class="hh-section-title">Material & Specification Guide</h2>
+    </div>
+  </div>
+  <div class="hh-table-wrap">
+    <table class="hh-table">
+      <thead>
+        <tr>
+          <th>Material</th>
+          <th>Thickness</th>
+          <th>Size Range</th>
+          <th>Print Method</th>
+          <th>MOQ</th>
+          <th>Lead Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[Material A]</td>
+          <td>[X] gsm</td>
+          <td>[Min] - [Max] mm</td>
+          <td>[Method]</td>
+          <td>[X] units</td>
+          <td>[X] days</td>
+        </tr>
+        <tr>
+          <td>[Material B]</td>
+          <td>[X] gsm</td>
+          <td>[Min] - [Max] mm</td>
+          <td>[Method]</td>
+          <td>[X] units</td>
+          <td>[X] days</td>
+        </tr>
+        <tr>
+          <td>[Material C]</td>
+          <td>[X] gsm</td>
+          <td>[Min] - [Max] mm</td>
+          <td>[Method]</td>
+          <td>[X] units</td>
+          <td>[X] days</td>
+        </tr>
+        <tr>
+          <td>[Material D]</td>
+          <td>[X] gsm</td>
+          <td>[Min] - [Max] mm</td>
+          <td>[Method]</td>
+          <td>[X] units</td>
+          <td>[X] days</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <span class="hh-table-caption">Specifications are representative. Custom sizes and materials available on request.</span>
+</section>
+
+<!-- PROCESS -->
+<section class="content-section" id="process">
+  <div class="hh-section-header">
+    <span class="hh-section-num">04</span>
+    <div>
+      <span class="hh-section-tag">Workflow</span>
+      <h2 class="hh-section-title">5-Step Production Process</h2>
+    </div>
+  </div>
+  <div class="hh-steps">
+    <div class="hh-step">
+      <div class="hh-step-n">01</div>
+      <h4>Requirement Analysis</h4>
+      <p>Product audit, channel review, and regulatory mapping.</p>
+    </div>
+    <div class="hh-step">
+      <div class="hh-step-n">02</div>
+      <h4>Structure Design</h4>
+      <p>Engineering drawings, die-line development, load testing.</p>
+    </div>
+    <div class="hh-step">
+      <div class="hh-step-n">03</div>
+      <h4>Sample Production</h4>
+      <p>Pre-production samples for approval. Color matching.</p>
+    </div>
+    <div class="hh-step">
+      <div class="hh-step-n">04</div>
+      <h4>Volume Production</h4>
+      <p>QC at every station. In-line inspection protocols.</p>
+    </div>
+    <div class="hh-step">
+      <div class="hh-step-n">05</div>
+      <h4>Delivery & Support</h4>
+      <p>Global logistics, VMI programs, after-sales support.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="content-section" id="cases">
+  <div class="hh-section-header">
+    <span class="hh-section-num">05</span>
+    <div>
+      <span class="hh-section-tag">Case Studies</span>
+      <h2 class="hh-section-title">Proven Results</h2>
+    </div>
+  </div>
+  <div class="cases-grid">
+    <div class="case-card">
+      <div class="case-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <div>
+        <div class="case-industry">[Industry]</div>
+        <div class="case-name">[Case Study 1 Title]</div>
+        <div class="case-desc">[Brief description of the challenge, solution implemented, and measurable results achieved.]</div>
+        <div class="case-tags">
+          <span class="case-tag">[Tag 1]</span>
+          <span class="case-tag">[Tag 2]</span>
+          <span class="case-tag">[Tag 3]</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card">
+      <div class="case-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <div>
+        <div class="case-industry">[Industry]</div>
+        <div class="case-name">[Case Study 2 Title]</div>
+        <div class="case-desc">[Brief description of the challenge, solution implemented, and measurable results achieved.]</div>
+        <div class="case-tags">
+          <span class="case-tag">[Tag 1]</span>
+          <span class="case-tag">[Tag 2]</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="content-section" id="certifications">
+  <div class="hh-section-header">
+    <span class="hh-section-num">06</span>
+    <div>
+      <span class="hh-section-tag">Compliance</span>
+      <h2 class="hh-section-title">Certifications & Standards</h2>
+    </div>
+  </div>
+  <div class="cert-grid">
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <div class="cert-name">[Cert Name]</div>
+      <div class="cert-desc">[Brief description of what this certification covers.]</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <div class="cert-name">[Cert Name]</div>
+      <div class="cert-desc">[Brief description of what this certification covers.]</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <div class="cert-name">[Cert Name]</div>
+      <div class="cert-desc">[Brief description of what this certification covers.]</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <div class="cert-name">[Cert Name]</div>
+      <div class="cert-desc">[Brief description of what this certification covers.]</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="content-section" id="faq">
+  <div class="hh-section-header">
+    <span class="hh-section-num">07</span>
+    <div>
+      <span class="hh-section-tag">FAQ</span>
+      <h2 class="hh-section-title">Common Questions</h2>
+    </div>
+  </div>
+  <div class="hh-faq">
+    <details class="hh-faq-item">
+      <summary class="hh-faq-q">[Question 1 about this industry's packaging requirements?]</summary>
+      <div class="hh-faq-a"><p>[Detailed answer addressing the question with specific technical or commercial information.]</p></div>
+    </details>
+    <details class="hh-faq-item">
+      <summary class="hh-faq-q">[Question 2 about materials, MOQ, or lead times?]</summary>
+      <div class="hh-faq-a"><p>[Detailed answer with numbers and specifics relevant to this industry.]</p></div>
+    </details>
+    <details class="hh-faq-item">
+      <summary class="hh-faq-q">[Question 3 about customization or printing options?]</summary>
+      <div class="hh-faq-a"><p>[Detailed answer covering available options and recommendations.]</p></div>
+    </details>
+    <details class="hh-faq-item">
+      <summary class="hh-faq-q">[Question 4 about certifications or compliance?]</summary>
+      <div class="hh-faq-a"><p>[Detailed answer about regulatory requirements and documentation.]</p></div>
+    </details>
+    <details class="hh-faq-item">
+      <summary class="hh-faq-q">[Question 5 about shipping, logistics, or VMI?]</summary>
+      <div class="hh-faq-a"><p>[Detailed answer about delivery options and inventory programs.]</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="hh-cta">
+  <span class="hh-cta-tag">Get Started</span>
+  <h2>Ready for Your [Industry] Packaging Solution?</h2>
+  <p>Our specialists will analyze your product, channel, and brand requirements to recommend the optimal material, structure, and finish combination.</p>
+  <div class="hh-cta-btns">
+    <a href="#" class="hh-btn-primary">Request Custom Quote</a>
+    <a href="#" class="hh-btn-outline">Download Spec Sheet</a>
+  </div>
+</div>
+
+</main>
+</div>
+
+<script>
+function switchTab(btn, id) {
+  document.querySelectorAll('.hh-tab-btn').forEach(b => b.classList.remove('hh-active'));
+  document.querySelectorAll('.hh-tab-panel').forEach(p => p.style.display = 'none');
+  btn.classList.add('hh-active');
+  document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>

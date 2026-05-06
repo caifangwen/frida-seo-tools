@@ -1,0 +1,76 @@
+/* History & Traditions-specific layout */
+    .type-hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--gap-lg); margin: var(--gap-lg) 0 var(--gap-4xl); }
+    .type-hero-card { border: 1px solid var(--border); border-radius: var(--r-12); padding: var(--pad-card); background: var(--surface); text-align: center; box-shadow: var(--shadow-2); transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out); }
+    .type-hero-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-5); }
+    .type-hero-card .type-icon { font-size: 1.6rem; margin-bottom: var(--gap-xs); }
+    .type-hero-card h4 { margin: 0 0 var(--gap-xs); font-size: 1.05rem; }
+    .type-hero-card p { font-size: 0.85rem; color: var(--muted-700); margin: 0; line-height: 1.5; }
+
+    .profile-section { margin: var(--gap-4xl) 0; }
+    .profile-section-header { display: flex; flex-wrap: wrap; align-items: center; gap: var(--gap-sm); margin-bottom: var(--gap-sm); }
+    .profile-section-header h3 { margin: 0; font-size: 1.35rem; }
+    .profile-lead { color: var(--muted-800); font-size: 1rem; line-height: 1.7; margin-bottom: var(--gap-md); max-width: var(--content-max); }
+
+    .profile-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--gap-lg); margin: var(--gap-lg) 0; }
+    .profile-card { border: 1px solid var(--border); border-radius: var(--r-12); padding: var(--pad-card); background: var(--surface); box-shadow: var(--shadow-3); transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out); }
+    .profile-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-5); }
+    .profile-card-header { display: flex; align-items: center; gap: var(--gap-sm); margin-bottom: var(--gap-xs); flex-wrap: wrap; }
+    .profile-card-header h4 { margin: 0; font-size: 1.1rem; }
+    .profile-card .origin { font-size: 0.78rem; color: var(--muted-500); text-transform: uppercase; letter-spacing: 0.04em; }
+    .profile-desc { font-size: 0.92rem; color: var(--muted-800); line-height: 1.6; margin: var(--gap-xs) 0 var(--gap-sm); }
+    .profile-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 8px; font-size: 0.82rem; margin: var(--gap-sm) 0; }
+    .profile-specs dt { color: var(--muted-500); font-weight: 600; }
+    .profile-specs dd { margin: 0; color: var(--muted-900); }
+    .profile-bestfor { font-size: 0.85rem; color: var(--muted-700); margin-top: var(--gap-sm); padding-top: var(--gap-sm); border-top: 1px solid var(--surface-divider); }
+    .profile-bestfor strong { color: var(--secondary); }
+
+    .compare-bar { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap-lg); margin: var(--gap-lg) 0; }
+    .compare-side { border: 1px solid var(--border); border-radius: var(--r-12); padding: var(--pad-card); background: var(--surface); }
+    .compare-side h4 { margin: 0 0 var(--gap-sm); font-size: 1.05rem; }
+    .compare-side ul { margin: 0; padding-left: var(--gap-2xl); }
+    .compare-side li { margin-bottom: var(--gap-xs); font-size: 0.95rem; color: var(--muted-800); }
+
+    .timeline-wrap { position: relative; margin: var(--gap-4xl) 0; padding-left: 30px; }
+    .timeline-wrap::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+    .timeline-item { position: relative; margin-bottom: var(--gap-4xl); }
+    .timeline-item::before { content: ''; position: absolute; left: -26px; top: 4px; width: 14px; height: 14px; border-radius: 50%; background: var(--secondary); border: 2px solid var(--surface); }
+    .timeline-date { font-size: 0.78rem; font-weight: 700; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: var(--gap-xs); }
+    .timeline-item h4 { margin: 0 0 var(--gap-xs); font-size: 1.15rem; }
+    .timeline-item p { margin: 0; font-size: 0.95rem; color: var(--muted-800); line-height: 1.65; }
+
+    .region-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--gap-lg); margin: var(--gap-lg) 0; }
+    .region-card { border: 1px solid var(--border); border-radius: var(--r-12); padding: var(--pad-card); background: var(--surface); box-shadow: var(--shadow-3); transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out); }
+    .region-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-5); }
+    .region-card-header { display: flex; align-items: center; gap: var(--gap-sm); margin-bottom: var(--gap-xs); }
+    .region-card-header h4 { margin: 0; font-size: 1.1rem; }
+    .region-card .region-tag { font-size: 0.72rem; padding: 3px 10px; border-radius: var(--r-pill); font-weight: 700; text-transform: uppercase; }
+    .region-tag.active { background: var(--tag-budget-bg); color: var(--tag-budget-text); }
+    .region-tag.historic { background: var(--tag-mid-bg); color: var(--tag-mid-text); }
+    .region-desc { font-size: 0.92rem; color: var(--muted-800); line-height: 1.6; margin: var(--gap-xs) 0 var(--gap-sm); }
+    .region-legacy { font-size: 0.85rem; color: var(--muted-700); margin-top: var(--gap-sm); padding-top: var(--gap-sm); border-top: 1px solid var(--surface-divider); }
+    .region-legacy strong { color: var(--secondary); }
+
+    .evolution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--gap-lg); margin: var(--gap-lg) 0; }
+    .evolution-card { border: 1px solid var(--border); border-radius: var(--r-10); padding: var(--pad-card-sm); background: var(--surface); text-align: center; }
+    .evolution-card .evo-era { font-size: 0.72rem; font-weight: 700; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: var(--gap-xs); }
+    .evolution-card h4 { margin: 0 0 var(--gap-xs); font-size: 1rem; }
+    .evolution-card p { margin: 0; font-size: 0.85rem; color: var(--muted-700); line-height: 1.5; }
+
+    /* Ritual & culture cards */
+    .ritual-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--gap-lg); margin: var(--gap-lg) 0; }
+    .ritual-card { border: 1px solid var(--border); border-radius: var(--r-12); padding: var(--pad-card); background: var(--surface); box-shadow: var(--shadow-3); transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out); }
+    .ritual-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-5); }
+    .ritual-card-header { display: flex; align-items: center; gap: var(--gap-sm); margin-bottom: var(--gap-xs); flex-wrap: wrap; }
+    .ritual-card-header h4 { margin: 0; font-size: 1.1rem; }
+    .ritual-card .origin { font-size: 0.78rem; color: var(--muted-500); text-transform: uppercase; letter-spacing: 0.04em; }
+    .ritual-desc { font-size: 0.92rem; color: var(--muted-800); line-height: 1.6; margin: var(--gap-xs) 0 var(--gap-sm); }
+    .ritual-symbol { font-size: 1.4rem; margin-right: var(--gap-xs); }
+
+    /* Culture note highlight */
+    .culture-highlight { background: linear-gradient(180deg, var(--accent-bg) 0%, var(--surface) 100%); border: 1px solid var(--border); border-left: 4px solid var(--secondary); border-radius: var(--r-12); padding: var(--pad-card); margin: var(--gap-xl) 0; }
+    .culture-highlight h4 { margin: 0 0 var(--gap-sm); font-size: 1.05rem; }
+    .culture-highlight p { margin: 0; color: var(--muted-800); line-height: 1.65; }
+
+    @media (max-width: 820px) {
+      .compare-bar { grid-template-columns: 1fr; }
+    }

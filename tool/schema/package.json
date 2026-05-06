@@ -1,0 +1,25 @@
+{
+  "name": "schema-generation-skill",
+  "version": "1.0.0",
+  "description": "根据用户描述自动生成完整的 Claude Skill 结构（SKILL.md, evals.json, eval_metadata.json）",
+  "main": "schema-generator.js",
+  "scripts": {
+    "generate": "node run-generator.js",
+    "example": "node examples.js",
+    "cli": "node schema-generator.js",
+    "batch": "node batch-convert.js",
+    "jsonld": "node generate-jsonld.js"
+  },
+  "keywords": [
+    "claude",
+    "skill",
+    "generator",
+    "schema",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

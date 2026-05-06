@@ -3,5 +3,6 @@
     "allow": [
       "WebFetch(mewarpolytex.com)"
     ]
-  }
+  },
+  "$version": 3
 }

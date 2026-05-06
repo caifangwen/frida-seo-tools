@@ -1,0 +1,515 @@
+Hub Page 设计简要模板 副本
+Hub Page（知识中心页）的页面设计简要模板
+
+GEO/AEO 时代的关键要求
+
+•	GEO（Generative Engine Optimization）：让 AI 搜索引擎（Google SGE、Perplexity、ChatGPT Search）在生成回答时引用你的内容
+•	AEO（Answer Engine Optimization）：让你的内容直接成为"答案"
+核心操作：
+1.	每篇文章开头 2-3 句给出 清晰定义式回答（AI 容易抓取）
+2.	文章中使用 对比表格、属性列表、FAQ（结构化信息）
+3.	以 制造商/行业专家视角 提供独家见解（E-E-A-T 信号）
+4.	Wiki 页面要覆盖一个话题的 所有实体和关系（Topical Map 完整性）
+5.	使用 Schema Markup（Article, FAQ, HowTo, Product, Organization）
+
+以 /knife-steel/ 为例：
+
+Plain Text
+┌──────────────────────────────────────────────┐
+│  H1: Kitchen Knife Steel: The Complete       │
+│      Knowledge Center                        │
+│                                              │
+│  [2-3句话综述，直接回答"what steel is best   │
+│   for kitchen knives"]                       │
+│                                              │
+│  ── QUICK NAVIGATION ──                      │
+│                                              │
+│  ┌──────────┐ ┌──────────┐ ┌──────────┐     │
+│  │ Japanese │ │ German   │ │ Damascus │     │
+│  │ Steels   │ │ Steels   │ │ Steels   │     │
+│  │ VG-10    │ │ 1.4116   │ │ What Is  │     │
+│  │ AUS-8    │ │ X50CrMoV │ │ Damascus │     │
+│  │ SG2      │ │          │ │ Patterns │     │
+│  │ AUS-10   │ │          │ │ Real vs  │     │
+│  │ ZDP-189  │ │          │ │ Fake     │     │
+│  └──────────┘ └──────────┘ └──────────┘     │
+│                                              │
+│  ┌──────────┐ ┌──────────┐ ┌──────────┐     │
+│  │ Carbon   │ │ American │ │ Guides & │     │
+│  │ Steels   │ │ Steels   │ │ Compari- │     │
+│  │ 1095     │ │ S30V     │ │ sons     │     │
+│  │ 1055     │ │ S90V     │ │ Carbon   │     │
+│  │ W2       │ │ 154CM    │ │ vs SS    │     │
+│  │ Aogami   │ │ D2       │ │ Best     │     │
+│  │ Shirogami│ │ M390     │ │ Steel    │     │
+│  └──────────┘ └──────────┘ └──────────┘     │
+│                                              │
+│  ── STEEL COMPARISON TABLE ──                │
+│  [大表格：所有钢材 × HRC × 碳含量 ×         │
+│   铬含量 × 价位 × 适用场景]                  │
+│                                              │
+│  ── FROM OUR FACTORY ──                      │
+│  "We work with 30+ steel types daily..."     │
+│                                              │
+│  ── FAQ ── (带Schema)                        │
+│  Q: What is the best steel for chef knives?  │
+│  Q: What steel do professional chefs prefer? │
+│  Q: Is VG-10 better than AUS-10?             │
+│                                              │
+│  ── RELATED HUBS ──                          │
+│  → Kitchen Knife Types                       │
+│  → Knife Manufacturing                       │
+│  → Start Your Knife Brand                    │
+└──────────────────────────────────────────────┘
+
+
+
+
+Hub Page 文章大纲详细模板
+
+示范一：Leeknives — /knife-steel/ Hub Page
+
+页面元信息
+
+Plain Text
+URL: leeknives.com/knife-steel/
+Title Tag: Knife Steel Guide: Complete Knowledge Center | Leeknives
+Meta Description: Everything about knife steel — types, properties, 
+comparisons, and real factory testing data. Your complete reference 
+for kitchen knife steel, by a manufacturer that works with 30+ steels daily.
+H1: Kitchen Knife Steel: The Complete Knowledge Center
+
+页面完整大纲
+
+Markdown
+═══════════════════════════════════════════════════════
+SECTION 1: HERO区域
+═══════════════════════════════════════════════════════
+
+[H1] Kitchen Knife Steel: The Complete Knowledge Center
+
+[导语 - 2-3句话，直接建立权威]
+"As a kitchen knife manufacturer working with 30+ steel types 
+on our production lines daily, we've built this knowledge center 
+to cover everything about knife steel — from metallurgy basics 
+to real-world performance data from our factory floor."
+
+[关键数据条 - 视觉突出]
+┌─────────────────────────────────────────────────┐
+│  30+ Steels We Work With | 500K+ Blades Tested  │
+│  15 Years Manufacturing Experience              │
+└─────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════
+SECTION 2: QUICK NAVIGATION（快速导航 - 卡片式）
+═══════════════════════════════════════════════════════
+
+[H2] Explore by Steel Category
+
+[6个视觉卡片，每个卡片包含分类名称+2-3个代表钢材+链接]
+
+┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+│ 🇯🇵 Japanese  │ │ 🇩🇪 German    │ │ ⚔️ Damascus  │
+│ Steels       │ │ Steels       │ │ Steels       │
+│              │ │              │ │              │
+│ • VG-10      │ │ • 1.4116     │ │ • What Is    │
+│ • AUS-8      │ │ • X50CrMoV15 │ │   Damascus   │
+│ • AUS-10     │ │              │ │ • 67-Layer   │
+│ • SG2/R2     │ │              │ │ • Patterns   │
+│ • ZDP-189    │ │              │ │ • Real vs    │
+│ • Shirogami  │ │              │ │   Fake       │
+│ • Aogami     │ │              │ │              │
+│ [View All →] │ │ [View All →] │ │ [View All →] │
+└──────────────┘ └──────────────┘ └──────────────┘
+
+┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+│ 🔥 High      │ │ 🇺🇸 American  │ │ 📊 Guides &  │
+│ Carbon       │ │ & Powder     │ │ Comparisons  │
+│ Steels       │ │ Steels       │ │              │
+│              │ │              │ │ • Carbon vs  │
+│ • 1095       │ │ • S30V       │ │   Stainless  │
+│ • 1055       │ │ • S90V       │ │ • Best Steel │
+│ • W2         │ │ • 154CM      │ │   for Kitchen│
+│ • 65Mn       │ │ • D2         │ │ • Rockwell   │
+│ • SK Series  │ │ • M390       │ │   Hardness   │
+│              │ │ • 20CV       │ │ • Comparison │
+│ [View All →] │ │ [View All →] │ │   Chart      │
+└──────────────┘ └──────────────┘ │ [View All →] │
+                                  └──────────────┘
+
+═══════════════════════════════════════════════════════
+SECTION 3: STEEL ESSENTIALS（钢材基础知识简述）
+═══════════════════════════════════════════════════════
+
+[H2] Understanding Knife Steel: The Basics
+
+[注意：这部分不要写太长，Hub页面的角色是"索引+概述"，
+不是"详尽教程"。每个子话题3-5句话+链接到详细文章]
+
+[H3] What Makes a Good Knife Steel?
+- 3句话概述五大性能维度
+- 链接到详细文章（如果有）
+
+[H3] The Five Key Properties
+[简洁表格]
+| Property | What It Means | Why It Matters |
+|---|---|---|
+| Hardness (HRC) | Resistance to deformation | Edge retention |
+| Toughness | Resistance to chipping/breaking | Durability |
+| Wear Resistance | Resistance to abrasion | Long-term performance |
+| Corrosion Resistance | Resistance to rust | Low maintenance |
+| Ease of Sharpening | How easy to restore edge | User convenience |
+
+→ "Deep dive: [Understanding Rockwell Hardness (HRC) in Kitchen Knives]"
+
+[H3] Carbon Steel vs Stainless Steel: The Fundamental Divide
+- 3句话概述核心区别
+→ "Full comparison: [Carbon Steel vs Stainless Steel: A Knife Steel Comparison]"
+
+═══════════════════════════════════════════════════════
+SECTION 4: MASTER COMPARISON TABLE（大对比表 - 核心资产）
+═══════════════════════════════════════════════════════
+
+[H2] Kitchen Knife Steel Comparison Chart
+
+[这是整个Hub页面最有价值的部分 - AI引擎最爱引用表格]
+
+| Steel | Origin | HRC | Carbon % | Chromium % | Corrosion Resistance | Edge Retention | Toughness | Price Tier | Best For | Full Review |
+|---|---|---|---|---|---|---|---|---|---|---|
+| VG-10 | Japan | 58-60 | 1.0% | 15% | ★★★★☆ | ★★★★☆ | ★★★☆☆ | Mid | All-purpose chef knives | [Read →] |
+| AUS-8 | Japan | 57-59 | 0.75% | 13.5% | ★★★★☆ | ★★★☆☆ | ★★★★☆ | Budget-Mid | Entry-level Japanese knives | [Read →] |
+| AUS-10 | Japan | 58-60 | 1.05% | 14% | ★★★★☆ | ★★★★☆ | ★★★☆☆ | Mid | Mid-range chef knives | [Read →] |
+| SG2/R2 | Japan | 62-64 | 1.25% | 14% | ★★★★☆ | ★★★★★ | ★★☆☆☆ | Premium | High-end chef knives | [Read →] |
+| ZDP-189 | Japan | 64-67 | 3.0% | 20% | ★★★☆☆ | ★★★★★ | ★★☆☆☆ | Premium+ | Ultra-premium knives | [Read →] |
+| 1.4116 | Germany | 55-57 | 0.5% | 14.5% | ★★★★★ | ★★★☆☆ | ★★★★☆ | Budget | German-style knives | [Read →] |
+| X50CrMoV15 | Germany | 56-58 | 0.5% | 15% | ★★★★★ | ★★★☆☆ | ★★★★☆ | Budget-Mid | European kitchen knives | [Read →] |
+| 5Cr15MoV | China | 54-56 | 0.5% | 15% | ★★★★☆ | ★★☆☆☆ | ★★★★★ | Budget | Entry-level, high volume | [Read →] |
+| 8Cr13MoV | China | 56-58 | 0.8% | 13% | ★★★☆☆ | ★★★☆☆ | ★★★★☆ | Budget | Value kitchen knives | [Read →] |
+| 10Cr15CoMoV | China | 59-61 | 1.0% | 15% | ★★★★☆ | ★★★★☆ | ★★★☆☆ | Mid | Chinese premium knives | [Read →] |
+| 1095 | USA | 56-58 | 0.95% | 0% | ★☆☆☆☆ | ★★★★☆ | ★★★★☆ | Budget | Carbon steel enthusiasts | [Read →] |
+| D2 | USA | 58-62 | 1.55% | 12% | ★★★☆☆ | ★★★★★ | ★★☆☆☆ | Mid | Heavy-duty cutting | [Read →] |
+| ...续 | | | | | | | | | | |
+
+[表格下方注释]
+"★ ratings are based on our factory testing of each steel across 
+10,000+ blade production runs. Individual results may vary based 
+on heat treatment and blade geometry."
+
+[CTA - 软性]
+"Need help choosing the right steel for your knife line? 
+[Talk to our materials team →]"
+
+═══════════════════════════════════════════════════════
+SECTION 5: FROM OUR FACTORY FLOOR（制造商独家板块）
+═══════════════════════════════════════════════════════
+
+[H2] From Our Factory: What We've Learned About Knife Steel
+
+[这个板块是你与所有内容站的核心区别]
+
+[H3] Our Most Requested Steels (And Why)
+"Based on 2024 order data from our OEM clients:
+1. VG-10 — 35% of orders (best balance of performance and cost)
+2. Damascus (VG-10 core) — 25% of orders (premium positioning)
+3. 5Cr15MoV — 20% of orders (budget-friendly, high volume)
+4. German 1.4116 — 10% (European market clients)
+5. SG2/R2 — 5% (premium brands)
+..."
+
+[H3] Common Misconceptions We See
+"After 15 years of working with knife brands worldwide, 
+here are the steel myths we encounter most often..."
+- Myth 1: Higher HRC always means better
+- Myth 2: Damascus is stronger than regular steel
+- Myth 3: Japanese steel is always better than Chinese steel
+
+[配1-2张工厂实拍图：钢材原料/热处理/硬度测试]
+
+═══════════════════════════════════════════════════════
+SECTION 6: COMPLETE ARTICLE INDEX（完整文章索引）
+═══════════════════════════════════════════════════════
+
+[H2] All Our Knife Steel Articles
+
+[按分类列出所有文章链接，每篇配一句话摘要]
+
+[H3] Japanese Steels
+• [VG-10 Steel Review] — Properties, performance, and our factory test data
+• [AUS-8 Steel Review] — Budget Japanese steel analysis
+• [AUS-10 Steel] — (Coming Soon)
+• [SG2/R2 Steel Guide] — Premium powder steel breakdown
+• [ZDP-189 Steel] — Ultra-hard steel: when it makes sense
+• [Aogami vs Shirogami] — Traditional Japanese carbon steels compared
+
+[H3] German & European Steels
+• [1.4116 Steel Guide] — The workhorse of German knife making
+• [X50CrMoV15 Review] — Standard European kitchen knife steel
+
+[H3] Chinese Steels
+• [5Cr15MoV Review] — Budget steel analysis
+• [8Cr13MoV Review] — Mid-budget option
+• [9Cr18MoV Review] — Chinese mid-range steel
+• [3Cr13 Review] — Entry-level steel
+• [10Cr15CoMoV Review] — Chinese premium contender
+
+[H3] American & Specialty Steels
+• [S30V Review] — ...
+• [S90V Review] — ...
+• [154CM Review] — ...
+• [D2 Steel Review] — ...
+• [M390 Review] — ...
+• [20CV Review] — ...
+...
+
+[H3] Damascus Steel
+• [What Is Damascus Steel] — ...
+• [Damascus Patterns Guide] — ...
+• [How to Tell Real Damascus] — ...
+• [Damascus vs Carbon Steel] — ...
+• [Is Damascus Strong?] — ...
+
+[H3] Guides & Comparisons
+• [Carbon Steel vs Stainless Steel] — ...
+• [Best Steel for Kitchen Knives] — ...
+• [Rockwell Hardness Scale Explained] — ...
+• [Japanese Steel Complete Guide] — ...
+• [Layered Steel / San Mai Guide] — ...
+
+═══════════════════════════════════════════════════════
+SECTION 7: FAQ（常见问题 - 带Schema）
+═══════════════════════════════════════════════════════
+
+[H2] Frequently Asked Questions About Knife Steel
+
+Q: What is the best steel for kitchen knives?
+A: "It depends on your priorities. For the best all-around 
+performance, VG-10 offers excellent edge retention and 
+corrosion resistance at a mid-range price. For budget options, 
+German 1.4116 or Chinese 5Cr15MoV are reliable choices. 
+For premium knives, SG2 (R2) powder steel delivers 
+exceptional hardness (62-64 HRC) and edge retention. 
+See our [complete guide to best steel for kitchen knives] 
+for a detailed breakdown."
+
+Q: What is the hardest kitchen knife steel?
+A: "ZDP-189 is one of the hardest kitchen knife steels 
+commercially available, reaching 64-67 HRC. However, extreme 
+hardness comes with reduced toughness — these blades can 
+chip if misused. In our factory, we find that 60-62 HRC 
+(achieved by steels like SG2 or high-end VG-10 heat treatment) 
+offers the best balance for most kitchen applications."
+
+Q: Is Damascus steel better than regular steel?
+A: "Damascus steel is not inherently stronger or sharper 
+than single-steel blades. A Damascus kitchen knife's 
+cutting performance is determined by its core steel 
+(usually VG-10 or AUS-10), not its layered pattern. 
+The Damascus layers add visual beauty and can slightly 
+improve food release. See our guide: 
+[What Is Damascus Steel: Origin, Composition, and Patterns]"
+
+Q: What steel do professional chefs prefer?
+A: ...
+
+Q: How do I choose the right steel for my knife brand?
+A: ... [链接到 Start Your Brand Hub]
+
+Q: Does higher Rockwell hardness mean a better knife?
+A: ...
+
+[至少6-8个FAQ，每个答案都包含内链]
+
+═══════════════════════════════════════════════════════
+SECTION 8: RELATED KNOWLEDGE CENTERS
+═══════════════════════════════════════════════════════
+
+[H2] Explore More
+
+[3-4个链接卡片到其他Hub]
+• Kitchen Knife Types → /kitchen-knife-types/
+• How Knives Are Made → /knife-manufacturing/
+• Start Your Knife Brand → /start-knife-brand/
+• Knife Care & Maintenance → /knife-care/
+
+═══════════════════════════════════════════════════════
+SECTION 9: CTA
+═══════════════════════════════════════════════════════
+
+[底部CTA - 不要太aggressive]
+"Looking to source kitchen knives in a specific steel? 
+We manufacture knives in 30+ steel types with flexible MOQ. 
+[Browse Our Products →] or [Get a Custom Quote →]"
+
+Schema Markup 清单
+
+JSON
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Kitchen Knife Steel: The Complete Knowledge Center",
+  "description": "Complete knowledge center covering all kitchen knife steels...",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Leeknives",
+    "url": "https://leeknives.com"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://leeknives.com/vg-10-steel/",
+        "name": "VG-10 Steel Review"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://leeknives.com/aus-8-steel/",
+        "name": "AUS-8 Steel Review"
+      }
+      // ...所有文章
+    ]
+  }
+}
+
+// 加上 BreadcrumbList
+{
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"position": 1, "name": "Home", "item": "https://leeknives.com/"},
+    {"position": 2, "name": "Knife Steel Knowledge Center"}
+  ]
+}
+
+// 加上 FAQPage
+{
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best steel for kitchen knives?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your priorities..."
+      }
+    }
+    // ...所有FAQ
+  ]
+}
+
+
+
+通用Hub Page模板
+
+以下是可复用到所有Hub的通用模板：
+
+Markdown
+═══════════════════════════════════════════════════════
+TEMPLATE: HUB PAGE
+═══════════════════════════════════════════════════════
+
+META:
+  URL: site.com/[hub-slug]/
+  Title: [Topic]: Complete Knowledge Center | [Brand]
+  Description: 150-160字符，包含主题+制造商身份+覆盖范围
+  H1: [Topic]: The Complete Knowledge Center
+
+SCHEMA:
+  - CollectionPage
+  - BreadcrumbList
+  - FAQPage
+  - Organization (publisher)
+  - ItemList (所有文章列表)
+
+═══════════════════════════════════════════════════════
+
+SECTION 1: HERO
+  - H1
+  - 导语（2-3句，建立权威，提及制造商身份）
+  - 关键数据条（生产数据、经验年限、测试数量）
+  
+  字数：50-100字
+  目的：快速建立E-E-A-T信号
+
+SECTION 2: QUICK NAVIGATION
+  - H2: Explore [Topic]
+  - 6-9个视觉卡片
+  - 每个卡片 = 一个子分类
+  - 每个卡片列出3-5个代表性文章链接
+  
+  字数：仅标题和简短标签
+  目的：用户快速找到需要的内容 + 爬虫快速发现所有链接
+
+SECTION 3: ESSENTIALS（基础概述）
+  - H2: Understanding [Topic]: The Basics
+  - 2-3个H3子话题
+  - 每个H3用3-5句话概述 + 链接到详细文章
+  - 1个概述性表格
+  
+  字数：300-500字
+  目的：给不了解的读者快速入门 + 给AI一段可引用的概述文本
+
+SECTION 4: MASTER COMPARISON TABLE
+  - H2: [Topic] Comparison Chart
+  - 覆盖所有主要项目的大对比表
+  - 包含数据、评级、适用场景
+  - 每行链接到对应的详细文章
+  - 表格下方注明数据来源（制造商实测）
+  
+  字数：表格（不算字数，但信息密度极高）
+  目的：AI引擎最爱引用的格式 + 用户收藏/分享
+
+SECTION 5: FROM OUR FACTORY FLOOR
+  - H2: From Our Factory: [具体角度]
+  - 2-3个H3（实际数据、常见误区、质检流程等）
+  - 第一人称叙述
+  - 配工厂实拍图片
+  
+  字数：300-500字
+  目的：E-E-A-T信号（Experience + Expertise）
+
+SECTION 6: COMPLETE ARTICLE INDEX
+  - H2: All Our [Topic] Articles
+  - 按子分类用H3分组
+  - 每篇文章 = 标题链接 + 一句话摘要
+  - 未写的文章标注 "(Coming Soon)"
+  
+  字数：仅标题和摘要
+  目的：完整索引 + 爬虫发现所有页面 + 展示覆盖广度
+
+SECTION 7: FAQ
+  - H2: Frequently Asked Questions About [Topic]
+  - 6-10个Q&A
+  - 每个答案50-100字
+  - 每个答案包含至少1个内链
+  - 必须加 FAQPage Schema
+  
+  字数：500-800字
+  目的：直接回答用户/AI的问题 + Featured Snippet
+
+SECTION 8: RELATED HUBS
+  - H2: Explore More
+  - 3-4个链接到其他Hub
+  
+  目的：Hub之间互链，构建知识网络
+
+SECTION 9: CTA
+  - 软性CTA，不要过度推销
+  - 1-2个按钮（Browse Products / Get a Quote）
+  
+  目的：知识→商业的自然过渡
+
+═══════════════════════════════════════════════════════
+
+总字数目标：Hub页面正文 1,200-2,000字
+（不含表格和文章索引列表）
+
+关键原则：
+- Hub页面是"索引+概述"，不是"长文教程"
+- 深度内容留给Pillar和Cluster文章
+- Hub页面的核心价值 = 导航效率 + 对比表格 + 制造商视角
+- 每6-8周review一次，新文章产出后更新索引
+
+═══════════════════════════════════════════════════════
+

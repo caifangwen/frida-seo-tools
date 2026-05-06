@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industry Packaging Solutions · Custom Bag Manufacturing</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1c1812;
+  --ink-60: rgba(28,24,18,0.6);
+  --ink-30: rgba(28,24,18,0.3);
+  --ink-08: rgba(28,24,18,0.08);
+  --cream: #fdfaf4;
+  --warm: #f7f0e4;
+  --kraft: #c8a055;
+  --kraft-light: #f5e8cc;
+  --rust: #b85432;
+  --sage: #6b9c72;
+  --line: rgba(28,24,18,0.1);
+  --white: #fff;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+.site-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(253,250,244,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  gap: 32px;
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px;
+  color: var(--ink-60);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--ink); }
+
+.nav-cta {
+  background: var(--ink);
+  color: var(--cream) !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 13px !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s !important;
+}
+.nav-cta:hover { opacity: 0.8; color: var(--cream) !important; }
+
+/* ── BREADCRUMB ── */
+.breadcrumb {
+  margin-top: 60px;
+  padding: 14px 48px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--ink-60);
+}
+.breadcrumb a { color: var(--ink-60); text-decoration: none; }
+.breadcrumb a:hover { color: var(--ink); }
+.breadcrumb .sep { opacity: 0.3; }
+.breadcrumb .current { color: var(--ink); font-weight: 500; }
+
+/* ── HERO ── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 0;
+  min-height: 440px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-left {
+  padding: 64px 48px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--line);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--kraft);
+  margin-bottom: 24px;
+}
+.hero-badge::before {
+  content: '';
+  width: 20px; height: 1px;
+  background: var(--kraft);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--ink);
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--rust);
+}
+
+.hero-desc {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--ink-60);
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.pill {
+  font-size: 12px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: var(--warm);
+  border: 1px solid var(--line);
+  color: var(--ink-60);
+  font-weight: 500;
+}
+
+.pill.highlight {
+  background: var(--kraft-light);
+  border-color: rgba(200,160,85,0.4);
+  color: #7a5c1a;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.meta-item .val {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.meta-item .key {
+  font-size: 11px;
+  color: var(--ink-30);
+  margin-top: 2px;
+  letter-spacing: 1px;
+}
+
+.hero-right {
+  background: var(--warm);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-right-title {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ink-30);
+  margin-bottom: 20px;
+}
+
+.quick-inquiry {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  justify-content: center;
+}
+
+.qi-label {
+  font-size: 12px;
+  color: var(--ink-60);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.qi-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.qi-input:focus { border-color: var(--kraft); }
+
+.qi-select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--ink);
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.qi-btn {
+  width: 100%;
+  padding: 13px;
+  background: var(--rust);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 4px;
+}
+.qi-btn:hover { background: #9e4228; }
+
+.qi-note {
+  font-size: 11px;
+  color: var(--ink-30);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ── STICKY SUBNAV ── */
+.subnav {
+  position: sticky;
+  top: 60px;
+  z-index: 90;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  height: 52px;
+  gap: 0;
+  overflow-x: auto;
+}
+
+.subnav-item {
+  padding: 0 20px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: var(--ink-60);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.subnav-item:hover { color: var(--ink); }
+.subnav-item.active { color: var(--rust); border-bottom-color: var(--rust); font-weight: 600; }
+
+/* ── LAYOUT ── */
+.page-body {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  gap: 0;
+  min-height: 100vh;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  padding: 40px 0 40px;
+  border-right: 1px solid var(--line);
+  position: sticky;
+  top: 112px;
+  height: fit-content;
+  padding-right: 32px;
+}
+
+.sidebar-section {
+  margin-bottom: 36px;
+}
+
+.sidebar-label {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ink-30);
+  margin-bottom: 12px;
+  padding-left: 12px;
+}
+
+.sidebar-menu {
+  list-style: none;
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  font-size: 13px;
+  color: var(--ink-60);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+  line-height: 1.4;
+}
+
+.sidebar-menu li a:hover {
+  background: var(--warm);
+  color: var(--ink);
+}
+
+.sidebar-menu li a.active {
+  background: var(--kraft-light);
+  color: #7a5c1a;
+  font-weight: 600;
+}
+
+.sidebar-menu li a .icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.sidebar-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 20px 0;
+}
+
+.sidebar-cert {
+  padding: 16px;
+  background: var(--warm);
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
+.cert-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-60);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.cert-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cert-badge {
+  font-size: 10px;
+  padding: 3px 8px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--ink-60);
+  font-weight: 500;
+}
+
+/* ── MAIN CONTENT ── */
+.main-content {
+  padding: 40px 0 80px 48px;
+}
+
+/* ── SECTION ── */
+.content-section {
+  margin-bottom: 72px;
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  color: var(--ink-30);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.section-en {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--ink-30);
+  text-transform: uppercase;
+  margin-left: auto;
+}
+
+/* ── PAIN POINTS ── */
+.pain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.pain-card {
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.pain-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--rust);
+  border-radius: 3px 0 0 3px;
+}
+
+.pain-icon { font-size: 22px; margin-bottom: 12px; display: block; }
+
+.pain-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.pain-text {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink-60);
+}
+
+.pain-solution {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--sage);
+  display: flex;
+  gap: 6px;
+}
+
+/* ── SUB-CATEGORIES ── */
+.subcat-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.subcat-tab {
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1.5px solid var(--line);
+  background: var(--white);
+  color: var(--ink-60);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.subcat-tab:hover {
+  border-color: var(--kraft);
+  color: var(--ink);
+}
+
+.subcat-tab.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  overflow: hidden;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  border-color: rgba(200,160,85,0.4);
+}
+
+.product-img {
+  height: 160px;
+  background: var(--warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  position: relative;
+  border-bottom: 1px solid var(--line);
+}
+
+.product-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.tag-hot { background: #fde8e3; color: #b85432; }
+.tag-new { background: #e3f0e5; color: #3d7a46; }
+.tag-eco { background: #e8f0e3; color: #4a7a2e; }
+
+.product-body {
+  padding: 18px 18px 20px;
+}
+
+.product-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.product-material {
+  font-size: 11px;
+  color: var(--ink-30);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.product-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.spec-item {
+  font-size: 11px;
+  color: var(--ink-60);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.spec-val { font-weight: 600; color: var(--ink); font-size: 12px; }
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.moq-label {
+  font-size: 11px;
+  color: var(--ink-30);
+}
+
+.moq-val {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--rust);
+}
+
+.product-btn {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: var(--warm);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.product-btn:hover {
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+
+/* ── SPEC TABLE ── */
+.spec-table-wrap {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.spec-table thead tr {
+  background: var(--ink);
+}
+
+.spec-table thead th {
+  padding: 14px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.spec-table tbody tr {
+  border-bottom: 1px solid var(--line);
+  transition: background 0.15s;
+}
+
+.spec-table tbody tr:last-child { border-bottom: none; }
+.spec-table tbody tr:hover { background: var(--warm); }
+
+.spec-table td {
+  padding: 13px 18px;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.spec-table td:first-child {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.spec-table td:nth-child(2) { color: var(--ink-60); }
+
+.range-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.range-fill {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--kraft);
+}
+
+/* ── PROCESS ── */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: var(--line);
+  z-index: 0;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1.5px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 14px;
+  transition: all 0.2s;
+}
+
+.step-item:hover .step-circle {
+  background: var(--kraft-light);
+  border-color: var(--kraft);
+}
+
+.step-num {
+  position: absolute;
+  top: -6px;
+  right: 30%;
+  width: 18px;
+  height: 18px;
+  background: var(--rust);
+  border-radius: 50%;
+  font-size: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.step-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.step-days {
+  font-size: 11px;
+  color: var(--kraft);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.step-desc {
+  font-size: 11px;
+  color: var(--ink-60);
+  line-height: 1.5;
+  padding: 0 8px;
+}
+
+/* ── CASES ── */
+.cases-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.case-card {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.case-card:hover {
+  border-color: var(--kraft);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.case-emoji {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.case-body {}
+
+.case-industry {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-30);
+  margin-bottom: 6px;
+}
+
+.case-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.case-desc {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--ink-60);
+  margin-bottom: 10px;
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.case-tag {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--warm);
+  color: var(--ink-60);
+}
+
+/* ── CERT SECTION ── */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.cert-card {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  padding: 24px 20px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.cert-card:hover {
+  border-color: var(--sage);
+  background: #f5fbf5;
+}
+
+.cert-icon { font-size: 32px; margin-bottom: 12px; display: block; }
+
+.cert-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.cert-desc {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--ink-60);
+}
+
+/* ── FAQ ── */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  overflow: hidden;
+}
+
+.faq-q {
+  padding: 18px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.faq-q:hover { background: var(--warm); }
+
+.faq-arrow {
+  font-size: 12px;
+  color: var(--ink-30);
+  transition: transform 0.25s;
+  flex-shrink: 0;
+}
+
+.faq-item.open .faq-arrow { transform: rotate(180deg); }
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 20px;
+}
+
+.faq-item.open .faq-a {
+  max-height: 200px;
+  padding: 0 20px 18px;
+}
+
+.faq-a p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink-60);
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+/* ── CTA BANNER ── */
+.cta-banner {
+  border-radius: 16px;
+  background: var(--ink);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 80% at 80% 50%, rgba(200,160,85,0.1) 0%, transparent 60%);
+}
+
+.cta-text {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+
+.cta-text p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+}
+
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.btn-primary {
+  padding: 13px 28px;
+  background: var(--rust);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.btn-primary:hover { background: #9e4228; }
+
+.btn-outline {
+  padding: 12px 28px;
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.5); color: white; }
+
+/* ── SCROLL ANIMATION ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .page-body { grid-template-columns: 1fr; padding: 0 24px; }
+  .sidebar { display: none; }
+  .main-content { padding: 32px 0 60px; }
+  .product-grid { grid-template-columns: 1fr 1fr; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .site-nav { padding: 0 24px; }
+  .breadcrumb { padding: 14px 24px; }
+  .subnav { padding: 0 24px; }
+}
+
+@media (max-width: 640px) {
+  .product-grid { grid-template-columns: 1fr; }
+  .pain-grid { grid-template-columns: 1fr; }
+  .cases-grid { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: 1fr 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
+  .process-steps::before { display: none; }
+  .cta-banner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- SITE NAV -->
+<nav class="site-nav">
+  <a href="#" class="nav-logo">Huahao Packaging</a>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#" class="active">Solutions</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Certifications</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="#">Home</a>
+  <span class="sep">/</span>
+  <a href="#">Industry Solutions</a>
+  <span class="sep">/</span>
+  <span class="current">Your Industry</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">Industry Solutions</div>
+    <h1>Custom <em>Packaging</em><br>Solutions for Your Industry</h1>
+    <p class="hero-desc">From concept to delivery, we provide tailored bag and packaging solutions that align with your brand identity, budget targets, and sustainability goals — engineered for your specific industry requirements.</p>
+    <div class="hero-pills">
+      <span class="pill highlight">Retail & Fashion</span>
+      <span class="pill highlight">Food & Beverage</span>
+      <span class="pill highlight">Beauty & Cosmetics</span>
+      <span class="pill highlight">E-commerce</span>
+      <span class="pill">Education</span>
+      <span class="pill">Hospitality</span>
+    </div>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <div class="val">15+</div>
+        <div class="key">Years Experience</div>
+      </div>
+      <div class="meta-item">
+        <div class="val">100 pcs</div>
+        <div class="key">Minimum Order</div>
+      </div>
+      <div class="meta-item">
+        <div class="val">14 Days</div>
+        <div class="key">Standard Lead Time</div>
+      </div>
+      <div class="meta-item">
+        <div class="val">FSC</div>
+        <div class="key">Eco Certified</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-right-title">Quick Quote</div>
+    <div class="quick-inquiry">
+      <div>
+        <span class="qi-label">Industry Segment</span>
+        <select class="qi-select">
+          <option>Retail & Fashion</option>
+          <option>Food & Beverage</option>
+          <option>Beauty & Cosmetics</option>
+          <option>E-commerce</option>
+          <option>Education</option>
+          <option>Hospitality</option>
+        </select>
+      </div>
+      <div>
+        <span class="qi-label">Estimated Monthly Volume</span>
+        <select class="qi-select">
+          <option>100 – 500 pcs</option>
+          <option>500 – 2,000 pcs</option>
+          <option>2,000 – 10,000 pcs</option>
+          <option>10,000+ pcs</option>
+        </select>
+      </div>
+      <div>
+        <span class="qi-label">Contact Information</span>
+        <input class="qi-input" type="text" placeholder="Name / Email / Phone">
+      </div>
+      <button class="qi-btn">Get Your Custom Solution</button>
+    </div>
+    <p class="qi-note">Reply within 48 hours · Free sample shipping · No deposit required</p>
+  </div>
+</section>
+
+<!-- STICKY SUBNAV -->
+<div class="subnav" id="subnav">
+  <a class="subnav-item active" href="#pain">Pain Points</a>
+  <a class="subnav-item" href="#products">Products</a>
+  <a class="subnav-item" href="#specs">Specifications</a>
+  <a class="subnav-item" href="#process">Process</a>
+  <a class="subnav-item" href="#cases">Case Studies</a>
+  <a class="subnav-item" href="#certs">Certifications</a>
+  <a class="subnav-item" href="#faq">FAQ</a>
+</div>
+
+<!-- PAGE BODY -->
+<div class="page-body">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">Subcategories</div>
+      <ul class="sidebar-menu">
+        <li><a href="#" class="active"><span class="icon">🏷️</span> Retail & Fashion</a></li>
+        <li><a href="#"><span class="icon">🍔</span> Food & Beverage</a></li>
+        <li><a href="#"><span class="icon">💄</span> Beauty & Cosmetics</a></li>
+        <li><a href="#"><span class="icon">📦</span> E-commerce</a></li>
+        <li><a href="#"><span class="icon">🎓</span> Education</a></li>
+        <li><a href="#"><span class="icon">🏨</span> Hospitality</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Other Industries</div>
+      <ul class="sidebar-menu">
+        <li><a href="#"><span class="icon">💎</span> Jewelry & Luxury</a></li>
+        <li><a href="#"><span class="icon">⚡</span> Electronics</a></li>
+        <li><a href="#"><span class="icon">🏥</span> Medical & Health</a></li>
+        <li><a href="#"><span class="icon">🌿</span> Agriculture</a></li>
+        <li><a href="#"><span class="icon">🏋️</span> Sports & Outdoor</a></li>
+        <li><a href="#"><span class="icon">🎁</span> Gift & Stationery</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="sidebar-cert">
+      <div class="cert-title">Certifications</div>
+      <div class="cert-list">
+        <span class="cert-badge">FSC</span>
+        <span class="cert-badge">SGS</span>
+        <span class="cert-badge">ISO 9001</span>
+        <span class="cert-badge">REACH</span>
+        <span class="cert-badge">BSCI</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- 01 Pain Points -->
+    <section class="content-section reveal" id="pain">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Industry Pain Points & Solutions</h2>
+        <span class="section-en">Pain Points</span>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <span class="pain-icon">🎨</span>
+          <div class="pain-title">Brand Identity Gaps</div>
+          <p class="pain-text">Generic packaging fails to communicate brand values, weakening consumer perception and loyalty in competitive markets.</p>
+          <div class="pain-solution">✓ Full-color custom printing + finishing options (foil stamping, UV, embossing)</div>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">💸</span>
+          <div class="pain-title">High MOQ Barriers</div>
+          <p class="pain-text">New product testing and seasonal collections require small batches, but traditional factories demand high minimums.</p>
+          <div class="pain-solution">✓ 100-piece minimums with digital printing — zero plate fees, lower trial risk</div>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">⏱️</span>
+          <div class="pain-title">Peak Season Delays</div>
+          <p class="pain-text">Stockouts before major sales events mean missed marketing windows and lost revenue opportunities.</p>
+          <div class="pain-solution">✓ Safety stock programs + 7-day express channels for urgent orders</div>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">🌱</span>
+          <div class="pain-title">ESG Compliance Pressure</div>
+          <p class="pain-text">Retailers and brands face escalating supply-chain sustainability audits and environmental regulations.</p>
+          <div class="pain-solution">✓ FSC-certified papers + biodegradable materials with full certification reports</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 Product Categories -->
+    <section class="content-section reveal" id="products">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Product Categories</h2>
+        <span class="section-en">Products</span>
+      </div>
+
+      <div class="subcat-tabs">
+        <button class="subcat-tab active" onclick="switchTab(this, 'retail')">🏷️ Retail</button>
+        <button class="subcat-tab" onclick="switchTab(this, 'food')">🍔 Food & Beverage</button>
+        <button class="subcat-tab" onclick="switchTab(this, 'beauty')">💄 Beauty</button>
+        <button class="subcat-tab" onclick="switchTab(this, 'ecom')">📦 E-commerce</button>
+        <button class="subcat-tab" onclick="switchTab(this, 'education')">🎓 Education</button>
+        <button class="subcat-tab" onclick="switchTab(this, 'hotel')">🏨 Hospitality</button>
+      </div>
+
+      <!-- Retail -->
+      <div class="product-grid" id="tab-retail">
+        <div class="product-card">
+          <div class="product-img">🛍️<span class="product-tag tag-hot">Hot</span></div>
+          <div class="product-body">
+            <div class="product-name">Matte Laminated Paper Bags</div>
+            <div class="product-material">MATERIAL · White card stock + matte lamination</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Weight</span><span class="spec-val">300–400g</span></div>
+              <div class="spec-item"><span>Print</span><span class="spec-val">4C + Pantone</span></div>
+              <div class="spec-item"><span>Finish</span><span class="spec-val">Matte / Foil</span></div>
+              <div class="spec-item"><span>Handle</span><span class="spec-val">Cotton / Paper</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">500 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">👜<span class="product-tag tag-eco">Eco</span></div>
+          <div class="product-body">
+            <div class="product-name">Cotton Canvas Tote Bags</div>
+            <div class="product-material">MATERIAL · 12oz natural cotton canvas</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Weight</span><span class="spec-val">280–340g</span></div>
+              <div class="spec-item"><span>Print</span><span class="spec-val">Silk / Digital</span></div>
+              <div class="spec-item"><span>Cert</span><span class="spec-val">GOTS Organic</span></div>
+              <div class="spec-item"><span>Handle</span><span class="spec-val">Self fabric</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">200 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🎀<span class="product-tag tag-new">New</span></div>
+          <div class="product-body">
+            <div class="product-name">Hot-stamped Gift Bags</div>
+            <div class="product-material">MATERIAL · Art paper + foil stamping</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Weight</span><span class="spec-val">350g</span></div>
+              <div class="spec-item"><span>Finish</span><span class="spec-val">Gold / Silver</span></div>
+              <div class="spec-item"><span>Handle</span><span class="spec-val">Satin ribbon</span></div>
+              <div class="spec-item"><span>Size</span><span class="spec-val">Custom</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">300 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Food -->
+      <div class="product-grid" id="tab-food" style="display:none">
+        <div class="product-card">
+          <div class="product-img">🥡</div>
+          <div class="product-body">
+            <div class="product-name">Greaseproof Paper Bags</div>
+            <div class="product-material">MATERIAL · FDA-grade kraft paper</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Coating</span><span class="spec-val">PE / PLA</span></div>
+              <div class="spec-item"><span>Temp</span><span class="spec-val">Up to 100°C</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">1,000 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🧊</div>
+          <div class="product-body">
+            <div class="product-name">Insulated Cooler Bags</div>
+            <div class="product-material">MATERIAL · Non-woven + aluminum foil</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Insulation</span><span class="spec-val">4–6 hours</span></div>
+              <div class="spec-item"><span>Capacity</span><span class="spec-val">5–20L</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">500 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🍞</div>
+          <div class="product-body">
+            <div class="product-name">Window Bread Bags</div>
+            <div class="product-material">MATERIAL · Kraft + clear film window</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Window</span><span class="spec-val">30–50%</span></div>
+              <div class="spec-item"><span>Cert</span><span class="spec-val">FDA / EC 1935</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">2,000 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beauty -->
+      <div class="product-grid" id="tab-beauty" style="display:none">
+        <div class="product-card">
+          <div class="product-img">💜</div>
+          <div class="product-body">
+            <div class="product-name">Velvet Drawstring Pouches</div>
+            <div class="product-material">MATERIAL · High-density velvet</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Logo</span><span class="spec-val">Embossed</span></div>
+              <div class="spec-item"><span>Color</span><span class="spec-val">Pantone match</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">100 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🖤</div>
+          <div class="product-body">
+            <div class="product-name">Rigid Gift Box Sets</div>
+            <div class="product-material">MATERIAL · Specialty paper + satin lining</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Finish</span><span class="spec-val">Deboss + foil</span></div>
+              <div class="spec-item"><span>Set</span><span class="spec-val">Box + bag</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">100 sets</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🤍</div>
+          <div class="product-body">
+            <div class="product-name">Premium Shopping Bags</div>
+            <div class="product-material">MATERIAL · Heavy matte white card</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Finish</span><span class="spec-val">Spot UV</span></div>
+              <div class="spec-item"><span>Handle</span><span class="spec-val">Leather / Faux</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">200 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- E-commerce -->
+      <div class="product-grid" id="tab-ecom" style="display:none">
+        <div class="product-card">
+          <div class="product-img">📦</div>
+          <div class="product-body">
+            <div class="product-name">Branded Mailer Bags</div>
+            <div class="product-material">MATERIAL · Kraft paper + waterproof coat</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Seal</span><span class="spec-val">Self-adhesive</span></div>
+              <div class="spec-item"><span>Print</span><span class="spec-val">Full-color</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">1,000 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🛡️</div>
+          <div class="product-body">
+            <div class="product-name">Bubble Padded Mailers</div>
+            <div class="product-material">MATERIAL · PE bubble laminate</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Cushion</span><span class="spec-val">Air bubble</span></div>
+              <div class="spec-item"><span>Seal</span><span class="spec-val">Tamper-evident</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">500 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🌊</div>
+          <div class="product-body">
+            <div class="product-name">Waterproof Courier Bags</div>
+            <div class="product-material">MATERIAL · Coated woven fabric</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Water</span><span class="spec-val">IPX4 rated</span></div>
+              <div class="spec-item"><span>Size</span><span class="spec-val">10+ sizes</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">1,000 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="product-grid" id="tab-education" style="display:none">
+        <div class="product-card">
+          <div class="product-img">📚</div>
+          <div class="product-body">
+            <div class="product-name">Non-woven Conference Bags</div>
+            <div class="product-material">MATERIAL · 80g PP non-woven</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Print</span><span class="spec-val">1–4 color silk</span></div>
+              <div class="spec-item"><span>Pocket</span><span class="spec-val">Front + side</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">500 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🎒</div>
+          <div class="product-body">
+            <div class="product-name">Drawstring Backpacks</div>
+            <div class="product-material">MATERIAL · 210D polyester</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Size</span><span class="spec-val">35×42 cm</span></div>
+              <div class="spec-item"><span>Print</span><span class="spec-val">Full heat transfer</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">300 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">📓</div>
+          <div class="product-body">
+            <div class="product-name">Felt Document Sleeves</div>
+            <div class="product-material">MATERIAL · 3mm wool-blend felt</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Closure</span><span class="spec-val">Button / Zip</span></div>
+              <div class="spec-item"><span>Size</span><span class="spec-val">A4 / Custom</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">200 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hospitality -->
+      <div class="product-grid" id="tab-hotel" style="display:none">
+        <div class="product-card">
+          <div class="product-img">🏨</div>
+          <div class="product-body">
+            <div class="product-name">Luxury Hotel Welcome Bags</div>
+            <div class="product-material">MATERIAL · Embossed art paper</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Finish</span><span class="spec-val">Soft-touch</span></div>
+              <div class="spec-item"><span>Handle</span><span class="spec-val">Ribbon</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">300 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🧴</div>
+          <div class="product-body">
+            <div class="product-name">Amenity Organizing Pouches</div>
+            <div class="product-material">MATERIAL · Washed canvas / jute</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Logo</span><span class="spec-val">Woven label</span></div>
+              <div class="spec-item"><span>Size</span><span class="spec-val">S / M / L</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">200 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🛍️</div>
+          <div class="product-body">
+            <div class="product-name">Resort Boutique Shopping Bags</div>
+            <div class="product-material">MATERIAL · Recycled kraft / cotton</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>Cert</span><span class="spec-val">FSC / GRS</span></div>
+              <div class="spec-item"><span>Print</span><span class="spec-val">Water-based ink</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">MOQ</div><div class="moq-val">500 pcs</div></div>
+              <button class="product-btn">Inquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Specifications -->
+    <section class="content-section reveal" id="specs">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Specification Comparison</h2>
+        <span class="section-en">Specifications</span>
+      </div>
+      <div class="spec-table-wrap">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>Bag Type</th>
+              <th>Application</th>
+              <th>Common Sizes (W×H×D cm)</th>
+              <th>Load</th>
+              <th>Printing</th>
+              <th>MOQ</th>
+              <th>Lead Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Matte Paper Bags</td>
+              <td>Retail, fashion stores</td>
+              <td>20×25×8 / 26×32×10 / 32×40×12</td>
+              <td>≤5kg</td>
+              <td>4C + matte / foil</td>
+              <td>500 pcs</td>
+              <td>12–15 days</td>
+            </tr>
+            <tr>
+              <td>Cotton Canvas Bags</td>
+              <td>Eco-brands, boutiques</td>
+              <td>38×42 / 40×45 / 45×50</td>
+              <td>≤8kg</td>
+              <td>Silk 1–4 colors</td>
+              <td>200 pcs</td>
+              <td>10–14 days</td>
+            </tr>
+            <tr>
+              <td>Hot-stamped Gift Bags</td>
+              <td>Jewelry, cosmetics</td>
+              <td>12×15×6 / 20×25×8</td>
+              <td>≤3kg</td>
+              <td>Pantone + foil / UV</td>
+              <td>300 pcs</td>
+              <td>14–18 days</td>
+            </tr>
+            <tr>
+              <td>Velvet Pouches</td>
+              <td>Luxury, accessories</td>
+              <td>8×10 / 12×15 / 15×20</td>
+              <td>≤1kg</td>
+              <td>Emboss / deboss</td>
+              <td>100 pcs</td>
+              <td>10–14 days</td>
+            </tr>
+            <tr>
+              <td>Non-woven Bags</td>
+              <td>Supermarkets, chains</td>
+              <td>35×40×10 / 40×45×12</td>
+              <td>≤10kg</td>
+              <td>Silk 1–3 colors</td>
+              <td>500 pcs</td>
+              <td>7–12 days</td>
+            </tr>
+            <tr>
+              <td>Mailer Bags</td>
+              <td>E-commerce shipping</td>
+              <td>Multiple standards</td>
+              <td>≤3kg</td>
+              <td>1–2 color</td>
+              <td>1,000 pcs</td>
+              <td>7–10 days</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 04 Process -->
+    <section class="content-section reveal" id="process">
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Customization Process</h2>
+        <span class="section-en">Process</span>
+      </div>
+      <div class="process-steps">
+        <div class="step-item">
+          <div class="step-circle">💬<span class="step-num">1</span></div>
+          <div class="step-name">Consultation</div>
+          <div class="step-days">Day 1</div>
+          <div class="step-desc">Submit requirements; advisor confirms material, size, finish, and volume</div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">📐<span class="step-num">2</span></div>
+          <div class="step-name">Quote & Sample</div>
+          <div class="step-days">Day 2–4</div>
+          <div class="step-desc">Quote within 48 hours; physical sample ready in 3–5 days</div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">✅<span class="step-num">3</span></div>
+          <div class="step-name">Approval</div>
+          <div class="step-days">Day 5–7</div>
+          <div class="step-desc">Client approves sample, signs contract, and deposits payment</div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">🏭<span class="step-num">4</span></div>
+          <div class="step-name">Production</div>
+          <div class="step-days">Day 8–18</div>
+          <div class="step-desc">Factory scheduling, full QC checkpoints, and progress photo updates</div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">🚚<span class="step-num">5</span></div>
+          <div class="step-name">Delivery</div>
+          <div class="step-days">Day 19–21</div>
+          <div class="step-desc">Pre-shipment inspection, packing list + QC report, and logistics booking</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Case Studies -->
+    <section class="content-section reveal" id="cases">
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Case Studies</h2>
+        <span class="section-en">Case Studies</span>
+      </div>
+      <div class="cases-grid">
+        <div class="case-card">
+          <div class="case-emoji">👗</div>
+          <div class="case-body">
+            <div class="case-industry">Fashion Retail · Fast Fashion Chain</div>
+            <div class="case-name">Spring/Summer Collection Launch — 300 Stores</div>
+            <p class="case-desc">Delivered 100,000 matte-laminated bags with partial UV for a national fast-fashion chain across 300 stores in just 15 days.</p>
+            <div class="case-tags">
+              <span class="case-tag">Matte Paper Bags</span>
+              <span class="case-tag">Spot UV</span>
+              <span class="case-tag">100k pcs</span>
+              <span class="case-tag">15-Day Delivery</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-emoji">💎</div>
+          <div class="case-body">
+            <div class="case-industry">Jewelry · Premium Brand</div>
+            <div class="case-name">Boutique Gift Bag & Box Matching Set</div>
+            <p class="case-desc">Hot foil gift bags paired with velvet-lined rigid boxes for a unified luxury brand experience. Rolling replenishment from 100-piece MOQ.</p>
+            <div class="case-tags">
+              <span class="case-tag">Foil Gift Bags</span>
+              <span class="case-tag">Velvet Boxes</span>
+              <span class="case-tag">100 pcs MOQ</span>
+              <span class="case-tag">Rolling Orders</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-emoji">🛒</div>
+          <div class="case-body">
+            <div class="case-industry">Supermarket · Regional Chain</div>
+            <div class="case-name">Plastic-Bag Replacement Program — 200 Stores</div>
+            <p class="case-desc">Supplied compostable PLA shopping bags with EN13432 certification, helping the client meet government compliance across all locations.</p>
+            <div class="case-tags">
+              <span class="case-tag">Compostable PLA</span>
+              <span class="case-tag">EN13432</span>
+              <span class="case-tag">500k pcs/mo</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-emoji">📦</div>
+          <div class="case-body">
+            <div class="case-industry">E-commerce · D2C Skincare Brand</div>
+            <div class="case-name">Unboxing Experience Upgrade — Mailer Redesign</div>
+            <p class="case-desc">Replaced generic poly mailers with custom branded kraft mailers. Social sharing rate increased 40% and repeat purchase rate rose significantly.</p>
+            <div class="case-tags">
+              <span class="case-tag">Branded Mailers</span>
+              <span class="case-tag">Unboxing UX</span>
+              <span class="case-tag">Sharing +40%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Certifications -->
+    <section class="content-section reveal" id="certs">
+      <div class="section-head">
+        <span class="section-num">06</span>
+        <h2 class="section-title">Certifications</h2>
+        <span class="section-en">Certifications</span>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <span class="cert-icon">🌳</span>
+          <div class="cert-name">FSC</div>
+          <p class="cert-desc">Forest Stewardship Council certified materials from responsibly managed forests</p>
+        </div>
+        <div class="cert-card">
+          <span class="cert-icon">🔬</span>
+          <div class="cert-name">SGS</div>
+          <p class="cert-desc">Hazardous substance testing; REACH / RoHS compliant for EU import requirements</p>
+        </div>
+        <div class="cert-card">
+          <span class="cert-icon">⚙️</span>
+          <div class="cert-name">ISO 9001</div>
+          <p class="cert-desc">Quality management system certification covering the full production workflow</p>
+        </div>
+        <div class="cert-card">
+          <span class="cert-icon">♻️</span>
+          <div class="cert-name">EN 13432</div>
+          <p class="cert-desc">Industrial compostability certification; biodegradable products fully decompose in 180 days</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 FAQ -->
+    <section class="content-section reveal" id="faq">
+      <div class="section-head">
+        <span class="section-num">07</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <span class="section-en">FAQ</span>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What is the minimum order quantity? Can I order samples?<span class="faq-arrow">▼</span></div>
+          <div class="faq-a"><p>MOQ varies by product: paper bags typically start at 500 pcs, canvas totes at 200 pcs, and velvet pouches at 100 pcs. Sample fees range from $30–$120 depending on complexity and are deductible against bulk orders. Rush orders can also use our sample-free fast track.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">How do you guarantee lead times during peak seasons?<span class="faq-arrow">▼</span></div>
+          <div class="faq-a"><p>Standard lead time is 15–20 business days. We lock in peak-season capacity three months in advance. For Black Friday, Christmas, and other major events, we recommend placing orders 6–8 weeks ahead. Express 7-day production is available for urgent orders at an additional fee.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What certifications can you provide? Do you support export?<span class="faq-arrow">▼</span></div>
+          <div class="faq-a"><p>We provide FSC, SGS test reports, ISO 9001, EN13432 compostability, and BSCI social compliance documentation. We regularly export to North America, Europe, Southeast Asia, and the Middle East, and can assist with customs declaration paperwork.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">How do you ensure color accuracy?<span class="faq-arrow">▼</span></div>
+          <div class="faq-a"><p>We match Pantone references precisely and provide physical color swatches for approval before production. Every batch undergoes 100% visual inspection. If color deviation exceeds agreed tolerances, we cover the reprint cost.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What payment methods do you accept? Is there a payment term?<span class="faq-arrow">▼</span></div>
+          <div class="faq-a"><p>Standard terms are 50% deposit + 50% balance before shipment. Qualified long-term partners may apply for monthly settlement terms. We accept bank transfer, PayPal, Alibaba Trade Assurance, and Letter of Credit for export orders.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <div class="cta-banner reveal">
+      <div class="cta-text">
+        <h3>Ready to elevate your<br>brand packaging?</h3>
+        <p>Submit your requirements and receive a tailored quote within 48 hours · Free sample shipping · Dedicated account manager</p>
+      </div>
+      <div class="cta-actions">
+        <button class="btn-primary">Request a Free Quote</button>
+        <button class="btn-outline">Chat on WhatsApp</button>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+// Tab switching
+function switchTab(btn, tabId) {
+  document.querySelectorAll('.subcat-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  ['retail','food','beauty','ecom','education','hotel'].forEach(id => {
+    const el = document.getElementById('tab-' + id);
+    if (el) el.style.display = id === tabId ? 'grid' : 'none';
+  });
+}
+
+// FAQ accordion
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// Subnav active state
+const subnavItems = document.querySelectorAll('.subnav-item');
+const sections = ['pain','products','specs','process','cases','certs','faq'];
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top < 130) current = id;
+  });
+  subnavItems.forEach(item => {
+    item.classList.remove('active');
+    if (item.getAttribute('href') === '#' + current) item.classList.add('active');
+  });
+});
+
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

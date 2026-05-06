@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>零售行业包装解决方案 · 专业袋类定制</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1c1812;
+  --ink-60: rgba(28,24,18,0.6);
+  --ink-30: rgba(28,24,18,0.3);
+  --ink-08: rgba(28,24,18,0.08);
+  --cream: #fdfaf4;
+  --warm: #f7f0e4;
+  --kraft: #c8a055;
+  --kraft-light: #f5e8cc;
+  --rust: #b85432;
+  --sage: #6b9c72;
+  --line: rgba(28,24,18,0.1);
+  --white: #fff;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+.site-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(253,250,244,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  gap: 32px;
+}
+
+.nav-logo {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px;
+  color: var(--ink-60);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--ink); }
+
+.nav-cta {
+  background: var(--ink);
+  color: var(--cream) !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 13px !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s !important;
+}
+.nav-cta:hover { opacity: 0.8; color: var(--cream) !important; }
+
+/* ── BREADCRUMB ── */
+.breadcrumb {
+  margin-top: 60px;
+  padding: 14px 48px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--ink-60);
+}
+.breadcrumb a { color: var(--ink-60); text-decoration: none; }
+.breadcrumb a:hover { color: var(--ink); }
+.breadcrumb .sep { opacity: 0.3; }
+.breadcrumb .current { color: var(--ink); font-weight: 500; }
+
+/* ── HERO ── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 0;
+  min-height: 440px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-left {
+  padding: 64px 48px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--line);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--kraft);
+  margin-bottom: 24px;
+}
+.hero-badge::before {
+  content: '';
+  width: 20px; height: 1px;
+  background: var(--kraft);
+}
+
+.hero h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--ink);
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--rust);
+}
+
+.hero-desc {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--ink-60);
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.pill {
+  font-size: 12px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: var(--warm);
+  border: 1px solid var(--line);
+  color: var(--ink-60);
+  font-weight: 500;
+}
+
+.pill.highlight {
+  background: var(--kraft-light);
+  border-color: rgba(200,160,85,0.4);
+  color: #7a5c1a;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.meta-item .val {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.meta-item .key {
+  font-size: 11px;
+  color: var(--ink-30);
+  margin-top: 2px;
+  letter-spacing: 1px;
+}
+
+.hero-right {
+  background: var(--warm);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-right-title {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ink-30);
+  margin-bottom: 20px;
+}
+
+.quick-inquiry {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  justify-content: center;
+}
+
+.qi-label {
+  font-size: 12px;
+  color: var(--ink-60);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.qi-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.qi-input:focus { border-color: var(--kraft); }
+
+.qi-select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--ink);
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.qi-btn {
+  width: 100%;
+  padding: 13px;
+  background: var(--rust);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 4px;
+}
+.qi-btn:hover { background: #9e4228; }
+
+.qi-note {
+  font-size: 11px;
+  color: var(--ink-30);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ── STICKY SUBNAV ── */
+.subnav {
+  position: sticky;
+  top: 60px;
+  z-index: 90;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  height: 52px;
+  gap: 0;
+  overflow-x: auto;
+}
+
+.subnav-item {
+  padding: 0 20px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: var(--ink-60);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.subnav-item:hover { color: var(--ink); }
+.subnav-item.active { color: var(--rust); border-bottom-color: var(--rust); font-weight: 600; }
+
+/* ── LAYOUT ── */
+.page-body {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  gap: 0;
+  min-height: 100vh;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  padding: 40px 0 40px;
+  border-right: 1px solid var(--line);
+  position: sticky;
+  top: 112px;
+  height: fit-content;
+  padding-right: 32px;
+}
+
+.sidebar-section {
+  margin-bottom: 36px;
+}
+
+.sidebar-label {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ink-30);
+  margin-bottom: 12px;
+  padding-left: 12px;
+}
+
+.sidebar-menu {
+  list-style: none;
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  font-size: 13px;
+  color: var(--ink-60);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+  line-height: 1.4;
+}
+
+.sidebar-menu li a:hover {
+  background: var(--warm);
+  color: var(--ink);
+}
+
+.sidebar-menu li a.active {
+  background: var(--kraft-light);
+  color: #7a5c1a;
+  font-weight: 600;
+}
+
+.sidebar-menu li a .icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.sidebar-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 20px 0;
+}
+
+.sidebar-cert {
+  padding: 16px;
+  background: var(--warm);
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
+.cert-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-60);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.cert-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cert-badge {
+  font-size: 10px;
+  padding: 3px 8px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--ink-60);
+  font-weight: 500;
+}
+
+/* ── MAIN CONTENT ── */
+.main-content {
+  padding: 40px 0 80px 48px;
+}
+
+/* ── SECTION ── */
+.content-section {
+  margin-bottom: 72px;
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-num {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 13px;
+  color: var(--ink-30);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.section-en {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--ink-30);
+  text-transform: uppercase;
+  margin-left: auto;
+}
+
+/* ── PAIN POINTS ── */
+.pain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.pain-card {
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.pain-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--rust);
+  border-radius: 3px 0 0 3px;
+}
+
+.pain-icon { font-size: 22px; margin-bottom: 12px; display: block; }
+
+.pain-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.pain-text {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink-60);
+}
+
+.pain-solution {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--sage);
+  display: flex;
+  gap: 6px;
+}
+
+/* ── SUB-CATEGORIES ── */
+.subcat-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.subcat-tab {
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1.5px solid var(--line);
+  background: var(--white);
+  color: var(--ink-60);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.subcat-tab:hover {
+  border-color: var(--kraft);
+  color: var(--ink);
+}
+
+.subcat-tab.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  overflow: hidden;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  border-color: rgba(200,160,85,0.4);
+}
+
+.product-img {
+  height: 160px;
+  background: var(--warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  position: relative;
+  border-bottom: 1px solid var(--line);
+}
+
+.product-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.tag-hot { background: #fde8e3; color: #b85432; }
+.tag-new { background: #e3f0e5; color: #3d7a46; }
+.tag-eco { background: #e8f0e3; color: #4a7a2e; }
+
+.product-body {
+  padding: 18px 18px 20px;
+}
+
+.product-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.product-material {
+  font-size: 11px;
+  color: var(--ink-30);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.product-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.spec-item {
+  font-size: 11px;
+  color: var(--ink-60);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.spec-val { font-weight: 600; color: var(--ink); font-size: 12px; }
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.moq-label {
+  font-size: 11px;
+  color: var(--ink-30);
+}
+
+.moq-val {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--rust);
+}
+
+.product-btn {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: var(--warm);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.product-btn:hover {
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+
+/* ── SPEC TABLE ── */
+.spec-table-wrap {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.spec-table thead tr {
+  background: var(--ink);
+}
+
+.spec-table thead th {
+  padding: 14px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.spec-table tbody tr {
+  border-bottom: 1px solid var(--line);
+  transition: background 0.15s;
+}
+
+.spec-table tbody tr:last-child { border-bottom: none; }
+.spec-table tbody tr:hover { background: var(--warm); }
+
+.spec-table td {
+  padding: 13px 18px;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.spec-table td:first-child {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.spec-table td:nth-child(2) { color: var(--ink-60); }
+
+.range-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.range-fill {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--kraft);
+}
+
+/* ── PROCESS ── */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: var(--line);
+  z-index: 0;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1.5px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 14px;
+  transition: all 0.2s;
+}
+
+.step-item:hover .step-circle {
+  background: var(--kraft-light);
+  border-color: var(--kraft);
+}
+
+.step-num {
+  position: absolute;
+  top: -6px;
+  right: 30%;
+  width: 18px;
+  height: 18px;
+  background: var(--rust);
+  border-radius: 50%;
+  font-size: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.step-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.step-days {
+  font-size: 11px;
+  color: var(--kraft);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.step-desc {
+  font-size: 11px;
+  color: var(--ink-60);
+  line-height: 1.5;
+  padding: 0 8px;
+}
+
+/* ── CASES ── */
+.cases-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.case-card {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.case-card:hover {
+  border-color: var(--kraft);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.case-emoji {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.case-body {}
+
+.case-industry {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-30);
+  margin-bottom: 6px;
+}
+
+.case-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.case-desc {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--ink-60);
+  margin-bottom: 10px;
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.case-tag {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--warm);
+  color: var(--ink-60);
+}
+
+/* ── CERT SECTION ── */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.cert-card {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  padding: 24px 20px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.cert-card:hover {
+  border-color: var(--sage);
+  background: #f5fbf5;
+}
+
+.cert-icon { font-size: 32px; margin-bottom: 12px; display: block; }
+
+.cert-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.cert-desc {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--ink-60);
+}
+
+/* ── FAQ ── */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  overflow: hidden;
+}
+
+.faq-q {
+  padding: 18px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.faq-q:hover { background: var(--warm); }
+
+.faq-arrow {
+  font-size: 12px;
+  color: var(--ink-30);
+  transition: transform 0.25s;
+  flex-shrink: 0;
+}
+
+.faq-item.open .faq-arrow { transform: rotate(180deg); }
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 20px;
+}
+
+.faq-item.open .faq-a {
+  max-height: 200px;
+  padding: 0 20px 18px;
+}
+
+.faq-a p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink-60);
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+/* ── CTA BANNER ── */
+.cta-banner {
+  border-radius: 16px;
+  background: var(--ink);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 80% at 80% 50%, rgba(200,160,85,0.1) 0%, transparent 60%);
+}
+
+.cta-text {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-text h3 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+
+.cta-text p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+}
+
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.btn-primary {
+  padding: 13px 28px;
+  background: var(--rust);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.btn-primary:hover { background: #9e4228; }
+
+.btn-outline {
+  padding: 12px 28px;
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.5); color: white; }
+
+/* ── SCROLL ANIMATION ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .page-body { grid-template-columns: 1fr; padding: 0 24px; }
+  .sidebar { display: none; }
+  .main-content { padding: 32px 0 60px; }
+  .product-grid { grid-template-columns: 1fr 1fr; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .site-nav { padding: 0 24px; }
+  .breadcrumb { padding: 14px 24px; }
+  .subnav { padding: 0 24px; }
+}
+
+@media (max-width: 640px) {
+  .product-grid { grid-template-columns: 1fr; }
+  .pain-grid { grid-template-columns: 1fr; }
+  .cases-grid { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: 1fr 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
+  .process-steps::before { display: none; }
+  .cta-banner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- SITE NAV -->
+<nav class="site-nav">
+  <a href="#" class="nav-logo">袋业 · BAGPRO</a>
+  <ul class="nav-links">
+    <li><a href="#">首页</a></li>
+    <li><a href="#" class="active">行业方案</a></li>
+    <li><a href="#">产品中心</a></li>
+    <li><a href="#">认证资质</a></li>
+    <li><a href="#">关于我们</a></li>
+    <li><a href="#" class="nav-cta">获取报价</a></li>
+  </ul>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="#">首页</a>
+  <span class="sep">/</span>
+  <a href="#">行业解决方案</a>
+  <span class="sep">/</span>
+  <span class="current">零售行业</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">Retail Industry · 零售行业</div>
+    <h1>零售品牌<em>包装</em><br>全栈解决方案</h1>
+    <p class="hero-desc">从快时尚到奢侈品，从便利超市到精品买手店，我们为各类零售场景提供兼顾品牌调性、成本效益与可持续性的专属包装方案。</p>
+    <div class="hero-pills">
+      <span class="pill highlight">🔥 服装/时装品牌</span>
+      <span class="pill highlight">💎 珠宝/奢侈品</span>
+      <span class="pill highlight">🛒 超市/便利店</span>
+      <span class="pill highlight">👟 运动/鞋包品牌</span>
+      <span class="pill">📦 电商零售</span>
+      <span class="pill">🎁 礼品/文创</span>
+    </div>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <div class="val">6类</div>
+        <div class="key">二级细分场景</div>
+      </div>
+      <div class="meta-item">
+        <div class="val">100件</div>
+        <div class="key">最低起订量</div>
+      </div>
+      <div class="meta-item">
+        <div class="val">14天</div>
+        <div class="key">标准交货周期</div>
+      </div>
+      <div class="meta-item">
+        <div class="val">FSC认证</div>
+        <div class="key">环保合规</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-right-title">快速询价 · QUICK QUOTE</div>
+    <div class="quick-inquiry">
+      <div>
+        <span class="qi-label">所属细分行业</span>
+        <select class="qi-select">
+          <option>服装/时装品牌</option>
+          <option>珠宝/奢侈品</option>
+          <option>超市/便利店</option>
+          <option>运动/鞋包品牌</option>
+          <option>电商零售</option>
+          <option>礼品/文创</option>
+        </select>
+      </div>
+      <div>
+        <span class="qi-label">预计月采购量</span>
+        <select class="qi-select">
+          <option>100–500件</option>
+          <option>500–2,000件</option>
+          <option>2,000–10,000件</option>
+          <option>10,000件以上</option>
+        </select>
+      </div>
+      <div>
+        <span class="qi-label">联系方式</span>
+        <input class="qi-input" type="text" placeholder="姓名 / 微信 / 手机号">
+      </div>
+      <button class="qi-btn">📋 立即获取专属方案</button>
+    </div>
+    <p class="qi-note">48小时内回复 · 免费寄送样品 · 无需定金</p>
+  </div>
+</section>
+
+<!-- STICKY SUBNAV -->
+<div class="subnav" id="subnav">
+  <a class="subnav-item active" href="#pain">行业痛点</a>
+  <a class="subnav-item" href="#products">产品分类</a>
+  <a class="subnav-item" href="#specs">规格参数</a>
+  <a class="subnav-item" href="#process">定制流程</a>
+  <a class="subnav-item" href="#cases">合作案例</a>
+  <a class="subnav-item" href="#certs">认证资质</a>
+  <a class="subnav-item" href="#faq">常见问题</a>
+</div>
+
+<!-- PAGE BODY -->
+<div class="page-body">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">二级分类</div>
+      <ul class="sidebar-menu">
+        <li><a href="#" class="active"><span class="icon">👗</span> 服装 / 时装品牌</a></li>
+        <li><a href="#"><span class="icon">💎</span> 珠宝 / 奢侈品</a></li>
+        <li><a href="#"><span class="icon">🛒</span> 超市 / 便利店</a></li>
+        <li><a href="#"><span class="icon">👟</span> 运动 / 鞋包品牌</a></li>
+        <li><a href="#"><span class="icon">📦</span> 电商零售</a></li>
+        <li><a href="#"><span class="icon">🎁</span> 礼品 / 文创</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">其他行业</div>
+      <ul class="sidebar-menu">
+        <li><a href="#"><span class="icon">🍔</span> 餐饮食品</a></li>
+        <li><a href="#"><span class="icon">💄</span> 美妆个护</a></li>
+        <li><a href="#"><span class="icon">🏥</span> 医疗健康</a></li>
+        <li><a href="#"><span class="icon">⚡</span> 电子科技</a></li>
+        <li><a href="#"><span class="icon">🌿</span> 农业食品</a></li>
+        <li><a href="#"><span class="icon">🎓</span> 教育文化</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="sidebar-cert">
+      <div class="cert-title">持有认证</div>
+      <div class="cert-list">
+        <span class="cert-badge">FSC</span>
+        <span class="cert-badge">SGS</span>
+        <span class="cert-badge">ISO 9001</span>
+        <span class="cert-badge">REACH</span>
+        <span class="cert-badge">GB/T</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- 01 痛点 -->
+    <section class="content-section reveal" id="pain">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2 class="section-title">行业痛点与我们的解法</h2>
+        <span class="section-en">Pain Points</span>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <span class="pain-icon">🎨</span>
+          <div class="pain-title">品牌调性难以传递</div>
+          <p class="pain-text">通用包装无法体现品牌个性，消费者无法从包装感知品牌价值，影响复购与传播。</p>
+          <div class="pain-solution">✓ 全彩定制印刷 + 工艺选配（烫金/UV/压纹），精准呈现品牌视觉</div>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">💸</span>
+          <div class="pain-title">小批量定制成本过高</div>
+          <p class="pain-text">新品测试、季节限定款需要少量定制，但传统工厂起订量高，成本难以控制。</p>
+          <div class="pain-solution">✓ 最低100件起订，数字印刷支持零版费，降低试单风险</div>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">⏱️</span>
+          <div class="pain-title">旺季交货周期太长</div>
+          <p class="pain-text">双11、圣诞等大促节点前包材断货，临时追单交期无法保障，错失营销窗口。</p>
+          <div class="pain-solution">✓ 常备库存 + 7天急单通道，重要节点提前锁定产能</div>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">🌱</span>
+          <div class="pain-title">ESG合规要求日益严格</div>
+          <p class="pain-text">大型零售商、品牌方对供应链环保要求升级，普通包材难以通过采购审查。</p>
+          <div class="pain-solution">✓ FSC认证纸张 + 可降解材质，提供完整认证报告</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 产品分类 -->
+    <section class="content-section reveal" id="products">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2 class="section-title">产品分类</h2>
+        <span class="section-en">Products</span>
+      </div>
+
+      <!-- 二级分类切换 -->
+      <div class="subcat-tabs">
+        <button class="subcat-tab active" onclick="switchTab(this, 'fashion')">👗 服装/时装</button>
+        <button class="subcat-tab" onclick="switchTab(this, 'luxury')">💎 珠宝/奢侈品</button>
+        <button class="subcat-tab" onclick="switchTab(this, 'supermarket')">🛒 超市/便利店</button>
+        <button class="subcat-tab" onclick="switchTab(this, 'sport')">👟 运动/鞋包</button>
+        <button class="subcat-tab" onclick="switchTab(this, 'ecom')">📦 电商零售</button>
+        <button class="subcat-tab" onclick="switchTab(this, 'gift')">🎁 礼品/文创</button>
+      </div>
+
+      <!-- 服装时装 -->
+      <div class="product-grid" id="tab-fashion">
+        <div class="product-card">
+          <div class="product-img">🛍️<span class="product-tag tag-hot">热销</span></div>
+          <div class="product-body">
+            <div class="product-name">哑膜手提纸袋</div>
+            <div class="product-material">MATERIAL · 白卡纸 + 哑光覆膜</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>克重</span><span class="spec-val">300–400g</span></div>
+              <div class="spec-item"><span>印刷</span><span class="spec-val">四色+专色</span></div>
+              <div class="spec-item"><span>工艺</span><span class="spec-val">哑膜/烫金可选</span></div>
+              <div class="spec-item"><span>绳子</span><span class="spec-val">棉绳/纸绳</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">最低起订</div><div class="moq-val">500件</div></div>
+              <button class="product-btn">询价</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">👜<span class="product-tag tag-eco">环保</span></div>
+          <div class="product-body">
+            <div class="product-name">棉麻帆布袋</div>
+            <div class="product-material">MATERIAL · 12安士天然棉帆布</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>克重</span><span class="spec-val">280–340g</span></div>
+              <div class="spec-item"><span>印刷</span><span class="spec-val">丝印/数码印</span></div>
+              <div class="spec-item"><span>认证</span><span class="spec-val">GOTS有机棉</span></div>
+              <div class="spec-item"><span>提手</span><span class="spec-val">同色棉织带</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">最低起订</div><div class="moq-val">200件</div></div>
+              <button class="product-btn">询价</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🎀<span class="product-tag tag-new">新品</span></div>
+          <div class="product-body">
+            <div class="product-name">烫金礼品纸袋</div>
+            <div class="product-material">MATERIAL · 铜版纸 + 局部烫金</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>克重</span><span class="spec-val">350g</span></div>
+              <div class="spec-item"><span>工艺</span><span class="spec-val">烫金/烫银/镭射</span></div>
+              <div class="spec-item"><span>绳子</span><span class="spec-val">绸带</span></div>
+              <div class="spec-item"><span>尺寸</span><span class="spec-val">全尺寸可选</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">最低起订</div><div class="moq-val">300件</div></div>
+              <button class="product-btn">询价</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 其他tab内容（隐藏） -->
+      <div class="product-grid" id="tab-luxury" style="display:none">
+        <div class="product-card">
+          <div class="product-img">💜</div>
+          <div class="product-body">
+            <div class="product-name">丝绒束口袋</div>
+            <div class="product-material">MATERIAL · 高密丝绒布</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>工艺</span><span class="spec-val">刺绣Logo</span></div>
+              <div class="spec-item"><span>颜色</span><span class="spec-val">Pantone定制</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">最低起订</div><div class="moq-val">100件</div></div>
+              <button class="product-btn">询价</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🖤</div>
+          <div class="product-body">
+            <div class="product-name">珠宝礼品盒袋套组</div>
+            <div class="product-material">MATERIAL · 特种纸 + 丝绸内衬</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>工艺</span><span class="spec-val">凹凸压纹+烫金</span></div>
+              <div class="spec-item"><span>配套</span><span class="spec-val">礼盒+手提袋</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">最低起订</div><div class="moq-val">100套</div></div>
+              <button class="product-btn">询价</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🤍</div>
+          <div class="product-body">
+            <div class="product-name">奢品品牌购物袋</div>
+            <div class="product-material">MATERIAL · 高克重哑光白卡</div>
+            <div class="product-specs">
+              <div class="spec-item"><span>工艺</span><span class="spec-val">专色+局部UV</span></div>
+              <div class="spec-item"><span>提手</span><span class="spec-val">真皮/仿皮</span></div>
+            </div>
+            <div class="product-footer">
+              <div><div class="moq-label">最低起订</div><div class="moq-val">200件</div></div>
+              <button class="product-btn">询价</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-grid" id="tab-supermarket" style="display:none">
+        <div class="product-card">
+          <div class="product-img">🟤</div>
+          <div class="product-body"><div class="product-name">牛皮纸手提袋</div><div class="product-material">MATERIAL · 本色牛皮纸</div><div class="product-specs"><div class="spec-item"><span>克重</span><span class="spec-val">100–150g</span></div><div class="spec-item"><span>认证</span><span class="spec-val">FSC</span></div></div><div class="product-footer"><div><div class="moq-label">最低起订</div><div class="moq-val">1,000件</div></div><button class="product-btn">询价</button></div></div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">♻️</div>
+          <div class="product-body"><div class="product-name">可重复使用无纺布袋</div><div class="product-material">MATERIAL · PP无纺布</div><div class="product-specs"><div class="spec-item"><span>克重</span><span class="spec-val">80g/㎡</span></div><div class="spec-item"><span>印刷</span><span class="spec-val">丝印</span></div></div><div class="product-footer"><div><div class="moq-label">最低起订</div><div class="moq-val">500件</div></div><button class="product-btn">询价</button></div></div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🌿</div>
+          <div class="product-body"><div class="product-name">可降解PLA购物袋</div><div class="product-material">MATERIAL · PLA生物基材料</div><div class="product-specs"><div class="spec-item"><span>降解</span><span class="spec-val">180天可堆肥</span></div><div class="spec-item"><span>认证</span><span class="spec-val">EN13432</span></div></div><div class="product-footer"><div><div class="moq-label">最低起订</div><div class="moq-val">2,000件</div></div><button class="product-btn">询价</button></div></div>
+        </div>
+      </div>
+
+      <div class="product-grid" id="tab-sport" style="display:none">
+        <div class="product-card"><div class="product-img">👟</div><div class="product-body"><div class="product-name">鞋盒专用手提袋</div><div class="product-material">MATERIAL · 强韧牛皮纸</div><div class="product-specs"><div class="spec-item"><span>承重</span><span class="spec-val">≥5kg</span></div><div class="spec-item"><span>提手</span><span class="spec-val">棉绳加固</span></div></div><div class="product-footer"><div><div class="moq-label">最低起订</div><div class="moq-val">500件</div></div><button class="product-btn">询价</button></div></div></div>
+        <div class="product-card"><div class="product-img">🏋️</div><div class="product-body"><div class="product-name">运动无纺布手提袋</div><div class="product-material">MATERIAL · 加厚无纺布</div><div class="product-specs"><div class="spec-item"><span>克重</span><span class="spec-val">120g/㎡</span></div><div class="spec-item"><span>印刷</span><span class="spec-val">全彩热转印</span></div></div><div class="product-footer"><div><div class="moq-label">最低起订</div><div class="moq-val">300件</div></div><button class="product-btn">询价</button></div></div></div>
+        <div class="product-card"><div class="product-img">🎽</div><div class="product-body"><div class="product-name">防水帆布背包袋</div><div class="product-material">MATERIAL · 600D涤纶</div><div class="product-specs"><div class="spec-item"><span>容量</span><span class="spec-val">20–30L</span></div><div class="spec-item"><span>印刷</span><span class="spec-val">绣花/丝印</span></div></div><div class="product-footer"><div><div class="moq-label">最低起订</div><div class="moq-val">100件</div></div><button class="product-btn">询价</button></div></div></div>
+      </div>
+
+      <div class="product-grid" id="tab-ecom" style="display:none">
+        <div class="product-card"><div class="product-img">📦</div><div class="product-body"><div class="product-name">电商快递纸袋</div><div class="product-material">MATERIAL · 牛皮纸+防水涂层</div><div class="product-specs"><div class="spec-item"><span>封口</span><span class="spec-val">自粘封口</span></div><div class="spec-item"><span>印刷</span><span class="spec-val">品牌全彩</span></div></div><div class="product-footer"><div><div class="moq-label">最低起订</div><div class="moq-val">1,000件</div></div><button class="product-btn">询价</button></div></div></div>
+        <div class="product-card"><div class="product-img">🛡️</div><div class="product-body"><div class="product-name">气泡防震快递袋</div><div class="product-material">MATERIAL · PE气泡膜复合</div><div class="product-specs"><div class="spec-item"><span>缓冲</span><span class="spec-val">气柱防震</span></div><div class="spec-item"><span>封口</span><span class="spec-val">撕拉条</span></div></div><div class="product-footer"><div><div class="moq-label">最低起订</div><div class="moq-val">500件</div></div><button class="product-btn">询价</button></div></div></div>
+        <div class="product-card"><div class="product-img">🌊</div><div class="product-body"><div class="product-name">防水快递袋</div><div class="product-material">MATERIAL · 防水编织布</div><div class="product-specs"><div class="spec-item"><span>防水</span><span class="spec-val">IPX4级</span></div><div class="spec-item"><span>尺寸</span><span class="spec-val">10+规格</span></div></div><div class="product-footer"><div><div class="moq-label">最低起订</div><div class="moq-val">1,000件</div></div><button class="product-btn">询价</button></div></div></div>
+      </div>
+
+      <div class="product-grid" id="tab-gift" style="display:none">
+        <div class="product-card"><div class="product-img">🎁</div><div class="product-body"><div class="product-name">精品礼品手提袋</div><div class="product-material">MATERIAL · 特种艺术纸</div><div class="product-specs"><div class="spec-item"><span>工艺</span><span class="spec-val">镭射+压纹</span></div><div class="spec-item"><span>内衬</span><span class="spec-val">彩色丝带纸</span></div></div><div class="product-footer"><div><div class="moq-label">最低起订</div><div class="moq-val">100件</div></div><button class="product-btn">询价</button></div></div></div>
+        <div class="product-card"><div class="product-img">🎨</div><div class="product-body"><div class="product-name">文创帆布手提袋</div><div class="product-material">MATERIAL · 本色帆布</div><div class="product-specs"><div class="spec-item"><span>印刷</span><span class="spec-val">插画全彩</span></div><div class="spec-item"><span>风格</span><span class="spec-val">国潮/简约</span></div></div><div class="product-footer"><div><div class="moq-label">最低起订</div><div class="moq-val">200件</div></div><button class="product-btn">询价</button></div></div></div>
+        <div class="product-card"><div class="product-img">🌸</div><div class="product-body"><div class="product-name">节日限定礼品袋</div><div class="product-material">MATERIAL · 珠光纸</div><div class="product-specs"><div class="spec-item"><span>节日</span><span class="spec-val">春节/圣诞/情人节</span></div><div class="spec-item"><span>配件</span><span class="spec-val">彩带+贴纸套装</span></div></div><div class="product-footer"><div><div class="moq-label">最低起订</div><div class="moq-val">300件</div></div><button class="product-btn">询价</button></div></div></div>
+      </div>
+    </section>
+
+    <!-- 03 规格参数 -->
+    <section class="content-section reveal" id="specs">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2 class="section-title">规格参数对照表</h2>
+        <span class="section-en">Specifications</span>
+      </div>
+      <div class="spec-table-wrap">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>袋型</th>
+              <th>适用场景</th>
+              <th>常用尺寸（W×H×D cm）</th>
+              <th>承重</th>
+              <th>印刷工艺</th>
+              <th>起订量</th>
+              <th>参考周期</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>哑膜手提纸袋</td>
+              <td>服装、鞋包门店</td>
+              <td>20×25×8 / 26×32×10 / 32×40×12</td>
+              <td>≤5kg</td>
+              <td>四色+哑膜/烫金</td>
+              <td>500件</td>
+              <td>12–15天</td>
+            </tr>
+            <tr>
+              <td>棉麻帆布袋</td>
+              <td>环保品牌、买手店</td>
+              <td>38×42 / 40×45 / 45×50</td>
+              <td>≤8kg</td>
+              <td>丝印 1–4色</td>
+              <td>200件</td>
+              <td>10–14天</td>
+            </tr>
+            <tr>
+              <td>烫金礼品纸袋</td>
+              <td>珠宝、礼品店</td>
+              <td>12×15×6 / 20×25×8</td>
+              <td>≤3kg</td>
+              <td>专色+烫金/UV</td>
+              <td>300件</td>
+              <td>14–18天</td>
+            </tr>
+            <tr>
+              <td>丝绒束口袋</td>
+              <td>奢侈品、首饰</td>
+              <td>8×10 / 12×15 / 15×20</td>
+              <td>≤1kg</td>
+              <td>刺绣/烫印</td>
+              <td>100件</td>
+              <td>10–14天</td>
+            </tr>
+            <tr>
+              <td>无纺布购物袋</td>
+              <td>超市、连锁零售</td>
+              <td>35×40×10 / 40×45×12</td>
+              <td>≤10kg</td>
+              <td>丝印 1–3色</td>
+              <td>500件</td>
+              <td>7–12天</td>
+            </tr>
+            <tr>
+              <td>电商快递纸袋</td>
+              <td>电商发货</td>
+              <td>多尺寸标准规格</td>
+              <td>≤3kg</td>
+              <td>单色/双色</td>
+              <td>1,000件</td>
+              <td>7–10天</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 04 定制流程 -->
+    <section class="content-section reveal" id="process">
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <h2 class="section-title">定制流程</h2>
+        <span class="section-en">Process</span>
+      </div>
+      <div class="process-steps">
+        <div class="step-item">
+          <div class="step-circle">💬<span class="step-num">1</span></div>
+          <div class="step-name">需求沟通</div>
+          <div class="step-days">Day 1</div>
+          <div class="step-desc">提交需求表，顾问确认材质、尺寸、工艺、数量</div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">📐<span class="step-num">2</span></div>
+          <div class="step-name">报价打样</div>
+          <div class="step-days">Day 2–4</div>
+          <div class="step-desc">48小时报价单，3–5天出实物样品</div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">✅<span class="step-num">3</span></div>
+          <div class="step-name">样品确认</div>
+          <div class="step-days">Day 5–7</div>
+          <div class="step-desc">客户确认样品，签订合同，支付订金</div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">🏭<span class="step-num">4</span></div>
+          <div class="step-name">批量生产</div>
+          <div class="step-days">Day 8–18</div>
+          <div class="step-desc">工厂排产，全程QC品控，中期进度照片反馈</div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">🚚<span class="step-num">5</span></div>
+          <div class="step-name">发货验收</div>
+          <div class="step-days">Day 19–21</div>
+          <div class="step-desc">出货前检验，提供装箱单+质检报告，安排物流</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 合作案例 -->
+    <section class="content-section reveal" id="cases">
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <h2 class="section-title">合作案例</h2>
+        <span class="section-en">Case Studies</span>
+      </div>
+      <div class="cases-grid">
+        <div class="case-card">
+          <div class="case-emoji">👗</div>
+          <div class="case-body">
+            <div class="case-industry">Fashion Retail · 快时尚连锁</div>
+            <div class="case-name">某国内快时尚品牌 春夏新品手提袋</div>
+            <p class="case-desc">为其300家门店定制春夏季节款手提袋，配合新品上市营销活动，哑膜+局部UV工艺，15天完成10万件量产交货。</p>
+            <div class="case-tags">
+              <span class="case-tag">哑膜纸袋</span>
+              <span class="case-tag">局部UV</span>
+              <span class="case-tag">10万件</span>
+              <span class="case-tag">15天交货</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-emoji">💎</div>
+          <div class="case-body">
+            <div class="case-industry">Jewelry · 珠宝品牌</div>
+            <div class="case-name">精品珠宝门店 礼品袋+礼盒套组</div>
+            <p class="case-desc">烫金工艺礼品袋与天鹅绒礼盒配套，统一品牌高端视觉。小批量100件起订，支持常年滚动补货。</p>
+            <div class="case-tags">
+              <span class="case-tag">烫金礼品袋</span>
+              <span class="case-tag">丝绒礼盒</span>
+              <span class="case-tag">100件起</span>
+              <span class="case-tag">滚动补货</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-emoji">🛒</div>
+          <div class="case-body">
+            <div class="case-industry">Supermarket · 连锁超市</div>
+            <div class="case-name">华南连锁超市 环保购物袋替换计划</div>
+            <p class="case-desc">响应限塑令，为200家门店更换可降解PLA购物袋，提供EN13432认证，帮助客户完成政府合规要求。</p>
+            <div class="case-tags">
+              <span class="case-tag">可降解PLA袋</span>
+              <span class="case-tag">EN13432认证</span>
+              <span class="case-tag">50万件/月</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-emoji">📦</div>
+          <div class="case-body">
+            <div class="case-industry">E-commerce · 电商品牌</div>
+            <div class="case-name">新锐护肤品牌 电商发货包材升级</div>
+            <p class="case-desc">将通用快递袋升级为定制品牌纸袋，配合开箱体验设计，用户分享率提升40%，复购率显著增长。</p>
+            <div class="case-tags">
+              <span class="case-tag">定制快递纸袋</span>
+              <span class="case-tag">开箱体验</span>
+              <span class="case-tag">分享率+40%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 认证资质 -->
+    <section class="content-section reveal" id="certs">
+      <div class="section-head">
+        <span class="section-num">06</span>
+        <h2 class="section-title">认证资质</h2>
+        <span class="section-en">Certifications</span>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <span class="cert-icon">🌳</span>
+          <div class="cert-name">FSC</div>
+          <p class="cert-desc">森林管理委员会认证，纸张原料来自负责任管理的森林</p>
+        </div>
+        <div class="cert-card">
+          <span class="cert-icon">🔬</span>
+          <div class="cert-name">SGS</div>
+          <p class="cert-desc">无有害物质检测，REACH/RoHS合规，符合欧盟进口要求</p>
+        </div>
+        <div class="cert-card">
+          <span class="cert-icon">⚙️</span>
+          <div class="cert-name">ISO 9001</div>
+          <p class="cert-desc">质量管理体系认证，生产全流程质量受控</p>
+        </div>
+        <div class="cert-card">
+          <span class="cert-icon">♻️</span>
+          <div class="cert-name">EN 13432</div>
+          <p class="cert-desc">可堆肥降解认证，可降解产品180天完全分解</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 FAQ -->
+    <section class="content-section reveal" id="faq">
+      <div class="section-head">
+        <span class="section-num">07</span>
+        <h2 class="section-title">常见问题</h2>
+        <span class="section-en">FAQ</span>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">最低起订量是多少？可以打样吗？<span class="faq-arrow">▼</span></div>
+          <div class="faq-a"><p>不同产品起订量不同，纸袋类通常500件起，帆布袋200件起，丝绒袋100件起。打样费用视复杂度在200–800元，量产后可抵扣。急单客户可走免打样快速通道。</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">交货周期如何保障？旺季是否会延期？<span class="faq-arrow">▼</span></div>
+          <div class="faq-a"><p>标准订单15–20个工作日。我们提前3个月锁定旺季产能，建议双11、圣诞等节点提前6–8周下单。急单可走7天加急通道，需额外支付加急费用。</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">可以提供哪些认证报告？支持出口吗？<span class="faq-arrow">▼</span></div>
+          <div class="faq-a"><p>可提供FSC、SGS有害物质检测、ISO 9001、EN13432降解认证等。支持出口至欧美、东南亚、中东等地区，可协助准备海关申报资料。</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">印刷颜色如何保证准确？<span class="faq-arrow">▼</span></div>
+          <div class="faq-a"><p>我们支持Pantone色号精准对色，并提供色标纸版确认。量产前提供色样确认，出货前100%目检。如有色差超标，我们承担重印费用。</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">支持哪些付款方式？有账期吗？<span class="faq-arrow">▼</span></div>
+          <div class="faq-a"><p>标准付款方式为50%订金+50%尾款（出货前）。长期合作客户经审核后可申请月结账期。支持银行转账、微信/支付宝、信用证（出口订单）。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <div class="cta-banner reveal">
+      <div class="cta-text">
+        <h3>准备好为您的零售品牌<br>定制专属包装了吗？</h3>
+        <p>提交需求，48小时内收到专属方案报价 · 免费寄送样品 · 专属顾问全程跟进</p>
+      </div>
+      <div class="cta-actions">
+        <button class="btn-primary">📋 立即提交需求</button>
+        <button class="btn-outline">💬 微信咨询顾问</button>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+// Tab switching
+function switchTab(btn, tabId) {
+  document.querySelectorAll('.subcat-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  ['fashion','luxury','supermarket','sport','ecom','gift'].forEach(id => {
+    const el = document.getElementById('tab-' + id);
+    if (el) el.style.display = id === tabId ? 'grid' : 'none';
+  });
+}
+
+// FAQ accordion
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// Subnav active state
+const subnavItems = document.querySelectorAll('.subnav-item');
+const sections = ['pain','products','specs','process','cases','certs','faq'];
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top < 130) current = id;
+  });
+  subnavItems.forEach(item => {
+    item.classList.remove('active');
+    if (item.getAttribute('href') === '#' + current) item.classList.add('active');
+  });
+});
+
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

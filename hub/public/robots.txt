@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /update_pillar.py
+Disallow: /update_pillar2.py
+
+Sitemap: https://leeknives.com/sitemap.xml

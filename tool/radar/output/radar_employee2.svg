@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="650" viewBox="0 0 650 650">
+  <defs>
+    <linearGradient id="dataGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f44336;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#e53935;stop-opacity:0.25" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="650" height="650" fill="#ffffff"/>
+
+  <!-- 网格层 - 浅色填充 -->
+  <g fill="#fafafa" stroke="#e0e0e0" stroke-width="1">
+    <polygon points="325.0,285.0 363.04226065180717,312.63932022500524 348.51141009169356,357.3606797750018 301.488589908293,357.36067977499204 286.95773934819795,312.6393202249895" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1" opacity="0.4"/>
+    <polygon points="325.0,245.0 401.08452130361434,300.2786404500105 372.0228201833871,389.72135955000357 277.97717981658604,389.7213595499841 248.9154786963959,300.27864044997904" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1" opacity="0.5"/>
+    <polygon points="325.0,205.0 439.1267819554215,287.91796067501576 395.5342302750807,422.0820393250054 254.4657697248791,422.08203932497617 210.87321804459384,287.9179606749685" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1" opacity="0.6000000000000001"/>
+    <polygon points="325.0,165.0 477.1690426072287,275.557280900021 419.04564036677425,454.44271910000714 230.95435963317215,454.4427190999682 172.8309573927918,275.557280899958" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1" opacity="0.7"/>
+    <polygon points="325.0,125.0 515.2113032590358,263.1966011250263 442.5570504584678,486.80339887500895 207.44294954146517,486.80339887496024 134.78869674098974,263.1966011249475" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1" opacity="0.8"/>
+  </g>
+
+  <!-- 轴线 -->
+  <g stroke="#bdbdbd" stroke-width="1.5">
+    <line x1="325.0" y1="325.0" x2="325.0" y2="125.0"/>
+    <line x1="325.0" y1="325.0" x2="515.2113032590358" y2="263.1966011250263"/>
+    <line x1="325.0" y1="325.0" x2="442.5570504584678" y2="486.80339887500895"/>
+    <line x1="325.0" y1="325.0" x2="207.44294954146517" y2="486.80339887496024"/>
+    <line x1="325.0" y1="325.0" x2="134.78869674098974" y2="263.1966011249475"/>
+  </g>
+
+  <!-- 数据区域 -->
+  <polygon points="325.0,279.0 368.74859974957826,310.78521825875606 416.6944993576049,451.20665112250697 219.19865458731863,470.6230589874642 159.5161661646611,271.23104297870435" fill="url(#dataGradient)" stroke="#f44336" stroke-width="2.5" filter="url(#glow)"/>
+
+  <!-- 数据点 -->
+  <g>
+    <circle cx="325.0" cy="279.0" r="6" fill="#ffffff" stroke="#f44336" stroke-width="2.5"/>
+    <circle cx="325.0" cy="279.0" r="3" fill="#f44336"/>
+    <circle cx="368.74859974957826" cy="310.78521825875606" r="6" fill="#ffffff" stroke="#f44336" stroke-width="2.5"/>
+    <circle cx="368.74859974957826" cy="310.78521825875606" r="3" fill="#f44336"/>
+    <circle cx="416.6944993576049" cy="451.20665112250697" r="6" fill="#ffffff" stroke="#f44336" stroke-width="2.5"/>
+    <circle cx="416.6944993576049" cy="451.20665112250697" r="3" fill="#f44336"/>
+    <circle cx="219.19865458731863" cy="470.6230589874642" r="6" fill="#ffffff" stroke="#f44336" stroke-width="2.5"/>
+    <circle cx="219.19865458731863" cy="470.6230589874642" r="3" fill="#f44336"/>
+    <circle cx="159.5161661646611" cy="271.23104297870435" r="6" fill="#ffffff" stroke="#f44336" stroke-width="2.5"/>
+    <circle cx="159.5161661646611" cy="271.23104297870435" r="3" fill="#f44336"/>
+  </g>
+
+  <!-- 数值标签 -->
+  <g font-size="13" font-weight="bold" fill="#f44336" font-family="Arial, sans-serif">
+    <text x="325.0" y="253.0" text-anchor="middle">23</text>
+    <text x="385.8676170428915" y="297.2229123600084" text-anchor="middle">23</text>
+    <text x="427.274633898867" y="457.7689570212578" text-anchor="middle">78</text>
+    <text x="208.6185200460505" y="477.18536488621066" text-anchor="middle">90</text>
+    <text x="142.39714887135017" y="257.6687370799496" text-anchor="middle">87</text>
+  </g>
+
+  <!-- 维度标签 -->
+  <g font-size="13" font-weight="bold" fill="#333333" font-family="Arial, sans-serif">
+    <text x="325.0" y="80.0" text-anchor="middle" dy="0.35em">e</text>
+    <text x="558.0088464923189" y="249.29083637815717" text-anchor="start" dy="0.35em">k</text>
+    <text x="469.00738681162306" y="523.209163621886" text-anchor="start" dy="0.35em">f</text>
+    <text x="180.99261318829483" y="523.2091636218263" text-anchor="end" dy="0.35em">a</text>
+    <text x="91.99115350771243" y="249.2908363780607" text-anchor="end" dy="0.35em">d</text>
+  </g>
+
+  <!-- 底部信息 -->
+  <text x="325.0" y="625" text-anchor="middle" font-size="20" font-weight="bold" fill="#333333" font-family="Arial, sans-serif">Employee2</text>
+</svg>

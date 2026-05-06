@@ -1,0 +1,42 @@
+/* Manufacturing process-specific layout */
+    .process-card { border: 1px solid var(--border); border-radius: var(--r-12); padding: var(--pad-card); margin-bottom: var(--gap-xl); background: var(--surface); box-shadow: var(--shadow-3); }
+    .process-card h3 { margin: 0 0 var(--gap-sm); font-size: 1.25rem; }
+    .process-card .process-meta { display: flex; flex-wrap: wrap; gap: var(--gap-sm); margin-bottom: var(--gap-sm); }
+    .process-lead { color: var(--muted-800); font-size: 1rem; line-height: 1.7; margin-bottom: var(--gap-md); }
+
+    .process-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap-lg); margin: var(--gap-md) 0; }
+    .process-side { border: 1px solid var(--border); border-radius: var(--r-10); padding: var(--pad-card-sm); background: var(--surface); }
+    .process-side h4 { margin: 0 0 var(--gap-xs); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted-700); }
+    .process-side ul { margin: 0; padding-left: var(--gap-2xl); }
+    .process-side li { margin-bottom: var(--gap-xs); font-size: 0.95rem; color: var(--muted-800); }
+
+    .process-visual { background: linear-gradient(135deg, var(--cover-grad-a), var(--cover-grad-b)); border-radius: var(--r-10); padding: var(--gap-xl); text-align: center; color: var(--muted-300); font-size: 0.9rem; margin: var(--gap-md) 0; }
+
+    .step-flow { display: flex; flex-wrap: wrap; gap: var(--gap-sm); justify-content: center; margin: var(--gap-lg) 0 var(--gap-4xl); }
+    .step-chip { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-pill); padding: 8px 16px; font-size: 0.85rem; font-weight: 600; color: var(--primary); }
+    .step-arrow { display: flex; align-items: center; color: var(--secondary); font-weight: 700; font-size: 1.1rem; }
+
+    .material-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--gap-lg); margin: var(--gap-lg) 0 var(--gap-4xl); }
+    .material-card { border: 1px solid var(--border); border-radius: var(--r-12); padding: var(--pad-card-sm); background: var(--surface); box-shadow: var(--shadow-2); transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out); }
+    .material-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-5); }
+    .material-card h4 { margin: 0 0 var(--gap-xs); font-size: 1rem; }
+    .material-card p { margin: 0; font-size: 0.88rem; color: var(--muted-700); line-height: 1.6; }
+    .material-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; padding: 3px 10px; border-radius: var(--r-pill); margin-bottom: var(--gap-xs); }
+    .material-tag.premium { background: var(--rose-100); color: var(--tag-high-text); }
+    .material-tag.mid { background: var(--tag-mid-bg); color: var(--tag-mid-text); }
+    .material-tag.budget { background: var(--tag-budget-bg); color: var(--tag-budget-text); }
+
+    .qc-checklist { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-12); padding: var(--pad-card); margin: var(--gap-lg) 0; }
+    .qc-checklist h4 { margin: 0 0 var(--gap-sm); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted-700); }
+    .qc-item { display: grid; grid-template-columns: 28px 1fr; gap: var(--gap-sm); align-items: start; margin-bottom: var(--gap-sm); }
+    .qc-num { width: 24px; height: 24px; border-radius: 50%; background: var(--secondary); color: var(--surface); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
+    .qc-text { font-size: 0.95rem; color: var(--muted-800); line-height: 1.5; }
+
+    .compare-method { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap-lg); margin: var(--gap-lg) 0; }
+
+    @media (max-width: 820px) {
+      .process-grid { grid-template-columns: 1fr; }
+      .compare-method { grid-template-columns: 1fr; }
+      .step-flow { flex-direction: column; align-items: center; }
+      .step-arrow { transform: rotate(90deg); }
+    }

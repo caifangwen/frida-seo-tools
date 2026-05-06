@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cross-Family Steel Comparisons (VS Series): Pick the Right Steel |...</title>
+  <meta name="description" content="Head-to-head knife steel comparisons across metallurgical families: stainless vs carbon, PM vs PM, tool vs stainless. Side-by-side data for product teams and buyers.">
+  <meta property="og:title" content="Cross-Family Steel Comparisons (VS Series): Pick the Right Steel | Leeknives">
+  <meta property="og:description" content="Head-to-head knife steel comparisons across metallurgical families: stainless vs carbon, PM vs PM, tool vs stainless. Side-by-side data for product teams and buyers.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://leeknives.com/cross-family-steel-comparisons/">
+  <meta property="og:site_name" content="Leeknives">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cross-Family Steel Comparisons (VS Series): Pick the Right Steel |...">
+  <meta name="twitter:description" content="Head-to-head knife steel comparisons across metallurgical families: stainless vs carbon, PM vs PM, tool vs stainless. Side-by-side data for product teams and buyers.">
+  <link rel="canonical" href="https://leeknives.com/cross-family-steel-comparisons/">
+  <link rel="stylesheet" href="hub-common.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cross-Family Steel Comparisons (VS Series)",
+    "description": "Head-to-head knife steel comparisons across metallurgical families with side-by-side performance data and sourcing guidance.",
+    "author": { "@type": "Person", "name": "Leeknives Editorial Team" },
+    "publisher": { "@type": "Organization", "name": "Leeknives", "url": "https://leeknives.com" },
+    "datePublished": "2026-04-28",
+    "dateModified": "2026-04-28",
+    "mainEntityOfPage": "https://leeknives.com/cross-family-steel-comparisons/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://leeknives.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Knife Steel Guide", "item": "https://leeknives.com/knife-steel/" },
+      { "@type": "ListItem", "position": 3, "name": "Cross-Family Steel Comparisons", "item": "https://leeknives.com/cross-family-steel-comparisons/" }
+    ]
+  }
+  </script>
+  <style>
+    /* VS-specific layout */
+    .vs-hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--gap-xl); margin: var(--gap-lg) 0 var(--gap-4xl); }
+    .vs-hero-card { border: 1px solid var(--border); border-radius: var(--r-12); padding: var(--pad-card); background: var(--surface); text-align: center; box-shadow: var(--shadow-2); transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out); }
+    .vs-hero-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-5); }
+    .vs-hero-card .vs-pair { font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: var(--gap-xs); }
+    .vs-hero-card .vs-pair span { color: var(--secondary); }
+    .vs-hero-card p { font-size: 0.88rem; color: var(--muted-700); margin: 0; }
+
+    .vs-section { margin: var(--gap-4xl) 0; }
+    .vs-section-header { display: flex; flex-wrap: wrap; align-items: center; gap: var(--gap-sm); margin-bottom: var(--gap-sm); }
+    .vs-section-header h3 { margin: 0; font-size: 1.35rem; }
+    .vs-section-lead { color: var(--muted-800); font-size: 1rem; line-height: 1.7; margin-bottom: var(--gap-md); max-width: var(--content-max); }
+
+    .vs-compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap-lg); margin: var(--gap-md) 0; }
+    .vs-side { border: 1px solid var(--border); border-radius: var(--r-12); padding: var(--pad-card); background: var(--surface); }
+    .vs-side-header { display: flex; align-items: center; gap: var(--gap-sm); margin-bottom: var(--gap-sm); flex-wrap: wrap; }
+    .vs-side-header h4 { margin: 0; font-size: 1.15rem; }
+    .vs-side .tag { font-size: 0.7rem; }
+    .vs-metrics { margin: var(--gap-md) 0; }
+    .vs-m-row { display: grid; grid-template-columns: 110px 36px 1fr; align-items: center; gap: var(--gap-sm); margin-bottom: 8px; }
+    .vs-m-name { font-size: 0.8rem; color: var(--muted-700); }
+    .vs-m-score { font-size: 0.8rem; font-weight: 700; color: var(--primary); text-align: right; }
+    .vs-m-bar { background: var(--surface-progress); height: 12px; border-radius: var(--r-20); overflow: hidden; }
+    .vs-m-fill { background: linear-gradient(90deg, var(--secondary-bright), var(--secondary)); height: 100%; border-radius: var(--r-20); }
+
+    .vs-verdict { background: linear-gradient(180deg, var(--surface) 0%, var(--light-gray) 100%); border: 1px solid var(--border); border-left: 4px solid var(--secondary); border-radius: var(--r-12); padding: var(--pad-card); margin-top: var(--gap-lg); }
+    .vs-verdict h4 { margin: 0 0 var(--gap-xs); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted-700); }
+    .vs-verdict p { margin: 0; color: var(--muted-900); font-size: 0.95rem; line-height: 1.6; }
+
+    .vs-summary-table { margin-top: var(--gap-lg); }
+    .vs-summary-table table { min-width: 100%; }
+    .vs-summary-table th, .vs-summary-table td { padding: var(--gap-md); font-size: 0.92rem; }
+
+    .decision-card { border: 1px solid var(--border); border-radius: var(--r-12); padding: var(--pad-card); background: var(--surface); box-shadow: var(--shadow-3); margin-bottom: var(--gap-xl); }
+    .decision-card h4 { margin: 0 0 var(--gap-xs); font-size: 1.05rem; }
+    .decision-card p { margin: 0 0 var(--gap-xs); color: var(--muted-800); font-size: 0.95rem; line-height: 1.6; }
+    .decision-card .winner { display: inline-block; background: var(--secondary); color: var(--surface); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; padding: 3px 10px; border-radius: var(--r-pill); }
+
+    @media (max-width: 820px) {
+      .vs-compare-grid { grid-template-columns: 1fr; }
+      .vs-m-row { grid-template-columns: 100px 32px 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="crumbs"><a href="hub.html">← Back to Steel Knowledge Center</a></div>
+    <span class="pillar-kicker">VS Series</span>
+    <h1>Cross-Family Steel Comparisons</h1>
+    <p class="hero-lead">Head-to-head steel matchups across metallurgical families. Side-by-side performance data, sourcing notes, and verdicts for product teams choosing between different steel philosophies.</p>
+    <div class="stats-strip">
+      <div class="stat-item">
+        <span class="stat-val">12+</span>
+        <span class="stat-title">VS Matchups</span>
+        <p class="stat-desc">Covering budget, mid, and premium tiers across stainless, carbon, tool, and PM families.</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val">4D</span>
+        <span class="stat-title">Rating Dimensions</span>
+        <p class="stat-desc">Edge retention, toughness, corrosion resistance, and ease of sharpening scored per grade.</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val">B2B</span>
+        <span class="stat-title">Sourcing Focused</span>
+        <p class="stat-desc">Every comparison includes yield rate, MOQ, and factory-production notes from Yangjiang.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="intro-narrative">
+  <div class="container">
+    <div class="key-takeaway">
+      <h3>Key Takeaway</h3>
+      <p>There is no universal "winner" in steel comparisons — only better fits for a given audience, price band, and care profile. Use these VS pages to align steel choice with your product strategy rather than chasing headline performance numbers.</p>
+    </div>
+    <div class="narrative-content">
+      <p>Most steel debates online miss the point: they ask "which steel is better?" instead of "which steel is better for this user at this price?" A PM steel like M390 is objectively higher-performing than 8Cr13MoV on most metrics, but if your retail target is under $40 and your audience does not own diamond stones, the "better" steel creates a worse ownership experience.</p>
+      <p>This VS series is structured around real product decisions: budget stainless vs tool steel, mid stainless vs entry PM, and visual premium vs functional carbon. Each matchup includes four-dimension scoring, factory notes, and a practical verdict for product teams.</p>
+    </div>
+    <div class="toc-wrap">
+      <h3>Table of Contents</h3>
+      <ol>
+        <li><a href="#budget-tool">Budget Stainless vs Semi-Stainless Tool</a></li>
+        <li><a href="#mid-tool">Mid Stainless vs Tool Steel</a></li>
+        <li><a href="#pm-battle">Premium PM Showdowns</a></li>
+        <li><a href="#japanese-mid">Japanese PM vs Mainstream Stainless</a></li>
+        <li><a href="#entry-premium">Entry vs Premium PM</a></li>
+        <li><a href="#visual-function">Visual Premium vs Function-First</a></li>
+        <li><a href="#edc-mid">EDC Mid-Tier Duels</a></li>
+        <li><a href="#decision">Quick Decision Framework</a></li>
+        <li><a href="#factory">From Our Factory</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+        <li><a href="#continue">Continue Learning</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       BUDGET STAINLESS vs TOOL
+       ═══════════════════════════════════════════════════════════════ -->
+  <h2 class="section-title" id="budget-tool">Budget Stainless vs Semi-Stainless Tool</h2>
+  <p class="section-sub">The most common cross-family decision for mass-market and value-tier product lines.</p>
+
+  <!-- 8Cr13MoV vs D2 -->
+  <div class="vs-section" id="vs-8cr-d2">
+    <div class="vs-section-header">
+      <h3>8Cr13MoV <span style="color:var(--secondary);">vs</span> D2</h3>
+      <span class="tag budget">Budget–Mid</span>
+      <span class="tag">Mass Market</span>
+    </div>
+    <p class="vs-section-lead">8Cr13MoV is the global workhorse of budget stainless. D2 is the entry point into semi-stainless tool steel with significantly higher wear resistance but more demanding production and sharpening requirements. For teams building a value line, this is often the first cross-family fork in the road.</p>
+    <div class="vs-compare-grid">
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>8Cr13MoV</h4><span class="tag budget">Budget</span><span class="tag">Stainless</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">6/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:60%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">7/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:70%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">7/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:70%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">8/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:80%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;"><strong>Factory note:</strong> Yield rate 96%+. Stable supply in Yangjiang. No special HT equipment needed. MOQ typically 300–500 pcs.</p>
+      </div>
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>D2</h4><span class="tag mid">Mid</span><span class="tag">Tool Steel</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">8.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:85%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">5.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:55%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">4.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:45%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">4/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:40%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;"><strong>Factory note:</strong> Yield rate 90–93%. ~3× warpage risk vs standard stainless. Requires post-HT straightening. MOQ 300+ pcs.</p>
+      </div>
+    </div>
+    <div class="vs-verdict">
+      <h4>Verdict</h4>
+      <p>Choose <strong>8Cr13MoV</strong> for mass-market retail, gift channels, and any audience that values low maintenance over maximum edge life. Choose <strong>D2</strong> when your brand targets enthusiasts who accept harder sharpening in exchange for dramatically longer edge retention — but budget for additional HT QC and care documentation.</p>
+    </div>
+  </div>
+
+  <!-- AUS-8 vs D2 -->
+  <div class="vs-section" id="vs-aus8-d2">
+    <div class="vs-section-header">
+      <h3>AUS-8 <span style="color:var(--secondary);">vs</span> D2</h3>
+      <span class="tag budget">Budget–Mid</span>
+      <span class="tag">EDC / Outdoor</span>
+    </div>
+    <p class="vs-section-lead">AUS-8 is the Japanese-designed budget stainless known for balanced toughness and easy sharpening. D2, as above, offers superior wear resistance but demands more from both factory and end user. The choice here often comes down to user sharpening skill and expected cutting duty.</p>
+    <div class="vs-compare-grid">
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>AUS-8</h4><span class="tag budget">Budget</span><span class="tag">Stainless</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">6/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:60%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">7.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:75%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">7/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:70%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">8/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:80%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Slightly tougher than 8Cr13MoV with similar corrosion behavior. Very forgiving in HT. Popular in SE Asian and North American OEM programs.</p>
+      </div>
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>D2</h4><span class="tag mid">Mid</span><span class="tag">Tool Steel</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">8.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:85%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">5.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:55%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">4.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:45%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">4/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:40%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Same D2 notes apply: higher yield risk, harder to sharpen, but substantially longer working edge life in abrasive cutting.</p>
+      </div>
+    </div>
+    <div class="vs-verdict">
+      <h4>Verdict</h4>
+      <p><strong>AUS-8</strong> wins for user-friendly lines where "easy to maintain" is a selling point. <strong>D2</strong> wins for hard-use EDC or outdoor lines where users prioritize edge endurance over sharpening convenience. For brands running both SKUs, position AUS-8 as the entry model and D2 as the upgrade.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       MID STAINLESS vs TOOL
+       ═══════════════════════════════════════════════════════════════ -->
+  <h2 class="section-title" id="mid-tool">Mid Stainless vs Tool Steel</h2>
+  <p class="section-sub">When corrosion resistance and edge stability must be weighed against wear resistance and hardness.</p>
+
+  <!-- 14C28N vs D2 -->
+  <div class="vs-section" id="vs-14c-d2">
+    <div class="vs-section-header">
+      <h3>14C28N <span style="color:var(--secondary);">vs</span> D2</h3>
+      <span class="tag mid">Mid</span>
+      <span class="tag">Kitchen / EDC</span>
+    </div>
+    <p class="vs-section-lead">14C28N is the corrosion-first, thin-grind-friendly mid stainless. D2 is the wear-first, semi-stainless tool steel. This matchup represents a fundamental philosophy split: do you optimize for "stays sharp in rough use" or "resists rust in a humid kitchen"?</p>
+    <div class="vs-compare-grid">
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>14C28N</h4><span class="tag mid">Mid</span><span class="tag">Stainless</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">7.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:75%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">7/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:70%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">8.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:85%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">8/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:80%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Excellent for thin kitchen grinds. Very stable HT window. High yield rate (95%+). Strong in EU and North American markets.</p>
+      </div>
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>D2</h4><span class="tag mid">Mid</span><span class="tag">Tool Steel</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">8.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:85%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">5.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:55%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">4.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:45%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">4/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:40%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Superior abrasive wear resistance. Best for users who cut cardboard, rope, and fibrous materials regularly. Requires proactive care.</p>
+      </div>
+    </div>
+    <div class="vs-verdict">
+      <h4>Verdict</h4>
+      <p><strong>14C28N</strong> is the safer commercial choice for kitchen and general-use lines. <strong>D2</strong> is the correct upgrade path for outdoor, tactical, or utility-focused SKUs where abrasive cutting dominates and users accept maintenance trade-offs.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       PREMIUM PM SHOWDOWNS
+       ═══════════════════════════════════════════════════════════════ -->
+  <h2 class="section-title" id="pm-battle">Premium PM Showdowns</h2>
+  <p class="section-sub">Powder metallurgy steels compared head-to-head for flagship and high-end product lines.</p>
+
+  <!-- S35VN vs M390 -->
+  <div class="vs-section" id="vs-s35-m390">
+    <div class="vs-section-header">
+      <h3>S35VN <span style="color:var(--secondary);">vs</span> M390</h3>
+      <span class="tag high">High-End</span>
+      <span class="tag">PM</span>
+    </div>
+    <p class="vs-section-lead">S35VN is the industry-standard balanced PM steel: excellent toughness for its retention level, well-understood HT protocols, and broad supplier availability. M390 pushes edge retention and corrosion resistance further but costs more and requires more precise processing. For flagship lines, this is the "balanced premium" vs "maximum spec" decision.</p>
+    <div class="vs-compare-grid">
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>S35VN</h4><span class="tag high">High-End</span><span class="tag">PM</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">8.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:85%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">7.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:75%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">8.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:85%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">6.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:65%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Toughness-for-retention ratio is among the best in PM. HT is well documented. Broad sourcing from multiple PM suppliers.</p>
+      </div>
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>M390</h4><span class="tag high">High-End</span><span class="tag">PM</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">9.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:95%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">6/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:60%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">9/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:90%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:50%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Highest vanadium content of common PM steels. Requires diamond or CBN abrasives for efficient sharpening. Premium positioning power.</p>
+      </div>
+    </div>
+    <div class="vs-verdict">
+      <h4>Verdict</h4>
+      <p><strong>S35VN</strong> is the safer flagship choice: proven, balanced, and easier to produce consistently. <strong>M390</strong> is the correct choice when your line needs a "best in class" retention claim and your audience owns advanced sharpening systems. Many brands run S35VN as the standard premium and M390 as a limited-edition upgrade.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       JAPANESE PM vs MAINSTREAM
+       ═══════════════════════════════════════════════════════════════ -->
+  <h2 class="section-title" id="japanese-mid">Japanese PM vs Mainstream Stainless</h2>
+  <p class="section-sub">When a brand wants to move from recognized mid-tier stainless into Japanese-origin premium positioning.</p>
+
+  <!-- SG2 vs VG-10 -->
+  <div class="vs-section" id="vs-sg2-vg10">
+    <div class="vs-section-header">
+      <h3>SG2 / R2 <span style="color:var(--secondary);">vs</span> VG-10</h3>
+      <span class="tag high">High-End</span>
+      <span class="tag">Kitchen Focus</span>
+    </div>
+    <p class="vs-section-lead">VG-10 is the most recognized mid-high stainless in global kitchen knife markets. SG2 (R2) is a Japanese PM stainless that delivers higher hardness potential and finer carbide structure. For brands targeting culinary enthusiasts, this is the classic "familiar premium" vs "Japanese upgrade" decision.</p>
+    <div class="vs-compare-grid">
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>SG2 / R2</h4><span class="tag high">High-End</span><span class="tag">PM Stainless</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">9/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:90%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">6.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:65%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">8.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:85%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">6/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:60%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Takes and holds a very fine edge at 62–64 HRC. Excellent for Damascus-clad kitchen knives. Japanese origin adds brand story.</p>
+      </div>
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>VG-10</h4><span class="tag mid">Mid–High</span><span class="tag">Stainless</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">7.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:75%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">6.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:65%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">8/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:80%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">6.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:65%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Global name recognition. Stable HT at 59–61 HRC. Pairs naturally with Damascus cladding. Lower cost and wider supply.</p>
+      </div>
+    </div>
+    <div class="vs-verdict">
+      <h4>Verdict</h4>
+      <p><strong>VG-10</strong> remains the safer commercial choice for most premium kitchen lines because of name recognition and supply stability. <strong>SG2</strong> is the upgrade path for Japanese-focused brands and culinary-specialist retailers where "Japanese PM" is a meaningful selling point.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       ENTRY vs PREMIUM PM
+       ═══════════════════════════════════════════════════════════════ -->
+  <h2 class="section-title" id="entry-premium">Entry vs Premium PM</h2>
+  <p class="section-sub">Building a value ladder within PM: when does the step up from entry PM to flagship PM make commercial sense?</p>
+
+  <!-- 420HC vs S30V -->
+  <div class="vs-section" id="vs-420hc-s30v">
+    <div class="vs-section-header">
+      <h3>420HC <span style="color:var(--secondary);">vs</span> S30V</h3>
+      <span class="tag budget">Entry</span>
+      <span class="tag high">Premium</span>
+    </div>
+    <p class="vs-section-lead">420HC is Buck's classic entry stainless — easy to sharpen, highly corrosion resistant, but modest in retention. S30V is Crucible's foundational PM steel that redefined the premium folder market. This matchup illustrates the full span of the PM value ladder.</p>
+    <div class="vs-compare-grid">
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>420HC</h4><span class="tag budget">Entry</span><span class="tag">Stainless</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">4/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:40%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">8/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:80%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">8/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:80%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">9/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:90%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Extremely user-friendly. Great for first-knife buyers and mass retail. Low cost, high yield, forgiving HT.</p>
+      </div>
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>S30V</h4><span class="tag high">High-End</span><span class="tag">PM</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">8.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:85%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">6.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:65%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">8.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:85%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">5.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:55%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Benchmark PM steel for premium folders. Requires more skill to sharpen but holds edge 2–3× longer than 420HC in field use.</p>
+      </div>
+    </div>
+    <div class="vs-verdict">
+      <h4>Verdict</h4>
+      <p><strong>420HC</strong> belongs in entry and gift lines where ease of ownership matters more than specs. <strong>S30V</strong> is the correct step-up for enthusiast retail and branded premium folders. Many successful brands run both in a two-SKU ladder.</p>
+    </div>
+  </div>
+
+  <!-- Nitro-V vs S35VN -->
+  <div class="vs-section" id="vs-nitro-s35">
+    <div class="vs-section-header">
+      <h3>Nitro-V <span style="color:var(--secondary);">vs</span> S35VN</h3>
+      <span class="tag mid">Upper-Mid</span>
+      <span class="tag high">High-End</span>
+    </div>
+    <p class="vs-section-lead">Nitro-V is a modern nitrogen-alloyed stainless that delivers corrosion resistance near premium levels at a mid-tier price. S35VN is the established PM benchmark. For brands building modern EDC lines, this comparison answers whether "new stainless" can compete with "proven PM."</p>
+    <div class="vs-compare-grid">
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>Nitro-V</h4><span class="tag mid">Mid</span><span class="tag">Stainless</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">7/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:70%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">7.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:75%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">9/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:90%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">7.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:75%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Excellent corrosion resistance from nitrogen alloying. Easier to sharpen than most PM steels. Competitive pricing for its performance envelope.</p>
+      </div>
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>S35VN</h4><span class="tag high">High-End</span><span class="tag">PM</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">8.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:85%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">7.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:75%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">8.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:85%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">6.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:65%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Higher retention, established PM supply chain, and strong enthusiast recognition. Higher material cost and slightly harder to sharpen.</p>
+      </div>
+    </div>
+    <div class="vs-verdict">
+      <h4>Verdict</h4>
+      <p><strong>Nitro-V</strong> is the smart choice for modern EDC lines that need strong corrosion performance without PM pricing. <strong>S35VN</strong> remains the premium default when retention and brand prestige are top priorities. Position Nitro-V as "modern stainless technology" and S35VN as "proven PM excellence."</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       VISUAL PREMIUM vs FUNCTION-FIRST
+       ═══════════════════════════════════════════════════════════════ -->
+  <h2 class="section-title" id="visual-function">Visual Premium vs Function-First</h2>
+  <p class="section-sub">When the purchase decision is driven by aesthetics versus pure cutting performance.</p>
+
+  <!-- Damascus vs Carbon Steel -->
+  <div class="vs-section" id="vs-damascus-carbon">
+    <div class="vs-section-header">
+      <h3>Damascus (Layered) <span style="color:var(--secondary);">vs</span> Carbon Steel</h3>
+      <span class="tag mid">Mid–High</span>
+      <span class="tag">Positioning</span>
+    </div>
+    <p class="vs-section-lead">Damascus-clad knives command visual attention and premium shelf pricing. Plain carbon steel knives deliver cutting character at lower cost. The real question is not "which cuts better?" — the core steel determines that — but "what does the buyer value at the moment of purchase?"</p>
+    <div class="vs-compare-grid">
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>Damascus / San Mai</h4><span class="tag mid">Mid–High</span><span class="tag">Visual Premium</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">Core dependent</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:80%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">Core + cladding</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:70%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">Core dependent</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:75%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Visual Impact</span><span class="vs-m-score">10/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:100%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Pattern-welded or layered construction creates strong shelf appeal. Gift and collector markets pay premiums for visual story. Core steel (VG-10, SG2, etc.) determines actual performance.</p>
+      </div>
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>Plain Carbon</h4><span class="tag budget">Value</span><span class="tag">Function</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">5–7/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:60%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">7–8/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:75%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">1–2/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:15%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Visual Impact</span><span class="vs-m-score">3/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:30%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Unmatched cutting feedback and sharpening ease at low cost. Patina develops character over time. Requires proactive care and limits audience to maintenance-willing users.</p>
+      </div>
+    </div>
+    <div class="vs-verdict">
+      <h4>Verdict</h4>
+      <p><strong>Damascus</strong> wins in gift, display, and collector channels where visual story drives purchase. <strong>Carbon steel</strong> wins in performance-focused and professional kitchen contexts where cutting feel and easy maintenance matter more than appearance. Many successful brands offer both: carbon for the chef, Damascus for the gift buyer.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       EDC MID-TIER DUELS
+       ═══════════════════════════════════════════════════════════════ -->
+  <h2 class="section-title" id="edc-mid">EDC Mid-Tier Duels</h2>
+  <p class="section-sub">Common matchups for everyday carry folders and small fixed blades in the $40–$120 retail band.</p>
+
+  <!-- 14C28N vs VG-10 -->
+  <div class="vs-section" id="vs-14c-vg10">
+    <div class="vs-section-header">
+      <h3>14C28N <span style="color:var(--secondary);">vs</span> VG-10</h3>
+      <span class="tag mid">Mid</span>
+      <span class="tag">Kitchen / EDC</span>
+    </div>
+    <p class="vs-section-lead">Both are excellent mid-tier stainless steels, but they optimize for slightly different priorities. 14C28N is designed for thin edges and high corrosion safety. VG-10 is the established brand name with slightly higher hardness potential and stronger market recognition.</p>
+    <div class="vs-compare-grid">
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>14C28N</h4><span class="tag mid">Mid</span><span class="tag">Stainless</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">7.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:75%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">7/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:70%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">8.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:85%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">8/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:80%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Developed by Sandvik for knife applications. Excellent microstructure for fine edges. Slightly lower name recognition than VG-10 in Asian markets.</p>
+      </div>
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>VG-10</h4><span class="tag mid">Mid–High</span><span class="tag">Stainless</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">7.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:75%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">6.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:65%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">8/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:80%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">6.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:65%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Strong global brand recognition. Natural pairing with Damascus cladding. Slightly more chipping-prone at thin edges than 14C28N.</p>
+      </div>
+    </div>
+    <div class="vs-verdict">
+      <h4>Verdict</h4>
+      <p>For <strong>thin kitchen grinds and corrosion-first markets</strong> (coastal, humid climates), 14C28N is technically superior. For <strong>brand recognition and Asian market positioning</strong>, VG-10 remains the safer choice. The performance gap is smaller than the marketing gap — choose based on your audience's brand literacy.</p>
+    </div>
+  </div>
+
+  <!-- Carbon vs Stainless (classic) -->
+  <div class="vs-section" id="vs-carbon-stainless">
+    <div class="vs-section-header">
+      <h3>Carbon Steel <span style="color:var(--secondary);">vs</span> Stainless Steel</h3>
+      <span class="tag">Classic Debate</span>
+      <span class="tag">Family Level</span>
+    </div>
+    <p class="vs-section-lead">The oldest debate in knife steel. Rather than declaring a winner, we treat this as a user-profile decision: carbon steel rewards maintenance-willing users with cutting character; stainless steel protects maintenance-averse users from corrosion risk.</p>
+    <div class="vs-compare-grid">
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>Carbon Steel Family</h4><span class="tag budget">Budget–High</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">5–7/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:65%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">7–8/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:75%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">1–2/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:15%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">8–9/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:85%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Fast, crisp sharpening feel. Fine grain structure for keen edges. Strong heritage and craft narrative. Requires wipe-dry discipline.</p>
+      </div>
+      <div class="vs-side">
+        <div class="vs-side-header"><h4>Stainless Steel Family</h4><span class="tag budget">Budget–High</span></div>
+        <div class="vs-metrics">
+          <div class="vs-m-row"><span class="vs-m-name">Edge Retention</span><span class="vs-m-score">5–9/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:75%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Toughness</span><span class="vs-m-score">6–7.5/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:70%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Corrosion</span><span class="vs-m-score">7–9/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:85%"></div></div></div>
+          <div class="vs-m-row"><span class="vs-m-name">Sharpening</span><span class="vs-m-score">5–8/10</span><div class="vs-m-bar"><div class="vs-m-fill" style="width:70%"></div></div></div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--muted-800);margin:0;line-height:1.6;">Low maintenance and broad user acceptance. Stable mass production. Wide price range from 3Cr13 budget to PM stainless premium.</p>
+      </div>
+    </div>
+    <div class="vs-verdict">
+      <h4>Verdict</h4>
+      <p>Launch with <strong>stainless</strong> for mainstream retail and gift channels. Add <strong>carbon</strong> as a secondary line only when your brand identity is craft/performance-focused and your audience accepts care routines. The safest commercial path for most brands is stainless-first, carbon-second.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       QUICK DECISION FRAMEWORK
+       ═══════════════════════════════════════════════════════════════ -->
+  <h2 class="section-title" id="decision">Quick Decision Framework</h2>
+  <p class="section-sub">Use these rules to shortcut the VS series when time is limited.</p>
+
+  <div class="two-col">
+    <div class="decision-card">
+      <h4>Budget retail / gift / first knife</h4>
+      <p>Prioritize low maintenance, easy sharpening, and stable supply. Avoid tool steels and high-carbon options that require care documentation.</p>
+      <span class="winner">Winner: 5Cr15MoV / 8Cr13MoV / AUS-8</span>
+    </div>
+    <div class="decision-card">
+      <h4>Hard-use EDC / outdoor / utility</h4>
+      <p>Prioritize edge retention and wear resistance. Users in this category accept harder sharpening and some corrosion risk.</p>
+      <span class="winner">Winner: D2 / 14C28N (corrosion-first alternative)</span>
+    </div>
+    <div class="decision-card">
+      <h4>Premium kitchen / culinary enthusiast</h4>
+      <p>Balance retention, corrosion resistance, and brand story. Japanese-origin steels add perceived value in this segment.</p>
+      <span class="winner">Winner: VG-10 / SG2 / 14C28N</span>
+    </div>
+    <div class="decision-card">
+      <h4>Flagship / collector / limited edition</h4>
+      <p>Maximize performance metrics and brand prestige. PM steels justify premium pricing when paired with premium fit and finish.</p>
+      <span class="winner">Winner: S35VN / M390 / MagnaCut</span>
+    </div>
+    <div class="decision-card">
+      <h4>Visual premium / gift / display</h4>
+      <p>Pattern and construction matter as much as core steel. Damascus cladding with a known core delivers both story and performance.</p>
+      <span class="winner">Winner: Damascus-clad VG-10 or SG2 core</span>
+    </div>
+    <div class="decision-card">
+      <h4>Heritage / craft / professional kitchen</h4>
+      <p>Cutting feel and sharpening ease dominate. Users accept maintenance in exchange for performance and tradition narrative.</p>
+      <span class="winner">Winner: Carbon family (Aogami, Shirogami, 52100)</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FACTORY INSIGHT
+       ═══════════════════════════════════════════════════════════════ -->
+  <h2 class="section-title" id="factory">From Our Factory: Cross-Family Production Notes</h2>
+  <div class="factory-insight">
+    <h2>Factory Insight</h2>
+    <p>Switching steel families within a production line creates hidden costs that are easy to underestimate. These notes come from real batch data across stainless, tool, and PM runs.</p>
+    <div class="data-grid">
+      <div class="data-item">
+        <span class="data-label">Stainless → Tool switch cost</span>
+        <span class="data-value">+15–25% setup</span>
+        <p>Tool steels require different quench media, longer soak times, and post-HT straightening. Plan line scheduling accordingly.</p>
+      </div>
+      <div class="data-item">
+        <span class="data-label">PM inbound inspection</span>
+        <span class="data-value">100% cert check</span>
+        <p>PM steels should always arrive with mill certificates. Batch-to-batch variance is lower than conventional steel, but counterfeit risk is higher.</p>
+      </div>
+      <div class="data-item">
+        <span class="data-label">Carbon → Stainless customer support</span>
+        <span class="data-value">~3× ticket delta</span>
+        <p>Carbon steel lines generate roughly 3× more rust-related support tickets than stainless equivalents if care inserts are omitted.</p>
+      </div>
+      <div class="data-item">
+        <span class="data-label">Mixed-family SKU strategy</span>
+        <span class="data-value">Separate HT batches</span>
+        <p>Running carbon and stainless in the same HT batch risks cross-contamination and inconsistent results. Always schedule separately.</p>
+      </div>
+    </div>
+    <div class="factory-cta"><a class="btn-text" href="hub.html">Back to full steel comparison chart →</a></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FAQ
+       ═══════════════════════════════════════════════════════════════ -->
+  <h2 class="section-title" id="faq">Frequently Asked Questions</h2>
+  <section class="faq-wrap">
+    <div class="faq-category">
+      <h3>For End Users</h3>
+      <span class="faq-q">Is there really a "best" knife steel?</span>
+      <div class="faq-a">No. The best steel is the one that matches your maintenance habits, cutting tasks, and budget. A PM steel you cannot sharpen is worse than a budget stainless you can maintain. See our <a href="hub.html">Steel Finder</a> for personalized recommendations.</div>
+      <span class="faq-q">Why do some steels with lower scores feel better in use?</span>
+      <div class="faq-a">Geometry, grind quality, and heat treatment often matter more than steel grade. A well-executed 8Cr13MoV knife can outperform a poorly heat-treated S30V in real cutting. That is why we include factory notes in every VS comparison.</div>
+      <span class="faq-q">Should I buy a Damascus knife for performance?</span>
+      <div class="faq-a">Buy Damascus for visual appeal and gift value. Performance is determined by the core steel. A Damascus-clad VG-10 knife cuts similarly to a monosteel VG-10 knife with the same geometry and HT.</div>
+    </div>
+    <div class="faq-category">
+      <h3>For B2B Buyers</h3>
+      <span class="faq-q">Can we run multiple steel families from one factory?</span>
+      <div class="faq-a">Yes, but schedule HT separately and verify that the factory has documented protocols for each family. Carbon, stainless, and PM each require different equipment and atmospheric controls.</div>
+      <span class="faq-q">What is the most common sourcing mistake in cross-family comparisons?</span>
+      <div class="faq-a">Over-focusing on steel name while under-specifying HRC target, tolerance, and geometry. A clear spec bundle (steel + HRC + angle + finish) reduces disputes more than upgrading steel alone.</div>
+      <span class="faq-q">How do we build a value ladder across steel families?</span>
+      <div class="faq-a">A proven ladder: budget stainless (5Cr15MoV) → mid stainless (VG-10 / 14C28N) → tool steel (D2) → PM (S35VN) → flagship PM (M390 / MagnaCut). Position each step with a clear user benefit, not just a steel name.</div>
+      <span class="faq-q">Is it worth creating a "VS" content series for our own brand?</span>
+      <div class="faq-a">Yes. VS content helps buyers self-select and reduces support load. It also signals transparency and technical credibility. Use the framework on this page as a template for your own steel education content.</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       CONTINUE LEARNING
+       ═══════════════════════════════════════════════════════════════ -->
+  <h2 class="section-title" id="continue">Continue Learning</h2>
+  <div class="nav-grid">
+    <div class="nav-card">
+      <h3>Back to Hub</h3>
+      <p>Return to the full steel knowledge center with interactive comparison tables and Steel Finder.</p>
+      <a class="btn-text" href="hub.html">← Knife Steel Knowledge Center</a>
+    </div>
+    <div class="nav-card">
+      <h3>Carbon Steels</h3>
+      <p>Deep-dive into carbon steel grades, HRC targets, and heritage positioning strategies.</p>
+      <a class="btn-text" href="pillar-carbon-steels.html">Carbon Steels Pillar →</a>
+    </div>
+    <div class="nav-card">
+      <h3>Stainless Steels</h3>
+      <p>Compare corrosion-first options from budget 3Cr13 to premium VG-10 and 14C28N.</p>
+      <a class="btn-text" href="pillar-stainless-steels.html">Stainless Steels Pillar →</a>
+    </div>
+    <div class="nav-card">
+      <h3>Powder Metallurgy</h3>
+      <p>Explore flagship PM options: S35VN, M390, MagnaCut, and their production requirements.</p>
+      <a class="btn-text" href="pillar-powder-metallurgy-steels.html">PM Steels Pillar →</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER CTA
+     ═══════════════════════════════════════════════════════════════ -->
+<footer class="cta-box">
+  <div class="container">
+    <h2>Need Help Choosing Between Steel Families?</h2>
+    <p>Tell us your target market, product type, and price band. We'll recommend the right steel matchup with process-ready specs for quoting and sampling.</p>
+    <a href="https://leeknives.com/contact/" class="btn">Get a Manufacturing Quote →</a>
+    <div class="author-meta">
+      Written by: Leeknives Editorial Team | Reviewed by: Head of Production, Leeknives<br>
+      Published: 2026-04-28 | Last Updated: 2026-04-28
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="650" viewBox="0 0 650 650">
+  <defs>
+    <linearGradient id="dataGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f44336;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#e53935;stop-opacity:0.25" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="650" height="650" fill="#ffffff"/>
+
+  <!-- 网格层 - 浅色填充 -->
+  <g fill="#fafafa" stroke="#e0e0e0" stroke-width="1">
+    <polygon points="325.0,285.0 365.0,325.00000000000415 324.9999999999917,365.0 285.0,324.99999999998755" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1" opacity="0.4"/>
+    <polygon points="325.0,245.0 405.0,325.0000000000083 324.99999999998346,405.0 245.0,324.99999999997516" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1" opacity="0.5"/>
+    <polygon points="325.0,205.0 445.0,325.0000000000124 324.99999999997516,445.0 205.0,324.9999999999627" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1" opacity="0.6000000000000001"/>
+    <polygon points="325.0,165.0 485.0,325.00000000001654 324.9999999999669,485.0 165.0,324.99999999995026" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1" opacity="0.7"/>
+    <polygon points="325.0,125.0 525.0,325.0000000000207 324.9999999999586,525.0 125.0,324.99999999993787" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1" opacity="0.8"/>
+  </g>
+
+  <!-- 轴线 -->
+  <g stroke="#bdbdbd" stroke-width="1.5">
+    <line x1="325.0" y1="325.0" x2="325.0" y2="125.0"/>
+    <line x1="325.0" y1="325.0" x2="525.0" y2="325.0000000000207"/>
+    <line x1="325.0" y1="325.0" x2="324.9999999999586" y2="525.0"/>
+    <line x1="325.0" y1="325.0" x2="125.0" y2="324.99999999993787"/>
+  </g>
+
+  <!-- 数据区域 -->
+  <polygon points="325.0,155.0 465.0,325.0000000000145 324.99999999996277,505.0 175.0,324.9999999999534" fill="url(#dataGradient)" stroke="#f44336" stroke-width="2.5" filter="url(#glow)"/>
+
+  <!-- 数据点 -->
+  <g>
+    <circle cx="325.0" cy="155.0" r="6" fill="#ffffff" stroke="#f44336" stroke-width="2.5"/>
+    <circle cx="325.0" cy="155.0" r="3" fill="#f44336"/>
+    <circle cx="465.0" cy="325.0000000000145" r="6" fill="#ffffff" stroke="#f44336" stroke-width="2.5"/>
+    <circle cx="465.0" cy="325.0000000000145" r="3" fill="#f44336"/>
+    <circle cx="324.99999999996277" cy="505.0" r="6" fill="#ffffff" stroke="#f44336" stroke-width="2.5"/>
+    <circle cx="324.99999999996277" cy="505.0" r="3" fill="#f44336"/>
+    <circle cx="175.0" cy="324.9999999999534" r="6" fill="#ffffff" stroke="#f44336" stroke-width="2.5"/>
+    <circle cx="175.0" cy="324.9999999999534" r="3" fill="#f44336"/>
+  </g>
+
+  <!-- 数值标签 -->
+  <g font-size="13" font-weight="bold" fill="#f44336" font-family="Arial, sans-serif">
+    <text x="325.0" y="129.0" text-anchor="middle">85</text>
+    <text x="483.0" y="317.00000000001637" text-anchor="middle">70</text>
+    <text x="324.999999999959" y="515.0" text-anchor="middle">90</text>
+    <text x="157.0" y="316.9999999999478" text-anchor="middle">75</text>
+  </g>
+
+  <!-- 维度标签 -->
+  <g font-size="13" font-weight="bold" fill="#333333" font-family="Arial, sans-serif">
+    <text x="325.0" y="80.0" text-anchor="middle" dy="0.35em">a</text>
+    <text x="570.0" y="325.00000000002535" text-anchor="start" dy="0.35em">b</text>
+    <text x="324.9999999999493" y="570.0" text-anchor="middle" dy="0.35em">c</text>
+    <text x="80.0" y="324.9999999999239" text-anchor="end" dy="0.35em">d</text>
+  </g>
+
+  <!-- 底部信息 -->
+  <text x="325.0" y="625" text-anchor="middle" font-size="20" font-weight="bold" fill="#333333" font-family="Arial, sans-serif">Employee1</text>
+</svg>
